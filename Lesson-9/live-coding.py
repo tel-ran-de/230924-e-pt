@@ -1,5 +1,6 @@
 # Тема 1. Продемонстрируйте и объясните в режиме live-coding:
 # - создание списка,
+print('Тема 1')
 fruits = ['apple', 'banana', 'peach']
 print(fruits)
 
@@ -39,5 +40,49 @@ users = [
 
 # Тема 2. Продемонстрируйте и объясните в режиме live-coding:
 # - Использование различных методов списков.
-# - Сравнение списков
+print('Тема 2')
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+
+numbers.extend([5, 6])
+print(numbers)
+
+numbers.insert(1, 1.5)
+print(numbers)
+
+numbers.remove(1.5)
+print(numbers)
+
+# .pop(<индекс>)
+popped_number = numbers.pop(3)  # по умолчанию удаляет последний элемент
+print(popped_number)
+print(numbers)
+
+numbers.clear()
+print(numbers)
+
+numbers = [1, 2, 3, 2, 2]
+index_of_2 = numbers.index(2)
+print(index_of_2)
+
+count_of_2 = numbers.count(2)
+print(count_of_2)
+
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+
+
 # - Изменяемость списков и неизменяемость строк
+
+# string = 'hello'
+# string[0] = 1  # TypeError: 'str' object does not support item assignment
+
+string = 'hello'
+print(id(string))
+print(string)
+string = string.replace('e', 'a')
+print(id(string))
+print(string)
