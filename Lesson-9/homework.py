@@ -121,19 +121,35 @@ print(movie_details)
 
 # Упражнение 2: Анализ списка курсов и их продолжительности
 # 2.1 Создайте список курсов, содержащий элементы "Python", "Java", "JavaScript".
-coгrses_list = ["Python", "Java", "JavaScript"]
+courses_list = ["Python", "Java", "JavaScript"]
 # 2.2 Добавьте в список курс "C++".
-coгrses_list.append("C++")
-print(coгrses_list)
+courses_list.append("C++")
+print(courses_list)
 # 2.3 Измените название второго курса на "Kotlin"
-coгrses_list[1] = "Kotlin"
-print(coгrses_list)
+courses_list[1] = "Kotlin"
+#print(courses_list)
 # 2.4 Если первые три курса "Python", "Kotlin", "JavaScript", то создайте срез, содержащий первые три курса.
-if coгrses_list
+if courses_list >= ["Python", "Kotlin", "JavaScript"]:
+    slice_courses_list = courses_list [0:3]
+    print(slice_courses_list)
+
 # 2.5 Отсортируйте курсы по названиям.
+courses_list.sort()
+print(courses_list)
+
 # 2.6 Cоздайте вложенный список, где каждый курс имеет свою продолжительность в часах.
 # ["Python", 40], ["Kotlin", 30], ["JavaScript", 35], ["C++", 50]
+courses_time =[
+    ["Python", 40],
+    ["Kotlin", 30],
+    ["JavaScript", 35],
+    ["C++", 50]
+]
+print(courses_time)
+
 # 2.7 Выполните сложение часов всех курсов во вложенном списке и выведите общую продолжительность всех курсов.
+all_courses_time = courses_time
+print(all_courses_time)
 # 2.8 Выведите в консоль:
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
