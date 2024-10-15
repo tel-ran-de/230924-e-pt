@@ -148,8 +148,17 @@ courses_time =[
 print(courses_time)
 
 # 2.7 Выполните сложение часов всех курсов во вложенном списке и выведите общую продолжительность всех курсов.
-all_courses_time = courses_time
-print(all_courses_time)
+courses_time = [
+    ["Python", 40],
+    ["Kotlin", 30],
+    ["JavaScript", 35],
+    ["C++", 50]
+]
+print(courses_time)
+courses_total_hours = 0
+for time in courses_time:
+    courses_total_hours += time[1]
+print(courses_total_hours)
 # 2.8 Выведите в консоль:
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
