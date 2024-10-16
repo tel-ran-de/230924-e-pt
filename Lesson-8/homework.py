@@ -119,6 +119,7 @@ text = "Hello"
 print('строка не пустая' if len(text) else 'строка пустая')
 
 # Задание 9: Проверьте, начинается ли строка с заглавной буквы с помощью тернарного оператора.
+<<<<<<< HEAD
 # city = "Berlin"
 city = "Berlin"
 
@@ -126,7 +127,6 @@ if city[0].isupper():
     print('B - big')
 else:
     print('all letters are small')
-
 
 
 # Тема: Логические операторы: and, or, not
