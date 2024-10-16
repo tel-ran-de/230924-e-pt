@@ -74,7 +74,7 @@ wmic os get osarchitecture
 git config --global user.name "Здесь Впишите Своё Имя На Латинице"
 git config --global user.email "Здесь Впишите Свой Email"
 git config --global init.defaultBranch main
-git config --global core. editor "nano" 
+git config --global core.editor "nano" 
 ```
 
 Можно проверить успешность выполнения командой:
