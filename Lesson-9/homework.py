@@ -1,6 +1,6 @@
 # Тема: Список, срезы списков.
 
-"""# Упражнение 1: Управление списком покупок
+# Упражнение 1: Управление списком покупок
 # Создайте список покупок, содержащий элементы "bread", "milk", "eggs".
 shopping_list = ["bread", "milk", "eggs"]
 # Измените элемент "milk" на "almond milk".
@@ -20,9 +20,9 @@ print(f'shopping_list: {shopping_list}', f'slice_shopping_list: {slice_shopping_
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
 # print(slice_shopping_list)  # Ожидаемый результат: ["bread", "almond milk"]
 # print(detailed_shopping_list)  # Ожидаемый результат: [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
-"""
 
-"""
+
+
 # Упражнение 2: Управление списком студентов и их оценок
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
 students = ["Alice", "Bob", "Charlie", "David"]
@@ -43,10 +43,10 @@ for student in students:
 print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
 print(top_students)  # Ожидаемый результат: ["Bob", "Charlie"]
 print(student_grades)  # Ожидаемый результат:
-# [["Alice", [90, 85, 88]], ["Eve", [75, 80, 82]], ["Charlie", [95, 92, 93]], ["David", [78, 85, 84]]]"""
+# [["Alice", [90, 85, 88]], ["Eve", [75, 80, 82]], ["Charlie", [95, 92, 93]], ["David", [78, 85, 84]]]
 
 
-"""# Упражнение 3: Управление списком задач
+# Упражнение 3: Управление списком задач
 # Создайте список задач, содержащий элементы "task1", "task2", "task3", "task4.
 tasks = ["task1", "task2", "task3", "task4"]
 # Измените третью задачу на "task3 updated".
@@ -63,10 +63,10 @@ print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3
 print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
 print(detailed_tasks)  # Ожидаемый результат:
 # [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False]]
-"""
+
 
 # Тема: Методы списков
-'''
+
 # Упражнение 1: Управление списком фильмов и их рейтингов
 # 1.1 Создайте список фильмов, содержащий элементы "Movie1", "Movie2", "Movie3".
 movie_list = ["Movie1", "Movie2", "Movie3"]
@@ -96,8 +96,8 @@ movie_details.insert(0, ["Movie", 2002, 7.7])
 print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
 #["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
-'''
-'''
+
+
 # Упражнение 2: Анализ списка курсов и их продолжительности
 # 2.1 Создайте список курсов, содержащий элементы "Python", "Java", "JavaScript".
 subjects = ["Python", "Java", "JavaScript"]
@@ -136,7 +136,7 @@ print(subjects_sorted, subjects_slice, subjects_extended, total_duration_1, tota
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
 # - вложенный список, # Ожидаемый результат: [['Python', 40], ['Kotlin', 30], ['JavaScript', 35], ['C++', 50]]
 # - общую продолжительность всех курсов. # Ожидаемый результат: 155
-'''
+
 
 # Мини-проект: Система управления задачами (To-Do List)
 
