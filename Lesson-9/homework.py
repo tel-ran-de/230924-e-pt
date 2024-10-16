@@ -1,4 +1,5 @@
 # Тема: Список, срезы списков.
+from asyncio import all_tasks
 from unittest.mock import right
 
 # Упражнение 1: Управление списком покупок
@@ -199,4 +200,30 @@ print(courses_total_hours)
 #     choice = input("Выберите действие, введя его номер: ")
 #
 #     # Продолжите программу ниже. Код пишите с отсутпом, как принты выше.
+
+tasks = []
+add_task = ()
+show_task = '4'
+done_task = ()
+delete_task = ()
+
+print("\nСистема управления задачами")
+print("1. Добавить задачу")
+print("2. Показать задачи")
+print("3. Отметить задачу как выполненную")
+print("4. Удалить задачу")
+choice = input("Выберите действие, введя его номер: ")
+if choice == '1':
+    add_task()
+elif choice == '2':
+    print(show_task)
+elif choice == '3':
+    done_task()
+else:
+    print("Некорректный номер задачи.")
+
+
+
+
+
 
