@@ -19,8 +19,8 @@
 # Если номер корректный, то удалите ее.
 
 tasks = []
-
 while True:
+
 # В решении используется цикл, чтобы программа работала пока вы ее принудительно не завершите через Ctr-C.
 # Циклы вы еще не проходили. Для решения задачи эти знания не нужны. Просто пишите код с отступом, продолжая программу.
     print("\nСистема управления задачами")
@@ -30,7 +30,47 @@ while True:
     print("4. Удалить задачу")
     choice = input("Выберите действие, введя его номер: ")
 
-    # Продолжите программу ниже. Код пишите с отсутпом, как принты выше.
+# Продолжите программу ниже. Код пишите с отсутпом, как принты выше.
 
+    if choice == '1':
+        task_description = input("Введите описание задачи: ")
+        task_number = len(tasks) + 1
+        tasks.append([task_number, task_description, False])
+        print(f"Задача добавлена: {task_number}. {task_description}")
 
+    elif choice == '2':
+        if not tasks:
+            print("Нет задач для отображения.")
+        else:
+            print("Список задач:")
+            for task in tasks:
+                status = "Выполнена" if task[2] else "Не выполнена"
+                print(f"{task[0]}. {task[1]} - {status}")
+
+    elif choice == '3':
+        task_number = int(input("Введите номер задачи, чтобы отметить как выполненную: "))
+        found = False
+        for task in tasks:
+            if task[0] == task_number:
+                task[2] = True
+                print(f"Задача {task_number} отмечена как выполненная.")
+                found = True
+                break
+        if not found:
+            print("Некорректный номер задачи.")
+
+    elif choice == '4':
+        task_number = int(input("Введите номер задачи, чтобы удалить ее: "))
+        found = False
+        for i in range(len(tasks)):
+            if tasks[i][0] == task_number:
+                tasks.pop(i)
+                print(f"Задача {task_number} удалена.")
+                found = True
+                break
+        if not found:
+            print("Некорректный номер задачи.")
+
+    else:
+        print("Некорректный выбор. Пожалуйста, выберите действие от 1 до 4.")
 
