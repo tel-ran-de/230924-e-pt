@@ -1,4 +1,4 @@
-# Тема: Цикл while. Операторы break, continue, else.
+# Цикл while. Операторы break, continue, else.
 
 # while
 # i = 0  # i, j, k - нормальные абстрактные названия для переменных
@@ -55,6 +55,9 @@
 # cities = ['Tbilisi', 'Berlin', 'Kogon', 'Beijin', 'London']
 # for city in cities:
 #     print(city)
+# print('Tbilisi')
+# ...
+# print('London')
 
 # range
 # print(list(range(5)))  # арифметическая прогрессия от 0 до 4
