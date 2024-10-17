@@ -55,6 +55,9 @@
 # cities = ['Tbilisi', 'Berlin', 'Kogon', 'Beijin', 'London']
 # for city in cities:
 #     print(city)
+# print('Tbilisi')
+# ...
+# print('London')
 
 # range
 # print(list(range(5)))  # арифметическая прогрессия от 0 до 4
