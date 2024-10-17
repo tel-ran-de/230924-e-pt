@@ -69,6 +69,16 @@
 #     print(i)
 
 # enumerate - первый аргумент коллекция, второй аргумент с какого числа начать отсчёт
-countries = ['Germany', 'Italy', 'Brazil', 'Georgia']
-for index, country in enumerate(countries, 1):
-    print(f'{index}. {country}')
+# countries = ['Germany', 'Italy', 'Brazil', 'Georgia', 'Italy']
+# for index, country in enumerate(countries, 1):
+#     print(f'{index}. {country}')
+
+# word = 'television noromende'
+# for letter in word:
+#     print(letter)
+
+# fruits = ['banana', 'orange', 'apple', 'peach', 'pear']
+# for fruit in fruits:
+#     for letter in fruit:
+#         print(letter, end=' ')
+#     print()
