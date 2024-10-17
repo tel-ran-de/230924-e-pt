@@ -207,7 +207,7 @@ while True:
     elif choice == '3':
         number_task = int(input('Выберите номер задачи для выполнения: '))
         tasks[number_task -1][2] = True
-        print()
+        print('Статус задачи обновлён')
     elif choice == '4':
         delete_task = int(input('Выберите номер задачи для удаления: '))
         del tasks[delete_task-1]
