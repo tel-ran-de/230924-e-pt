@@ -1,4 +1,4 @@
-# Тема: Цикл while. Операторы break, continue, else.
+# Цикл while. Операторы break, continue, else.
 
 # while
 # i = 0  # i, j, k - нормальные абстрактные названия для переменных
