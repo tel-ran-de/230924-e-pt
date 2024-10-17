@@ -1,7 +1,7 @@
 # Домашнее задание: прорешайте еще раз индивидуально все задания, которые решали в классе.
 #
 #     - [х] в выбранных вариантах проставьте х или пропишите решение, если вариантов ответа не предусмотрено
-
+from socketserver import BaseServer
 
 # ---- ДАННЫЕ И ПЕРЕМЕННЫЕ ----
 
@@ -350,4 +350,3 @@
 # s2 = int(input("Digits after the decimal point to be rounded: "))
 # s3 = round(s1, s2)
 # print('Number of digits after the decimal point: ', s3)
-#
