@@ -6,7 +6,7 @@
 # в этой строке.Используйте цикл for и условие if.
 
 summ = 0
-ser_word = input('Напишите слово: ')
+user_word = input('Напишите слово: ')
 for letter in user_word:
   if letter in 'aeiou':
      summ += 1
