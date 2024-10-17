@@ -2,23 +2,9 @@
 
 # Упражнение 1: Управление списком покупок
 # Создайте список покупок, содержащий элементы "bread", "milk", "eggs".
-#buy = ["bread", "milk", "eggs"]
-#print(buy)
-
 # Измените элемент "milk" на "almond milk".
-#buy[1] = "almond milk"
-#print(buy)
-
 # Создайте срез, содержащий первые два элемента списка.
-#print(buy[0:2])
-
 # Создайте вложенный список, где каждый элемент списка покупок будет содержать его цену.
-#buy_price = [
-    #["bread", 1.5],
-   # ["almond milk", 3.0],
-   # ["eggs", 2.0]
-#]
-#print(buy_price)
 
 # Выведите список покупок, срез и вложенный список.
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
@@ -28,24 +14,9 @@
 
 # Упражнение 2: Управление списком студентов и их оценок
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
-#list_students = ["Alice", "Bob", "Charlie", "David"]
-
 # Измените имя второго студента на "Eve".
-#list_students[1] = "Eve"
-#print(list_students)
-
 # Создайте срез, содержащий студентов: "Bob", "Charlie".
-#list_students[1] = "Bob"
-#print(list_students[1:3])
-
 # Создайте вложенный список, где каждый студент имеет список своих оценок.
-#grade = [
-   # ["Alice", [90, 85, 88]],
-  #  ["Eve", [75, 80, 82]],
-  #  ["Charlie", [95, 92, 93]],
-  #  ["David", [78, 85, 84]]
-#]
-#print(grade)
 
 # Выведите список студентов, срез и вложенный список.
 # print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
@@ -56,24 +27,9 @@
 
 # Упражнение 3: Управление списком задач
 # Создайте список задач, содержащий элементы "task1", "task2", "task3", "task4.
-#tasks = ["task1", "task2", "task3", "task4"]
-#print(tasks)
-
 # Измените третью задачу на "task3 updated".
-#tasks[2] = "task3 updated"
-#print(tasks)
 # Создайте срез, содержащий последние две задачи.
-#tasks[2] = "task3"
-#print(tasks[2:4])
-
 # Создайте вложенный список, где каждая задача имеет свой статус (True - выполнено, False - не выполнено).
-#detailed_tasks = [
-#   ["task1", True],
-#   ["task2 updated", False],
-#   ["task3", True],
-#   ["task4", False]
-#]
-#print(detailed_tasks)
 
 # Выведите список задач, срез и вложенный список.
 # print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3 updated", "task4"]
@@ -86,43 +42,13 @@
 
 # Упражнение 1: Управление списком фильмов и их рейтингов
 # 1.1 Создайте список фильмов, содержащий элементы "Movie1", "Movie2", "Movie3".
-#list = ["Movie1", "Movie2", "Movie3"]
-#print(list)
-
 # 1.2 Пропишите условие: добавить в список фильм "Movie4", если его еще нет в списке.
-#ist.append("Movie4")
-#print(list)
-
 # 1.3 Пропишите условия: если количество фильмов больше 2, то название второго фильма меняется на "Updated Movie2".
 # Если количество фильмов меньше 5, то объедините имеющийся список с новым списком ["Movie5", "Movie6", "Movie7"]
-# movies = ["Movie1", "Movie2", "Movie3", "Movie4"]
-# new_movies = ["Movie5", "Movie6", "Movie7"]
-# if len(movies) > 2:
-#     movies[1] = "Updated Movie2"
-# if len(movies) < 5:
-#     movies.extend(new_movies)
-# print(movies)
-
-
 # 1.4 Создайте вложенный список, где каждый фильм имеет свой год выпуска и рейтинг:
 # ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
 # ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]
-
-# movie_details = [
-#     ["Movie1", 2010, 8.1],
-#     ["Updated Movie2", 2015, 7.5],
-#     ["Movie3", 2020, 8.6],
-#     ["Movie4", 2021, 7.9],
-#     ["Movie5", 2013, 8.5],
-#     ["Movie6", 2018, 8.6],
-#     ["Movie7", 2023, 7.0]
-# ]
-# print(movie_details)
-
-# # 1.5 Добавьте фильм ["Movie", 2002, 7.7] в начало вложенного списка.
-# movie_details.insert(0,  "Movie, 2002, 7.7")
-# print(movie_details)
-
+# 1.5 Добавьте фильм ["Movie", 2002, 7.7] в начало вложенного списка.
 # 1.6 Выведите список фильмов и вложенный список.
 # print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 # print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
