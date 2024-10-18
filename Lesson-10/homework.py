@@ -8,6 +8,19 @@
 # программа должна вывести сообщение "Вы ввели большее число" и продолжать запрашивать числа.
 # Если пользователь угадал, то программа должна вывести "Вы угадали число" и завершиться.
 
+import random
+num = random.randint(0,100)
+while True:
+    user_input = int(input('Введите число: '))
+    if user_input < num:
+        print("Слишком маленькое число")
+    elif user_input > num:
+        print("Вы ввели большее число")
+    elif user_input == num:
+        print("Вы угадали число")
+        break
+
+from operator import index
 
 # Упражнение 2: Проверка пароля
 #
@@ -18,6 +31,22 @@
 # Если после трех неправильных попыток пароль не введен правильно, программа должна выводить сообщение
 # "Превышено количество попыток" и завершаться.
 
+password = ('python123')
+password_attempts = 0
+while True:
+    input_user = input('Введите пароль: ')
+    if ' ' in input_user:
+        print("Пароль не должен содержать пробелов")
+    if input_user == password:
+        print(input("Доступ разрешен"))
+        break
+    elif input_user != password:
+        print("Пароль введён не правильно!")
+    password_attempts += 1
+    if password_attempts == 3:
+        print("Превышено количество попыток")
+        break
+    print('Попытка', password_attempts, 'из 3 попыток')
 
 # Упражнение 3: Работа со списком покупок
 #
@@ -29,6 +58,27 @@
 # то программа должна вывести: “Превышен лимит покупок.” и завершиться.
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
+shopping_list = []
+
+while True:
+    input_user = input('Добавьте элемент в список покупок: ')
+    if input_user == 'stop':
+        print("Формирование списка завершено")
+        break
+    if input_user in shopping_list:
+        print("Этот элемент уже в списке")
+        continue
+
+    shopping_list.append(input_user)
+    print( input_user, 'добавлен в список.')
+    if len(shopping_list) >= 6:
+        print('Превышен лимит покупок!')
+        break
+print("Итоговый список покупок:")
+for nr, input_user in enumerate(shopping_list, start=1):
+    print(nr, input_user)
+full_list = len(shopping_list)
+print('Общее количество элементов:', full_list)
 
 # Тема: Цикл for
 
