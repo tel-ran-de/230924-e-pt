@@ -113,7 +113,7 @@ for number in range(1, 21):
         print("Buzz")
     else:
         print(number)
-'''
+
 # Проект 1: Управление библиотекой
 #
 # Описание:
@@ -223,12 +223,67 @@ while True:
                       f'{(25 - len(book[0])) * ' '}{book[0]} |'
                       f'{(10 - len(book[2])) * ' '}{book[2]} |')
                 print(60 * '-')
-
+'''
 # Проект 2: Анализ посещаемости на сайте
 #
 # Разработайте программу для анализа посещаемости на сайте. Программа должна позволять вводить количество посещений
 # за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
 # за неделю и выводить дни с посещаемостью выше среднего.
 #
-# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-# visits = []
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
+average_attendance = 0
+max_attendance = 0
+min_attendance = 0
+while True:
+    print("\nМеню")
+    print("1. Ввести количество посещений за каждый день недели")
+    print("2. Определить дни с наибольшей посещаемостью")
+    print("3. Определить дни с наименьшей посещаемостью")
+    print("4. Рассчитать среднюю посещаемость за неделю")
+    print("5. Выввести дни с посещаемостью выше среднего")
+    choice = int(input("Выберите действие, введя его номер: "))
+    if choice == 1:
+        for id, day in enumerate(days, 1):
+            attendance = int(input(f'Введите количество посещений в/во {day}: '))
+            visits.append([day, attendance])
+            print(34 * '-')
+            print(f'| id |{2 * " "}день недели{2 * " "}| посещения |')
+            print(34 * '-')
+            print(f'|{(3 - len(str(id))) * ' '}{id} |'
+                  f'{(14 - len(day)) * ' '}{day} |'
+                  f'{(10 - len(str(attendance))) * ' '}{attendance} |')
+            print(34 * '-')
+    elif choice == 2:
+        for day in visits:
+            if max_attendance < day[1]:
+                max_attendance = day[1]
+                mindex = visits.index(day)
+        print(f'Наибольшая посещаемость {max_attendance} была в {visits[mindex][0]}')
+    elif choice == 3:
+        min_attendance = visits[0][1]
+        mindex = visits.index(visits[0])
+        for day in visits:
+            if min_attendance > day[1]:
+                min_attendance = day[1]
+                mindex = visits.index(day)
+                print(f'mindex {mindex} type {type(mindex)}')
+        print(f'Наименьшая посещаемость {min_attendance} была в {visits[mindex][0]}')
+    elif choice in [4, 5]:
+        average_attendance = round(sum([day[1] for day in visits])/7, 0)
+        print(f'Средняя посещаемость за неделю составляет {average_attendance}')
+        if choice == 5:
+            visits_list = []
+            print('Список дней с посещаемостью выше средней')
+            print(29 * '-')
+            print(f'|{2 * " "}день недели{2 * " "}| посещения |')
+            print(29 * '-')
+            for day in visits:
+                if day[1] > average_attendance:
+                    visits_list.append(day)
+                    print(f'|{(14 - len(day[0])) * ' '}{day[0]} |'
+                          f'{(10 - len(str(day[1]))) * ' '}{day[1]} |')
+                    print(29 * '-')
+    else:
+        print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
+
