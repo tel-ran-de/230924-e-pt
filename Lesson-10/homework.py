@@ -7,7 +7,7 @@
 # выводить сообщение "Слишком маленькое число" и продолжать запрашивать числа. Если число больше num,
 # программа должна вывести сообщение "Вы ввели большее число" и продолжать запрашивать числа.
 # Если пользователь угадал, то программа должна вывести "Вы угадали число" и завершиться.
-'''
+print('Task # 1')
 guess_num = 63
 while True:
     check_num = int(input('Введите число от 0 до 100: '))
@@ -18,7 +18,7 @@ while True:
     else:
         print("Вы угадали число")
         break
-
+print('Task # 2')
 # Упражнение 2: Проверка пароля
 #
 # Напишите программу, которая будет запрашивать у пользователя пароль до тех пор, пока не будет введен
@@ -43,7 +43,7 @@ while True:
         break
     print(f'{attempt_num - attempt} attempt(s) remain!')
 
-
+print('Task # 3')
 # Упражнение 3: Работа со списком покупок
 #
 # Напишите программу, которая будет запрашивать у пользователя элементы для списка покупок до тех пор,
@@ -88,7 +88,7 @@ while True:
 #
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
-
+print('Тема: Цикл for Task # 1')
 check_string = 'aeiou'
 counter = 0
 word = input('введите слово: ')
@@ -97,7 +97,7 @@ for letter in word:
         counter += 1
 print(f'в слове {word} всего {counter} гласных букв')
 
-
+print('Тема: Цикл for Task # 2')
 # Упражнение 2: Генерация и вывод последовательности чисел
 #
 # Напишите программу, которая генерит и выводит последовательность чисел от 1 до 20,
@@ -114,6 +114,8 @@ for number in range(1, 21):
     else:
         print(number)
 
+
+print('project Управление библиотекой')
 # Проект 1: Управление библиотекой
 #
 # Описание:
@@ -135,6 +137,7 @@ while True:
     print("4. Поменять статус книги")
     print("5. Показать книги определенного автора")
     print("6. Показать книги с определенным статусом")
+    print("0. если хотите покинуть программу")
     choice = int(input("Выберите действие, введя его номер: "))
 
     if choice == 1:
@@ -223,7 +226,13 @@ while True:
                       f'{(25 - len(book[0])) * ' '}{book[0]} |'
                       f'{(10 - len(book[2])) * ' '}{book[2]} |')
                 print(60 * '-')
-'''
+    elif choice == 0:
+        print('Вы покинули программу')
+        break
+    else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
+
+
+print('project Управление библиотекой')
 # Проект 2: Анализ посещаемости на сайте
 #
 # Разработайте программу для анализа посещаемости на сайте. Программа должна позволять вводить количество посещений
@@ -232,16 +241,18 @@ while True:
 #
 days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 visits = []
-average_attendance = 0
-max_attendance = 0
-min_attendance = 0
 while True:
+    average_attendance = 0
+    max_attendance = -1
+    min_attendance = 10000000000
     print("\nМеню")
     print("1. Ввести количество посещений за каждый день недели")
     print("2. Определить дни с наибольшей посещаемостью")
     print("3. Определить дни с наименьшей посещаемостью")
     print("4. Рассчитать среднюю посещаемость за неделю")
     print("5. Выввести дни с посещаемостью выше среднего")
+    print("6. Выввести таблицу посещений")
+    print("0. Покинуть программу")
     choice = int(input("Выберите действие, введя его номер: "))
     if choice == 1:
         for id, day in enumerate(days, 1):
@@ -259,18 +270,16 @@ while True:
             if max_attendance < day[1]:
                 max_attendance = day[1]
                 mindex = visits.index(day)
+
         print(f'Наибольшая посещаемость {max_attendance} была в {visits[mindex][0]}')
     elif choice == 3:
-        min_attendance = visits[0][1]
-        mindex = visits.index(visits[0])
         for day in visits:
             if min_attendance > day[1]:
                 min_attendance = day[1]
                 mindex = visits.index(day)
-                print(f'mindex {mindex} type {type(mindex)}')
         print(f'Наименьшая посещаемость {min_attendance} была в {visits[mindex][0]}')
     elif choice in [4, 5]:
-        average_attendance = round(sum([day[1] for day in visits])/7, 0)
+        average_attendance = round(sum([day[1] for day in visits])/len(visits), 0)
         print(f'Средняя посещаемость за неделю составляет {average_attendance}')
         if choice == 5:
             visits_list = []
@@ -284,6 +293,18 @@ while True:
                     print(f'|{(14 - len(day[0])) * ' '}{day[0]} |'
                           f'{(10 - len(str(day[1]))) * ' '}{day[1]} |')
                     print(29 * '-')
+    elif choice == 0:
+        print('Вы покинули программу')
+        break
+    elif choice == 6:
+        print(34 * '-')
+        print(f'| id |{2 * " "}день недели{2 * " "}| посещения |')
+        print(34 * '-')
+        for id, day in enumerate(visits, 1):
+            print(f'|{(3 - len(str(id))) * ' '}{id} |'
+                  f'{(14 - len(day[0])) * ' '}{day[0]} |'
+                  f'{(10 - len(str(day[1]))) * ' '}{day[1]} |')
+            print(34 * '-')
     else:
         print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
 
