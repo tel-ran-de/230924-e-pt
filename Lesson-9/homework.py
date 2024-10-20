@@ -120,7 +120,7 @@ courses[1] = "Kotlin"
 
 # 2.4 Если первые три курса "Python", "Kotlin", "JavaScript", то создайте срез, содержащий первые три курса.
 if courses[:3] == ["Python", "Kotlin", "JavaScript"]:
-    slice_courses = courses[:3]
+    part_course = courses[:3]
 
 # 2.5 Отсортируйте курсы по названиям.
 courses_sort = sorted(courses)
@@ -140,7 +140,7 @@ total_times = sum(course[1] for course in course_hours)
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']
 print(courses_sort)
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
-print(slice_courses)
+print(part_course)
 # - вложенный список, # Ожидаемый результат: [['Python', 40], ['Kotlin', 30], ['JavaScript', 35], ['C++', 50]]
 print(course_hours )
 # - общую продолжительность всех курсов. # Ожидаемый результат: 155
