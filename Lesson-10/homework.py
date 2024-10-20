@@ -67,13 +67,10 @@ from operator import attrgetter
 #
 #while len(shopping_list) < max_produkt:
 #    product = input("Введите элемент для списка покупок: ")
-#тут через len посчитали длину до 6 и пока меньше доп то можжно дальше вводить элементы
 #    if product.lower() == "стоп":
 #        print('Формирование списка завершено')
 #         break
-#         #тут поставили через if условие, через метод ловер все символы строки перевели в нижний регистр чтоб сравнить строки и найти "стоп" и завершили через break
-#
-#    if product in shopping_list:
+#       if product in shopping_list:
 #             print("Этот элемент уже в списке")
 #            continue
 #    shopping_list.append(product)
@@ -81,7 +78,6 @@ from operator import attrgetter
 #
 #if len(shopping_list) >= max_produkt:
 #        print("Превышен лимит покупок.")
-#тут через лен посчитали сколько элементов в списке и сравнили
 #print("Итоговый список покупок:", shopping_list)
 #print("Общее количество элементов в списке:", len(shopping_list))
 #
@@ -92,14 +88,14 @@ from operator import attrgetter
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
 
-vowels = "aeiou"
-user_input = input("Введите строку: ")
-vowel_count = 0
-for char in user_input.lower():
-    if char in vowels:
-        vowel_count += 1
-
-print(f"Количество гласных букв в строке: {vowel_count}")
+#vowels = "aeiou"
+#user_input = input("Введите строку: ")
+#vowel_count = 0
+#for char in user_input.lower():
+#    if char in vowels:
+#        vowel_count += 1
+#
+#print(f"Количество гласных букв в строке: {vowel_count}")
 
 
 
@@ -109,6 +105,15 @@ print(f"Количество гласных букв в строке: {vowel_cou
 # Напишите программу, которая генерит и выводит последовательность чисел от 1 до 20,
 # но выводит "Fizz" вместо чисел, кратных 3, "Buzz" вместо чисел, кратных 5, и "FizzBuzz"
 # вместо чисел, кратных как 3, так и 5. Используйте цикл for и функцию range.
+#for i in range(1, 20):
+#    if i % 3 == 0 and i % 5 == 0:
+#     print("FizzBuzz")
+#    elif i % 3 == 0:
+#       print("Fizz")
+#    elif i % 5 == 0:
+#        print("Buzz")
+#    else:
+#        print(i)
 
 
 # Проект 1: Управление библиотекой
@@ -135,6 +140,87 @@ print(f"Количество гласных букв в строке: {vowel_cou
 #
 #     # Продолжите программу ниже.
 
+#library = [
+#    ["Война и мир", "Толстой", "в наличии"],
+#            ["Преступление и наказание", "Достоевский", "выдана"],
+#            ["Мастер и Маргарита", "Булгаков", "в наличии"]
+#]
+#
+#def show_books():
+#    for book in library:
+#        print(f"название: {book[0]}, автор: {book[1]}, статус: {book[2]}")
+#def add_book():
+#    title = input("Введите название книги: ")
+#    author = input("Введите автора книги: ")
+#    status = input("Введите статус книги (в наличии/ выдана): ")
+#    library.append([title, author, status])
+#    print(f"Книга ´{title}` добавлена в библиотеку.")
+#
+#def remove_book():
+#    title =input("Введите название книги для удаления: ")
+#    for book in library:
+#        if book[0].lower() == title.lower():
+#            library.remove(book)
+#            print(f"Книга `{title}` удалена из библиотеки.")
+#
+#def change_status():
+#    title = input("Введите название книги для изменения статуса: ")
+#    for book in library:
+#        if book[0].lower() == title.lower():
+#            new_status = input("Введите новый статус книги (в наличии/ выдана): ")
+#            book[2] = new_status
+#            print(f"Статус книги `{title}` изменен на `{new_status}`. ")
+#            return
+#        print(f"Книга `{title}` не найдена в библиотеке.")
+#def search_by_author():
+#    author = input("Введите автора для поиска книги: ")
+#    found = False
+#    for book in library:
+#        if book[1].lower() == author.lower():
+#            print(f"Название: {book[0]}, Автор: {book[1]}, Статус: {book[2]}")
+#            found = True
+#            if not found:
+#                print(f"Книги автора `{author}` не найдена в библиотеке.")
+#
+#def search_by_status():
+#    status = input("Введите статус книги для поиска (в наличии/ выдана): ")
+#    found = False
+#    for book in library:
+#        if book[2].lower() == status.lower():
+#            print(f"Название: {book[0]}, Автор: {book[1]}, Статус: {book[2]}")
+#            found = True
+#            if not  found:
+#                print(f"Книги со статусом `{status}` не найдены.")
+#
+#while True:
+#     print("\nМеню")
+#     print("1. Показать список всех книг")
+#    print("2. Добавить книгу")
+#     print("3. Удалить книгу")
+#     print("4. Поменять статус книги")
+#     print("5. Показать книги определенного автора")
+#     print("6. Показать книги с определенным статусом")
+#     choice = input("Выберите действие, введя его номер: ")
+#
+#     if choice == "1":
+#         show_books()
+#     elif choice == "2":
+#         add_book()
+#     elif choice == "3":
+#         remove_book()
+#     elif choice == "4":
+#         change_status()
+#     elif choice == "5":
+#        search_by_author()
+#     elif choice == "6":
+#         search_by_status()
+#     elif choice == "7":
+#         print("Выход из программы.")
+#         break
+#     else:
+#         print("Неверный выбор. Выберите действие из имеющегося списка от 1 до 7.")
+
+
 
 # Проект 2: Анализ посещаемости на сайте
 #
@@ -142,5 +228,25 @@ print(f"Количество гласных букв в строке: {vowel_cou
 # за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
 # за неделю и выводить дни с посещаемостью выше среднего.
 #
-# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-# visits = []
+
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
+
+for day in days:
+    visit_count = int(input(f"Введите количество посещений за {day}: "))
+    visits.append(visit_count)
+
+    max_visits = max(visits)
+    min_visits = min(visits)
+    max_day = days[visits.index(max_visits)]
+    min_day = days[visits.index(min_visits)]
+
+    average_visits = sum(visits) / len(visits)
+
+    above_average_days = [days[i] for i in range(len(visits)) if visits[i] > average_visits]
+
+    print("\nРезультаты анализа посещаемости:")
+    print(f"День с наибольшей посещаемостью: {max_day} ({max_visits} посещений)")
+    print(f"День с наименьшей посещаемостью: {min_day} ({min_visits} посещений)")
+    print(f"Средняя посещаемость за неделю: {average_visits:.2f}")
+    print("Дни с посещаемостью выше среднего:", ", ".join(above_average_days))
