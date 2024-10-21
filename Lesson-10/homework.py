@@ -7,7 +7,7 @@
 # выводить сообщение "Слишком маленькое число" и продолжать запрашивать числа. Если число больше num,
 # программа должна вывести сообщение "Вы ввели большее число" и продолжать запрашивать числа.
 # Если пользователь угадал, то программа должна вывести "Вы угадали число" и завершиться.
-
+'''
 import random
 num = random.randint(0,100)
 while True:
@@ -175,8 +175,7 @@ while True:
              if book[2] == status_book:
                  print(book)
 
-
-
+'''
 
 # Проект 2: Анализ посещаемости на сайте
 #
@@ -184,5 +183,41 @@ while True:
 # за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
 # за неделю и выводить дни с посещаемостью выше среднего.
 #
-# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-# visits = []
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
+
+    # print sum [visits]
+
+while True:
+    for day in days:
+        visit = int(input(f'Введите количество посещений за {day}: '))
+        visits.append(visit)
+    max_visits = max(visits)
+    min_visits = min(visits)
+    average_visit = sum(visits) / len(days)
+    max_day = days[visits.index(max_visits)]
+    min_day = days[visits.index(min_visits)]
+    #above_average_visit = []
+    #for a_day in visits:
+        #if a_day > average_visit:
+            #above_average_visit.append(a_day)
+    above_average_day = []
+    for i in range(len(days)):
+        if visits[i] > float(average_visit):
+            above_average_day.append(i)
+
+    print(f'День с наибольшей посещаемостью: {max_day}')
+    print(f'День с наименьшей посещаемостью: {min_day}')
+    print(f'Средняя посещаемость за неделю: {average_visit}')
+    #print(f'Дни с посещаемостью выше среднего: {above_average_visit}')
+    print(f'Дни с посещаемостью выше среднего: {above_average_day}')
+
+
+
+
+        #max_visit = max(visits)
+        #print(min_visit)
+        #print(max_visit)
+       # print(f'дни с наибольшей посещаемостью: {max_visit}')
+
+
