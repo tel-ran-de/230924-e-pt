@@ -69,9 +69,39 @@ matrix = [
 normalized = [[element / 10 for element in row] for row in matrix]
 print(normalized)
 
-
-
-
-
 # Тема: Итератор и итерируемые объекты. Функции iter и next. Сравнение iter и next с циклом for и функцией range.
 # Продемонстрируйте создание итератора и использование функций iter и next.
+print('Итератор и итерируемые объекты.')
+cities = ['Istanbul', 'Batumi', 'Berlin', 'Porto', 'Beijin']
+# for city in cities:
+#     print(city)
+city_iter = iter(cities)
+# print(city_iter)
+print(next(city_iter))
+print(next(city_iter))
+print(next(city_iter))
+print(next(city_iter))
+print(next(city_iter))
+
+print('считывание файла')
+file = open('live-coding.py', encoding='utf-8')
+file_iter = iter(file)
+print(next(file_iter))
+print(next(file_iter))
+print(next(file_iter))
+print(next(file_iter))
+print(next(file_iter))
+file.close()
+
+print('ручная итерация')
+def manual_iteration(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            item = next(iterator)
+            print(item)
+        except StopIteration:
+            break
+
+
+manual_iteration(cities)
