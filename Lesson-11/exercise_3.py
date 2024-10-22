@@ -1,15 +1,19 @@
 # Упражнение 1: Напишите программу с помощью генераторов списков,
 # которая находит все числа от 1 до 1000, которые делятся на 7.
+#numbers_divisible_by_7 = [number for number in range(1, 1001) if number % 7 == 0]
+#print(numbers_divisible_by_7)
 
 
-# Упражнение 2: Напишите программу с помощью генераторов списков,
-# которая найдёт все числа от 1 до 1000, в которых есть цифра 3.
-
+# Упражнение 2: Напишите программу с помощь генераторов списков,
+# которая найдите все числа от 1 до 1000, в которых есть цифра 3.
+#number_3 = [number for  number in range(1, 1001) if "3" in str(number)]
+#print(number_3)
 
 # Упражнение 3: Напишите программу с помощь генераторов списков,
 # которая посчитает количество пробелов в строке
-# some_string = 'the slow solid squid swam sumptuously through the slimy swamp'.
-
+some_string = 'the slow solid squid swam sumptuously through the slimy swamp'
+spec = sum(1 for char in some_string if char == " ")
+print(spec)
 
 # Упражнение 4: Напишите программу с помощь генераторов списков,
 # которая создаст список всех гласных букв в строке
