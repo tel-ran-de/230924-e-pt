@@ -22,3 +22,68 @@ while True:
     choice = input("Выберите действие, введя его номер: ")
 
     # Продолжите программу ниже.
+    if choice == "1":
+        print("\nСписок всех книг:")
+        for book in library:
+            print(f"{book[0]} - {book[1]} ({book[2]})")
+
+    elif choice == "2":
+        title = input("Введите название книги: ")
+        author = input("Введите автора книги: ")
+        status = input("Введите статус книги (в наличии/выдана): ")
+        library.append([title, author, status])
+        print(f"Книга '{title}' добавлена.")
+
+    elif choice == "3":
+        title = input("Введите название книги, которую хотите удалить: ")
+        found = False
+        for book in library:
+            if book[0].lower() == title.lower():
+                library.remove(book)
+                found = True
+                print(f"Книга '{title}' удалена.")
+                break
+        if not found:
+            print(f"Книга '{title}' не найдена.")
+
+    elif choice == "4":
+        title = input("Введите название книги, статус которой хотите поменять: ")
+        found = False
+        for book in library:
+            if book[0].lower() == title.lower():
+                new_status = input(f"Введите новый статус для книги '{title}' (в наличии/выдана): ")
+                book[2] = new_status
+                found = True
+                print(f"Статус книги '{title}' изменен на '{new_status}'.")
+                break
+        if not found:
+            print(f"Книга '{title}' не найдена.")
+
+    elif choice == "5":
+        author = input("Введите автора: ")
+        print(f"\nКниги автора {author}:")
+        found = False
+        for book in library:
+            if book[1].lower() == author.lower():
+                print(f"{book[0]} ({book[2]})")
+                found = True
+        if not found:
+            print(f"Книги автора {author} не найдены.")
+
+    elif choice == "6":
+        status = input("Введите статус (в наличии/выдана): ")
+        print(f"\nКниги со статусом '{status}':")
+        found = False
+        for book in library:
+            if book[2].lower() == status.lower():
+                print(f"{book[0]} - {book[1]}")
+                found = True
+        if not found:
+            print(f"Книги со статусом '{status}' не найдены.")
+
+    elif choice == "7":
+        print("Программа завершена.")
+        break
+
+    else:
+        print("Некорректный выбор. Пожалуйста, выберите пункт из меню.")
