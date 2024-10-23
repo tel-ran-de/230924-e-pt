@@ -143,3 +143,81 @@ print(colors_matching)  # {'Red': 'Красный', 'Blue': 'Синий', 'Green
 # - Примеры их использования
 # - Основные методы кортежей и множеств
 # - Генератор множеств
+print()
+print('# Создание кортежей')
+my_tuple = (1, 2, 3)
+my_tuple2 = 1, 2, 3
+my_tuple3 = tuple([1, 2, 3])
+print(my_tuple)
+print(my_tuple[0])
+# my_tuple[0] = 10  # TypeError: 'tuple' object does not support item assignment
+print('# Кортеж может содержать в себе список')
+print('# При этом список внутри кортежа можно изменить')
+my_tuple4 = ('Alice', [30, 'New York'])
+print(my_tuple4)
+# my_tuple4[0] = 'Bob'  # TypeError: 'tuple' object does not support item assignment
+my_tuple4[1][0] = 37
+print(my_tuple4)
+
+# Методы кортежа
+print('# Методы кортежа')
+person = ("Alice", [30, "New York"], 35000, "Alice", "Alice")
+print(person[0])
+print(person[1])
+print(person[2])
+print(person.count("Alice"))  # Вывод: 3
+print(person.index(35000))  # Вывод: 2
+print(person.index('Alice'))  # Вывод: 0
+print(person.index('Alice', 1))  # Вывод: 3
+
+print()
+print('# Множества')
+my_set = {2, 3, 4, 5, 5, 5, 5, 3, 4, 1, 2, 3, 1, 2, 3, 3, 3, 3}
+print(my_set)
+# print(my_set[0])  # TypeError: 'set' object is not subscriptable
+my_set.add(6)
+print(my_set)
+my_set.remove(1)
+print(my_set)
+
+print()
+print('# Операции над множествами')
+set1 = {'apple', 'banana', 'cherry'}
+set2 = {'cherry', 'melon', 'peach'}
+print('# объединение |')
+print(set1)
+print(set2)
+print(set1 | set2)  # {'peach', 'cherry', 'melon', 'apple', 'banana'}
+print(set1.union(set2))  # {'peach', 'cherry', 'melon', 'apple', 'banana'}
+print('# пересечение &')
+print(set1)
+print(set2)
+print(set1 & set2)  # {'cherry'}
+print(set1.intersection(set2))  # {'cherry'}
+print('# симметричная разность ^')
+print(set1)
+print(set2)
+print(set1 ^ set2)  # {'peach', 'banana', 'melon', 'apple'}
+print(set1.symmetric_difference(set2))  # {'peach', 'banana', 'melon', 'apple'}
+print('# разность set1 - set2')
+print(set1)
+print(set2)
+print(set1 - set2)  # {'banana', 'apple'}
+print(set1.difference(set2))  # {'banana', 'apple'}
+print('# разность set2 - set1')
+print(set1)
+print(set2)
+print(set2 - set1)  # {'peach', 'melon'}
+print(set2.difference(set1))  # {'peach', 'melon'}
+# set1.union_update(set2)  # делают тоже самое что .union(), но при этом меняют множество
+# set1.intersection_update(set2)  # делают тоже самое что .intersection(), но при этом меняют множество
+# set1.symmetric_difference_update(set2)  # делают тоже самое что .symmetric_difference(), но при этом меняют множество
+# set1.difference_update(set2)  # делают тоже самое что .difference(), но при этом меняют множество
+
+print()
+print('# генератор множеств')
+squared_set = {x ** 2 for x in range(1, 11)}
+print(squared_set)
+print('# множества можно перебирать в цикле')
+for i in squared_set:
+    print(int(i ** 0.5))
