@@ -11,4 +11,21 @@
 #
 # - Выведите исходные матрицы и результат их произведения.
 
+matrix1 = [[i + j * 3 + 1 for i in range(3)] for j in range(3)]
+matrix2 = [[9 - (i + j * 3) for i in range(3)] for j in range(3)]
+
+product = [[sum(matrix1[i][k] * matrix2[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+
+for row in matrix1:
+    print(row)
+
+print()
+
+for row in matrix2:
+    print(row)
+
+print()
+
+for row in product:
+    print(row)
 
