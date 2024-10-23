@@ -8,6 +8,20 @@
 # программа должна вывести сообщение "Вы ввели большее число" и продолжать запрашивать числа.
 # Если пользователь угадал, то программа должна вывести "Вы угадали число" и завершиться.
 
+num = 42  # Заданное число для поиска
+guessed = False
+
+while not guessed:
+    user_input = int(input("Введите число от 0 до 100: "))
+    
+    if user_input < num:
+        print("Слишком маленькое число")
+    elif user_input > num:
+        print("Вы ввели большее число")
+    else:
+        print("Вы угадали число!")
+        guessed = True
+
 
 # Упражнение 2: Проверка пароля
 #
@@ -17,6 +31,25 @@
 # Если введен правильный пароль, программа должна выводить сообщение "Доступ разрешен" и завершаться.
 # Если после трех неправильных попыток пароль не введен правильно, программа должна выводить сообщение
 # "Превышено количество попыток" и завершаться.
+
+correct_password = "python123"
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+    password = input("Введите пароль: ")
+
+    if " " in password:
+        print("Пароль не должен содержать пробелов")
+    elif password == correct_password:
+        print("Доступ разрешен")
+        break
+    else:
+        attempts += 1
+        print(f"Неправильный пароль. Осталось попыток: {max_attempts - attempts}")
+        
+if attempts == max_attempts:
+    print("Превышено количество попыток")
 
 
 # Упражнение 3: Работа со списком покупок
@@ -29,6 +62,26 @@
 # то программа должна вывести: “Превышен лимит покупок.” и завершиться.
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
+shopping_list = []
+
+while len(shopping_list) <= 6:
+    item = input("Введите элемент списка покупок (или 'стоп' для завершения): ").lower()
+
+    if item == "стоп":
+        print("Формирование списка завершено.")
+        break
+    elif item in shopping_list:
+        print("Этот элемент уже в списке.")
+    else:
+        shopping_list.append(item)
+
+    if len(shopping_list) > 6:
+        print("Превышен лимит покупок.")
+        break
+
+print("Итоговый список покупок:", shopping_list)
+print("Общее количество элементов в списке:", len(shopping_list))
+
 
 # Тема: Цикл for
 
@@ -37,12 +90,33 @@
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
 
+user_input = input("Введите строку: ").lower()
+
+vowels = "aeiou"
+vowel_count = 0
+
+for char in user_input:
+    if char in vowels:
+        vowel_count += 1
+
+print(f"Количество гласных в строке: {vowel_count}")
+
 
 # Упражнение 2: Генерация и вывод последовательности чисел
 #
 # Напишите программу, которая генерит и выводит последовательность чисел от 1 до 20,
 # но выводит "Fizz" вместо чисел, кратных 3, "Buzz" вместо чисел, кратных 5, и "FizzBuzz"
 # вместо чисел, кратных как 3, так и 5. Используйте цикл for и функцию range.
+
+for number in range(1, 21):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
 
 
 # Проект 1: Управление библиотекой
@@ -53,21 +127,86 @@
 #
 # Требования: Реализуйте работу всех пунктов меню.
 #
-# library = [["Война и мир", "Толстой", "в наличии"],
-#            ["Преступление и наказание", "Достоевский", "выдана"],
-#            ["Мастер и Маргарита", "Булгаков", "в наличии"]]
-#
-# while True:
-#     print("\nМеню")
-#     print("1. Показать список всех книг")
-#     print("2. Добавить книгу")
-#     print("3. Удалить книгу")
-#     print("4. Поменять статус книги")
-#     print("5. Показать книги определенного автора")
-#     print("6. Показать книги с определенным статусом")
-#     choice = input("Выберите действие, введя его номер: ")
-#
-#     # Продолжите программу ниже.
+library = [["Война и мир", "Толстой", "в наличии"],
+           ["Преступление и наказание", "Достоевский", "выдана"],
+           ["Мастер и Маргарита", "Булгаков", "в наличии"]]
+
+while True:
+    print("\nМеню")
+    print("1. Показать список всех книг")
+    print("2. Добавить книгу")
+    print("3. Удалить книгу")
+    print("4. Поменять статус книги")
+    print("5. Показать книги определенного автора")
+    print("6. Показать книги с определенным статусом")
+    print("7. Выйти")
+    choice = input("Выберите действие, введя его номер: ")
+
+    if choice == "1":
+        print("\nСписок всех книг:")
+        for book in library:
+            print(f"{book[0]} - {book[1]} ({book[2]})")
+
+    elif choice == "2":
+        title = input("Введите название книги: ")
+        author = input("Введите автора книги: ")
+        status = input("Введите статус книги (в наличии/выдана): ")
+        library.append([title, author, status])
+        print(f"Книга '{title}' добавлена.")
+
+    elif choice == "3":
+        title = input("Введите название книги, которую хотите удалить: ")
+        found = False
+        for book in library:
+            if book[0].lower() == title.lower():
+                library.remove(book)
+                found = True
+                print(f"Книга '{title}' удалена.")
+                break
+        if not found:
+            print(f"Книга '{title}' не найдена.")
+
+    elif choice == "4":
+        title = input("Введите название книги, статус которой хотите поменять: ")
+        found = False
+        for book in library:
+            if book[0].lower() == title.lower():
+                new_status = input(f"Введите новый статус для книги '{title}' (в наличии/выдана): ")
+                book[2] = new_status
+                found = True
+                print(f"Статус книги '{title}' изменен на '{new_status}'.")
+                break
+        if not found:
+            print(f"Книга '{title}' не найдена.")
+
+    elif choice == "5":
+        author = input("Введите автора: ")
+        print(f"\nКниги автора {author}:")
+        found = False
+        for book in library:
+            if book[1].lower() == author.lower():
+                print(f"{book[0]} ({book[2]})")
+                found = True
+        if not found:
+            print(f"Книги автора {author} не найдены.")
+
+    elif choice == "6":
+        status = input("Введите статус (в наличии/выдана): ")
+        print(f"\nКниги со статусом '{status}':")
+        found = False
+        for book in library:
+            if book[2].lower() == status.lower():
+                print(f"{book[0]} - {book[1]}")
+                found = True
+        if not found:
+            print(f"Книги со статусом '{status}' не найдены.")
+
+    elif choice == "7":
+        print("Программа завершена.")
+        break
+
+    else:
+        print("Некорректный выбор. Пожалуйста, выберите пункт из меню.")
 
 
 # Проект 2: Анализ посещаемости на сайте
@@ -78,3 +217,27 @@
 #
 # days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 # visits = []
+
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
+
+for day in days:
+    visit_count = int(input(f"Введите количество посещений за {day}: "))
+    visits.append(visit_count)
+
+max_visits = max(visits)
+min_visits = min(visits)
+
+max_day = days[visits.index(max_visits)]
+min_day = days[visits.index(min_visits)]
+
+print(f"\nДень с наибольшей посещаемостью: {max_day} ({max_visits} посещений)")
+print(f"День с наименьшей посещаемостью: {min_day} ({min_visits} посещений)")
+
+average_visits = sum(visits) / len(visits)
+print(f"\nСредняя посещаемость за неделю: {average_visits:.2f}")
+
+print("\nДни с посещаемостью выше среднего:")
+for i in range(len(visits)):
+    if visits[i] > average_visits:
+        print(f"{days[i]}: {visits[i]} посещений")
