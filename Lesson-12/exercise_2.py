@@ -9,9 +9,18 @@
 # 4. Замените первую координату на (15, 25).
 # 5. Выведите все координаты, отсортированные по оси x.
 #
-# coordinates = [(10, 20), (30, 40), (50, 60)]
-
-
+coordinates = [(10, 20), (30, 40), (50, 60)]
+print(*coordinates)
+x_c = sum([x[0] for x in coordinates])
+y_c = sum([x[1] for x in coordinates])
+print(x_c, y_c)
+coordinates.append((70,80))
+print(*coordinates)
+coordinates[0] = (15, 25)
+print(*coordinates)
+x_sort = sorted([x[0] for x in coordinates])
+coordinates.sort()
+print(coordinates)
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
 # Необходимо провести различные операции с этими данными.
@@ -23,9 +32,15 @@
 # 4. Замените цену "Apple" на 2.5.
 # 5. Выведите все продукты, отсортированные по цене.
 #
-# products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
 
+for item in products:
+    print(item[0])
 
+pr_sum = sum([x[1] for x in products])
+print(pr_sum)
+products.append(('Date', 4))
+print(products)
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #

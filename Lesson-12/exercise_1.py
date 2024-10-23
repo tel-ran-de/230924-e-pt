@@ -11,13 +11,18 @@
 # 6. Выведите данные о каждом сотруднике в формате:
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 #
-# employees = {
-#     "Alice": {"age": 30, "department": "HR", "salary": 5000},
-#     "Bob": {"age": 25, "department": "IT", "salary": 6000},
-#     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
-# }
+employees = {
+     "Alice": {"age": 30, "department": "HR", "salary": 5000},
+     "Bob": {"age": 25, "department": "IT", "salary": 6000},
+     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
+ }
+for name in employees.keys():
+    print(name)
+salary = sum([ x['salary'] for x in employees.values()])
+print(salary)
 
-
+employees['David'] = {'age':28, 'department': 'IT', 'Salary': 6500}
+print(employees['David']['Salary'])
 # Задача 2: Управление запасами товаров
 # У вас есть словарь, содержащий информацию о запасах товаров в магазине.
 # Необходимо провести различные операции с этими данными.
