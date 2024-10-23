@@ -9,8 +9,23 @@
 # 4. Замените первую координату на (15, 25).
 # 5. Выведите все координаты, отсортированные по оси x.
 #
-# coordinates = [(10, 20), (30, 40), (50, 60)]
+from multiprocessing.connection import reduce_pipe_connection
 
+coordinates = [(10, 20), (30, 40), (50, 60)]
+print(coordinates)
+print("-------------------------------------")
+sumx = sum(coord[0] for coord in coordinates)
+print(sumx)
+sumy = sum(coord[1] for coord in coordinates)
+print(sumy)
+print("-------------------------------------")
+coordinates.append((70, 80))
+print(coordinates)
+print("-------------------------------------")
+coordinates[0] = (15, 25)
+print(coordinates)
+print("-------------------------------------")
+print(sorted(coordinates))
 
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
@@ -23,9 +38,17 @@
 # 4. Замените цену "Apple" на 2.5.
 # 5. Выведите все продукты, отсортированные по цене.
 #
-# products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+print(products)
 
+sumfruits = sum(fruit[1] for fruit in products)
+print(sumfruits)
 
+products.append(("Date", 4))
+print(products)
+
+products[0][1] = 2.5
+print(products)
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
