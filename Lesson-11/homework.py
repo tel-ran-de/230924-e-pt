@@ -43,9 +43,18 @@ print(simple)
 #  8 |   8  16  24  32  40  48  56  64  72  80
 #  9 |   9  18  27  36  45  54  63  72  81  90
 # 10 |  10  20  30  40  50  60  70  80  90 100
-
-
-
+numbers = list(range(1,11))
+print(numbers)
+print(' '*4, end='')
+for num in numbers:
+    print(f'{num:4}', end='')
+print()
+print('-'*44)
+for num1 in numbers:
+    print(f'{num1:3}|', end='')
+    for num2 in numbers:
+        print(f'{num1*num2:4}', end='')
+    print()
 '''
 # Тема: Генераторы списков
 
