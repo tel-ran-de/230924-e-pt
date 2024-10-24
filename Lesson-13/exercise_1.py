@@ -2,9 +2,14 @@
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 #
-# numbers = [1, 2, 3, 4, 5, 6]
+numbers = [1, 2, 3, 4, 5, 6]
 # Вывод функции: (21, 3.5, 3)
-
+def analyze_numbers(num_list):
+    total = sum(num_list)
+    average = total / len(num_list)
+    evens = sum(1 for i in numbers if i%2 == 0)
+    return total, average, evens
+print(analyze_numbers(numbers))
 
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
