@@ -1,4 +1,5 @@
 # Тема: словари
+from idlelib.editor import keynames
 
 # Задача 1: Анализ данных о сотрудниках
 # У вас есть словарь, содержащий информацию о сотрудниках компании.
@@ -18,6 +19,15 @@
 #     "Bob": {"age": 25, "department": "IT", "salary": 6000},
 #     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
 # }
+
+# employees = {
+#     "Alice": {"age": 30, "department": "HR", "salary": 5000},
+#     "Bob": {"age": 25, "department": "IT", "salary": 6000},
+#     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
+# }
+#
+# for i in employees:
+#     print(i)
 
 
 # Задача 2: Управление запасами товаров
