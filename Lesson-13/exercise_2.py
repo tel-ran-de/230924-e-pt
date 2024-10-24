@@ -13,6 +13,18 @@
 #
 # string = "hello world"
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+def count_characters(text):
+    char_count = {}
+    for char in text:  # char = 'h', 'e', 'l', 'l', ..., 'l', 'd'
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
+
+
+string = "hello world"
+print(count_characters(string))
 
 
 # Задача 3: Обработка произвольного числа аргументов
