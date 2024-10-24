@@ -6,6 +6,14 @@
 # values = ["Alice", 30, "New York"]
 # Вывод функции: {'name': 'Alice', 'age': 30, 'city': 'New York'}
 
+def create_dict(keys, values):
+    return dict(zip(keys, values))
+
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+
+print(create_dict(keys, values))  # {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
 
 # Задача 2: Подсчет символов в строке
 # Напишите функцию `count_characters(string)`, которая принимает строку и
@@ -13,6 +21,12 @@
 #
 # string = "hello world"
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+def count_characters(string):
+    return {char: string.count(char) for char in string}
+
+string = "hello world"
+
+print(count_characters(string))  # {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 
 
 # Задача 3: Обработка произвольного числа аргументов
@@ -21,6 +35,12 @@
 #
 # sum_positive_negative(1, -2, 3, -4, 5)
 # Вывод функции: (9, -6)
+def sum_positive_negative(*args):
+    positive_sum = sum(num for num in args if num > 0)
+    negative_sum = sum(num for num in args if num < 0)
+    return positive_sum, negative_sum
+
+print(sum_positive_negative(1, -2, 3, -4, 5))  # (9, -6)
 
 
 # Задача 4: Генерация строки из именованных аргументов
@@ -28,3 +48,8 @@
 #
 # generate_string(name="Alice", age=30, city="New York")
 # Вывод функции: name=Alice, age=30, city=New York
+def generate_string(**kwargs):
+    return ", ".join(f"{key}={value}" for key, value in kwargs.items())
+
+print(generate_string(name="Alice", age=30, city="New York"))
+# name=Alice, age=30, city=New York
