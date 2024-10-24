@@ -63,6 +63,63 @@ print(cube_7)  # 343
 
 
 # Тема: args, kwargs
-#
 # Покажите в формате live-coding и объясните:
-# - Как работать с произвольным числом параметров с помощью args и *kwargs.
+# - Как работать с произвольным числом параметров с помощью *args и *kwargs.
+print('\n# *args произвольное количество неименованных (позиционные) аргументов')
+
+
+def add_even(*args):
+    return sum([i for i in args if i % 2 == 0])
+
+
+print(add_even(1, 2, 3, 4, 5, 6, 7, 8, 9))  # 20
+print(add_even(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))  # 42
+print(add_even(4))  # 4
+
+
+def poppuri(*args):
+    for el in args:
+        if isinstance(el, str):
+            print(f'{el} - строка')
+        elif isinstance(el, int):
+            print(f'{el} - целое число')
+        else:
+            print(f'Мы не знаем что такое {el}')
+
+
+poppuri(1, 2, 3, 'stroka', 7.9, True, False, 10)
+# 1 - целое число
+# 2 - целое число
+# 3 - целое число
+# stroka - строка
+# Мы не знаем что такое 7.9
+# True - целое число
+# False - целое число
+# 10 - целое число
+
+
+print('\n# **kwargs произвольное количество именованных аргументов')
+# Примеры с *args и **kwargs
+
+
+def describe_person(name, age, *args, **kwargs):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print("Additional info:", args)
+    print("Other details:", kwargs)
+    if kwargs.get('salary'):
+        print(f'{name} зарабатывает {kwargs["salary"]} ')
+
+
+describe_person('Alice', 30, 'Engineer', 'UK', salary=3000, hair='blond', height=168)
+# Name: Alice
+# Age: 30
+# Additional info: ('Engineer', 'UK')
+# Other details: {'salary': 3000, 'hair': 'blond', 'height': 168}
+# Alice зарабатывает 3000
+
+describe_person('Bob', 27, 'Canada', height=175)
+# Name: Bob
+# Age: 27
+# Additional info: ('Canada',)
+# Other details: {'height': 175}
