@@ -33,14 +33,9 @@
 # else:
 #     print('Вы ввели неверную оценку!!!')
 
-print('тернарный оператор')
-number = int(input('Введите целое число: '))
-# # if number >= 0:
-# #     result = 'Неотрицательное'
-# # else:
-# #     result = 'Отрицательное'
-result = 'Неотрицательное' if number >= 0 else 'Отрицательное'
-# result = 'Положительное' if number > 0 else ('Отрицательное' if number < 0 else 'Ноль')
-print(result)
-
-# print('Неотрицательное' if int(input('Введите целое число: ')) >= 0 else 'Отрицательное')
+word=input('Введите слово:')
+gls =0
+for letter in word:
+        if letter in "aeiou":
+          gls +=1
+print(gls)
