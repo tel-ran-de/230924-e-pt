@@ -1,6 +1,5 @@
 # Тема: Список, срезы списков.
-from asyncio import all_tasks
-from unittest.mock import right
+
 
 # Упражнение 1: Управление списком покупок
 # Создайте список покупок, содержащий элементы "bread", "milk", "eggs".
