@@ -12,19 +12,18 @@ from operator import attrgetter
 # программа должна вывести сообщение "Вы ввели большее число" и продолжать запрашивать числа.
 # Если пользователь угадал, то программа должна вывести "Вы угадали число" и завершиться.
 
- ollga-faruk-l10
-#num = 90
-#while True:
-#    number = int(input('Введите число: '))
-#    if number < num:
-#        print('Слишком маленькое число!')
-#    elif number > num:
-#        print('Слишком большое число!')
-#    else:
-#        print('Вы угадали число.')
-#        break
-#
 
+num=43
+while True:
+    numb = int(input("ВВедите число:"))
+    if numb < num:
+        print("Слишком маленькое число")
+    elif numb > num :
+        print("Вы ввели большее число")
+    else:
+        print("Вы угадали число")
+        break
+ main
 
  ollga-faruk
 # Упражнение 2: Проверка пароля
@@ -35,6 +34,23 @@ from operator import attrgetter
 # Если введен правильный пароль, программа должна выводить сообщение "Доступ разрешен" и завершаться.
 # Если после трех неправильных попыток пароль не введен правильно, программа должна выводить сообщение
 # "Превышено количество попыток" и завершаться.
+t = 4
+while True :
+     p = input('Введите пароль:')
+     if p == 'pyton123':
+       print('Доступ разрешен')
+       break
+     if ' ' in p :
+         print('Пароль не должен содержать пробелов')
+     t -= 1
+     if t > 0:
+       print('Осталось', t)
+     else:
+       print('Превышено количество попыток')
+       break
+
+
+
 
  ollga-faruk-l10
 #password = "python123"
@@ -99,6 +115,12 @@ from operator import attrgetter
 #
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
+word=input('Введите слово:')
+gls =0
+for letter in word:
+        if letter in "aeiou":
+          gls +=1
+print(gls)
 
  ollga-faruk-l10
 #vowels = "aeiou"
@@ -119,18 +141,17 @@ from operator import attrgetter
 # Напишите программу, которая генерит и выводит последовательность чисел от 1 до 20,
 # но выводит "Fizz" вместо чисел, кратных 3, "Buzz" вместо чисел, кратных 5, и "FizzBuzz"
 # вместо чисел, кратных как 3, так и 5. Используйте цикл for и функцию range.
- ollga-faruk-l10
-#for i in range(1, 20):
-#    if i % 3 == 0 and i % 5 == 0:
-#     print("FizzBuzz")
-#    elif i % 3 == 0:
-#       print("Fizz")
-#    elif i % 5 == 0:
-#        print("Buzz")
-#    else:
-#        print(i)
- ollga-faruk
 
+for i in range(1, 21):
+    if i % 3 == 0 and i % 5 == 0:
+        print('FizzBuzz')
+    elif i % 3 == 0:
+        print('Fizz')
+    elif i % 5 == 0:
+        print('Buzz')
+    else:
+        print(i)
+ main
 
 # Проект 1: Управление библиотекой
 #
