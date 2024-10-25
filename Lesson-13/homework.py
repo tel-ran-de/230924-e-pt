@@ -143,22 +143,24 @@ inventory = [
 ]
 
 def print_products(products_list):
-    print('-'*28)
+    print('-'*27)
     columns = list(products_list[0].keys())
     print('|', end='')
     for item in columns:
         print(f' {item} ', end='|')
     print()
-    print('-' * 28)
+    print('-' * 27)
     for product in products_list:
         vals = list(product.items())
         print('|', end='')
         for val in vals:
-            print(f' {val[1]}: ', end='|')
+            print(f' {val[1]:{len(val[0])+1}}', end='|')
         print()
-        print('-' * 28)
+        print('-' * 27)
 
-print_products(inventory)
+def add_product(products_list):
+
+
 
 '''while True:
     print('-------')
