@@ -1,16 +1,30 @@
 # Задача 1: Анализ чисел
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
-#
-# numbers = [1, 2, 3, 4, 5, 6]
+def analyze_numbers(numbers_list):
+    numbers_sum = sum(numbers_list)
+    average = numbers_sum/len(numbers_list)
+    evens = sum(1 for i in numbers if i % 2 == 0)
+    return numbers_sum, average, evens
+
+numbers = [1, 2, 3, 4, 5, 6]
+print(analyze_numbers(numbers))
+
 # Вывод функции: (21, 3.5, 3)
 
 
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
-#
-# strings = ["apple", "banana", "cherry", "date"]
+def analyze_strings(string):
+    min_str = min(string, key=len)
+    max_str = max(string, key=len)
+    a_total = sum(1 for word in string if 'a' in word)
+    print((min_str, max_str, a_total))
+    return min_str, max_str, a_total
+
+strings = ["apple", "banana", "cherry", "date"]
+analyze_strings(strings)
 # Вывод функции: ('banana', 'date', 3)
 
 
@@ -18,7 +32,16 @@
 # Напишите функцию `analyze_salaries(employees)`, которая принимает словарь сотрудников и
 # возвращает кортеж из трех значений: средняя зарплата, максимальная зарплата и имя сотрудника с максимальной зарплатой.
 #
-# employees = {"Alice": 5000, "Bob": 7000, "Charlie": 6000}
+def analyze_salaries(employees):
+    salary_list = [val for val in employees.values()]
+    average = sum(salary_list)/len(employees)
+    max_salary = max(salary_list)
+    name =[item[0] for item in list(employees.items()) if item[1] == max_salary]
+    print(average, max_salary, *name)
+    return average, max_salary, *name
+employees = {"Alice": 5000, "Bob": 7000, "Charlie": 6000}
+print(analyze_salaries(employees))
+
 # Вывод функции: (6000.0, 7000, 'Bob')
 
 
@@ -26,7 +49,14 @@
 # Напишите функцию `filter_numbers(numbers)`, которая принимает список чисел и
 # возвращает кортеж из двух списков: четные числа и нечетные числа.
 #
-# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def filter_numbers(numbers_list):
+    even= [x for x in numbers_list if x % 2 == 0]
+    odd = [x for x in numbers_list if x % 2 != 0]
+    return even, odd
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(filter_numbers(numbers))
+
 # Вывод функции: ([2, 4, 6, 8, 10], [1, 3, 5, 7, 9])
 
 
@@ -34,16 +64,29 @@
 # Напишите функцию `create_dict(keys, values)`, которая принимает два списка: ключи и значения,
 # и возвращает словарь, где ключи из первого списка, а значения из второго.
 #
-# keys = ["name", "age", "city"]
-# values = ["Alice", 30, "New York"]
+def create_dict(keys, values):
+    return dict(zip(keys, values))
+
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+print(create_dict(keys, values))
 # Вывод функции: {'name': 'Alice', 'age': 30, 'city': 'New York'}
 
 
 # Задача 6: Подсчет символов в строке
 # Напишите функцию `count_characters(string)`, которая принимает строку и
 # возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
-#
-# string = "hello world"
+def count_characters(string):
+    result_dict = {}
+    for char in string:
+        if char in result_dict:
+            result_dict[char] += 1
+        else:
+            result_dict[char] = 1
+    return result_dict
+
+string = "hello world"
+print(count_characters(string))
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 
 
@@ -51,14 +94,26 @@
 # Напишите функцию `sum_positive_negative(*args)`, которая принимает произвольное число числовых аргументов
 # и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
 #
-# sum_positive_negative(1, -2, 3, -4, 5)
+def sum_positive_negative(*args):
+    positiv_sum = sum(x for x in args if x > 0)
+    negativ_sum = sum(x for x in args if x < 0)
+    print(positiv_sum, negativ_sum)
+    return positiv_sum, negativ_sum
+
+
+sum_positive_negative(1, -2, 3, -4, 5)
 # Вывод функции: (9, -6)
 
 
 # Задача 8: Генерация строки из именованных аргументов
 # Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
 #
-# generate_string(name="Alice", age=30, city="New York")
+def generate_string(**kwargs):
+    res_list = [f'{item[0]}= {item[1]},' for item in list(kwargs.items())]
+    print(*res_list)
+
+
+generate_string(name="Alice", age=30, city="New York")
 # Вывод функции: name=Alice, age=30, city=New York
 
 
