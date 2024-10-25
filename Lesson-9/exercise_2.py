@@ -1,23 +1,41 @@
 # Упражнение 1: Управление списком фильмов и их рейтингов
 
 # 1.1 Создайте список фильмов, содержащий элементы "Movie1", "Movie2", "Movie3".
+cinemas = ["Movie1", "Movie2", "Movie3"]
+print(cinemas)
 
 # 1.2 Пропишите условие: добавить в список фильм "Movie4", если его еще нет в списке.
+if "Movie4" not in cinemas:
+    cinemas.append("Movie4")
+print(cinemas)
 
 # 1.3 Пропишите условия: если количество фильмов больше 2, то название второго фильма меняется на "Updated Movie2".
 # Если количество фильмов меньше 5, то объедините имеющийся список с новым списком ["Movie5", "Movie6", "Movie7"]
+if len(cinemas) > 2:
+    cinemas[1] = "Updated Movie2"
+if len(cinemas) < 5:
+    cinemas.extend(["Movie5", "Movie6", "Movie7"])
+print(cinemas)
 
 # 1.4 Создайте вложенный список, где каждый фильм имеет свой год выпуска и рейтинг:
 # ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
 # ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]
+cinema_new = [["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
+        ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
 
 # 1.5 Добавьте фильм ["Movie", 2002, 7.7] в начало вложенного списка.
+cinema_new.insert(0, ["Movie", 2002, 7.7])
+print(cinema_new)
 
 # 1.6 Выведите список фильмов и вложенный список.
 # print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 # print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
 # ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
+print()
+print()
 
+print(cinemas)
+print(cinema_new)
 
 
 
