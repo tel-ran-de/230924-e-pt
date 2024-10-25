@@ -8,6 +8,20 @@
 # Число является простым, если оно делится только на 1 и на само себя.
 # Для каждого числа в диапазоне от 2 до 50, проверьте, делится ли оно на любое число меньше него (кроме 1).
 
+number = 2
+while number <= 50:
+    is_prime = True
+    i = 2
+    while i < number:
+        if number % i == 0:
+           is_prime = False
+             break
+        i += 1
+    if is_prime:
+
+     print(number)
+    number += 1
+
 # Упражнение 2: Таблица умножения
 
 # - Создайте программу, которая выводит таблицу умножения размером 10x10.
@@ -29,26 +43,45 @@
 #  9 |   9  18  27  36  45  54  63  72  81  90
 # 10 |  10  20  30  40  50  60  70  80  90 100
 
+print("   ", end="")
+for i in range(1, 11):
+    print(f"{i:4}", end="")
+print('\n_______________________________________________')
+
+for i in range(1, 11):
+    print(f'{i:2} |', end='')
+    for j in range(1, 11):
+       print(f'{i * j:4}', end='')
+    print()
+
+
 
 # Тема: Генераторы списков
 
 # Упражнение 1: Напишите программу с помощью генераторов списков,
 # которая находит все числа от 1 до 1000, которые делятся на 7.
-
+multiples_number_7 = [number for number in range(1, 1001) if number % 7 ==0]
+print(multiples_number_7)
 
 # Упражнение 2: Напишите программу с помощь генераторов списков,
 # которая найдите все числа от 1 до 1000, в которых есть цифра 3.
 
+print([number for number in range(1, 1001) if '3' in str(number)])
+
 
 # Упражнение 3: Напишите программу с помощь генераторов списков,
 # которая посчитает количество пробелов в строке
-# some_string = 'the slow solid squid swam sumptuously through the slimy swamp'.
+
+some_string = ('the slow solid squid swam sumptuously through the slimy swamp')
+
+print(len([space for space in some_string if space == " "]))
 
 
 # Упражнение 4: Напишите программу с помощь генераторов списков,
 # которая создаст список всех гласных букв в строке
-# some_string = 'the quick brown fox jumps over the lazy dog'.
 
+some_string = 'the quick brown fox jumps over the lazy dog'
+print([char for char in some_string if char in 'aeiou'])
 
 # Упражнение 5: Сумма элементов в каждом ряду матрицы
 # С помощью генераторов списков создайте матрицу 3x3 из чисел от 20 до 28
@@ -60,6 +93,14 @@
 # Напишите код для вычисления суммы элементов в каждом ряду (в каждом вложенном списке).
 # Выведите получившиеся значения в консоль.
 
+matrix = [[20 + i + j * 3 for i in range(3)] for j in range(3)]
+
+row_sums = [sum(row) for row in matrix]
+
+for row in matrix:
+    print(row)
+
+#print("Сумма элементов в каждом ряду:", row_sums)
 
 # Упражнение 6: Подсчет количества четных и нечетных чисел в матрице
 # Дана матрица
@@ -76,6 +117,17 @@
 # print(f"Количество нечетных чисел: ")
 
 
+matrix = [[2, 5, 8, 11],[14, 17, 20, 23],[26, 29, 32, 35],[38, 41, 44, 47]]
+
+for row in matrix:
+    even_count = len([num for num in row if num % 2 == 0])
+    odd_count = len([num for num in row if num % 2 != 0])
+
+    print(f"Строка: {row}")
+    print(f"Количество четных чисел: {even_count}")
+    print(f"Количество нечетных чисел: {odd_count}")
+    print()
+
 # Упражнение 7: Поиск минимального и максимального значения в матрице
 # Дана матрица
 # matrix = [
@@ -86,6 +138,19 @@
 
 # Напишите программу для вывода минимального и максимального значений в каждом ряду (вложенном списке) матрицы.
 
+matrix = [
+    [34, 23, 18],
+    [14, 55, 27],
+    [19, 42, 31]
+]
+
+for row in matrix:
+    min_value = min(row)
+    max_value = max(row)
+
+    print(f"Строка: {row}")
+    print(f"Минимальное значение: {min_value}")
+   print(f"Максимальное значение: {max_value}")
 
 # Упражнение 8: Перемножение матриц
 #
@@ -97,3 +162,11 @@
 #     product = [[30, 24, 18], [84, 69, 54], [138, 114, 90]]
 #
 # - Выведите исходные матрицы и результат их произведения.
+
+matrix1 = [[i + j * 3 + 1 for i in range(3)] for j in range(3)]
+matrix2 = [[9 - (i + j * 3) for i in range(3)] for j in range(3)]
+print("matrix1 =",  matrix1)
+print("matrix2 =", matrix2)
+
+product = [[sum(matrix1[i][k] * matrix2[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+print("произведения этих матриц =", product)
