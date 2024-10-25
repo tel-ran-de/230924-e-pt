@@ -126,7 +126,7 @@ for line in matrix:
             print(f'Максимальное значение в ряду: {line} = {i}')
 
 # Напишите программу для вывода минимального и максимального значений в каждом ряду (вложенном списке) матрицы.
-
+print('\n')
 
 # Упражнение 8: Перемножение матриц
 #
@@ -138,3 +138,12 @@ for line in matrix:
 #     product = [[30, 24, 18], [84, 69, 54], [138, 114, 90]]
 #
 # - Выведите исходные матрицы и результат их произведения
+matrix1 = [[i + j * 3 + 1 for i in range(3)] for j in range(3)]
+print(f'matrix1 = {matrix1}')
+matrix2 = [[9 - (j * 3 + i) for i in range(3)] for j in range(3)]
+print(f'matrix2 = {matrix2}')
+print('\n')
+p1 = [30 - (i * 6 ) for i in range(3)]
+p2 = [84 - (i * 15 ) for i in range(3)]
+p3 = [138 - (i * 24 ) for i in range(3)]
+print(f'product = [{p1}, {p2}, {p3}]')
