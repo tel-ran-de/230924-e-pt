@@ -1,4 +1,4 @@
-# Задача 1: Анализ чисел
+'''# Задача 1: Анализ чисел
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 def analyze_numbers(numbers_list):
@@ -109,12 +109,12 @@ sum_positive_negative(1, -2, 3, -4, 5)
 # Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
 #
 def generate_string(**kwargs):
-    res_list = [f'{item[0]}= {item[1]},' for item in list(kwargs.items())]
+    res_list = [f'{item[0]} = {item[1]},' for item in list(kwargs.items())]
     print(*res_list)
 
 
 generate_string(name="Alice", age=30, city="New York")
-# Вывод функции: name=Alice, age=30, city=New York
+# Вывод функции: name=Alice, age=30, city=New York'''
 
 
 # Проект: Перепишите проект из урока 7 в функциональном стиле.
@@ -134,11 +134,65 @@ generate_string(name="Alice", age=30, city="New York")
 # 6. Вывести список товаров меньше определнной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
 
-# inventory = [
-#     {'product': "Laptop", 'price': 10, 'count': 13},
-#     {'product': "Mouse", 'price': 50, 'count': 1},
-#     {'product': "Keyboard", 'price': 30, 'count': 33},
-#     {'product': "Monitor", 'price': 20, 'count': 10}
-# ]
 
+inventory = [
+    {'product': "Laptop", 'price': 10, 'count': 13},
+    {'product': "Mouse", 'price': 50, 'count': 1},
+    {'product': "Keyboard", 'price': 30, 'count': 33},
+    {'product': "Monitor", 'price': 20, 'count': 10}
+]
 
+def print_products(products_list):
+    print('-'*28)
+    columns = list(products_list[0].keys())
+    print('|', end='')
+    for item in columns:
+        print(f' {item} ', end='|')
+    print()
+    print('-' * 28)
+    for product in products_list:
+        vals = list(product.items())
+        print('|', end='')
+        for val in vals:
+            print(f' {val[1]}: ', end='|')
+        print()
+        print('-' * 28)
+
+print_products(inventory)
+
+'''while True:
+    print('-------')
+    print('\nМеню:')
+    print('1. Показать список товаров.')
+    print('2. Добавить товар.')
+    print('3. Удалить товар.')
+    print('4. Обновить название товара, стоимость или количество.')
+    print('5. Найти товар по названию.')
+    print('6. Вывести список товаров меньше определённой стоимости.')
+    print('7. Вывести список товаров меньше определенного количества.')
+
+    choice = input('Выберите действие: ')
+
+    if choice == '1':
+        print('-------')
+        print('Список товаров')
+        for item in inventory:
+            print(f'Название: {item["product"]}, Цена: {item["price"]}, Количество: {item["count"]}')
+    elif choice == '2':
+        pass
+    elif choice == '3':
+        pass
+    elif choice == '4':
+        pass
+    elif choice == '5':
+        pass
+    elif choice == '6':
+        pass
+    elif choice == '7':
+        pass
+    elif choice == '8':
+        print('Выход из программы')
+        break
+    else:
+        print('Неверный выбор. Пожалуйста, выберите снова.')
+'''
