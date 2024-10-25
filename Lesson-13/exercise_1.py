@@ -15,7 +15,16 @@ print(analyze_numbers(numbers))
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
 #
-# strings = ["apple", "banana", "cherry", "date"]
+strings = ["apple", "banana", "cherry", "date"]
+
+def analyze_strings(string):
+    min_str = 10000
+    max_str = -1
+    for word in string:
+        if len(word) > max_str:
+            max_str = len(word)
+        if len(word) < min_str:
+            min_str
 # Вывод функции: ('banana', 'date', 3)
 
 
