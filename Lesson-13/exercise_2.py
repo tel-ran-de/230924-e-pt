@@ -2,16 +2,24 @@
 # Напишите функцию `create_dict(keys, values)`, которая принимает два списка: ключи и значения,
 # и возвращает словарь, где ключи из первого списка, а значения из второго.
 #
-# keys = ["name", "age", "city"]
-# values = ["Alice", 30, "New York"]
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
 # Вывод функции: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
+def create_dict(keys, values):
+    return { keys[i]: values[i] for i in range(len(keys))}
+print(create_dict(keys,values))
+
 
 
 # Задача 2: Подсчет символов в строке
 # Напишите функцию `count_characters(string)`, которая принимает строку и
 # возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
 #
-# string = "hello world"
+string = "hello world"
+def count_characters(string):
+    return {for i in string}
+
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 
 
