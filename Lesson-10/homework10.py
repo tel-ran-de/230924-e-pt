@@ -190,21 +190,21 @@
 # за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
 # за неделю и выводить дни с посещаемостью выше среднего.
 #
-days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-visits = []
-
-for day in days:
-    visit_count = int(input(f"Введите количество посещений за {day}: "))
-    visits.append(visit_count)
-max_visits = max(visits)
-min_visits = min(visits)
-max_day = days[visits.index(max_visits)]
-min_day = days[visits.index(min_visits)]
-print(f"День с наибольшей посещаемостью: {max_day} ")
-print(f"День с наименьшей посещаемостью: {min_day} ")
-middle_visits = sum(visits) / len(visits)
-print(f"Средняя посещаемость за неделю: {middle_visits:.2f}")
-print("Дни с посещаемостью выше среднего:")
-for i in range(len(visits)):
-    if visits[i] > middle_visits:
-        print(f"{days[i]}")
+# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+# visits = []
+#
+# for day in days:
+#     visit_count = int(input(f"Введите количество посещений за {day}: "))
+#     visits.append(visit_count)
+# max_visits = max(visits)
+# min_visits = min(visits)
+# max_day = days[visits.index(max_visits)]
+# min_day = days[visits.index(min_visits)]
+# print(f"День с наибольшей посещаемостью: {max_day} ")
+# print(f"День с наименьшей посещаемостью: {min_day} ")
+# middle_visits = sum(visits) / len(visits)
+# print(f"Средняя посещаемость за неделю: {middle_visits:.2f}")
+# print("Дни с посещаемостью выше среднего:")
+# for i in range(len(visits)):
+#     if visits[i] > middle_visits:
+#         print(f"{days[i]}")
