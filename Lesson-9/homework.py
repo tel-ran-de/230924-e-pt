@@ -1,6 +1,7 @@
 # Тема: Список, срезы списков.
 
 
+
 # Упражнение 1: Управление списком покупок
 # Создайте список покупок, содержащий элементы "bread", "milk", "eggs".
 shopping_list = ["bread", "milk", "eggs"]
@@ -18,6 +19,7 @@ detailed_shopping_list = [
 ]
 print(detailed_shopping_list)
 
+
 # Выведите список покупок, срез и вложенный список.
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
 # print(slice_shopping_list)  # Ожидаемый результат: ["bread", "almond milk"]
@@ -26,6 +28,7 @@ print(detailed_shopping_list)
 
 # Упражнение 2: Управление списком студентов и их оценок
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
+
 students_list = ["Alice", "Bob", "Charlie", "David"]
 print(students_list)
 # Измените имя второго студента на "Eve".
@@ -44,6 +47,7 @@ students_grades = [
 ]
 print(students_grades)
 
+
 # Выведите список студентов, срез и вложенный список.
 # print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
 # print(top_students)  # Ожидаемый результат: ["Bob", "Charlie"]
@@ -53,6 +57,7 @@ print(students_grades)
 
 # Упражнение 3: Управление списком задач
 # Создайте список задач, содержащий элементы "task1", "task2", "task3", "task4.
+
 tasks = ["task1", "task2", "task3", "task4"]
 print(tasks)
 # Измените третью задачу на "task3 updated".
@@ -70,6 +75,7 @@ detailed_tasks = [
     ["task4", False]
 ]
 print(detailed_tasks)
+
 # Выведите список задач, срез и вложенный список.
 # print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3 updated", "task4"]
 # print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
@@ -81,6 +87,7 @@ print(detailed_tasks)
 
 # Упражнение 1: Управление списком фильмов и их рейтингов
 # 1.1 Создайте список фильмов, содержащий элементы "Movie1", "Movie2", "Movie3".
+
 movie_list = ["Movie1", "Movie2", "Movie3"]
 
 # 1.2 Пропишите условие: добавить в список фильм "Movie4", если его еще нет в списке.
@@ -112,6 +119,7 @@ movie_details = [
 ]
 print(movie_details)
 
+
 # 1.5 Добавьте фильм ["Movie", 2002, 7.7] в начало вложенного списка.
 # 1.6 Выведите список фильмов и вложенный список.
 # print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
@@ -121,6 +129,7 @@ print(movie_details)
 
 # Упражнение 2: Анализ списка курсов и их продолжительности
 # 2.1 Создайте список курсов, содержащий элементы "Python", "Java", "JavaScript".
+
 courses_list = ["Python", "Java", "JavaScript"]
 # 2.2 Добавьте в список курс "C++".
 courses_list.append("C++")
@@ -159,6 +168,7 @@ courses_total_hours = 0
 for time in courses_time:
     courses_total_hours += time[1]
 print(courses_total_hours)
+
 # 2.8 Выведите в консоль:
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
@@ -185,6 +195,7 @@ print(courses_total_hours)
 
 # 4. Пользователь должен иметь возможность удалить задачу. Чтобы удалить задачу, запросите ее номер.
 # Если номер корректный, то удалите ее.
+
 
 tasks = []
 

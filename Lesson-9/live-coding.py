@@ -1,5 +1,6 @@
 # Тема 1. Продемонстрируйте и объясните в режиме live-coding:
 # - создание списка,
+
 print('Тема 1')
 fruits = ['apple', 'banana', 'peach']
 print(fruits)
@@ -37,9 +38,14 @@ users = [
     ['user3', 'password', 'email3@example.com'],
 ]
 
+# - доступ к элементам списка,
+# - изменение значения элемента списка,
+# - получение среза,
+# - создание и работу с вложенными списками.
 
 # Тема 2. Продемонстрируйте и объясните в режиме live-coding:
 # - Использование различных методов списков.
+
 print('Тема 2')
 numbers = [1, 2, 3]
 numbers.append(4)
@@ -85,4 +91,11 @@ print(id(string))
 print(string)
 string = string.replace('e', 'a')
 print(id(string))
+
 print(string)
+
+print(string)
+
+# - Сравнение списков
+# - Изменяемость списков и неизменяемость строк
+
