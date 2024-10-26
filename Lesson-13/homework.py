@@ -1,4 +1,4 @@
-'''# Задача 1: Анализ чисел
+# Задача 1: Анализ чисел
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 def analyze_numbers(numbers_list):
@@ -114,7 +114,7 @@ def generate_string(**kwargs):
 
 
 generate_string(name="Alice", age=30, city="New York")
-# Вывод функции: name=Alice, age=30, city=New York'''
+# Вывод функции: name=Alice, age=30, city=New York
 
 
 # Проект: Перепишите проект из урока 7 в функциональном стиле.
