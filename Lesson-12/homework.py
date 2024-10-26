@@ -13,12 +13,26 @@
 # 6. Выведите данные о каждом сотруднике в формате:
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 #
-# employees = {
-#     "Alice": {"age": 30, "department": "HR", "salary": 5000},
-#     "Bob": {"age": 25, "department": "IT", "salary": 6000},
-#     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
-# }
+employees = {
+    "Alice": {"age": 30, "department": "HR", "salary": 5000},
+    "Bob": {"age": 25, "department": "IT", "salary": 6000},
+    "Charlie": {"age": 35, "department": "Finance", "salary": 7000}}
 
+for name in employees.keys():
+    print(name)
+print('\n')
+total_salary = sum(employee["salary"] for employee in employees.values())
+print(f"Общая сумма зарплат всех сотрудников: {total_salary}")
+print('\n')
+employees["David"] = {"age": 28, "department": "IT", "salary": 6500}
+
+employees["Alice"]["salary"] = 5500
+
+del employees["Charlie"]
+
+for name, details in employees.items():
+    print(f"Имя: {name}, Возраст: {details['age']}, Отдел: {details['department']}, Зарплата: {details['salary']}")
+print('==================================================')
 
 # Задача 2: Управление запасами товаров
 # У вас есть словарь, содержащий информацию о запасах товаров в магазине.
@@ -32,13 +46,27 @@
 # 5. Добавьте новый товар "Dates" с количеством 15 и ценой 4.
 # 6. Выведите общую стоимость всех товаров (количество * цена для каждого товара и сумма этих значений).
 #
-# inventory = {
-#     "Apples": {"quantity": 50, "price": 2},
-#     "Bananas": {"quantity": 30, "price": 1},
-#     "Cherries": {"quantity": 20, "price": 3},
-# }
+inventory = {
+    "Apples": {"quantity": 50, "price": 2},
+    "Bananas": {"quantity": 30, "price": 1},
+    "Cherries": {"quantity": 20, "price": 3},
+}
 
+for product in inventory.keys():
+    print(product)
 
+inventory["Apples"]["quantity"] += 10
+
+inventory["Bananas"]["price"] = 1.5
+
+del inventory["Cherries"]
+
+inventory["Dates"] = {"quantity": 15, "price": 4}
+
+total_value = sum(item["quantity"] * item["price"] for item in inventory.values())
+print(f"Общая стоимость всех товаров: {total_value}")
+
+print('====================================================')
 # Тема: кортежи и множества.
 
 # Задача 1: Обработка данных о координатах
@@ -52,7 +80,21 @@
 # 4. Замените первую координату на (15, 25).
 # 5. Выведите все координаты, отсортированные по оси x.
 #
-# coordinates = [(10, 20), (30, 40), (50, 60)]
+coordinates = [(10, 20), (30, 40), (50, 60)]
+
+print(f'Все координаты: {coordinates}')
+
+sum_x = sum(x for x, y in coordinates)
+sum_y = sum(y for x, y in coordinates)
+print(f"Сумма координат по оси x: {sum_x}")
+print(f"Сумма координат по оси y: {sum_y}")
+
+coordinates.append((70, 80))
+
+coordinates[0] = (15, 25)
+
+print(f'Новые координаты: {coordinates}')
+print('=====================================================')
 
 
 # Задача 2: Обработка данных о продуктах

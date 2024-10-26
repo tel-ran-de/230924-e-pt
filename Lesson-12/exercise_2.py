@@ -9,25 +9,6 @@
 # 4. Замените первую координату на (15, 25).
 # 5. Выведите все координаты, отсортированные по оси x.
 #
-coordinates = [(10, 20), (30, 40), (50, 60)]
-
-for coord in coordinates:
-    print(coord)
-
-sum_x = sum(x for x, y in coordinates)
-sum_y = sum(y for x, y in coordinates)
-print(f"\nСумма координат по оси x: {sum_x}")
-print(f"Сумма координат по оси y: {sum_y}")
-
-coordinates.append((70, 80))
-
-coordinates[0] = (15, 25)
-
-sorted_coordinates = sorted(coordinates, key=lambda coord: coord[0])
-print("\nКоординаты, отсортированные по оси x:")
-for coord in sorted_coordinates:
-    print(coord)
-
 
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
