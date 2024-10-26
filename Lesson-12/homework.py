@@ -19,6 +19,28 @@
 #     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
 # }
 
+employees = {
+    "Alice": {"age": 30, "department": "HR", "salary": 5000},
+    "Bob": {"age": 25, "department": "IT", "salary": 6000},
+    "Charlie": {"age": 35, "department": "Finance", "salary": 7000}}
+
+for name in employees.keys():
+    print(name)
+
+total_salary = sum(employee["salary"] for employee in employees.values())
+print(f"\nОбщая сумма зарплат всех сотрудников: {total_salary}")
+
+employees["David"] = {"age": 28, "department": "IT", "salary": 6500}
+
+employees["Alice"]["salary"] = 5500
+
+del employees["Charlie"]
+
+for name, details in employees.items():
+    print(f"Имя: {name}, Возраст: {details['age']}, Отдел: {details['department']}, Зарплата: {details['salary']}")
+
+
+
 
 # Задача 2: Управление запасами товаров
 # У вас есть словарь, содержащий информацию о запасах товаров в магазине.
@@ -39,6 +61,28 @@
 # }
 
 
+inventory = {
+    "Apples": {"quantity": 50, "price": 2},
+    "Bananas": {"quantity": 30, "price": 1},
+    "Cherries": {"quantity": 20, "price": 3},
+}
+
+for product in inventory.keys():
+    print(product)
+
+inventory["Apples"]["quantity"] += 10
+
+inventory["Bananas"]["price"] = 1.5
+
+del inventory["Cherries"]
+
+inventory["Dates"] = {"quantity": 15, "price": 4}
+
+total_value = sum(item["quantity"] * item["price"] for item in inventory.values())
+print(f"\nОбщая стоимость всех товаров: {total_value}")
+
+
+
 # Тема: кортежи и множества.
 
 # Задача 1: Обработка данных о координатах
@@ -53,6 +97,25 @@
 # 5. Выведите все координаты, отсортированные по оси x.
 #
 # coordinates = [(10, 20), (30, 40), (50, 60)]
+
+coordinates = [(10, 20), (30, 40), (50, 60)]
+for coord in coordinates:
+    print(coord)
+
+sum_x = sum(x for x, y in coordinates)
+sum_y = sum(y for x, y in coordinates)
+print(f"\nСумма координат по оси x: {sum_x}")
+print(f"Сумма координат по оси y: {sum_y}")
+
+coordinates.append((70, 80))
+
+coordinates[0] = (15, 25)
+
+sorted_coordinates = sorted(coordinates, key=lambda coord: coord[0])
+print("\nКоординаты, отсортированные по оси x:")
+for coord in sorted_coordinates:
+    print(coord)
+
 
 
 # Задача 2: Обработка данных о продуктах
@@ -69,6 +132,24 @@
 # products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
 
 
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+for product in products:
+    print(product)
+
+total_cost = sum(price for name, price in products)
+print(f"\nСуммарная стоимость всех продуктов: {total_cost}")
+
+products.append(("Date", 4))
+
+products = [(name, 2.5) if name == "Apple" else (name, price) for name, price in products]
+
+sorted_products = sorted(products, key=lambda product: product[1])
+print("\nПродукты, отсортированные по цене:")
+for product in sorted_products:
+    print(product)
+
+
+
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
@@ -80,6 +161,21 @@
 # 5. Выведите количество пользователей.
 #
 # users = {"Alice", "Bob", "Charlie"}
+
+users = {"Alice", "Bob", "Charlie"}
+
+for user in users:
+    print(user)
+
+users.add("David")
+
+users.remove("Bob")
+
+if "Alice" in users:
+    print("\nПользователь 'Alice' есть в множестве.")
+
+print(f"\nКоличество пользователей: {len(users)}")
+
 
 
 # Задача 4: Управление наборами данных
@@ -95,6 +191,25 @@
 #
 # set1 = {1, 2, 3, 4, 5}
 # set2 = {4, 5, 6, 7, 8}
+
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+print("Множество 1:", set1)
+print("Множество 2:", set2)
+
+union = set1.union(set2)
+print("\nОбъединение множеств:", union)
+
+intersection = set1.intersection(set2)
+print("Пересечение множеств:", intersection)
+
+difference = set1.difference(set2)
+print("Разность множеств (set1 - set2):", difference)
+
+is_subset = set2.issubset(set1)
+print(f"\nЯвляется ли set2 подмножеством set1: {is_subset}")
 
 
 # Проект: Управление инвентарем в интернет-магазине
@@ -120,3 +235,45 @@
 #     {'product': "Monitor", 'price': 20, 'count': 10}
 # ]
 
+nventory = [
+    {'product': "Laptop", 'price': 10, 'count': 13},
+    {'product': "Mouse", 'price': 50, 'count': 1},
+    {'product': "Keyboard", 'price': 30, 'count': 33},
+    {'product': "Monitor", 'price': 20, 'count': 10}
+]
+
+while True:
+    print('-------')
+    print('\nМеню:')
+    print('1. Показать список товаров.')
+    print('2. Добавить товар.')
+    print('3. Удалить товар.')
+    print('4. Обновить название товара, стоимость или количество.')
+    print('5. Найти товар по названию.')
+    print('6. Вывести список товаров меньше определённой стоимости.')
+    print('7. Вывести список товаров меньше определенного количества.')
+
+    choice = input('Выберите действие: ')
+
+    if choice == '1':
+        print('-------')
+        print('Список товаров')
+        for item in inventory:
+            print(f'Название: {item["product"]}, Цена: {item["price"]}, Количество: {item["count"]}')
+    elif choice == '2':
+        pass
+    elif choice == '3':
+        pass
+    elif choice == '4':
+        pass
+    elif choice == '5':
+        pass
+    elif choice == '6':
+        pass
+    elif choice == '7':
+        pass
+    elif choice == '8':
+        print('Выход из программы')
+        break
+    else:
+        print('Неверный выбор. Пожалуйста, выберите снова.')
