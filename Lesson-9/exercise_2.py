@@ -1,6 +1,7 @@
 # Упражнение 1: Управление списком фильмов и их рейтингов
 
 # 1.1 Создайте список фильмов, содержащий элементы "Movie1", "Movie2", "Movie3".
+
 cinemas = ["Movie1", "Movie2", "Movie3"]
 print(cinemas)
 
@@ -31,6 +32,7 @@ print(cinema_new)
 # print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 # print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
 # ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
+
 print()
 print()
 
@@ -45,19 +47,34 @@ print(cinema_new)
 # Упражнение 2: Анализ списка курсов и их продолжительности
 
 # 2.1 Создайте список курсов, содержащий элементы "Python", "Java", "JavaScript".
+kurses = ["Python", "Java", "JavaScript"]
 
 # 2.2 Добавьте в список курс "C++".
+kurses.append("C++")
 
 # 2.3 Измените название второго курса на "Kotlin".
+kurses[1] = "Kotlin"
 
 # 2.4 Если первые три курса "Python", "Kotlin", "JavaScript", то создайте срез, содержащий первые три курса.
+if kurses[0:3] == (["Python", "Kotlin", "JavaScript"]):
+    print(kurses[0:3])
 
 # 2.5 Отсортируйте курсы по названиям.
+kurses.sort()
+print(kurses)
 
 # 2.6 Cоздайте вложенный список, где каждый курс имеет свою продолжительность в часах.
 # ["Python", 40], ["Kotlin", 30], ["JavaScript", 35], ["C++", 50]
+kurses_details = [
+    ["Python", 40],
+    ["Kotlin", 30],
+    ["JavaScript", 35],
+    ["C++", 50]
+]
+print(kurses_details)
 
 # 2.7 Выполните сложение часов всех курсов во вложенном списке и выведите общую продолжительность всех курсов.
+print(kurses_details[0] [1] + kurses_details[1] [1] + kurses_details[2] [1] + kurses_details[3] [1])
 
 # 2.8 Выведите в консоль:
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']

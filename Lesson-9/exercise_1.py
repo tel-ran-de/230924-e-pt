@@ -3,6 +3,7 @@
 # Измените элемент "milk" на "almond milk".
 # Создайте срез, содержащий первые два элемента списка.
 # Создайте вложенный список, где каждый элемент списка покупок будет содержать его цену.
+
 pay = ["bread", "milk", "eggs"]
 print(pay)
 pay[1] = "almond milk"
@@ -11,6 +12,7 @@ pay_1 = pay[0:2]
 print(pay_1)
 price = [["bread ", 10], ["milk", 2], ["eggs", 3]]
 print(price)
+
 
 # Выведите список покупок, срез и вложенный список.
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
@@ -23,7 +25,7 @@ print(price)
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
 # Измените имя второго студента на "Eve".
 # Создайте срез, содержащий студентов: "Bob", "Charlie".
-# Создайте вложенный список, где каждый студент имеет список своих оценок.
+# Создайте вложенный список, где каждый студент имеет список своих оценок
 
 students = ["Alice", "Bob", "Charlie", "David"]
 print(students)
@@ -32,6 +34,7 @@ print(students)
 top_students = students[1:3]
 students_grades = [["Alice", [90, 85, 88]], ["Eve", [75, 80, 82]], ["Charlie", [95, 92, 93]], ["David", [78, 85, 84]]]
 print(students_grades)
+
 # Выведите список студентов, срез и вложенный список.
 # print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
 # print(top_students)  # Ожидаемый результат: ["Bob", "Charlie"]
@@ -44,6 +47,18 @@ print(students_grades)
 # Измените третью задачу на "task3 updated".
 # Создайте срез, содержащий последние две задачи.
 # Создайте вложенный список, где каждая задача имеет свой статус (True - выполнено, False - не выполнено).
+task_list = ["task1", "task2", "task3", "task4"]
+last_tasks = task_list[2:4]
+task_list[2] = "task3 updated"
+detailed_tasks = [
+    [task_list[0], True],
+    [task_list[1], False],
+    [task_list[2], True],
+    [task_list[3], False]
+]
+print(task_list)
+print(last_tasks)
+print(detailed_tasks)
 
 # Выведите список задач, срез и вложенный список.
 # print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3 updated", "task4"]
