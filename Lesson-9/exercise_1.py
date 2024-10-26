@@ -3,6 +3,7 @@
 # Измените элемент "milk" на "almond milk".
 # Создайте срез, содержащий первые два элемента списка.
 # Создайте вложенный список, где каждый элемент списка покупок будет содержать его цену.
+
 pay = ["bread", "milk", "eggs"]
 print(pay)
 pay[1] = "almond milk"
@@ -11,6 +12,7 @@ pay_1 = pay[0:2]
 print(pay_1)
 price = [["bread ", 10], ["milk", 2], ["eggs", 3]]
 print(price)
+
 
 # Выведите список покупок, срез и вложенный список.
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
@@ -25,6 +27,7 @@ print(price)
 # Создайте срез, содержащий студентов: "Bob", "Charlie".
 # Создайте вложенный список, где каждый студент имеет список своих оценок.
 
+
 students = ["Alice", "Bob", "Charlie", "David"]
 print(students)
 students[1] = "Eve"
@@ -32,6 +35,7 @@ print(students)
 top_students = students[1:3]
 students_grades = [["Alice", [90, 85, 88]], ["Eve", [75, 80, 82]], ["Charlie", [95, 92, 93]], ["David", [78, 85, 84]]]
 print(students_grades)
+
 # Выведите список студентов, срез и вложенный список.
 # print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
 # print(top_students)  # Ожидаемый результат: ["Bob", "Charlie"]
@@ -49,6 +53,7 @@ print(students_grades)
 # print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3 updated", "task4"]
 # print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
 # print(detailed_tasks)  # Ожидаемый результат: [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False]]
+
 
 tasks = ["task1", "task2", "task3", "task4"]
 print(tasks)

@@ -1,5 +1,6 @@
 # Тема 1. Продемонстрируйте и объясните в режиме live-coding:
 # - создание списка,
+
 print('Тема 1')
 fruits = ['apple', 'banana', 'peach']
 print(fruits)
@@ -90,3 +91,4 @@ print(string)
 movies = [["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
 print(*movies, sep='\n')
 print(movies, sep='\n')
+

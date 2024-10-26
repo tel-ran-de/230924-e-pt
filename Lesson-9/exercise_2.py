@@ -17,9 +17,11 @@ if len(cinemas) < 5:
     cinemas.extend(["Movie5", "Movie6", "Movie7"])
 print(cinemas)
 
+
 # 1.4 Создайте вложенный список, где каждый фильм имеет свой год выпуска и рейтинг:
 # ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
 # ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]
+
 cinema_new = [["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
         ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
 
@@ -27,10 +29,12 @@ cinema_new = [["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2
 cinema_new.insert(0, ["Movie", 2002, 7.7])
 print(cinema_new)
 
+
 # 1.6 Выведите список фильмов и вложенный список.
 # print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 # print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
 # ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
+
 print()
 print()
 
