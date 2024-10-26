@@ -1,5 +1,6 @@
 # Тема: Вложенные циклы
-#from itertools import product
+
+
 
 # Упражнение 1: Проверка простых чисел в диапазоне
 #
@@ -8,6 +9,7 @@
 # Внутри вложенного цикла while используйте для проверки, является ли число простым.
 # Число является простым, если оно делится только на 1 и на само себя.
 # Для каждого числа в диапазоне от 2 до 50, проверьте, делится ли оно на любое число меньше него (кроме 1).
+
 
 numbers = list(range(2,51))
 simple = []
@@ -22,6 +24,7 @@ for num in numbers:
     if result:
         simple.append(num)
 print(simple)
+
 
 # Упражнение 2: Таблица умножения
 
@@ -43,6 +46,7 @@ print(simple)
 #  8 |   8  16  24  32  40  48  56  64  72  80
 #  9 |   9  18  27  36  45  54  63  72  81  90
 # 10 |  10  20  30  40  50  60  70  80  90 100
+
 numbers = list(range(1,11))
 print(numbers)
 print(' '*4, end='')
@@ -56,6 +60,7 @@ for num1 in numbers:
         print(f'{num1*num2:4}', end='')
     print()
 '''
+
 # Тема: Генераторы списков
 
 # Упражнение 1: Напишите программу с помощью генераторов списков,
@@ -82,12 +87,14 @@ some_string = 'the quick brown fox jumps over the lazy dog'
 vowel_list = [x for x in some_string if x in 'eiuoa']
 print(vowel_list)
 
+
 # Упражнение 5: Сумма элементов в каждом ряду матрицы
 # С помощью генераторов списков создайте матрицу 3x3 из чисел от 20 до 28
 # Ожидаемая матрица:
 # [20, 21, 22]
 # [23, 24, 25]
 # [26, 27, 28]
+
 
 matrix = [[x + 19  for x in range(1 + 3 * i, 1 + 3 * (i + 1))] for i in range(3)]
 for row in matrix:
@@ -100,6 +107,7 @@ for row in matrix:
 
 # Упражнение 6: Подсчет количества четных и нечетных чисел в матрице
 # Дана матрица
+
 matrix = [
      [2, 5, 8, 11],
      [14, 17, 20, 23],
@@ -127,18 +135,22 @@ matrix = [
 min_max = [[min(row), max(row)] for row in matrix]
 print(min_max)
 
+
 # Упражнение 8: Перемножение матриц
 #
 # - Создайте с помощью генераторов списков две матрицы размером 3x3 со значениями от 1 до 9 и от 9 до 1.
+
 matrix1 = [[x for x in range(1 + j*3, 1 + 3*(j+1))] for j in range(3)]
 print(f'matrix1 = {matrix1}')
 matrix2 = [[x for x in range(3*j, (j-1)*3, -1) ] for j in range(3, 0,-1)]
 print(f'matrix2 = {matrix2}')
+
 #     matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 #     matrix2 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 #
 # - Используйте генераторы списков для вычисления произведения этих матриц.
 #     product = [[30, 24, 18], [84, 69, 54], [138, 114, 90]]
+
 
 product = [[sum([matrix1[k][i] * matrix2[i][j] for i in range(3)]) for j in range(3)] for k in range(3)]
 for row in matrix1:
@@ -151,3 +163,4 @@ for row in product:
 print(product)
 #
 # - Выведите исходные матрицы и результат их произведения.'''
+
