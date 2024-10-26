@@ -2,15 +2,32 @@
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 #
-# numbers = [1, 2, 3, 4, 5, 6]
-# Вывод функции: (21, 3.5, 3)
+from itertools import count
 
+numbers = [1, 2, 3, 4, 5, 6]
+# Вывод функции: (21, 3.5, 3)
+def analyze_numbers(numbers):
+    summ = sum(numbers)
+    alln = summ / len(numbers)
+    count_ev = []
+    for i in numbers:
+        if i % 2 == 0:
+            count_ev += [i]
+    return summ, alln, len(count_ev)
+print(analyze_numbers(numbers))
 
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
 #
-# strings = ["apple", "banana", "cherry", "date"]
+strings = ["apple", "banana", "cherry", "date"]
+def analyze_strings(strings):
+    count_ev=[]
+    long=max[i]
+    short=min[i]
+    str=len(["a"])
+    return long, short, str
+print(analyze_strings(strings))
 # Вывод функции: ('banana', 'date', 3)
 
 
@@ -51,12 +68,18 @@
 # Напишите функцию `sum_positive_negative(*args)`, которая принимает произвольное число числовых аргументов
 # и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
 #
-# sum_positive_negative(1, -2, 3, -4, 5)
+#sum_positive_negative(1, -2, 3, -4, 5)
 # Вывод функции: (9, -6)
+def sum_positive_negative(*args):
 
+    pos_sum = sum(i for i in args if i > 0)
+    neg_sum = sum(i for i in args if i < 0)
+    return pos_sum, neg_sum
+print(sum_positive_negative(1, -2, 3, -4, 5))
 
 # Задача 8: Генерация строки из именованных аргументов
-# Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
+# Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов
+# и возвращает строку, состоящую из ключей и значений в формате "key=value".
 #
 # generate_string(name="Alice", age=30, city="New York")
 # Вывод функции: name=Alice, age=30, city=New York
