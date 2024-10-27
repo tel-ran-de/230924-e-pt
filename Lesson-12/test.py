@@ -20,4 +20,10 @@ print("Список сотрудников:")
 for name in employees:
     print(f"{name}")
 print("----------------------")
-for salary in employees:
+summa = sum(employee["salary"] for employee in employees.values())
+print(f"Общая зарплата сотрудников: {summa}")
+print("----------------------")
+print("Добавляем нового сотрудника:")
+employees["David"] = {"age": 28, "department": "IT", "salary": 6500}
+for name in employees:
+    print(f"{name}")
