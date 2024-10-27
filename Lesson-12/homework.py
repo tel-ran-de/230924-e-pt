@@ -33,11 +33,9 @@ for name in employees:
 print("-----------------------")
 print("4. Поднимаем зарплату Alice до 5500")
 employees["Alice"] ["salary"] = 5500
-print(employees)
 print("_______________________")
 print("Удаляем сотрудника Charlie")
 del employees["Charlie"]
-print(employees)
 print("-----------------------")
 print("Данные о каждом сотруднике")
 for name, info in employees.items():
