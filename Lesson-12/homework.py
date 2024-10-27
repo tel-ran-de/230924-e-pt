@@ -13,12 +13,36 @@
 # 6. Выведите данные о каждом сотруднике в формате:
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 #
-# employees = {
-#     "Alice": {"age": 30, "department": "HR", "salary": 5000},
-#     "Bob": {"age": 25, "department": "IT", "salary": 6000},
-#     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
-# }
-
+employees = {
+    "Alice": {"age": 30, "department": "HR", "salary": 5000},
+    "Bob": {"age": 25, "department": "IT", "salary": 6000},
+    "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
+}
+print("----------------------")
+print("1. Список сотрудников:")
+for name in employees:
+    print(f"{name}")
+print("----------------------")
+summa = sum(employee["salary"] for employee in employees.values())
+print(f"2. Общая зарплата сотрудников: {summa}")
+print("----------------------")
+print("3. Добавляем нового сотрудника:")
+employees["David"] = {"age": 28, "department": "IT", "salary": 6500}
+for name in employees:
+    print(f"{name}")
+print("-----------------------")
+print("4. Поднимаем зарплату Alice до 5500")
+employees["Alice"] ["salary"] = 5500
+print(employees)
+print("_______________________")
+print("Удаляем сотрудника Charlie")
+del employees["Charlie"]
+print(employees)
+print("-----------------------")
+print("Данные о каждом сотруднике")
+for name, info in employees.items():
+    print(f"Имя: {name}, Возоаст: {info["age"]}, Отдел: {info["department"]}, Зарплата: {info["salary"]}")
+print("------------------------")
 
 # Задача 2: Управление запасами товаров
 # У вас есть словарь, содержащий информацию о запасах товаров в магазине.
