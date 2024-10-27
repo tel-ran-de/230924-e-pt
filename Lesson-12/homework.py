@@ -121,8 +121,11 @@ print()
 products[0] = ("Apple", 2.5)
 print(products)
 print()
-sort_products = sorted(i for j, i in products)
-print(sort_products)
+
+print("\nПродукты, отсортированные по цене:")
+for product in sorted(products, key=lambda i: i[1]):
+    print(product)
+
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
