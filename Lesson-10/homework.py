@@ -56,6 +56,26 @@ while True :
 # то программа должна вывести: “Превышен лимит покупок.” и завершиться.
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
+shopping_list = []
+
+while len(shopping_list) <= 6:
+    item = input("Введите элемент списка покупок (или 'стоп' для завершения): ").lower()
+
+    if item == "стоп":
+        print("Формирование списка завершено.")
+        break
+    elif item in shopping_list:
+        print("Этот элемент уже в списке.")
+    else:
+        shopping_list.append(item)
+
+    if len(shopping_list) > 6:
+        print("Превышен лимит покупок.")
+        break
+
+print("Итоговый список покупок:", shopping_list)
+print("Общее количество элементов в списке:", len(shopping_list))
+
 
 # Тема: Цикл for
 
