@@ -108,9 +108,21 @@ print('=====================================================')
 # 4. Замените цену "Apple" на 2.5.
 # 5. Выведите все продукты, отсортированные по цене.
 #
-# products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
 
-
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+print(f'Все продукты: {products}')
+print()
+sum_products = sum(i for j, i in products)
+print(f'Cуммарная стоимость всех продуктов: {sum_products}')
+print()
+products.append(("Date",4))
+print(f'Новый список продуктов: {products}')
+print()
+products[0] = ("Apple", 2.5)
+print(products)
+print()
+sort_products = sorted(i for j, i in products)
+print(sort_products)
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
