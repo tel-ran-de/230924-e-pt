@@ -70,17 +70,72 @@ print(print_info(**data))
 # Вывод: Name: Bob, Age: 25
 
 
-
-
-
-
-
-
-
-
 # Продемонстрируйте в режиме live-coding и объясните работу:
 # - Глобальных и локальных переменных
 # - Ключевых слов global и nonlocal
-# В- ложенных функций
+# - Вложенных функций
 # - Замыкания
 
+print()
+print('# - Глобальныe и локальныe переменныe')
+gl_var = 0
+
+def f():
+    gl_var = 1
+    print(gl_var + 10)
+
+f()
+print(gl_var)
+
+# глобальная область видимости ничего не знает о переменных расположенных в локальных областях видимости (то есть в функциях)
+# def f2():
+#     a = 10
+#     print(a)
+# print(a)
+
+print()
+print('оператор global')
+gl_var2 = 1
+def f3():
+    global gl_var2
+    gl_var2 += 1
+    return gl_var2
+f3()
+f3()
+f3()
+print(gl_var2)
+
+# Использование ключевого слова nonlocal
+print()
+print('# Использование ключевого слова nonlocal')
+def outer():
+    count = 0
+
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+
+    return inner
+
+counter1 = outer()
+print(counter1())  # Вывод: 1
+print(counter1())  # Вывод: 2
+print(counter1())  # Вывод: 3
+
+
+print()
+print('# global')
+x = 1  # global
+def func1():
+    x = 2
+    def func2():
+        global x
+        print('New print: ', x)
+        x = 3
+        print(f'Func2: {x}')
+    func2()
+    print(f'Func1: {x}')
+
+func1()
+print(f'Global: {x}')
