@@ -5,56 +5,56 @@
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 def analyze_numbers(numbers):
     return sum(numbers), sum(numbers) / len(numbers), len([num for num in numbers if num % 2 == 0])
-
+print(analyze_numbers)
 
 # Задача 2: Работа со строками
 # Напишите функцию analyze_strings(strings), которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a".
 def analyze_strings(strings):
     return max(strings, key=len), min(strings, key=len), len([string for string in strings if 'a' in string])
-
+print(analyze_strings)
 
 # Задача 3: Обработка словаря сотрудников
 # Напишите функцию analyze_salaries(employees), которая принимает словарь сотрудников
 # и возвращает кортеж из трех значений: средняя зарплата, максимальная зарплата и имя сотрудника с максимальной зарплатой.
 def analyze_salaries(employees):
     return sum(employees.values()) / len(employees), max(employees.values()), max(employees, key=employees.get)
-
+print(analyze_salaries)
 
 # Задача 4: Фильтрация списка
 # Напишите функцию filter_numbers(numbers), которая принимает список чисел
 # и возвращает кортеж из двух списков: четные числа и нечетные числа.
 def filter_numbers(numbers):
     return [num for num in numbers if num % 2 == 0], [num for num in numbers if num % 2 != 0]
-
+print(filter_numbers)
 
 # Задача 5: Генерация словаря
 # Напишите функцию create_dict(keys, values), которая принимает два списка: ключи и значения,
 # и возвращает словарь, где ключи из первого списка, а значения из второго.
 def create_dict(keys, values):
     return dict(zip(keys, values))
-
+print(create_dict)
 
 # Задача 6: Подсчет символов в строке
 # Напишите функцию count_characters(string), которая принимает строку
 # и возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
 def count_characters(string):
     return {char: string.count(char) for char in string}
-
+print(count_characters)
 
 # Задача 7: Обработка произвольного числа аргументов
 # Напишите функцию sum_positive_negative(*args), которая принимает произвольное число числовых аргументов
 # и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
 def sum_positive_negative(*args):
     return sum(num for num in args if num > 0), sum(num for num in args if num < 0)
-
+print(sum_positive_negative)
 
 # Задача 8: Генерация строки из именованных аргументов
 # Напишите функцию generate_string(**kwargs), которая принимает произвольное число именованных аргументов
 # и возвращает строку, состоящую из ключей и значений в формате "key=value".
 def generate_string(**kwargs):
     return ", ".join(f"{key}={value}" for key, value in kwargs.items())
-
+print(generate_string)
 
 # Проект: Перепишите проект из урока 7 в функциональном стиле.
 # Управление инвентарем в интернет-магазине
