@@ -1,0 +1,17 @@
+name: Branch Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        run: |
+          branch_name=${{ github.head_ref }}
+          if [[ ! $branch_name =~ ^lesson-.* ]]; then
+            echo "Branch name does not match the pattern 'lesson-*'"
+            exit 1
+          fi
