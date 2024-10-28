@@ -1,3 +1,5 @@
+# FIXED
+
 # Тема: Список, срезы списков.
 
 # Упражнение 1: Управление списком покупок
@@ -6,7 +8,10 @@ shopping_list = ["bread", "milk", "eggs"]
 
 # Измените элемент "milk" на "almond milk".
 shopping_list[1] = "almond milk"
-
+Aleksandr_Samborskij
+print(shopping_list)
+=======
+main
 # Создайте срез, содержащий первые два элемента списка.
 slice_shopping_list = shopping_list[:2]
 
