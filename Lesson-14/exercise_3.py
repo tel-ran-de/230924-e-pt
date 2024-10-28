@@ -3,6 +3,14 @@
 # 1. Напишите функцию create_user, которая принимает параметры username, email
 # и произвольное количество дополнительных данных с помощью **kwargs.
 # Функция должна возвращать словарь с информацией о пользователе.
+def create_user(username, email, **kwargs):
+    kwargs['username'] = username
+    kwargs['email'] = email
+    return kwargs
+
+#info = {'age': 34, 'city': 'Berlin'}
+print(create_user('Alice', 'alic@mail.com', **{'age': 34, 'city': 'Berlin'}))
+
 
 # 2. Напишите функцию make_replacer, которая принимает два аргумента old и new. Внутри этой функции создайте
 # и верните функцию replacer, которая заменяет все вхождения old на new в переданной ей строке.
