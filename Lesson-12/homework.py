@@ -18,6 +18,29 @@
 #     "Bob": {"age": 25, "department": "IT", "salary": 6000},
 #     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
 # }
+# print('Выведите имена всех сотрудников:')
+# for key in employees:
+#     print(key)
+#
+# print('Найдите и выведите общую сумму зарплат всех сотрудников: ')
+# list_salary=sum((item["salary"])for item in employees.values())
+# print(list_salary)
+#
+# print('Добавьте нового сотрудника "David" с возрастом 28, отделом "IT" и зарплатой 6500')
+# employees["David"]={"age": 28, "department": "IT", "salary": 6500}
+# print(employees)
+#
+# print('Обновите зарплату "Alice" до 5500')
+# employees["Alice"]["salary"]=5500
+# print(employees)
+#
+# print('Удалите сотрудника "Charlie"')
+# del employees["Charlie"]
+# print(employees)
+#
+# print('Выведите данные о каждом сотруднике')
+# for name, info in employees.items():
+#     print(f"Имя: {name}, Возраст: {info['age']}, Отдел: {info['department']}, Зарплата: {info['salary']}")
 
 
 # Задача 2: Управление запасами товаров
@@ -37,6 +60,30 @@
 #     "Bananas": {"quantity": 30, "price": 1},
 #     "Cherries": {"quantity": 20, "price": 3},
 # }
+# print('Выведите названия всех товаров: ')
+# for key in inventory:
+#     print(key)
+#
+# print('Увеличьте количество "Apples" на 10:')
+# inventory["Apples"]["quantity"]+=10
+# print(inventory)
+#
+# print('Измените цену "Bananas" на 1.5 :')
+# inventory["Bananas"]["price"]+=1.5
+# print(inventory)
+#
+# print('Удалите товар "Cherries"')
+# del inventory["Cherries"]
+# print(inventory)
+#
+# print('Добавьте новый товар "Dates" с количеством 15 и ценой 4')
+# inventory["Dates"]={"quantity": 15, "price": 4}
+# print(inventory)
+#
+# print('Выведите общую стоимость всех товаров (количество * цена для каждого товара и сумма этих значений)')
+# sum_inventory=sum((item['quantity']*item['price'])for item in inventory.values())
+# print(sum_inventory)
+
 
 
 # Тема: кортежи и множества.
@@ -53,6 +100,16 @@
 # 5. Выведите все координаты, отсортированные по оси x.
 #
 # coordinates = [(10, 20), (30, 40), (50, 60)]
+# print(*coordinates)
+# x_c = sum([x[0]for x in coordinates])
+# y_c = sum([x[1]for x in coordinates])
+# print(x_c, y_c )
+# coordinates.append((70, 80))
+# print(coordinates)
+# coordinates[0]=[15, 20]
+# print(coordinates)
+# x_sort = sorted([x[0]for x in coordinates])
+# print(x_sort)
 
 
 # Задача 2: Обработка данных о продуктах
@@ -66,8 +123,17 @@
 # 4. Замените цену "Apple" на 2.5.
 # 5. Выведите все продукты, отсортированные по цене.
 #
-# products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+for product in products:
+ print(product)
 
+sum_cost = sum(price for name, price in products)
+print(f"Общая стоимость продуктов: {sum_cost}")
+
+products.append(("Date" , 4))
+print(products)
+products = [(name, 2.5) if name == "Apple" else (name, price) for name, price in products]
+print(products)
 
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
