@@ -34,9 +34,11 @@ for name in employees:
 print("-----------------------")
 print("4. Поднимаем зарплату Alice до 5500")
 employees["Alice"] ["salary"] = 5500
+print(employees)
 print("_______________________")
 print("Удаляем сотрудника Charlie")
 del employees["Charlie"]
+print(employees)
 print("-----------------------")
 print("Данные о каждом сотруднике")
 for name, info in employees.items():
@@ -68,15 +70,19 @@ for name in inventory:
 print("----------------------")
 print("2. Увеличить количество яблок на 10")
 inventory["Apples"]["quantity"] += 10
+print(inventory)
 print("----------------------")
 print("3. Изменить цену бананов на 1,5")
 inventory["Bananas"]["price"] = 1.5
+print(inventory)
 print("----------------------")
 print("4. Удалить товар Черри")
 del inventory["Cherries"]
+print(inventory)
 print("----------------------")
 print("5. Добавить новый товар - финики количеством 15 и ценой 4")
 inventory["Dates"] = {"quantity": 15, "price": 4}
+print(inventory)
 print("----------------------")
 
 total_cost = 0
