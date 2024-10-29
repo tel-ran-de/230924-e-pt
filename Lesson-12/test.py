@@ -29,7 +29,8 @@ print("--------------------------")
 print("5. Все координаты, отсортированные по оси x:")
 sort_x = sorted(coordinates)
 for x, y in sort_x:
-        print(sort_x)
+    print(f"({x}, {y})")
+print("---------------------------")
 
 
 
