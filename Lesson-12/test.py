@@ -10,4 +10,27 @@
 # 5. Выведите все координаты, отсортированные по оси x.
 #
 coordinates = [(10, 20), (30, 40), (50, 60)]
+print("-----------------------")
+print("1. Выводим все координаты: ")
+for x, y in coordinates:
+    print(f"X {x}, Y {y}")
+print("------------------------")
+sum_y = sum(y for x, y in coordinates)
+print(f"2. Сумма всех координат по оси 'Y': {sum_y}")
+print("-------------------------")
+print("3. Добавляем новую координату (70, 80)")
+coordinates.append((70, 80))
+print(coordinates)
+print("--------------------------")
+print("4. 4. Заменить первую координату на (15, 25)")
+coordinates[0] = (15, 25)
+print(coordinates)
+print("--------------------------")
+print("5. Все координаты, отсортированные по оси x:")
+sort_x = sorted(coordinates)
+for x, y in sort_x:
+        print(sort_x)
+
+
+
 
