@@ -47,25 +47,34 @@ print(analyze_salaries(employees))
 # Задача 4: Фильтрация списка
 # Напишите функцию `filter_numbers(numbers)`, которая принимает список чисел и
 # возвращает кортеж из двух списков: четные числа и нечетные числа.
-#
-# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def filter_numbers(numbers):
+    even_num = [num for num in numbers if num % 2 ==0]
+    odd_num = [num for num in numbers if num % 2 != 0]
+    return even_num, odd_num
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(filter_numbers(numbers))
 # Вывод функции: ([2, 4, 6, 8, 10], [1, 3, 5, 7, 9])
 
 
 # Задача 5: Генерация словаря
 # Напишите функцию `create_dict(keys, values)`, которая принимает два списка: ключи и значения,
 # и возвращает словарь, где ключи из первого списка, а значения из второго.
-#
-# keys = ["name", "age", "city"]
-# values = ["Alice", 30, "New York"]
+def create_dict(keys, values):
+    return dict(zip(keys, values))
+keys = ["name", "age", "city"]
+values = ["Alice", 30, "New York"]
+print(create_dict(keys, values))
 # Вывод функции: {'name': 'Alice', 'age': 30, 'city': 'New York'}
 
 
 # Задача 6: Подсчет символов в строке
 # Напишите функцию `count_characters(string)`, которая принимает строку и
 # возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
-#
-# string = "hello world"
+def count_characters(string):
+    return {char: string.count(char) for char in string}
+
+string = 'My name is Aleksej'
+print(count_characters(string))
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 
 
