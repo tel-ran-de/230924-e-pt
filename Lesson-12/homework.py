@@ -1,6 +1,4 @@
 # Тема: словари
-from itertools import count
-from random import choice
 
 # Задача 1: Анализ данных о сотрудниках
 # У вас есть словарь, содержащий информацию о сотрудниках компании.
@@ -220,10 +218,10 @@ def update_item():
             elif items == 'price':
                 item['price'] = float(input('Введите новую цену товара: '))
             elif items == 'count':
-                item['count'] = input('Введите новое количество товара: ')
+                item['count'] = int(input('Введите новое количество товара: '))
                 break
-     #else:
-        #print('Продукт не найден.')
+            else:
+                 print('Продукт не найден.')
 
 def find_item():
     name_item = input('Введите название товара для поиска: ')
@@ -234,8 +232,19 @@ def find_item():
     else:
         print('Продукт не найден.')
 
+def below_price():
+    below_item_price = float(input('Введите определенную стоимость: '))
+    print(f'\nТовары меньше {below_item_price} стоимости:')
+    for item in inventory:
+        if item['price'] < below_item_price:
+            print(f'Товар: {item['product']}')
 
-
+def below_count():
+    below_item_count = int(input('Введите определенное количество: '))
+    print(f'\nТовары меньше количества {below_item_count}')
+    for item in inventory:
+        if item['count'] < below_item_count:
+            print(f'Товар: {item['product']}')
 
 
 while True:
@@ -265,6 +274,7 @@ while True:
     elif choice == '7':
         below_count()
     elif choice == '8':
+        print('Программа завершена')
         break
     else:
         print('Неверный набор.')
