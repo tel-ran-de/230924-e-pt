@@ -134,7 +134,28 @@ print("---------------------------")
 # 4. Замените цену "Apple" на 2.5.
 # 5. Выведите все продукты, отсортированные по цене.
 #
-# products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+
+print("Задача 2.2")
+print("-----------------------------")
+print("1. Все продукты:")
+for product, price in products:
+    print(f"{product}")
+print("-----------------------------")
+total_cost = sum(price for _, price in products)
+print(f"2. Сумарная стоимомть всех продуктов: {total_cost}")
+print("------------------------------")
+print("3. Добавить новый продукт 'Date' с ценой 4")
+products.append(("Date", 4))
+print(products)
+print("------------------------------")
+print("4. Заменить цену 'Apple' на 2.5")
+products[0] = ("Apple", 2.5)
+print(products)
+print("------------------------------")
+print("5. Вывести все продукты, отсортированные по цене")
+sorted_products = sorted(products, key=lambda x: x[1])
+print(sorted_products)
 
 
 # Задача 3: Управление группами пользователей
