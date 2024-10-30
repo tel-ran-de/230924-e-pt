@@ -30,11 +30,34 @@ employees = {
 
 for i in employees:
     print(i)
-#
+print()
+
 total_salary = sum(employeer['salary'] for employeer in employees.values())
 print(total_salary)
+print()
+# 3. Добавьте нового сотрудника "David" с возрастом 28, отделом "IT" и зарплатой 6500.
 
-# print(employees["Alice"]['salary'])
+employees['David'] = {"age": 30, "department": "HR", "salary": 5000}
+for i in employees:
+    print(i)
+print()
+
+# 4. Обновите зарплату "Alice" до 5500.
+employees['Alice']["salary"] =  5500
+print(employees)
+print( '# 6. Выведите данные о каждом сотруднике в формате:')
+# 5. Удалите сотрудника "Charlie".
+
+del employees["Charlie"]
+print(employees)
+print()
+
+for i in employees:
+    [i] f"Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
+    print(i)
+
+
+# "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 
 
 # Задача 2: Управление запасами товаров
@@ -137,3 +160,21 @@ print(total_salary)
 #     {'product': "Monitor", 'price': 20, 'count': 10}
 # ]
 
+# string = {'Hello World'}
+# print(string)
+
+# def counter(start=0):
+#     def step():
+#         nonlocal start
+#         start += 1
+#         return start
+#     return step
+#
+# c1 = counter(10)
+# c2 = counter(0)
+# c3 = counter(11)
+# c4 = counter(12)
+#
+# print(c1(), c2(), c3(), c4())
+# print(c1(), c2(), c3(), c4())
+# print(c1(), c2(), c3(), c4())
