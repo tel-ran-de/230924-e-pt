@@ -63,7 +63,7 @@ del inventory["Cherries"]
 
 inventory["Dates"] = {"quantity": 15, "price": 4}
 
-total_value = sum(item["quantity"] * item["price"] for item in inventory.values())
+total_value = sum(i["quantity"] * i["price"] for i in inventory.values())
 print(f"Общая стоимость всех товаров: {total_value}")
 
 print('=================================================')
@@ -159,9 +159,23 @@ print('=================================================')
 # 5. Проверьте, является ли `set2` подмножеством `set1`.
 #
 set1 = {1, 2, 3, 4, 5}
+print(set1)
+
 set2 = {4, 5, 6, 7, 8}
-all_set = set1.union(set2)
+print(set2)
+
+all_set = set1.union(set2) #объединение
 print(all_set)
+
+inter_set = set1 & set2 #пересечение
+print(inter_set)
+
+dif_set = set1.symmetric_difference(set2) #разность множеств
+print(dif_set)
+
+subset_set =set2.issubset(set1) #set2 <= set1
+print(subset_set)
+
 
 
 
