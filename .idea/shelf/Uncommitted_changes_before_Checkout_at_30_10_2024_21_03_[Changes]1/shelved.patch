@@ -1,0 +1,346 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,0 +1,1 @@
++print("Hello, World!")
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c9dced80-658c-4f89-9216-6c79767eb18c\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 1\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2o4dqB9d8TkRc8B3UmxJJQ57qOz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject2\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82\" />\r\n        <option value=\"bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c9dced80-658c-4f89-9216-6c79767eb18c\" name=\"Changes\" comment=\"\" />\r\n      <created>1730132970358</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1730132970358</updated>\r\n      <workItem from=\"1730132980995\" duration=\"7000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/main.py</url>\r\n          <line>8</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,18 +1,53 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="" />
++    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/Lesson-13/examples.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_1.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_2.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_3.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/homework-h13.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/live-coding.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Lesson-13/Урок 8. Функции.pptx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="anatoliy-zhuk-h12" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 1
+-}]]></component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;AFZhuk63&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/tel-ran-de/230924-e-pt.git&quot;,
++    &quot;accountId&quot;: &quot;9ac1311e-6466-4622-b9f1-8df68adf9b25&quot;
++  }
++}</component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 1
++}</component>
+   <component name="ProjectId" id="2o4dqB9d8TkRc8B3UmxJJQ57qOz" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -21,14 +56,52 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "Python.homework-h13.executor": "Run",
++    "Python.main.executor": "Run",
++    "Python.main.py$FileDir$.executor": "Run",
++    "Python.main.py.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
++    "git-widget-placeholder": "anatoliy-zhuk-h13",
++    "ignore.virus.scanning.warn.message": "true",
++    "last_opened_file_path": "C:/Users/Ilon Mask/PyCharmProject_New/pythonProject2/Lesson-13",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.keymap",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Ilon Mask\PyCharmProject_New\pythonProject2\Lesson-13" />
++    </key>
++  </component>
+   <component name="RunManager">
+-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++    <configuration name="homework-h13" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="pythonProject2" />
++      <option name="ENV_FILES" value="" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-13" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-13/homework-h13.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="main.py" type="PythonConfigurationType" factoryName="Python">
+       <module name="pythonProject2" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -51,6 +124,15 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
++    <list>
++      <item itemvalue="Python.main.py" />
++      <item itemvalue="Python.homework-h13" />
++    </list>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Python.homework-h13" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+@@ -69,18 +151,17 @@
+       <option name="presentableId" value="Default" />
+       <updated>1730132970358</updated>
+       <workItem from="1730132980995" duration="7000" />
++      <workItem from="1730238287270" duration="1884000" />
++      <workItem from="1730284671691" duration="712000" />
++      <workItem from="1730285509921" duration="8757000" />
+     </task>
+     <servers />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/main.py</url>
+-          <line>8</line>
+-          <option name="timeStamp" value="1" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/pythonProject2$main.coverage" NAME="main.py Coverage Results" MODIFIED="1730287448698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/pythonProject2$homework_h13.coverage" NAME="homework-h13 Coverage Results" MODIFIED="1730289069313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson-13" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.13 (pythonProject2)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.13 (pythonProject2)" />
++  </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (pythonProject2)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: Lesson-13/homework-h13.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Lesson-13/homework-h13.py b/Lesson-13/homework-h13.py
+new file mode 100644
+--- /dev/null	
++++ b/Lesson-13/homework-h13.py	
+@@ -0,0 +1,139 @@
++# Задача 1: Анализ чисел
++# Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
++# и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
++#
++# numbers = [1, 2, 3, 4, 5, 6]
++# Вывод функции: (21, 3.5, 3)
++# ОТВЕТ:
++def analyze_numbers(numbers):
++    # Сумма всех чисел
++    total_sum = sum(numbers)
++
++    # Среднее значение
++    average = total_sum / len(numbers) if numbers else 0  # Защита от деления на ноль
++
++    # Количество четных чисел
++    even_count = sum(1 for num in numbers if num % 2 == 0)
++
++    return total_sum, average, even_count
++
++# Пример использования
++numbers = [1, 2, 3, 4, 5, 6]
++result = analyze_numbers(numbers)
++print(result)  # (21, 3.5, 3)
++
++result = analyze_numbers(numbers)
++print(result)  # (21, 3.5, 3)
++
++# Задача 2: Работа со строками
++# Напишите функцию `analyze_strings(strings)`, которая принимает список строк
++# и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
++#
++# strings = ["apple", "banana", "cherry", "date"]
++# Вывод функции: ('banana', 'date', 3)
++def analyze_strings(strings):
++    # Находим самую длинную строку
++    longest_string = max(strings, key=len) if strings else ""
++
++    # Находим самую короткую строку
++    shortest_string = min(strings, key=len) if strings else ""
++
++    # Подсчитываем количество строк, содержащих букву "a"
++    count_strings_with_a = sum(1 for string in strings if 'a' in string)
++
++    return longest_string, shortest_string, count_strings_with_a
++
++strings = ["apple", "banana", "cherry", "date"]
++result = analyze_strings(strings)
++print(result)  # ('banana', 'date', 3)
++
++# Задача 3: Обработка словаря сотрудников
++# Напишите функцию `analyze_salaries(employees)`, которая принимает словарь сотрудников и
++# возвращает кортеж из трех значений: средняя зарплата, максимальная зарплата и имя сотрудника с максимальной зарплатой.
++#
++# employees = {"Alice": 5000, "Bob": 7000, "Charlie": 6000}
++# Вывод функции: (6000.0, 7000, 'Bob')
++#
++# ОТВЕТ:
++def analyze_salaries(employees):
++    # 1. Находим среднюю зарплату
++    total_salary = sum(employees.values())  # Сумма всех зарплат
++    average_salary = total_salary / len(employees) if employees else 0  # Средняя зарплата
++
++    # 2. Находим максимальную зарплату и имя сотрудника с этой зарплатой
++    max_salary = max(employees.values()) if employees else 0  # Максимальная зарплата
++    max_salary_employee = max(employees, key=employees.get) if employees else None  # Имя сотрудника
++
++    return average_salary, max_salary, max_salary_employee
++
++
++# Пример использования
++employees = {"Alice": 5000, "Bob": 7000, "Charlie": 6000}
++result = analyze_salaries(employees)
++print(result)  # (6000.0, 7000, 'Bob')
++
++# Задача 4: Фильтрация списка
++# Напишите функцию `filter_numbers(numbers)`, которая принимает список чисел и
++# возвращает кортеж из двух списков: четные числа и нечетные числа.
++#
++# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
++# Вывод функции: ([2, 4, 6, 8, 10], [1, 3, 5, 7, 9])
++
++
++# Задача 5: Генерация словаря
++# Напишите функцию `create_dict(keys, values)`, которая принимает два списка: ключи и значения,
++# и возвращает словарь, где ключи из первого списка, а значения из второго.
++#
++# keys = ["name", "age", "city"]
++# values = ["Alice", 30, "New York"]
++# Вывод функции: {'name': 'Alice', 'age': 30, 'city': 'New York'}
++
++
++# Задача 6: Подсчет символов в строке
++# Напишите функцию `count_characters(string)`, которая принимает строку и
++# возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
++#
++# string = "hello world"
++# Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
++
++
++# Задача 7: Обработка произвольного числа аргументов
++# Напишите функцию `sum_positive_negative(*args)`, которая принимает произвольное число числовых аргументов
++# и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
++#
++# sum_positive_negative(1, -2, 3, -4, 5)
++# Вывод функции: (9, -6)
++
++
++# Задача 8: Генерация строки из именованных аргументов
++# Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
++#
++# generate_string(name="Alice", age=30, city="New York")
++# Вывод функции: name=Alice, age=30, city=New York
++
++
++# Проект: Перепишите проект из урока 7 в функциональном стиле.
++# Управление инвентарем в интернет-магазине
++# Разработайте программу для управления инвентарем интернет-магазина.
++# Программа должна позволять добавлять новые товары и удалять имеющиеся,
++# обновлять наименование, цену и количество существующих товаров,
++# искать товары по названию, выводить список всех товаров и их количество,
++# а также выводить товары с количеством ниже заданного значения стоимости и количества.
++#
++# Меню:
++# 1. Показать список товаров.
++# 2. Добавить товар.
++# 3. Удалить товар.
++# 4. Обновить название товара, стоимость или количество.
++# 5. Найти товар по названию.
++# 6. Вывести список товаров меньше определнной стоимости.
++# 7. Вывести список товаров меньше определенного количества.
++
++# inventory = [
++#     {'product': "Laptop", 'price': 10, 'count': 13},
++#     {'product': "Mouse", 'price': 50, 'count': 1},
++#     {'product': "Keyboard", 'price': 30, 'count': 33},
++#     {'product': "Monitor", 'price': 20, 'count': 10}
++# ]
++
++
