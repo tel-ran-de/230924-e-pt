@@ -2,6 +2,7 @@
 # Напишите функцию `analyze_numbers(numbers)`, которая принимает список чисел
 # и возвращает кортеж из трех значений: сумма всех чисел, среднее значение и количество четных чисел.
 #
+<<<<<<< HEAD
 # Вывод функции: (21, 3.5, 3)
 # numbers = [1, 2, 3, 4, 5, 6]
 #
@@ -17,10 +18,17 @@
 #     return text[::-1]
 # print(revers_string('I go to the theatre'))
 
+=======
+# numbers = [1, 2, 3, 4, 5, 6]
+# Вывод функции: (21, 3.5, 3)
+
+
+>>>>>>> abb1210aa612fd57ba605d8fec7f203be4ab3ead
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
 #
+<<<<<<< HEAD
 def analyze_strings(strings):
     long_str = 0
     short_str = 999
@@ -38,6 +46,9 @@ def analyze_strings(strings):
 strings = ["apple", "banana", "cherry", "date"]
 
 
+=======
+# strings = ["apple", "banana", "cherry", "date"]
+>>>>>>> abb1210aa612fd57ba605d8fec7f203be4ab3ead
 # Вывод функции: ('banana', 'date', 3)
 
 

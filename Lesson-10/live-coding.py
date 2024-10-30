@@ -1,3 +1,5 @@
+# FIXED
+
 # Цикл while. Операторы break, continue, else.
 
 # while
