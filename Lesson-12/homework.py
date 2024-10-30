@@ -19,6 +19,7 @@ employees = {
     "Bob": {"age": 25, "department": "IT", "salary": 6000},
     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
 }
+
 print("----------------------")
 print("1. Список сотрудников:")
 for name in employees:
