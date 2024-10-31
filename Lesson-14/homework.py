@@ -84,24 +84,43 @@ print('===================================================')
 
 # 4. Напишите функцию make_prefixer, которая принимает строку prefix и возвращает внутреннюю функцию prefixer.
 # Внутренняя функция должна добавлять prefix к любому переданному ей аргументу.
-# add_hello = make_prefixer("Hello, ")
-# print(add_hello("Alice"))  # Вывод: Hello, Alice
-# print(add_hello("Bob"))    # Вывод: Hello, Bob
+def make_prefixer(prefix):
+    def prefixer(name):
+        return f'{prefix}{name}'
+    return prefixer
 
+add_hello = make_prefixer("Hello, ")
+print(add_hello("Alice"))  # Вывод: Hello, Alice
+print(add_hello("Bob"))    # Вывод: Hello, Bob
+print('===================================================')
 
 # Тема: Дополнительная практика
 
 # 1. Напишите функцию create_user, которая принимает параметры username, email
 # и произвольное количество дополнительных данных с помощью **kwargs.
 # Функция должна возвращать словарь с информацией о пользователе.
+def create_user(username, email, **kwargs):
+    user_info = {'username': username, 'email':email, **kwargs}
+    return user_info
 
+
+user = create_user(username="alek1985", email="aleksej@gmail.com", age=39, location="London")
+print(user)
+
+print('===================================================')
 # 2. Напишите функцию make_replacer, которая принимает два аргумента old и new. Внутри этой функции создайте
 # и верните функцию replacer, которая заменяет все вхождения old на new в переданной ей строке.
-# replace_a_with_o = make_replacer("a", "o")
-# print(replace_a_with_o("banana"))  # Вывод: bonono
-# print(replace_a_with_o("apple"))   # Вывод: opple
 
+def make_replacer(old, new):
+    def replacer(word):
+        return word.replace(old, new)
+    return replacer
 
+replace_a_with_o = make_replacer("a", "o")
+print(replace_a_with_o("banana"))  # Вывод: bonono
+print(replace_a_with_o("apple"))   # Вывод: opple
+
+print('===================================================')
 # 3. Напишите функцию make_suffixer, которая принимает строку suffix и возвращает внутреннюю функцию suffixer.
 # Внутренняя функция должна добавлять suffix к любому переданному ей аргументу.
 # add_exclamation = make_suffixer("!")
