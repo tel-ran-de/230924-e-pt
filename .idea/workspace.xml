@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="практика3 урока 16 выполнена">
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live_coding4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="без изменений">
+      <change beforePath="$PROJECT_DIR$/Lesson-16/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-16/homework.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,15 +232,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730411751990</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="без изменений">
+      <option name="closed" value="true" />
+      <created>1730411917723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730411917723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="практика1 урок 16 выполнена" />
-    <MESSAGE value="без изменений" />
     <MESSAGE value="практика2 урока 16 выполнена" />
     <MESSAGE value="практика3 урока 16 выполнена" />
-    <option name="LAST_COMMIT_MESSAGE" value="практика3 урока 16 выполнена" />
+    <MESSAGE value="без изменений" />
+    <option name="LAST_COMMIT_MESSAGE" value="без изменений" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
