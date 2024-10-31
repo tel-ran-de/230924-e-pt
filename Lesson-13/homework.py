@@ -76,22 +76,37 @@ def count_characters(string):
 string = 'My name is Aleksej'
 print(count_characters(string))
 # Вывод функции: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
-
+print('=======================================')
 
 # Задача 7: Обработка произвольного числа аргументов
 # Напишите функцию `sum_positive_negative(*args)`, которая принимает произвольное число числовых аргументов
 # и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
 #
-# sum_positive_negative(1, -2, 3, -4, 5)
-# Вывод функции: (9, -6)
+def sum_positive_negative(*args):
+    positive_nums = 0
+    negative_nums = 0
+    for num in args:
+            if num >= 0:
+                positive_nums += num
+            else:
+                negative_nums += num
+    return positive_nums, negative_nums
 
+
+result = sum_positive_negative(1, -2, 3, -4, 5)
+print(result)
+# Вывод функции: (9, -6)
+print('=======================================')
 
 # Задача 8: Генерация строки из именованных аргументов
 # Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
-#
-# generate_string(name="Alice", age=30, city="New York")
-# Вывод функции: name=Alice, age=30, city=New York
+def generate_string(**kwargs):
+    return ', '.join(f'{key}={value}' for key , value in kwargs.items())
 
+print(generate_string(name="Alice", age=30, city="New York"))
+
+# Вывод функции: name=Alice, age=30, city=New York
+print('=======================================')
 
 # Проект: Перепишите проект из урока 7 в функциональном стиле.
 # Управление инвентарем в интернет-магазине
