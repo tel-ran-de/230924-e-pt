@@ -235,7 +235,7 @@ print(f"\nЯвляется ли set2 подмножеством set1: {is_subset
 #     {'product': "Monitor", 'price': 20, 'count': 10}
 # ]
 
-nventory = [
+inventory = [
     {'product': "Laptop", 'price': 10, 'count': 13},
     {'product': "Mouse", 'price': 50, 'count': 1},
     {'product': "Keyboard", 'price': 30, 'count': 33},
