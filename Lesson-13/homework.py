@@ -132,4 +132,100 @@ print('=======================================')
 #     {'product': "Monitor", 'price': 20, 'count': 10}
 # ]
 
+inventory = [
+     {'product': "Laptop", 'price': 10, 'count': 13},
+     {'product': "Mouse", 'price': 50, 'count': 1},
+     {'product': "Keyboard", 'price': 30, 'count': 33},
+     {'product': "Monitor", 'price': 20, 'count': 10}
+ ]
+def show_inventory():
+    print('\nСписок товаров:')
+    for item in inventory:
+        print(f'Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}')
 
+def add_item():
+    product_name = input('Введите название товара: ')
+    price_item = input('Введите цену: ')
+    count_item = input('введите количество:')
+    inventory.append({'product': product_name, 'price': price_item, 'count': count_item})
+    print(f'product: {product_name}, price: {price_item}, count: {count_item} добавлен в список товаров.')
+
+def delete_items():
+    delete_item = input('Какой товар вы хотите удалить: ')
+    for item in inventory:
+        if item['product'] == delete_item:
+            inventory.remove(item)
+            print(f'product: {delete_item} удален!')
+            return
+    print('Продукт не найден.')
+
+def update_item():
+    name_item = input('Введите название товара для обновления: ')
+    for item in inventory:
+        if item['product'] == name_item:
+            items = input("Что вы хотите обновить: product, price, count ")
+            if items == 'product':
+                item['product'] = input('Введите новое название товара; ')
+            elif items == 'price':
+                item['price'] = float(input('Введите новую цену товара: '))
+            elif items == 'count':
+                item['count'] = int(input('Введите новое количество товара: '))
+                break
+            else:
+                 print('Продукт не найден.')
+
+def find_item():
+    name_item = input('Введите название товара для поиска: ')
+    for item in inventory:
+        if item['product'] == name_item:
+            print(f'Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}')
+            break
+    else:
+        print('Продукт не найден.')
+
+def below_price():
+    below_item_price = float(input('Введите определенную стоимость: '))
+    print(f'\nТовары меньше {below_item_price} стоимости:')
+    for item in inventory:
+        if item['price'] < below_item_price:
+            print(f'Товар: {item['product']}')
+
+def below_count():
+    below_item_count = int(input('Введите определенное количество: '))
+    print(f'\nТовары меньше количества {below_item_count}')
+    for item in inventory:
+        if item['count'] < below_item_count:
+            print(f'Товар: {item['product']}')
+
+
+while True:
+    print('\nМеню:')
+    print('1. Показать список товаров.')
+    print('2. Добавить товар.')
+    print('3. Удалить товар.')
+    print('4. Обновить название товара, стоимость или количество.')
+    print('5. Найти товар по названию.')
+    print('6. Вывести список товаров меньше определенной стоимости.')
+    print('7. Вывести список товаров меньше определенного количества.')
+    print('8. Выйти.')
+
+    choice = input('Выберите действие: ')
+    if choice == '1':
+        show_inventory()
+    elif choice == '2':
+        add_item()
+    elif choice == '3':
+        delete_items()
+    elif choice == '4':
+        update_item()
+    elif choice == '5':
+        find_item()
+    elif choice == '6':
+        below_price()
+    elif choice == '7':
+        below_count()
+    elif choice == '8':
+        print('Программа завершена')
+        break
+    else:
+        print('Неверный набор.')
