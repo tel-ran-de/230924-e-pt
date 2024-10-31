@@ -37,23 +37,17 @@ secret_function()
 
 # 2. Создайте декоратор call_counter, который отслеживает количество вызовов декорируемой функции и
 # выводит это количество при каждом вызове.
-def call_counter(count_call):
-    def decorator(func):
-        count = 0
-        def wrapper(*args, **kwargs):
-            nonlocal count
-            if decorator != 0:
-                count += 1
-                print(f"Функция {func.__name__} вызвана {count} раз")
+def call_counter(func):
+    def decorator(*args, **kwargs):
+        decorator.call_count += 1
+        print(f"Функция {func.__name__} вызвана {decorator.call_count} раз(а).")
+        return func(*args, **kwargs)
 
-            return func(*args, **kwargs)
-
-        return wrapper
-
+    decorator.call_count = 0
     return decorator
 
 
-@call_counter(count)
+@call_counter
 def greet(name):
     print(f"Привет, {name}!")
 #
