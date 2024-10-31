@@ -14,6 +14,20 @@
 # print(add(-1, 3))
 # Вывод: Ошибка: все аргументы должны быть положительными числами
 
+def validate(func):
+    def decorator(*args):
+        for arg in args:
+            if arg <= 0:
+              print(f"Ошибка: аргумент {arg}, должен быть положительным")
+              return None
+        return func(*args)
+    return decorator
+@validate
+def add(a, b):
+    return a + b
+
+print(add(51, 36))
+print(add(-18, 33))
 
 # 2. Создайте декоратор cache, который запоминает результаты выполнения функции для заданных аргументов и возвращает
 # этот результат при повторном вызове декорируемой функции с теми же аргументами.
@@ -30,3 +44,19 @@
 # print(fibonacci(10))
 # # Вывод: 55 (использует кеш)
 
+def cache(func):
+    dic = {}
+    def decorator(*args):
+        if args in dic:
+            return dic[args]
+        result = func(*args)
+        dic[args] = result
+        return result
+    return decorator
+
+@cache
+def fibonacci(n):
+    if n in (0, 1):
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+print(fibonacci(10))
