@@ -1,3 +1,5 @@
+# FIXED
+
 # Тема: Цикл while. Операторы break, continue, else.
 
 # Упражнение 1: Поиск числа

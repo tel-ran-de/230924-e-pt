@@ -23,8 +23,22 @@
 # Вывод функции: (9, -6)
 
 
+def sum_positive_negative(*args):
+
+    pos_sum = sum(i for i in args if i > 0)
+    neg_sum = sum(i for i in args if i < 0)
+
+    return pos_sum, neg_sum
+
+print(sum_positive_negative(1, -2, 3, -4, 5))
+
 # Задача 4: Генерация строки из именованных аргументов
 # Напишите функцию `generate_string(**kwargs)`, которая принимает произвольное число именованных аргументов и возвращает строку, состоящую из ключей и значений в формате "key=value".
 #
 # generate_string(name="Alice", age=30, city="New York")
 # Вывод функции: name=Alice, age=30, city=New York
+
+def generate_string(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}={value}")
+generate_string(name="Alice", age=30, city="New York")
