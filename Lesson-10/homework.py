@@ -1,4 +1,5 @@
 # Тема: Цикл while. Операторы break, continue, else.
+# Viktor Yerokhov, выполнение ДЗ урока 10
 
 # Упражнение 1: Поиск числа
 #
