@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Lesson-16/examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/live_coding4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-16/Урок 11. Декораторы.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/exercise_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/exercise_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/exercise_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/live-coding-math.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/live-coding-random.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/live-coding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/my_package/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/my_package/lib_module_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/my_package/lib_module_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/test/my_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/test/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/test2/my_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/test2/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/work_with_package.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-17/Урок 12. Модули и пакеты. Модули Random и Math.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,23 +42,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2o4dqB9d8TkRc8B3UmxJJQ57qOz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging ollga-faruk&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject2" />
@@ -55,8 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
-        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
