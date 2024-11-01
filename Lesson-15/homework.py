@@ -70,3 +70,18 @@
 # Вывод:
 # Args: (1, 2, 3)
 # Kwargs: {'name': 'Alice', 'age': 30}
+
+
+# def sum_list(lst):
+#     if len(lst) <= 1:
+#         return lst[0]
+#     return lst[0] + sum_list([lst1])
+#
+# print(sum_list([1, 2, 3, 4, 5, 6, 7, 8]))
+
+def sum_of_digits(n):
+    if n < 10:
+        return n
+    return n % 10 + sum_of_digits(n//10)
+
+print(sum_of_digits(123555))
