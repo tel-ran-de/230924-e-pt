@@ -1,4 +1,5 @@
 # Тема: Упаковка аргументов с помощью *args, **kwargs и распаковка через * и **
+from itertools import count
 from pkgutil import extend_path
 
 
@@ -29,9 +30,21 @@ print(result)
 # 3. Напишите функцию print_details, которая принимает два аргумента name и age.
 # Затем создайте словарь с ключами name и age, распакуйте его и передайте в функцию print_details.
 
+def print_details(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+info = {"Name": "Igor", "Age": 46}
+
+print(info)
 
 # 4. Напишите функцию filter_numbers, которая принимает произвольное количество числовых аргументов с помощью *args
 # и возвращает список только тех чисел, которые больше 10.
+
+def filter_numbers(*args):
+    return [number for number in args if number > 10]
+
+result = filter_numbers(1, 6, 56, 13, 584, 666, 100, 999, 555, 5, 9)
+print(result)
 
 
 # Тема: Глобальные и локальные переменные. Вложенные функции и замыкания.
@@ -43,13 +56,40 @@ print(result)
 # increment_global()
 # print(counter)  # Вывод: 2
 
+counter = 0
+
+def increment_global():
+    global counter
+    counter += 1
+
+    return counter
+
+increment_global()
+print(counter)
+increment_global()
+print(counter)
+
 
 # 2. Напишите функцию outer, которая содержит внутреннюю функцию inner. Внутренняя функция должна увеличивать
 # значение переменной count, объявленной во внешней функции, на 1 каждый раз при её вызове.
 # counter = outer()
 # print(counter())  # Вывод: 1
 # print(counter())  # Вывод: 2
+def outer():
+    count = 0
 
+    def inner():
+        nonlocal count
+        count += 1
+
+        return count
+
+    return inner
+
+counter = outer()
+
+print(counter())
+print(counter())
 
 # 3. Напишите функцию make_multiplier, которая принимает аргумент factor. Внутри этой функции создайте и
 # верните функцию multiplier, которая умножает свой аргумент на factor.
@@ -58,6 +98,18 @@ print(result)
 # mult_by_3 = make_multiplier(3)
 # print(mult_by_3(5))  # Вывод: 15
 
+def make_multiplier(factor):
+    def multiplier(argument):
+        fact = factor * argument
+
+        return fact
+
+    return multiplier
+
+mult_by_2 = make_multiplier(2)
+print(mult_by_2(5))
+mult_by_3 = make_multiplier(3)
+print(mult_by_3(5))
 
 # 4. Напишите функцию make_prefixer, которая принимает строку prefix и возвращает внутреннюю функцию prefixer.
 # Внутренняя функция должна добавлять prefix к любому переданному ей аргументу.
