@@ -294,5 +294,22 @@ while True:
 # за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
 # за неделю и выводить дни с посещаемостью выше среднего.
 #
-# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-# visits = []
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
+
+for day in days:
+    visit = int(input(f"Количество посещений в(во) {day}: "))
+    visits.append(visit)
+
+max_visits = max(visits)
+min_visits = min(visits)
+average_visits = sum(visits) / len(visits)
+
+print(f"День с наибольшей посещаемостью: {days[visits.index(max_visits)]} ({max_visits} посещений)")
+print(f"День с наименьшей посещаемостью: {days[visits.index(min_visits)]} ({min_visits} посещений)")
+print(f"Средняя посещаемость за неделю: {average_visits:.2f}")
+
+print("Дни с посещаемостью выше среднего:")
+for i in range(len(visits)):
+    if visits[i] > average_visits:
+        print(f"{days[i]}: {visits[i]} посещений")
