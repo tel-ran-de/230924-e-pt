@@ -1,3 +1,5 @@
+# FIXED
+
 # Тема: Цикл while. Операторы break, continue, else.
  ollga-faruk-l10
 from itertools import product
