@@ -1,11 +1,29 @@
 # Тема: Упаковка аргументов с помощью *args, **kwargs и распаковка через * и **
+from pkgutil import extend_path
+
 
 # 1. Напишите функцию sum_all, которая принимает произвольное количество числовых аргументов
 # с помощью *args и возвращает их сумму.
 
+def sum_all(*args):
+    return sum(args)
+
+result = sum_all(1, 3, 55, 558, 666, 13)
+print(result)
 
 # 2. Напишите функцию combine_lists, которая принимает несколько списков в качестве аргументов с помощью *args
 # и возвращает один объединённый список.
+
+def combine_lists(*args):
+    combin_lst = []
+    for lst in args:
+        combin_lst.extend(lst)
+
+    return combin_lst
+
+result = combine_lists([1, 6, 9], ["Hello", not False], ["Bay", not True])
+print(result)
+
 
 
 # 3. Напишите функцию print_details, которая принимает два аргумента name и age.
