@@ -11,6 +11,12 @@
 #     - `divide(a, b)`: возвращает результат деления числа `a` на `b`.
 # 3. Включите конструкцию `if __name__ == "__main__"`, которая будет выполнять принт сообщения,
 # если модуль запущен напрямую: “Модуль запущен напрямую”.
+import math_operations
+
+
+print(math_operations.multiply(65, 45))
+print(math_operations.subtract(4564, 16813))
+print(math_operations.divide(4681, 68111))
 #
 # Часть 2: Использование модуля
 #
