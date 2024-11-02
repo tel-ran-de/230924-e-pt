@@ -15,48 +15,40 @@
 # 5. Удалите сотрудника "Charlie".
 # 6. Выведите данные о каждом сотруднике в формате:
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
-#
+
 # employees = {
 #     "Alice": {"age": 30, "department": "HR", "salary": 5000},
 #     "Bob": {"age": 25, "department": "IT", "salary": 6000},
 #     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
 # }
-
-employees = {
-    "Alice": {"age": 30, "department": "HR", "salary": 5000},
-    "Bob": {"age": 25, "department": "IT", "salary": 6000},
-    "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
-}
-
-for i in employees:
-    print(i)
-print()
-
-total_salary = sum(employeer['salary'] for employeer in employees.values())
-print(total_salary)
-print()
-# 3. Добавьте нового сотрудника "David" с возрастом 28, отделом "IT" и зарплатой 6500.
-
-employees['David'] = {"age": 30, "department": "HR", "salary": 5000}
-for i in employees:
-    print(i)
-print()
+#
+#
+# for i in employees:
+#     print(i)
+# print()
+#
+# total_salary = sum(employeer['salary'] for employeer in employees.values())
+# print(total_salary)
+# print()
+# # 3. Добавьте нового сотрудника "David" с возрастом 28, отделом "IT" и зарплатой 6500.
+#
+# employees['David'] = {"age": 30, "department": "HR", "salary": 5000}
+# for i in employees:
+#     print(i)
+# print()
 
 # 4. Обновите зарплату "Alice" до 5500.
-employees['Alice']["salary"] =  5500
-print(employees)
-print( '# 6. Выведите данные о каждом сотруднике в формате:')
-# 5. Удалите сотрудника "Charlie".
-
-del employees["Charlie"]
-print(employees)
-print()
-
-for i in employees:
-    [i] f"Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
-    print(i)
-
-
+# employees['Alice']["salary"] =  5500
+# print(employees)
+# print( '# 6. Выведите данные о каждом сотруднике в формате:')
+#
+#
+# del employees["Charlie"]
+# print(employees)
+# print()
+#
+# for name, details in employees.items():
+#     print(f"Имя: {name}, Возраст: {details['age']}, Отдел: {details['department']}, Зарплата: {details['salary']}")
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 
 
@@ -72,11 +64,43 @@ for i in employees:
 # 5. Добавьте новый товар "Dates" с количеством 15 и ценой 4.
 # 6. Выведите общую стоимость всех товаров (количество * цена для каждого товара и сумма этих значений).
 #
+
 # inventory = {
 #     "Apples": {"quantity": 50, "price": 2},
 #     "Bananas": {"quantity": 30, "price": 1},
 #     "Cherries": {"quantity": 20, "price": 3},
 # }
+#
+# print("1. Выведите названия всех товаров.")
+#
+# for i in inventory:
+#     print(i)
+# #
+# print("2. Увеличьте количество \"Apples\" на 10.")
+# print(" 3. Измените цену \"Bananas\" на 1.5.")
+#
+# inventory["Apples"]["quantity"] =  10
+# inventory["Bananas"]["price"] =  1.5
+# #
+# for i in inventory.items():
+#     print(i)
+#
+# print("4. Удалите товар Cherries")
+# del inventory["Cherries"]
+# for i in inventory.items():
+#     print(i)
+#
+#
+# print("5. Добавьте новый товар \"Dates\" с количеством 15 и ценой 4.")
+#
+# inventory["Dates"] = {"quantity": 15, "price": 4}
+#
+# print("6. Выведите общую стоимость всех товаров (количество * цена для каждого товара и сумма этих значений.")
+#
+#
+# total_value = sum(i["quantity"] * i["price"] for i in inventory.values())
+# print(f"Общая стоимость всех товаров: {total_value}")
+
 
 
 # Тема: кортежи и множества.
@@ -94,6 +118,12 @@ for i in employees:
 #
 # coordinates = [(10, 20), (30, 40), (50, 60)]
 
+
+coordinates = [(10, 20), (30, 40), (50, 60)]
+
+
+total_value = sum i for i in coordinates.values
+print(f"Общая стоимость всех товаров: {total_value}")
 
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
