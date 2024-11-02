@@ -1,4 +1,7 @@
-# Тема: Создание модулей
+import math
+import random
+
+
 
 # Задание: Создание и использование собственного модуля
 #
@@ -28,28 +31,54 @@
 # Задание 1: Округление и вычисление квадратного корня
 # Напишите функцию, которая принимает на вход два числа: одно для округления вверх, другое для округления вниз.
 # Затем программа должна вычислить квадратный корень каждого округленного числа и вывести результаты.
-
+def round_sqrt(num1, num2):
+    num1, num2 = math.ceil(num1), math.floor(num2)
+    print(math.sqrt(num1), math.sqrt(num2))
+    return math.sqrt(num1), math.sqrt(num2)
 
 # Задание 2: Факториал и возведение в степень
 # Напишите функцию, которая вычисляет факториал числа, а затем возводит результат в степень,
 # равную количеству цифр в этом факториале. Выведите результат.
-
+def factorial_pow(num):
+    res = math.factorial(num)
+    return (math.pow(res, math.ceil(math.log10(res))))
+print(factorial_pow(6))
 
 # Задание 3: Перемешивание списка и выбор элемента
 # Напишите функцию, которая создает список из 10 случайных чисел в диапазоне от 1 до 100.
 # Перемешайте список и выберите один случайный элемент. Выведите результат.
 
+def list_create_sheik():
+    num_list = list(random.sample(range(1,100), 10))
+    print(num_list)
+    random.shuffle(num_list)
+    print(num_list)
+    result = random.choice(num_list)
+    print(result)
+    return result
+
+list_create_sheik()
 
 # Задание 4: Отбрасывание дробной части и факториал
 # Напишите программу, которая принимает дробное число, отбрасывает его дробную часть,
 # а затем вычисляет факториал полученного целого числа. Выведите результат.
+def trunc_factorial(number):
+    number = math.trunc(number)
+    return  math.factorial(number)
 
+print(trunc_factorial(5.678))
 
 # Задание 5: Генерация и округление случайного числа
 # Напишите программу, которая генерирует случайное дробное число в диапазоне от 1.5 до 10.5,
 # округляет его до ближайшего целого в меньшую и большую сторону, а затем выводит результаты.
 
+def random_num_generate():
+    any_number = random.uniform(1.5, 10.5)
+    up_number = math.ceil(any_number)
+    down_number = math.floor(any_number)
+    print(up_number, down_number)
 
+random_num_generate()
 # Тема: Сторонние модули
 
 # Задание: Установка Django в виртуальную среду
