@@ -4,105 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="удаление ненужных строк из практики урока 13">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/Урок 5. Циклы.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/list_comprehension.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/Урок 7. Словари, кортежи, множества.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-13/Урок 8. Функции.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/Урок 9. Args, kwargs. Замыкания функций.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/factorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/flatten.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/Урок 10. Рекурсия.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/live_coding4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-16/Урок 11. Декораторы.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/Урок 12. Модули и пакеты. Модули Random и Math.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-2/Урок 2. Основы работы в Terminal и PyCharm.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-3/Урок 3. Основы работы в Git и GitHub.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-4/Урок 4. Ветвление и слияния в Git.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-5/Урок 5. Pull requests и дебаг кода.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/Урок 3. Условия.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/examples.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/homework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/live-coding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/Урок 4. Списки.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-X/exercise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +33,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Viktor-Yerokhov-h13 24_10_24.executor": "Run",
+    "Python.exercise_2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Viktor-Yerokhov-h13",
     "nodejs_package_manager_path": "npm",
@@ -150,6 +55,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="E:/КУРС IT back-end developer Phyton/ДЗ/Viktor-Yerokhov-h13 24_10_24.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-13" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-13/exercise_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,6 +111,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Viktor-Yerokhov-h13 24_10_24" />
+        <item itemvalue="Python.exercise_2" />
       </list>
     </recent_temporary>
   </component>
@@ -205,6 +133,28 @@
       <updated>1730132970358</updated>
       <workItem from="1730132980995" duration="7000" />
     </task>
+    <task id="LOCAL-00001" summary="удаление ненужных файлов из урока 13">
+      <option name="closed" value="true" />
+      <created>1730539120569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730539120569</updated>
+    </task>
+    <task id="LOCAL-00002" summary="удаление ненужных строк из практики урока 13">
+      <option name="closed" value="true" />
+      <created>1730539139931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730539139931</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="удаление ненужных файлов из урока 13" />
+    <MESSAGE value="удаление ненужных строк из практики урока 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="удаление ненужных строк из практики урока 13" />
   </component>
 </project>
