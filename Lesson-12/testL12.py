@@ -1,12 +1,8 @@
-# from itertools import product
-import itertools
-
-
 inventory = [
-    {'product': "Mouse", 'price': 10, 'count': 13},
-    {'product': "Laptop", 'price': 50, 'count': 1},
-    {'product': "Monitor", 'price': 30, 'count': 33},
-    {'product': "Keyboard", 'price': 20, 'count': 10}
+    {'product': "Laptop", 'price': 10, 'count': 13},
+    {'product': "Mouse", 'price': 50, 'count': 1},
+    {'product': "Keyboard", 'price': 30, 'count': 33},
+    {'product': "Monitor", 'price': 20, 'count': 10}
 ]
 while True:
     print("-----------------------------------------------------------------")
@@ -30,50 +26,20 @@ while True:
             print(f'| Наименование: {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
     elif choice == '2':
         product = input("Введите наименование товара: ")
-        for item in inventory:
-            if item['product'].lower() == product.lower():
-                print(f"Товар: {product} - уже есть в списке.")
-                break
-            else:
-                product = input("Введите наименование товара: ")
-                price = int(input("Введите цену товара: "))
-                count = int(input("Введите количество товара: "))
-                inventory.append({"product": product, "price": price, "count": count})
-                print(f"Товар: {product} - добавлен.")
-                break
+        price = int(input("Введите цену товара: "))
+        count = int(input("Введите количество товара: "))
+        inventory.append({"product": product, "price": price, "count": count})
+        print(f"Товар {product} добавлен.")
     elif choice == '3':
-        # product = input("Введите наименование товара для удаления из списка: ")
-        # print("-----------------------------------------------------------------")
-        try:
-            product = input("Введите наименование товара для удаления из списка: ")
-            print("-----------------------------------------------------------------")
-            for item in inventory:
-                if item['product'].lower() != product.lower():
-                # inventory.remove(item)
-                # print(f"Товар {product} удален.")
-                    print(f"Этот товар не найден!")
-                    break
-                else:
-                # print(f"Этот товар не найден!")
-                # break
-                    inventory.remove(item)
-                    print(f"Товар {product} удален.")
-                    break
-        except KeyError:
-            print(f"Этот товар не найден.")
-        # for item in inventory:
-        #     if item['product'].lower() == value.lower():
-        #         inventory.remove(item)
-        #         print(f"Товар {product} удален.")
-
-        # for item in inventory:
-        #     if item['product'].lower() != product.lower():
-        #         print(f"Товар {product} не найден.")
-        #         break
-        #     else:
-        #         inventory.remove(item)
-        #         print(f"Товар {product} удален.")
-        #         break
+        product = input("Введите наименование товара для удаления из списка: ")
+        print("-----------------------------------------------------------------")
+        for item in inventory:
+            if item["product"].lower() == product.lower():
+                inventory.remove(item)
+                print(f"Товар {product} удален.")
+                break
+            elif print(f"Товар {product} не найден."):
+                break
     elif choice == '4':
         product = input("Введите название товара для обновления: ")
         for item in inventory:
@@ -81,11 +47,10 @@ while True:
                 item['product'] = input("Введите новое название товара: ")
                 item['price'] = int(input("Введите новую цену товара: "))
                 item['count'] = int(input("Введите новое количество товара: "))
-                print(f"Товар {product} изменен.")
                 break
             else:
                 print(f"Товар {product} не найден.")
-                break
+                # break
     elif choice == '5':
         product = input("Введите наименование товара: ")
         print("-----------------------------------------------------------------")
