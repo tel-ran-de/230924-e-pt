@@ -4,80 +4,128 @@
 # 1. Создайте декоратор validate, который проверяет, что все переданные функции аргументы являются положительными числами.
 # Если нет, выводит сообщение об ошибке.
 #
-# @validate
-# def add(a, b):
-#     return a + b
+def validate(func):
+    def wrapper(*args):
+        for arg in args:
+            if not isinstance(arg, (int, float)) or arg <= 0:
+                print('Ошибка: все аргументы должны быть положительными числами')
+                return f'{arg} отрицательное число!'
+        return func(*args)
+    return wrapper
+
+
+@validate
+def add(a, b):
+    return a + b
 #
-# print(add(5, 3))
+print(add(5, 3))
 # Вывод: 8
 #
-# print(add(-1, 3))
+print(add(-1, 3))
 # Вывод: Ошибка: все аргументы должны быть положительными числами
-
+print('===============================================')
 
 # 2. Создайте декоратор cache, который запоминает результаты выполнения функции для заданных аргументов и возвращает
 # этот результат при повторном вызове декорируемой функции с теми же аргументами.
+def cache(func):
+    cache_dick = {}
+    def wrapper(*args):
+        if args in cache_dick:
+            return cache_dick[args]
+        result = func(*args)
+        cache_dick[args] = result
+        return result
+    return wrapper
 
-# @cache
-# def fibonacci(n):
-#     if n in (0, 1):
-#         return n
-#     return fibonacci(n - 1) + fibonacci(n - 2)
+
+@cache
+def fibonacci(n):
+    if n in (0, 1):
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 #
-# print(fibonacci(10))
+print(fibonacci(10))
 # # Вывод: 55
 #
-# print(fibonacci(10))
+print(fibonacci(10))
 # # Вывод: 55 (использует кеш)
 
-
+print('===============================================')
 # Дополнительная практика
 
 
 # 1. Создайте декоратор requires_auth, который проверяет наличие определенного флага authenticated и выполняет
 # функцию только если этот флаг установлен в True.
 #
-# authenticated = False
-#
-# @requires_auth
-# def secret_function():
-#     print("Секретная информация")
-#
-# secret_function()
+authenticated = False
+
+
+def requires_auth(func):
+    def wrapper(*args, **kwargs):
+        if not authenticated:
+            print('Доступ запрещен: пользователь не аутентифицирован')
+            return
+        return func(*args, **kwargs)
+    return wrapper()
+
+
+@requires_auth
+def secret_function():
+    print("Секретная информация")
+
+#secret_function()
 # Вывод: Доступ запрещен: пользователь не аутентифицирован
 #
-# authenticated = True
-# secret_function()
+#authenticated = True
+#secret_function()
 # Вывод: Секретная информация
-
+print('===============================================')
 
 # 2. Создайте декоратор call_counter, который отслеживает количество вызовов декорируемой функции и
 # выводит это количество при каждом вызове.
 #
-# @call_counter
-# def greet(name):
-#     print(f"Привет, {name}!")
-#
-# greet("Алиса")
+def call_counter(funk):
+    count = 0
+    def wrapper(*args, **kwargs):
+        nonlocal count
+        count += 1
+        print(f'Функция {funk.__name__} вызвана {count} раз')
+        return funk(*args, **kwargs)
+    return wrapper
+
+
+@call_counter
+def greet(name):
+    print(f"Привет, {name}!")
+
+greet("Алиса")
 # # Вывод:
 # # Функция greet вызвана 1 раз(а)
 # # Привет, Алиса!
 #
-# greet("Боб")
+greet("Боб")
 # # Вывод:
 # # Функция greet вызвана 2 раз(а)
 # # Привет, Боб!
-
-
+greet("Aleksej")
+print('===============================================')
 # 1. Создайте декоратор to_upper, который преобразует строковый результат функции в верхний регистр.
 #
-# @to_upper
-# def get_greeting(name):
-#     return f"Привет, {name}"
-#
-# print(get_greeting("Алиса"))
-# # Вывод: ПРИВЕТ, АЛИСА
+def to_upper(func):
+    def wrapper(*args, **kwargs):
+        upper_args = func(*args, **kwargs)
+        if isinstance(upper_args, str):
+            return upper_args.upper()
+    return wrapper
 
+
+@to_upper
+def get_greeting(name):
+    return f"Привет, {name}"
+
+print(get_greeting("Алиса"))
+# # Вывод: ПРИВЕТ, АЛИСА
+print('===============================================')
 
 # 2. Создайте декоратор limit_calls, который ограничивает количество вызовов функции заданным числом.
 # Если функция вызывается больше разрешенного числа раз, выводите сообщение об ошибке.
