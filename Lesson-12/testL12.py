@@ -37,9 +37,9 @@ while True:
             if item["product"].lower() == product.lower():
                 inventory.remove(item)
                 print(f"Товар {product} удален.")
-                break
-            elif print(f"Товар {product} не найден."):
-                break
+            #     break
+            # elif print(f"Товар {product} не найден."):
+            #     break
     elif choice == '4':
         product = input("Введите название товара для обновления: ")
         for item in inventory:
@@ -48,9 +48,9 @@ while True:
                 item['price'] = int(input("Введите новую цену товара: "))
                 item['count'] = int(input("Введите новое количество товара: "))
                 break
-            else:
-                print(f"Товар {product} не найден.")
-                # break
+            # else:
+            #     print(f"Товар {product} не найден.")
+            #     # break
     elif choice == '5':
         product = input("Введите наименование товара: ")
         print("-----------------------------------------------------------------")
