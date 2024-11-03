@@ -18,6 +18,7 @@ from itertools import count
 #     return summ, alln, len(count_ev)
 # print(analyze_numbers(numbers))
 
+
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
