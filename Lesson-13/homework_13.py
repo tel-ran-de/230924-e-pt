@@ -4,6 +4,7 @@
 
 from itertools import count
 
+
 # numbers = [1, 2, 3, 4, 5, 6]
 # Вывод функции: (21, 3.5, 3)
 # def analyze_numbers(numbers):
