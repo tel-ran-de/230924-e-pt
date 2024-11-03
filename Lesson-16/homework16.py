@@ -20,10 +20,10 @@
 #     return a + b
 #
 # print(add(3, 5))
-# Вывод: 8
+# # Вывод: 8
 #
 # print(add(-1, 3))
-# Вывод: Ошибка: все аргументы должны быть положительными числами
+# # Вывод: Ошибка: все аргументы должны быть положительными числами
 
 
 # 2. Создайте декоратор cache, который запоминает результаты выполнения функции для заданных аргументов и возвращает
@@ -82,6 +82,14 @@
 
 # 2. Создайте декоратор call_counter, который отслеживает количество вызовов декорируемой функции и
 # выводит это количество при каждом вызове.
+# def call_counter(func,counter=0):
+#     def wrapper(*args,**kwargs):
+#         nonlocal counter
+#         counter += 1
+#         print(f'Функция {func.__name__} вызвана {counter} раз(а)')
+#         return func(*args, **kwargs)
+#
+#     return wrapper
 #
 # @call_counter
 # def greet(name):
@@ -99,17 +107,34 @@
 
 
 # 1. Создайте декоратор to_upper, который преобразует строковый результат функции в верхний регистр.
-#
-# @to_upper
-# def get_greeting(name):
-#     return f"Привет, {name}"
-#
-# print(get_greeting("Алиса"))
+def to_upper(func):
+    def wrapper(*args, **kwargs):
+        result=func(*args, **kwargs)
+        return result.upper()
+    return wrapper
+
+@to_upper
+def get_greeting(name):
+    return f"Привет, {name}"
+
+print(get_greeting("Алиса"))
 # # Вывод: ПРИВЕТ, АЛИСА
 
 
 # 2. Создайте декоратор limit_calls, который ограничивает количество вызовов функции заданным числом.
 # Если функция вызывается больше разрешенного числа раз, выводите сообщение об ошибке.
+#
+# def limit_calls(numbers):
+#     def limit_calls_decorator(func,counter=0):
+#         def wrapper(*args,**kwargs):
+#             nonlocal counter
+#             counter+=1
+#             if counter>numbers:
+#                 print(f'Ошибка: функция {func.__name__} может быть вызвана не более {numbers} раз')
+#             else:
+#                 return func(*args,**kwargs)
+#         return wrapper
+#     return limit_calls_decorator
 #
 # @limit_calls(3)
 # def say_hello(name):
