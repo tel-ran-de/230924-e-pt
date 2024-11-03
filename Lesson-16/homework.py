@@ -1,6 +1,5 @@
 # Тема: Декораторы
 
-
 # 1. Создайте декоратор validate, который проверяет, что все переданные функции аргументы являются положительными числами.
 # Если нет, выводит сообщение об ошибке.
 #
@@ -130,15 +129,30 @@ print('===============================================')
 # 2. Создайте декоратор limit_calls, который ограничивает количество вызовов функции заданным числом.
 # Если функция вызывается больше разрешенного числа раз, выводите сообщение об ошибке.
 #
-# @limit_calls(3)
-# def say_hello(name):
-#     print(f"Привет, {name}!")
+def limit_calls(max_calls):
+    def limit_calls(func):
+        count = 0
+        def wrapper(*args, **kwargs):
+            nonlocal count
+            if count >= max_calls:
+                print(f'Вывод: Ошибка: функция {func.__name__} может быть вызвана не более {max_calls}')
+                return
+            count += 1
+            return func(*args, **kwargs)
+        return wrapper
+    return limit_calls
+
+
+
+@limit_calls(3)
+def say_hello(name):
+     print(f"Привет, {name}!")
 #
-# say_hello("Алиса")
+say_hello("Алиса")
 # # Вывод: Привет, Алиса!
-# say_hello("Боб")
+say_hello("Боб")
 # # Вывод: Привет, Боб!
-# say_hello("Чарли")
+say_hello("Чарли")
 # # Вывод: Привет, Чарли!
-# say_hello("Дейв")
+say_hello("Дейв")
 # # Вывод: Ошибка: функция say_hello может быть вызвана не более 3 раз
