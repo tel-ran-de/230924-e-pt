@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="отмена" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="удаление лишних файлов урок 16" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,12 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1730484837629</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="удаление лишних файлов урок 16">
+      <option name="closed" value="true" />
+      <created>1730631406078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730631406078</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="отмена" />
-    <option name="LAST_COMMIT_MESSAGE" value="отмена" />
+    <MESSAGE value="удаление лишних файлов урок 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="удаление лишних файлов урок 16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
