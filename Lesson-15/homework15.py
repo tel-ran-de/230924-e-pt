@@ -95,6 +95,8 @@ from functools import total_ordering
 # Пример использования:
 # dict1 = {"a": 1, "b": 2}
 # dict2 = {"c": 3, "d": 4}
+# def merge_dicts(**kwargs):
+#     return dict (zip(kwargs.keys(), kwargs.values()))
 # print(merge_dicts(**dict1, **dict2))  # Вывод: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 
 
@@ -102,19 +104,44 @@ from functools import total_ordering
 # Пример использования:
 # flatten = make_flatten()
 # print(flatten([1, [2, [3, 4], 5], 6]))  # Вывод: [1, 2, 3, 4, 5, 6]
+# def flatten(make_flatten):
+#     flat_list = []
+#     for item in make_flatten:
+#         if isinstance(item, list):
+#             flat_list.extend(flatten(item))
+#         else:
+#             flat_list.append(item)
+#     return flat_list
+# print(flatten([1, [2, [3, 4], 5], 6]))
+
+
+
 
 
 # 4. Напишите рекурсивную функцию `find_min`, которая возвращает минимальный элемент в списке `lst`.
 # Пример использования:
+# def find_min(lst):
+#     if len(lst) == 1:
+#         return lst[0]
+#     else:
+#         if lst[0] < lst[-1]:
+#             lst = lst[:-1]
+#         else:
+#             lst = lst[1:]
+#     return find_min(lst)
 # print(find_min([4, 2, 8, 1, 5]))  # Вывод: 1
 
 
 # 5. Напишите функцию `show_info`, которая принимает произвольное количество именованных и неименованных аргументов
 # с помощью `*args` и `**kwargs` и выводит их.
 # Пример использования:
+# def show_info(*args, **kwargs):
+#     print(f'Args: {args}')
+#     print(f'Kwargs: {kwargs}')
 # args = (1, 2, 3)
 # kwargs = {"name": "Alice", "age": 30}
 # show_info(*args, **kwargs)
 # Вывод:
 # Args: (1, 2, 3)
 # Kwargs: {'name': 'Alice', 'age': 30}
+
