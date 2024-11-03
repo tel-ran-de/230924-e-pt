@@ -213,7 +213,6 @@ print(set2.issubset(set1))
 # 6. Вывести список товаров меньше определенной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
 
-from itertools import product
 
 inventory = [
     {'product': "Laptop", 'price': 10, 'count': 13},
@@ -240,7 +239,7 @@ while True:
         print("Список товаров: ")
         print("-----------------------------------------------------------------")
         for item in inventory:
-            print(f'| Наименование: |  {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
+            print(f'| Наименование: {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
     elif choice == '2':
         product = input("Введите наименование товара: ")
         price = int(input("Введите цену товара: "))
@@ -274,7 +273,7 @@ while True:
         print("-----------------------------------------------------------------")
         for item in inventory:
             if item["product"].lower() == product.lower():
-                print(f'| Наименование: |  {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
+                print(f'| Наименование: {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
                 break
         else:
                 print(f"Товар {product} не найден.")
@@ -285,7 +284,7 @@ while True:
         print("-----------------------------------------")
         for item in inventory:
             if item["price"] <= price:
-                print(f'| Наименование: |  {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
+                print(f'| Наименование: {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
     elif choice == '7':
         count = int(input("Введите максимальное количество товара: "))
         print("-----------------------------------------------------------------")
@@ -293,8 +292,7 @@ while True:
         print("-------------------------------------------------")
         for item in inventory:
             if item["count"] <= count:
-                print(
-                    f'| Наименование: |  {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
+                print(f'| Наименование: {item["product"]} | Цена: {item["price"]} евро | Количество: {item["count"]} штук |')
     elif choice == '0':
         print("Выход из программы.")
         break
