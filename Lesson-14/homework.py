@@ -2,16 +2,14 @@
 
 # 1. Напишите функцию sum_all, которая принимает произвольное количество числовых аргументов
 # с помощью *args и возвращает их сумму.
-
 def sum_all(*args):
-      return sum(args)
+    return sum(args)
+
 
 print(sum_all(1, 2, 3, 4))
 
-
 # 2. Напишите функцию combine_lists, которая принимает несколько списков в качестве аргументов с помощью *args
 # и возвращает один объединённый список.
-
 def combine_lists(*args):
     list = []
     for i in args:
@@ -20,17 +18,14 @@ def combine_lists(*args):
 
 print(combine_lists(([1, 2, 3], [4, 5, 6])))
 
-
 # 3. Напишите функцию print_details, которая принимает два аргумента name и age.
 # Затем создайте словарь с ключами name и age, распакуйте его и передайте в функцию print_details.
-
 def print_details(name, age):
     print(f"Name: {name},  Age: {age}")
 
 my_details = {"name": "Olga", "age": 43}
 
 print_details(**my_details)
-
 
 # 4. Напишите функцию filter_numbers, которая принимает произвольное количество числовых аргументов с помощью *args
 # и возвращает список только тех чисел, которые больше 10.
@@ -41,18 +36,14 @@ def filter_numbers(*args):
 
 result = filter_numbers(1, 111, 2, 17, 0, 4)
 print(result)
-
-
-
 # Тема: Глобальные и локальные переменные. Вложенные функции и замыкания.
 
 # 1. Напишите функцию increment_global, которая увеличивает значение глобальной переменной counter на 1 каждый раз,
-# # когда она вызывается.
-# # increment_global()
-# # print(counter)  # Вывод: 1
-# # increment_global()
-# # print(counter)  # Вывод: 2
-
+# когда она вызывается.
+# increment_global()
+# print(counter)  # Вывод: 1
+# increment_global()
+# print(counter)  # Вывод: 2
 counter = 0
 
 def increment_global():
@@ -70,7 +61,6 @@ print(counter)
 # counter = outer()
 # print(counter())  # Вывод: 1
 # print(counter())  # Вывод: 2
-
 def outer():
     count = 0
     def inner():
@@ -90,7 +80,6 @@ print(counter())
 # print(mult_by_2(5))  # Вывод: 10
 # mult_by_3 = make_multiplier(3)
 # print(mult_by_3(5))  # Вывод: 15
-
 def make_multiplier(factor):
     def multiplier(x):
         return x * factor
@@ -102,7 +91,6 @@ print(mult_by_2(5))
 
 mult_by_3 = make_multiplier(3)
 print(mult_by_3(5))
-
 # 4. Напишите функцию make_prefixer, которая принимает строку prefix и возвращает внутреннюю функцию prefixer.
 # Внутренняя функция должна добавлять prefix к любому переданному ей аргументу.
 # add_hello = make_prefixer("Hello, ")
@@ -117,13 +105,11 @@ def make_prefixer(prefix):
 add_hello = make_prefixer("Hello, ")
 print(add_hello("Alice"))
 print(add_hello("Bob"))
-
 # Тема: Дополнительная практика
 
 # 1. Напишите функцию create_user, которая принимает параметры username, email
 # и произвольное количество дополнительных данных с помощью **kwargs.
 # Функция должна возвращать словарь с информацией о пользователе.
-
 def create_user(username, email, **kwargs):
     user_info = {
         'username': username,
@@ -138,13 +124,12 @@ print(user1)
 
 user2 = create_user('Thorsten', 'thorsten@example.com', phone='123-456-7890')
 print(user2)
-
+#
 # 2. Напишите функцию make_replacer, которая принимает два аргумента old и new. Внутри этой функции создайте
 # и верните функцию replacer, которая заменяет все вхождения old на new в переданной ей строке.
 # replace_a_with_o = make_replacer("a", "o")
 # print(replace_a_with_o("banana"))  # Вывод: bonono
 # print(replace_a_with_o("apple"))   # Вывод: opple
-
 def make_replacer(old, new):
     def replacer(s):
         return s.replace(old, new)
@@ -159,7 +144,6 @@ print(replace_a_with_o("apple"))
 # add_exclamation = make_suffixer("!")
 # print(add_exclamation("Hello"))  # Вывод: Hello!
 # print(add_exclamation("Wow"))    # Вывод: Wow!
-
 def make_suffixer(suffix):
     def suffixer(s):
         return s + suffix
@@ -193,13 +177,12 @@ print(to_upper("hello"))
 
 to_lower = make_case_changer("lower")
 print(to_lower("WORLD"))
-
+#
 # 5. Напишите функцию make_trimmer, которая принимает аргумент length. Внутри этой функции создайте и
 # верните функцию trimmer, которая обрезает строку до заданной длины.
 # trim_to_3 = make_trimmer(3)
 # print(trim_to_3("Hello"))  # Вывод: Hel
 # print(trim_to_3("World"))  # Вывод: Wor
-
 def make_trimmer(length):
     def trimmer(s):
         return s[:length]
