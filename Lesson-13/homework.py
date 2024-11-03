@@ -231,7 +231,7 @@ def find_product_price(product_list = inventory):
     for item in product_list:
         if item['price'] <= max_price:
             search_list.append(item)
-    print('-' * 7)
+    print("-------")
     print(f'Товары с ценой меньшей или равной - {max_price}:')
     print_products(search_list)
 
