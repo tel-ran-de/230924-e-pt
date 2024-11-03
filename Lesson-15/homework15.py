@@ -1,4 +1,5 @@
 ### Тема: Рекурсия
+
 from functools import total_ordering
 
 
