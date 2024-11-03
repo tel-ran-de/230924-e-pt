@@ -22,7 +22,7 @@ from itertools import count
 # Задача 2: Работа со строками
 # Напишите функцию `analyze_strings(strings)`, которая принимает список строк
 # и возвращает кортеж из трех значений: самая длинная строка, самая короткая строка и количество строк, содержащих букву "a"..
-#
+
 # strings = ["apple", "banana", "cherry", "date"]
 # def analyze_strings(strings):
 #     count_ev=[]
