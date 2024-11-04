@@ -167,19 +167,19 @@ def add_product(product_list = inventory):
                              'count': np_count
                              })
     else:
-        print(f'Добавить можно товар, отсутствующий в списке.')
+        print(f'Товар есть в списке.')
     print_products(product_list)
 
 
 def delete_product(product_list=inventory):
-    product_to_delete = input('Введите название удаляемого товара: ')
+    product_to_delete = input('Введите наименование, удаляемого товара: ')
     if check_input(product_to_delete, product_list):
         for item in product_list:
             if item['product'] == product_to_delete:
                 product_list.remove(item)
-        print(f'Продукт: {product_to_delete} - удален из списка продуктов.')
+        print(f'Продукт: {product_to_delete} - удален из списка товаров.')
     else:
-        print(f'Удалять можно только продукт находящийся в списке.')
+        print(f'Удалить можно товар из списка.')
     print_products(product_list)
 
 
@@ -218,7 +218,7 @@ def update_product(product_list = inventory):
 
 
 def find_product_name(product_list = inventory):
-    product_to_search = input("Введите название искомого товара: ")
+    product_to_search = input("Введите название товара: ")
     if check_input(product_to_search, product_list):
         print_products([product_to_search])
     else:
@@ -231,7 +231,7 @@ def find_product_price(product_list = inventory):
     for item in product_list:
         if item['price'] <= max_price:
             search_list.append(item)
-    print("-------")
+    print("-------------------------------------------------")
     print(f'Товары с ценой меньшей или равной - {max_price}:')
     print_products(search_list)
 
