@@ -111,24 +111,10 @@ print("-------------Доп. Задание 1.---------------")
 # 1. Напишите функцию create_user, которая принимает параметры username, email
 # и произвольное количество дополнительных данных с помощью **kwargs.
 # Функция должна возвращать словарь с информацией о пользователе.
-# def create_user(username):
-#     def email(email):
-#     return f'{username}:, +' '+{email}:'
-# return email
-#
-# hello_greeter = make_greeter('Hello')
-# print(hello_greeter('Alice'))
 
-# hi_greeter = make_greeter('Hi')
-# print(hi_greeter('Bob'))
-#
-#
-# merhaba_greeter = make_greeter('Merhaba')
-# print(merhaba_greeter('Metin'))
 def create_user(**kwargs):
     return kwargs
 print(create_user(username="Nikita", email="ttt", age=30, height=100))
-
 
 
 print("-------------Доп. Задание 2.---------------")
@@ -153,8 +139,14 @@ print(replace_a_with_o("aapplae"))   # Вывод: opple
 # print(add_exclamation("Hello"))  # Вывод: Hello!
 # print(add_exclamation("Wow"))    # Вывод: Wow!
 print("-------------Доп. Задание 3.---------------")
+def make_suffixer(suffix):
+    def suffixer(str):
+        return str + suffix
+    return suffixer
 
-
+add_exclamation = make_suffixer("!")
+print(add_exclamation("Hello"))  # Вывод: Hello!
+print(add_exclamation("Wow"))    # Вывод: Wow!
 
 # 4. Напишите функцию make_case_changer, которая принимает аргумент case (значения могут быть "upper" или "lower").
 # Внутри этой функции создайте и верните функцию case_changer, которая изменяет регистр строки в зависимости от
@@ -164,6 +156,20 @@ print("-------------Доп. Задание 3.---------------")
 # print(to_upper("hello"))  # Вывод: HELLO
 # to_lower = make_case_changer("lower")
 # print(to_lower("WORLD"))  # Вывод: world
+print("-------------Доп. Задание 4.---------------")
+
+def make_case_changer(case):
+    def case_changer(str):
+        if case == "upper":
+            return str.upper()
+        else:
+            return str.lower()
+    return case_changer
+
+to_upper = make_case_changer("upper")
+print(to_upper("hellO"))  # Вывод: HELLO
+to_lower = make_case_changer("lower")
+print(to_lower("WORLD"))  # Вывод: world
 
 
 # 5. Напишите функцию make_trimmer, которая принимает аргумент length. Внутри этой функции создайте и
@@ -171,3 +177,13 @@ print("-------------Доп. Задание 3.---------------")
 # trim_to_3 = make_trimmer(3)
 # print(trim_to_3("Hello"))  # Вывод: Hel
 # print(trim_to_3("World"))  # Вывод: Wor
+print("-------------Доп. Задание 5.---------------")
+
+def make_trimmer(length):
+    def trimmer(str):
+        return str[:length]
+    return trimmer
+
+trim_to_3 = make_trimmer(3)
+print(trim_to_3("Hello"))
+print(trim_to_3("World"))
