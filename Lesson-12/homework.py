@@ -264,7 +264,7 @@ while True:
                 break
             else:
                 have_product = False
-        print(have_product)
+        # print(have_product)
         if have_product == True:
             inventory.remove(item)
             print(f"Товар {product} удален.")
