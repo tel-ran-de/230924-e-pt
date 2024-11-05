@@ -272,12 +272,22 @@ while True:
             print(f"Товар: {product} - отсутствует.")
     elif choice == '4':
         product = input("Введите название товара для обновления: ")
+        print("-----------------------------------------------------------------")
         for item in inventory:
-            if item['product'].lower() == product.lower():
+            if product.lower() == item['product'].lower():
+                have_product = True
+                break
+            else:
+                have_product = False
+        if have_product == True:
                 item['product'] = input("Введите новое название товара: ")
                 item['price'] = int(input("Введите новую цену товара: "))
                 item['count'] = int(input("Введите новое количество товара: "))
-                break
+                print("-----------------------------------------------------------------")
+                print(f"Даные товара: '{product}' - изменены.")
+                # break
+        else:
+             print(f"Товара: {product} - нет в наличии.")
     elif choice == '5':
         product = input("Введите наименование товара: ")
         print("-----------------------------------------------------------------")
