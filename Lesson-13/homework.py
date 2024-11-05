@@ -185,35 +185,50 @@ def delete_product(product_list=inventory):
 
 def update_product(product_list = inventory):
     product_to_update = input("Введите название обновляемого товара: ")
-    if check_input(product_to_update, product_list):
-        article_to_update = input(f'Если хотите обновить наименование товара выберите - 1\n'
-                                  f'Если хотите обновить цену товара выберите - 2\n'
-                                  f'Если хотите обновить количество товара выберите - 3 \n')
-        if article_to_update == '1':
-            new_product = input("Введите новое название товара: ")
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['product'] = new_product.title()
-                    print_products([item])
-            print(f'Название продукта "{product_to_update}" изменено на "{new_product}" ')
-        elif article_to_update == '2':
-            new_price = int(input("Введите новую цену товара: "))
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['price'] = new_price
-                    print_products([item])
-            print(f'Новая цена продукта: {product_to_update} изменена на {new_price} ')
-        elif article_to_update == '3':
-            new_count = int(input("Введите новое количество товара: "))
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['count'] = new_count
-                    print_products([item])
-            print(f'Новое количество продукта: {product_to_update} изменена на {new_count} ')
+    for item in inventory:
+        if product_to_update.lower() == item['product'].lower():
+            have_product = True
+            break
         else:
-            print("Выбор действия неверен.")
+            have_product = False
+    if have_product == True:
+        item['product'] = input("Введите новое название товара: ")
+        item['price'] = int(input("Введите новую цену товара: "))
+        item['count'] = int(input("Введите новое количество товара: "))
+        print("-----------------------------------------------------------------")
+        print(f"Даные товара: '{product_to_update}' - изменены.")
+        # break1
     else:
-        print(f'Обновлять можно только продукт из списка товаров.')
+        print(f"Товара: {product_to_update} - нет в наличии.")
+    # if check_input(product_to_update, product_list):
+    #     article_to_update = input(f'Если хотите обновить наименование товара выберите - 1\n'
+    #                               f'Если хотите обновить цену товара выберите - 2\n'
+    #                               f'Если хотите обновить количество товара выберите - 3 \n')
+    #     if article_to_update == '1':
+    #         new_product = input("Введите новое название товара: ")
+    #         for item in product_list:
+    #             if item['product'].lower() == product_to_update.lower():
+    #                 item['product'] = new_product.title()
+    #                 print_products([item])
+    #         print(f'Название продукта "{product_to_update}" изменено на "{new_product}" ')
+    #     elif article_to_update == '2':
+    #         new_price = int(input("Введите новую цену товара: "))
+    #         for item in product_list:
+    #             if item['product'].lower() == product_to_update.lower():
+    #                 item['price'] = new_price
+    #                 print_products([item])
+    #         print(f'Новая цена продукта: {product_to_update} изменена на {new_price} ')
+    #     elif article_to_update == '3':
+    #         new_count = int(input("Введите новое количество товара: "))
+    #         for item in product_list:
+    #             if item['product'].lower() == product_to_update.lower():
+    #                 item['count'] = new_count
+    #                 print_products([item])
+    #         print(f'Новое количество продукта: {product_to_update} изменена на {new_count} ')
+    #     else:
+    #         print("Выбор действия неверен.")
+    # else:
+    #     print(f'Обновлять можно только продукт из списка товаров.')
     print_products(product_list)
 
 
