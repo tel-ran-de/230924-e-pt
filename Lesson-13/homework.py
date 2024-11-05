@@ -133,7 +133,7 @@ inventory = [
 def check_input(product, product_list=inventory):
     product_name_list = [item['product'].lower() for item in product_list]
     if product.lower() not in product_name_list:
-        print(f'Продукт: {product} - отсутствует в списке продуктов')
+        print(f'Товар: {product} - отсутствует в списке.')
         result = False
     else:
         result = True
@@ -177,18 +177,18 @@ def delete_product(product_list=inventory):
         for item in product_list:
             if item['product'] == product_to_delete:
                 product_list.remove(item)
-        print(f'Продукт: {product_to_delete} - удален из списка товаров.')
+        print(f'Товар: {product_to_delete} - удален из списка.')
     else:
-        print(f'Удалить можно товар из списка.')
+        print(f'Удалить можно только товар из списка.')
     print_products(product_list)
 
 
 def update_product(product_list = inventory):
     product_to_update = input("Введите название обновляемого товара: ")
     if check_input(product_to_update, product_list):
-        article_to_update = input(f'Если хотите обновить название продукта выберите 1\n'
-                                  f'Если хотите обновить цену продукта выберите 2\n'
-                                  f'Если хотите обновить количество продукта выберите 3: \n')
+        article_to_update = input(f'Если хотите обновить наименование товара выберите - 1\n'
+                                  f'Если хотите обновить цену товара выберите - 2\n'
+                                  f'Если хотите обновить количество товара выберите - 3 \n')
         if article_to_update == '1':
             new_product = input("Введите новое название товара: ")
             for item in product_list:
