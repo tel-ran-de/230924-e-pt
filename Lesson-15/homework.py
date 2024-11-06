@@ -1,17 +1,36 @@
 ### Тема: Рекурсия
+from xml.sax.saxutils import escape
+
 
 # 1. Напишите функцию `sum_list(lst)`, которая возвращает сумму всех элементов списка `lst` с помощью рекурсии.
 # Пример использования:
 # print(sum_list([1, 2, 3, 4, 5]))  # Вывод: 15
-
+print("------------------------------Рекурсия. Задание 1.---------------------------")
+def sum_list(lst):
+    if not lst:
+        return 0
+    else:
+        result = lst[0] + sum_list(lst[1:])
+    return result
+print(sum_list([1, 2, 3, 4, 5]))
 
 # 2. Напишите функцию `is_palindrome(s)`, которая проверяет, является ли строка `s` палиндромом
 # (порядок букв одинаковый при чтении слева направо и справа налево) с помощью рекурсии.
 # Пример использования:
 # print(is_palindrome("radar"))  # Вывод: True
 # print(is_palindrome("hello"))  # Вывод: False
+print("------------------------------Рекурсия. Задание 2.---------------------------")
+def is_palindrome(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return is_palindrome(s[1: -1])
 
-
+print(is_palindrome("radar"))  # Вывод: True
+print(is_palindrome("hello"))  # Вывод: False
+print(is_palindrome("radar"))
+print(is_palindrome("radar"))
 # 3. Напишите функцию `find_max(lst)`, которая возвращает максимальный элемент в списке `lst` с помощью рекурсии.
 # Пример использования:
 # print(find_max([1, 5, 3, 9, 2]))  # Вывод: 9
