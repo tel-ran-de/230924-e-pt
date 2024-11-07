@@ -1,33 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lesson-17/live-coding-math.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/live-coding-random.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/my_package/lib_module_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/my_package/lib_module_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/test/my_module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/test/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/test2/my_module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/test2/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-17/work_with_package.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/branch-check.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/230924-e-pt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/230924-e-pt/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-17/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-17/my_package/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,18 +13,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ViktorYerokhov"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ViktorYerokhov&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:tel-ran-de/230924-e-pt.git",
-    "accountId": "f4d70f9d-a8bf-43b9-8e3d-4a52b9738d40"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:tel-ran-de/230924-e-pt.git&quot;,
+    &quot;accountId&quot;: &quot;f4d70f9d-a8bf-43b9-8e3d-4a52b9738d40&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -61,7 +38,7 @@
   "keyToString": {
     "Python.hwtest10.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#152 on Merging Viktor-Yerokhov",
+    "git-widget-placeholder": "Viktor-Yerokhov-h19",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
