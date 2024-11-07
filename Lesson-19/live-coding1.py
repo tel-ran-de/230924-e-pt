@@ -66,6 +66,9 @@ lines = ['Line -2\n', 'Line -1\n', 'Line 0\n']
 file.writelines(lines)
 file.close()
 
+# перемещение курсора в конец файла
+# file.seek(0, 2)
+
 
 
 
