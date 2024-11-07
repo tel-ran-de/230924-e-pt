@@ -32,7 +32,7 @@ print(detailed_shopping_list)  # [["bread", 1.5], ["almond milk", 3.0], ["eggs",
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
 students = ["Alice", "Bob", "Charlie", "David"]
 
-# Измените имя второго студента на "Eve".
+# Измените имя вторgiого студента на "Eve".
 students[1] = "Eve"
 
 # Создайте срез, содержащий студентов: "Bob", "Charlie".
