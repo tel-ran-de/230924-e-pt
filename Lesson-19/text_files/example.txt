@@ -1,1 +1,2 @@
-Hello, World!\nWelcome to file handling in Python.
+Hello, World!
+Welcome to file handling in Python.
