@@ -52,10 +52,7 @@ products.append(("Date", 4))
 
 products = [(name, 2.5) if name == "Apple" else (name, price) for name, price in products]
 
-sorted_products = sorted(products, key=lambda product: product[1])
-print("\nПродукты, отсортированные по цене:")
-for product in sorted_products:
-    print(product)
+
 
 
 # Задача 3: Управление группами пользователей
@@ -100,7 +97,7 @@ print("Множество 1:", set1)
 print("Множество 2:", set2)
 
 union = set1.union(set2)
-print("\nОбъединение множеств:", union)
+print(union)
 
 intersection = set1.intersection(set2)
 print("Пересечение множеств:", intersection)
