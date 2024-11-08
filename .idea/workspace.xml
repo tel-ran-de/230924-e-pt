@@ -5,167 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/branch-check.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/230924-e-pt.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/230924-e-pt/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-13/Урок 8. Функции.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/live-coding2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/live-coding3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/live-coding4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-14/live-coding5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/factorial.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/flatten.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-15/Урок 10. Рекурсия.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live-coding3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/live_coding4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-16/Урок 11. Декораторы.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/examples.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/examples.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-10/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/live-coding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/live-coding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/Урок 5. Циклы.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/Урок 5. Циклы.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-12/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-6/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/Урок 1. Данные и переменные.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-7/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-7/Урок 2. Строки.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/Урок 9. Args, kwargs. Замыкания функций.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-8/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-8/live-coding2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Arbeitsnachweis.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Auftrag_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Auftrag_Image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Bild_Scan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Bild_Scan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/HKW_T - Kopie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/HKW_T.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/HKW_W - Kopie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/HKW_W.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Material.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Material_KOPIE.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Werkstatt.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Werkstatt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Werkstatt_KOPIE.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Werkstatt_START.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_125.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_155.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_165.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_170.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_175.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_185.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_190.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_195.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_200.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_205.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_210.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_215.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_220.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_225.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_230.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_235.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_245.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_250.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_255.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_260.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_265.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_270.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_275.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_280.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_285.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_290.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_295.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_305.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_315.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_320.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_325.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_330.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_335.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_345.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_350.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_355.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/Zeiger/Bild_95.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/d.Auftrag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/hanse_gm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Werkstatt/textdatei.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/homework_Pavel_morozov.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/homework_Pavel_morozov_copy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/exercise_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-16/homework.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +34,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;SHNAYDER&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,

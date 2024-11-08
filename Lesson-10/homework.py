@@ -51,24 +51,24 @@ print("Упражнение 3: Работа со списком покупок")
 print()
 
 
-#password = "python123"
-#attempts = 0
-#max_attempts = 3
-#
-#while attempts < max_attempts:
-#   passcode = input("Введите пароль: ")
-#
-#   if " " in passcode:
-#        print("Пароль не должен содержать пробелов")
-#        continue
-#
-#    if passcode == password:
-#        print("Доступ разрешен")
-#        break
-#    else:
-#       attempts += 1
-#        if attempts == max_attempts:
-#         print("Превышено количество попыток")
+password = "python123"
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+   passcode = input("Введите пароль: ")
+
+   if " " in passcode:
+        print("Пароль не должен содержать пробелов")
+        continue
+
+   if passcode == password:
+        print("Доступ разрешен")
+        break
+   else:
+       attempts += 1
+if attempts == max_attempts:
+         print("Превышено количество попыток")
 
 
 
@@ -83,24 +83,24 @@ print()
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
 
-#shopping_list = []
-#max_produkt = 6
-#
-#while len(shopping_list) < max_produkt:
-#    product = input("Введите элемент для списка покупок: ")
-#    if product.lower() == "стоп":
-#        print('Формирование списка завершено')
-#         break
-#       if product in shopping_list:
-#             print("Этот элемент уже в списке")
-#            continue
-#    shopping_list.append(product)
-#    print()
-#
-#if len(shopping_list) >= max_produkt:
-#        print("Превышен лимит покупок.")
-#print("Итоговый список покупок:", shopping_list)
-#print("Общее количество элементов в списке:", len(shopping_list))
+shopping_list = []
+max_produkt = 6
+
+while len(shopping_list) < max_produkt:
+    product = input("Введите элемент для списка покупок: ")
+    if product.lower() == "стоп":
+        print('Формирование списка завершено')
+        break
+    if product in shopping_list:
+            print("Этот элемент уже в списке")
+            continue
+    shopping_list.append(product)
+    print()
+
+if len(shopping_list) >= max_produkt:
+        print("Превышен лимит покупок.")
+print("Итоговый список покупок:", shopping_list)
+print("Общее количество элементов в списке:", len(shopping_list))
 #
 
 
@@ -122,14 +122,14 @@ print()
 print("Упражнение 3: Работа со списком покупок")
 print()
 
-#vowels = "aeiou"
-#user_input = input("Введите строку: ")
-#vowel_count = 0
-#for char in user_input.lower():
-#    if char in vowels:
-#        vowel_count += 1
-#
-#print(f"Количество гласных букв в строке: {vowel_count}")
+vowels = "aeiou"
+user_input = input("Введите строку: ")
+vowel_count = 0
+for char in user_input.lower():
+    if char in vowels:
+        vowel_count += 1
+
+print(f"Количество гласных букв в строке: {vowel_count}")
 
 
 
@@ -380,6 +380,6 @@ print(f"День с наименьшей посещаемостью: {min_day} (
 print(f"Средняя посещаемость за неделю: {average_visits:.2f}")
 print("Дни с посещаемостью выше среднего:", ", ".join(above_average_days))
 
-# days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-# visits = []
+days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+visits = []
 
