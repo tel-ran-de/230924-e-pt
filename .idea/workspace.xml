@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="проба написать игру сапер не выполнен">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change afterPath="$PROJECT_DIR$/Lesson-18/test_hangman.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/quiz_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/quiz_game.py" afterDir="false" />
     </list>
@@ -329,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731152177461</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731182708934</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731182708934</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -340,11 +347,11 @@
     <MESSAGE value="добавил код игра камень ножницы бумага" />
     <MESSAGE value="создал скелет главного меню" />
     <MESSAGE value="добавил возможный запуск на прямую для проверки работы игры" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="тестовый файл" />
     <MESSAGE value="тестовый файл сапер базовый" />
     <MESSAGE value="проба написать игру сапер не выполнен" />
-    <option name="LAST_COMMIT_MESSAGE" value="проба написать игру сапер не выполнен" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
