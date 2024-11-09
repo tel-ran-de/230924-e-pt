@@ -19,7 +19,7 @@
 
 def validate(func):
     def wrapper(*args, **kwargs):
-        # Проверяем, являются ли все аргументы положительными числами
+        "являются ли все положительными числами"
         for arg in args:
             if not isinstance(arg, (int, float)) or arg <= 0:
                 print("Ошибка: все аргументы должны быть положительными числами")
@@ -37,10 +37,10 @@ def add(a, b):
 
 "Примеры"
 
-print(add(5, 3))  # Вывод: 8
-print(add(-1, 3))  # Вывод: Ошибка: все аргументы должны быть положительными числами
-print(add(2, -4))  # Вывод: Ошибка: все аргументы должны быть положительными числами
-print(add(1.5, 2.5))  # Вывод: 4.0
+print(add(5, 3))        #  8
+print(add(-1, 3))          #  Ошибка: все аргументы должны быть положительными числами
+print(add(2, -4))          #  Ошибка: все аргументы должны быть положительными числами
+print(add(1.5, 2.5))    #  4.0
 
 
 
@@ -67,13 +67,13 @@ print(add(1.5, 2.5))  # Вывод: 4.0
 
 
 def cache(func):
-    results = {}  # Словарь для хранения результатов
+    results = {},                   "Словарь для хранения результатов"
 
     def wrapper(*args):
         if args in results:
-            return results[args]  # Возвращаем сохранённый результат
-        result = func(*args)  # Вызываем оригинальную функцию
-        results[args] = result  # Сохраняем результат
+            return results[args],    "сохранённый результат"
+        result = func(*args),        "оригинальную функцию"
+        results[args] = result,      "cохраняем результат"
         return result
 
     return wrapper
@@ -82,9 +82,10 @@ def cache(func):
 def fibonacci(n):
     if n in (0, 1):
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)# Примеры использования
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
+"Пример"
 
 print(fibonacci(10))  #  55
 print(fibonacci(10))  #  55 (использует кеш)
@@ -127,9 +128,9 @@ authenticated = False
 def requires_auth(func):
     def wrapper(*args, **kwargs):
         if not authenticated:
-            print("Доступ запрещен: пользователь не аутентифицирован")
+            print("пользователь не аутентифицирован")
             return
-        return func(*args, **kwargs)  # Вызываем оригинальную функцию, если аутентифицирован
+        return func(*args, **kwargs), "если аутентифицирован"
     return wrapper
 
 @requires_auth
@@ -139,11 +140,11 @@ def secret_function():
 
 "Пример"
 
-secret_function()  # Вывод: Доступ запрещен: пользователь не аутентифицирован
+secret_function()            # пользователь не аутентифицирован
 
 # Меняем флаг на True
 authenticated = True
-secret_function()  # Вывод: Секретная информация
+secret_function(),           # Секретная информация
 
 
 
@@ -175,9 +176,9 @@ def call_counter(func):
     count = 0
 
     def wrapper(*args, **kwargs):
-        nonlocal count  # Используем nonlocal для изменения переменной count из внешней функции
+        nonlocal count                # "для изменения переменной count из внешней функции"
         count += 1
-        print(f"Функция {func.__name__} вызвана {count} раз(а)")
+        print(f"Функция {func.__name__} вызвана {count} раз")
         return func(*args, **kwargs)
 
     return wrapper
@@ -191,14 +192,49 @@ def greet(name):
 
 greet("Алиса")
 
-#  greet вызвана 1 раз(а)
+#  greet вызвана 1 раз
 # "Привет, Алиса!"
 
 greet("Боб")
 
-#  greet вызвана 2 раз(а)
+#  greet вызвана 2 раза
 # "Привет, Боб!"
 
+
+
+
+
+def call_counter(func):
+                                   # подсчет количества вызовов
+    def wrapper(*args, **kwargs):
+                                   # переменную, которая хранит количество вызовов
+        wrapper.calls += 1
+        print(f"Функция {func.__name__} вызвана {wrapper.calls} раз")
+        return func(*args, **kwargs)
+
+    "количества вызовов"
+    wrapper.calls = 0
+    return wrapper
+
+
+"Пример"
+
+@call_counter
+def greet(name):
+    print(f"Привет, {name}!")
+
+
+# Вызовы функций
+greet("Алиса")
+
+# Функция greet вызвана 1 раз
+# Привет, Алиса!
+
+greet("Боб")
+
+
+# Функция greet вызвана 2 раза
+# Привет, Боб!
 
 
 
@@ -260,13 +296,13 @@ print(get_greeting("Боб")),      #  "ПРИВЕТ, БОБ"
 
 def limit_calls(max_calls):
     def decorator(func):
-        count = 0  # Переменная для отслеживания количества вызовов
+        count = 0,  "Переменная для отслеживания вызовов"
 
         def wrapper(*args, **kwargs):
             nonlocal count
             if count < max_calls:
                 count += 1
-                return func(*args, **kwargs)  # Вызываем оригинальную функцию
+                return func(*args, **kwargs),  "оригинальную функцию"
             else:
                 print(f"Ошибка: функция {func.__name__} может быть вызвана не более {max_calls} раз")
                 return None
@@ -284,6 +320,7 @@ say_hello("Алиса"),   "Привет, Алиса!"
 say_hello("Боб"),     "Привет, Боб!"
 say_hello("Чарли"),   "Привет, Чарли!"
 say_hello("Дейв"),    "Ошибка: функция say_hello может быть вызвана не более 3 раз"
+
 
 
 
