@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="игра Викторина выполнена">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил код игра камень ножницы бумага">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/guess_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/guess_number.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/minesweeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/minesweeper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" afterPath="$PROJECT_DIR$/hwtest10.py" afterDir="false" />
@@ -63,7 +62,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.guess_number">
+  <component name="RunManager" selected="Python.rock_paper_scissors">
     <configuration name="guess_number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -109,28 +108,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="minesweeper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="230924-e-pt" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-18" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-18/minesweeper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="quiz_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -145,6 +122,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-18/quiz_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rock_paper_scissors" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-18" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-18/rock_paper_scissors.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rock_paper_scissors" />
+        <item itemvalue="Python.test_miniproject" />
         <item itemvalue="Python.guess_number" />
         <item itemvalue="Python.test_quiz_game" />
         <item itemvalue="Python.quiz_game" />
-        <item itemvalue="Python.minesweeper" />
-        <item itemvalue="Python.test_miniproject" />
       </list>
     </recent_temporary>
   </component>
@@ -240,13 +239,57 @@
       <option name="project" value="LOCAL" />
       <updated>1731147120227</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="игра Угадай число выполнена, ввел корректность ввода только чисел в диапазоне от 1 до 100">
+      <option name="closed" value="true" />
+      <created>1731149496791</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731149496791</updated>
+    </task>
+    <task id="LOCAL-00004" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731149530780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731149530780</updated>
+    </task>
+    <task id="LOCAL-00005" summary="предложение Евгения для старта">
+      <option name="closed" value="true" />
+      <created>1731150197314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731150197314</updated>
+    </task>
+    <task id="LOCAL-00006" summary="запуск функции в случае выполнения напрямую">
+      <option name="closed" value="true" />
+      <created>1731150357821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731150357821</updated>
+    </task>
+    <task id="LOCAL-00007" summary="добавил код игра камень ножницы бумага">
+      <option name="closed" value="true" />
+      <created>1731151569053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731151569053</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="перезапись" />
     <MESSAGE value="игра Викторина выполнена" />
-    <option name="LAST_COMMIT_MESSAGE" value="игра Викторина выполнена" />
+    <MESSAGE value="игра Угадай число выполнена, ввел корректность ввода только чисел в диапазоне от 1 до 100" />
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="предложение Евгения для старта" />
+    <MESSAGE value="запуск функции в случае выполнения напрямую" />
+    <MESSAGE value="добавил код игра камень ножницы бумага" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил код игра камень ножницы бумага" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
