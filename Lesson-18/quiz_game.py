@@ -52,7 +52,7 @@ def quiz_game(question_country, list_city, correct_answer):
         except ValueError:
             print("Неверный ввод. Введите число.\n")
 
-def main():
+def quiz_game_main():
     dict_capital = [
         ("Столица Франции?", ["Лондон", "Берлин", "Париж"], 3),
         ("Столица Германии?", ["Лондон", "Берлин", "Венеция"], 2),
@@ -70,6 +70,7 @@ def main():
     print(f"Игра завершена. Вы дали {correct_answers} правильных ответа из 5.")
 
 if __name__ == "__main__":
-    main()
+    print('Файл запущен напрямую')
+    quiz_game_main()
 
 
