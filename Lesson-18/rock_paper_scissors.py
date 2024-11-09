@@ -13,6 +13,8 @@ def game_paper_scissors():
     comp_choice = random.randint(1, 3)
     win_comp = 0
     win_user = 0
+    print("---------------Игра: 'Камень, ножницы, бумага'.---------------")
+    print("Игра продолжается до тех пор, пока один из игроков не одержит на три победы больше, чем соперник.")
     while True:
         print("1. Камень")
         print("2. Ножницы")
@@ -55,7 +57,7 @@ def game_paper_scissors():
             else:
                 print("Ничья")
 
-game_paper_scissors()
 
 if __name__ == '__main__':
     print('Файл запущен напрямую')
+    game_paper_scissors()
