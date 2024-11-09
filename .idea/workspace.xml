@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
-      <change afterPath="$PROJECT_DIR$/test_quiz_game.py" afterDir="false" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="игра Викторина выполнена">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-18/guess_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/guess_number.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/minesweeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/minesweeper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/quiz_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/quiz_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" afterPath="$PROJECT_DIR$/hwtest10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +63,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.quiz_game">
-    <configuration name="hwtest10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.guess_number">
+    <configuration name="guess_number" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,11 +73,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-18" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hwtest10.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-18/guess_number.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.quiz_game" />
+        <item itemvalue="Python.guess_number" />
         <item itemvalue="Python.test_quiz_game" />
+        <item itemvalue="Python.quiz_game" />
         <item itemvalue="Python.minesweeper" />
         <item itemvalue="Python.test_miniproject" />
-        <item itemvalue="Python.hwtest10" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +224,29 @@
       <updated>1730132970358</updated>
       <workItem from="1730132980995" duration="7000" />
     </task>
+    <task id="LOCAL-00001" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731147104281</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731147104281</updated>
+    </task>
+    <task id="LOCAL-00002" summary="игра Викторина выполнена">
+      <option name="closed" value="true" />
+      <created>1731147120227</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731147120227</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="игра Викторина выполнена" />
+    <option name="LAST_COMMIT_MESSAGE" value="игра Викторина выполнена" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
