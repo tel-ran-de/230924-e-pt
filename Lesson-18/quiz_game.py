@@ -29,7 +29,6 @@
 # — 2. Порту
 # — 3. Мюнхен
 
-# def game_quiz(*args, **kwargs):
 def quiz_game(question_country, list_city, correct_answer):
     while True:
         print(question_country)
