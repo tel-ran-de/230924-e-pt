@@ -152,6 +152,8 @@ def delete_product():
     else:
         print("Продукт не наиден.")
 
+
+
 def update_product():
     product = input("Введите название продукта чтоб обнавить: ")
     for item in inventory:
@@ -162,6 +164,8 @@ def update_product():
     else:
         print("Продукт не найден.")
 
+
+
 def find_product():
     product = input("Введите название продукта которую ищите: ")
     for item in inventory:
@@ -171,17 +175,20 @@ def find_product():
     else:
         print("Продукт не найден.")
 
+
 def products_below_price():
     price = float(input("Введите цену для пойска товара: "))
     for item in inventory:
         if item['price'] < price:
             print(f"Product: {item['product']}, Price: {item['price']}, Count: {item['count']}")
 
+
 def products_below_count():
     count = int(input("Введите количество что вас интересует: "))
     for item in inventory:
         if item['count'] < count:
             print(f"Product: {item['product']}, Price: {item['price']}, Count: {item['count']}")
+
 
 def main():
     while True:
@@ -215,6 +222,6 @@ def main():
             break
         else:
             print("Неправильный выбор. Пожалуйста, выберите снова.")
-if __name__ == "__main__": main()
 
+if __name__ == "__main__": main()
 
