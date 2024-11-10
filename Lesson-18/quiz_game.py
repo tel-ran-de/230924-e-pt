@@ -29,28 +29,6 @@
 # — 2. Порту
 # — 3. Мюнхен
 
-def quiz_game(question_country, list_city, correct_answer):
-    while True:
-        print(question_country)
-        print(28 * "-")
-        for num, city in enumerate(list_city, start=1):
-            print(f"{num}. {city}")
-        try:
-            print(28 * "-")
-            user_answer = int(input("Введите вариант ответа: "))
-            print(28 * "-")
-            if 1 <= user_answer <= len(list_city):
-                if user_answer == correct_answer:
-                    print("Ответ правильный.\n")
-                    return True
-                else:
-                    print("Ответ неправильный.\n")
-                    return False
-            else:
-                print("Неверный ввод. Выберите число от 1 до", len(list_city), "\n")
-        except ValueError:
-            print("Неверный ввод. Введите число.\n")
-
 def quiz_game_main():
     dict_capital = [
         ("Столица Франции?", ["Лондон", "Берлин", "Париж"], 3),
@@ -62,14 +40,35 @@ def quiz_game_main():
 
     correct_answers = 0
     print("----- Игра: Викторина. -----")
+
     for question_country, list_city, correct_answer in dict_capital:
-        if quiz_game(question_country, list_city, correct_answer):
-            correct_answers += 1
+        while True:
+            print(question_country)
+            print(28 * "-")
+            for num, city in enumerate(list_city, start=1):
+                print(f"{num}. {city}")
+            try:
+                print(28 * "-")
+                user_answer = int(input("Введите вариант ответа: "))
+                print(28 * "-")
+                if 1 <= user_answer <= len(list_city):
+                    if user_answer == correct_answer:
+                        print("Ответ правильный.\n")
+                        correct_answers += 1
+                        break
+                    else:
+                        print("Ответ неправильный.\n")
+                        break
+                else:
+                    print("Неверный ввод. Выберите число от 1 до", len(list_city), "\n")
+            except ValueError:
+                print("Неверный ввод. Введите число.\n")
 
     print(f"Игра завершена. Вы дали {correct_answers} правильных ответа из 5.")
 
 if __name__ == "__main__":
     print('Файл запущен напрямую')
-    quiz_game_main()
+    quiz_game()
+
 
 
