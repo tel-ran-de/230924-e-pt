@@ -112,7 +112,6 @@ def minesweeper():
 
         if board[row][col] == '*':
             print("Вы наступили на мину! Игра окончена.")
-            # print_board_with_mines()
             for row in range(size):
                 for col in range(size):
                     if board[row][col] == '*':
