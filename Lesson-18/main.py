@@ -9,6 +9,7 @@ from guess_number import game_guess_number
 from quiz_game import quiz_game_main
 from rock_paper_scissors import game_paper_scissors
 from hangman import game_hangman
+from text_adventure import text_quest
 
 
 def main_menu():
@@ -21,7 +22,7 @@ def main_menu():
         print("5. Текстовый квест")
         print("6. Сапер")
         print("0. Выход")
-        print(52 * "-")
+        print(28 * "-")
         choice = input("Выберите игру (1-6): ")
         if choice == '1':
             game_guess_number()
@@ -36,6 +37,7 @@ def main_menu():
             game_hangman()
             print("")
         elif choice == '5':
+            text_quest()
             print("")
         elif choice == '6':
             print("")
