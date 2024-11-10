@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74627c53-2f2b-45f2-98f3-704361e9c1ee" name="Changes" comment="commit merge h-11">
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-13/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="74627c53-2f2b-45f2-98f3-704361e9c1ee" name="Changes" comment="commit merge h-11" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,15 +39,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.exercise_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;giorgi-okropiridze-h-13&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.exercise_2.executor": "Run",
+    "Python.homework.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "giorgi-okropiridze",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
