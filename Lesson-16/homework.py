@@ -172,40 +172,10 @@ secret_function(),           # Секретная информация
 
 
 
-def call_counter(func):
-    count = 0
-
-    def wrapper(*args, **kwargs):
-        nonlocal count                # "для изменения переменной count из внешней функции"
-        count += 1
-        print(f"Функция {func.__name__} вызвана {count} раз")
-        return func(*args, **kwargs)
-
-    return wrapper
-
-@call_counter
-def greet(name):
-    print(f"Привет, {name}!")
-
-
-"Пример"
-
-greet("Алиса")
-
-#  greet вызвана 1 раз
-# "Привет, Алиса!"
-
-greet("Боб")
-
-#  greet вызвана 2 раза
-# "Привет, Боб!"
-
-
-
 
 
 def call_counter(func):
-    ("подсчет количества вызовов")
+    ("количества вызовов")
     def wrapper(*args, **kwargs):
         ("переменную, хранит количество вызовов")
         wrapper.calls += 1
@@ -297,15 +267,15 @@ print(get_greeting("Боб")),      #  "ПРИВЕТ, БОБ"
 
 def limit_calls(max_calls):
     def decorator(func):
-        count = 0,                               "Переменная , отслеживания вызовов"
+        count = 0,                                     "Переменная , отслеживания вызовов"
 
         def wrapper(*args, **kwargs):
             nonlocal count
             if count < max_calls:
                 count += 1
-                return func(*args, **kwargs),     "оригинальную функцию"
+                return func(*args, **kwargs),           "оригинальную функцию"
             else:
-                print(f"Ошибка: функция {func.__name__} может быть вызвана не более {max_calls} раз")
+                print(f"Ошибка: функция {func.__name__} может быть не более {max_calls} раз")
                 return None
 
         return wrapper
@@ -320,7 +290,7 @@ def say_hello(name):
 say_hello("Алиса"),   "Привет, Алиса!"
 say_hello("Боб"),     "Привет, Боб!"
 say_hello("Чарли"),   "Привет, Чарли!"
-say_hello("Дейв"),    "Ошибка: функция say_hello может быть вызвана не более 3 раз"
+say_hello("Дейв"),    "Ошибка: функция say_hello вызвана не более 3 раз"
 
 
 

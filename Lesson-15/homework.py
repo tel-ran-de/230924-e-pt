@@ -6,6 +6,7 @@
 
 
 
+
 def sum_list(lst):
     if not lst:
         return 0
@@ -25,6 +26,7 @@ print(sum_list([1, 2, 3, 4, 5])),  # 15
 # Пример использования:
 # print(is_palindrome("radar")),  # Вывод: True
 # print(is_palindrome("hello")),  # Вывод:  False
+
 
 
 
@@ -57,6 +59,7 @@ print(is_palindrome("A man a plan a canal Panama")),True
 # 3. Напишите функцию `find_max(lst)`, которая возвращает максимальный элемент в списке `lst` с помощью рекурсии.
 # Пример использования:
 # print(find_max([1, 5, 3, 9, 2]))  # Вывод: 9
+
 
 
 
@@ -94,6 +97,7 @@ print(find_max([-1, -5, -3, -9, -2])),     # -1
 # 1. Напишите функцию `sum_of_digits(n)`, которая возвращает сумму цифр числа `n` с помощью рекурсии.
 # Пример использования:
 # print(sum_of_digits(12345))  # Вывод: 15
+
 
 
 
@@ -138,7 +142,6 @@ def reverse_string(s):
 
 print(reverse_string("hello")),   # "olleh"
 print(reverse_string("Python")),  # "nohtyP"
-
 
 
 
@@ -203,13 +206,13 @@ print(multiply_all()),    # 1 (пустые возвращают 1)
 
 
 
-
 # 2. Напишите функцию `merge_dicts`, которая принимает произвольное количество словарей с помощью `**kwargs`
 # и возвращает один объединённый словарь.
 # Пример использования:
 # dict1 = {"a": 1, "b": 2}
 # dict2 = {"c": 3, "d": 4}
 # print(merge_dicts(**dict1, **dict2))  # Вывод: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
 
 
 
@@ -236,6 +239,7 @@ print(merge_dicts(dict1=dict1, dict2=dict2))  # Вывод: {'a': 1, 'b': 2, 'c'
 # Пример использования:
 # flatten = make_flatten()
 # print(flatten([1, [2, [3, 4], 5], 6]))  # Вывод: [1, 2, 3, 4, 5, 6]
+
 
 
 
@@ -276,6 +280,7 @@ print(flatten([1, [2, [3, 4], 5], 6]))  # Вывод: [1, 2, 3, 4, 5, 6]
 
 
 
+
 def find_min(lst):
     if len(lst) == 1:
         return lst[0]
@@ -310,6 +315,7 @@ print(find_min([-5, -2, -8, -1, -3])),    # -8
 
 
 
+
 def show_info(*args, **kwargs):
     print("Args:", args)
     print("Kwargs:", kwargs)
@@ -323,6 +329,7 @@ show_info(*args, **kwargs)
 "пример"
 
 show_info(4, 5, name="Bob", city="New York")
+
 
 
 

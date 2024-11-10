@@ -229,9 +229,6 @@ print(result),   # name=Alice, age=30, city=New York
 
 
 
-
-
-
 # Проект: Перепишите проект из урока 7 в функциональном стиле.
 # Управление инвентарем в интернет-магазине
 # Разработайте программу для управления инвентарем интернет-магазина.
@@ -256,143 +253,11 @@ print(result),   # name=Alice, age=30, city=New York
 #     {'product': "Monitor", 'price': 20, 'count': 10}
 # ]
 
-inventory = [
-    {'product': "Laptop", 'price': 10, 'count': 13},
-    {'product': "Mouse", 'price': 50, 'count': 1},
-    {'product': "Keyboard", 'price': 30, 'count': 33},
-    {'product': "Monitor", 'price': 20, 'count': 10}
-]
 
 
-"отображения всех товаров"
-def show_inventory(inventory):
-    return "\n".join([f"{item['product']} - Цена: {item['price']} - Количество: {item['count']}" for item in inventory])
+"список товаров"
 
 
-"добавления товара"
-def add_product(inventory, product, price, count):
-    new_product = {'product': product, 'price': price, 'count': count}
-    return inventory + [new_product]
-
-"название товара для удаления"
-def remove_product(inventory, product_name):
-    return [item for item in inventory if item['product'] != product_name]
-
-
-"обновления товара"
-def update_product(inventory, product_name, new_name=None, new_price=None, new_count=None):
-    updated_inventory = []
-    for item in inventory:
-        if item['product'] == product_name:
-            updated_item = item.copy()
-            if new_name is not None:
-                updated_item['product'] = new_name
-            if new_price is not None:
-                updated_item['price'] = new_price
-            if new_count is not None:
-                updated_item['count'] = new_count
-            updated_inventory.append(updated_item)
-        else:
-            updated_inventory.append(item)
-    return updated_inventory
-
-
-"товар по названию"
-def find_product(inventory, product_name):
-    return [item for item in inventory if product_name.lower() in item['product'].lower()]
-
-
-"товар ниже стоимости"
-def filter_by_price(inventory, max_price):
-    return [item for item in inventory if item['price'] < max_price]
-
-
-"товар количество заданного"
-def filter_by_count(inventory, max_count):
-    return [item for item in inventory if item['count'] < max_count]
-
-
-"пользовател"
-
-def menu(inventory):
-    while True:
-        print("\nМеню:")
-        print("1. Показать список товаров.")
-        print("2. Добавить товар.")
-        print("3. Удалить товар.")
-        print("4. Обновить название товара, стоимость или количество.")
-        print("5. Найти товар по названию.")
-        print("6. Вывести список товаров меньше определенной стоимости.")
-        print("7. Вывести список товаров меньше определенного количества.")
-        print("8. Выйти.")
-
-        choice = input("Выберите опцию: ")
-
-        if choice == '1':
-            print(show_inventory(inventory))
-
-        elif choice == '2':
-            product = input("название товара: ")
-            price = float(input("цену товара: "))
-            count = int(input("количество товара: "))
-            inventory = add_product(inventory, product, price, count)
-            print(f"Товар '{product}' добавлен.")
-
-        elif choice == '3':
-            product_name = input("название товара для удаления: ")
-            inventory = remove_product(inventory, product_name)
-            print(f"Товар '{product_name}' удален.")
-
-        elif choice == '4':
-            product_name = input("название товара для обновления: ")
-            new_name = input("новое название товара (или Enter для пропуска): ")
-            new_price = input("новую цену товара (или Enter для пропуска): ")
-            new_count = input("новое количество товара (или Enter для пропуска): ")
-            new_price = float(new_price) if new_price else None
-            new_count = int(new_count) if new_count else None
-            inventory = update_product(inventory, product_name, new_name or None, new_price, new_count)
-            print(f"Товар '{product_name}' обновлен.")
-
-        elif choice == '5':
-            product_name = input("название товара для поиска: ")
-            found_items = find_product(inventory, product_name)
-            if found_items:
-                print(show_inventory(found_items))
-            else:
-                print(f"Товар '{product_name}' не найден.")
-
-        elif choice == '6':
-            max_price = float(input("максимальную цену: "))
-            filtered_items = filter_by_price(inventory, max_price)
-            if filtered_items:
-                print(show_inventory(filtered_items))
-            else:
-                print(f"Нет товаров с ценой ниже {max_price}.")
-
-        elif choice == '7':
-            max_count = int(input("максимальное количество: "))
-            filtered_items = filter_by_count(inventory, max_count)
-            if filtered_items:
-                print(show_inventory(filtered_items))
-            else:
-                print(f"Нет товаров ниже {max_count}.")
-
-        elif choice == '8':
-            print("Выход из программы.")
-            break
-
-        else:
-            print("Некорректный выбор. Пожалуйста, снова.")
-
-menu(inventory)
-
-
-
-
-
-
-
-# Изначальный список товаров
 inventory = [
     {'product': "Laptop", 'price': 10, 'count': 13},
     {'product': "Mouse", 'price': 50, 'count': 1},
@@ -476,13 +341,13 @@ def main():
             count = int(input("количество товара: "))
             current_inventory = add_product(current_inventory, name, price, count)
         elif choice == '3':
-            name = input("название товара, который хотите удалить: ")
+            name = input("название товара, который удалить: ")
             current_inventory = remove_product(current_inventory, name)
         elif choice == '4':
             name = input("товар, который обновить: ")
-            new_name = input("новое название товара (или Enter, чтобы не менять): ")
-            new_price = input("новую цену товара (или Enter, чтобы не менять): ")
-            new_count = input("новое количество товара (или Enter, чтобы не менять): ")
+            new_name = input("новое название товара (Enter, чтобы не менять): ")
+            new_price = input("новую цену товара (Enter, чтобы не менять): ")
+            new_count = input("новое количество товара (Enter, чтобы не менять): ")
 
             new_price = float(new_price) if new_price else None
             new_count = int(new_count) if new_count else None
@@ -510,13 +375,16 @@ def main():
             else:
                 print("Нет товаров с таким количеством.")
         elif choice == '8':
-            print("Выход из программы.")
+            print("Выход.")
             break
         else:
             print("Неверный выбор. Пожалуйста опцию от 1 до 8.")
 
 if __name__ == "__main__":
     main()
+
+
+
 
 
 ###########################################################################################
