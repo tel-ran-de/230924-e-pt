@@ -15,36 +15,115 @@
 # если количество штрафных очков достигает лимита (например, 6).
 
 import random
-
+#список слов
 words = ["mouse", "elephant", "duck", "cat", "dog", "horse"]
-
+#подключаю рандом для выбора слова
 word = random.choice(words)
-
-letters = []
-falce_attempts = 0
+#создаем пер. и присваиваем  им начальные знач.
+# - записываем угаданые буквы в список, неправильные попытки и колличество попыток
+guessed_letters = [] #список угаданных букв
+wrong_attempts = 0
 max_attempts = 6
 
-def game_start():
-    start_word = ""
-    for letter in word:
-        if letter in letters:
-            start_word += letter
+def display_game_state():
+    display_word = "" #пустая строка для записи и показа состояния отгадывания слова
+    for letter in word: #проходим по каждой букве в загаданном слове
+        if letter in guessed_letters: #если буква есть в guessed_letters то
+            display_word += letter #добавляем ее к строке display_word, если нет то ставим звезду
         else:
-            start_word += "*"
-        print(start_word)
-def the_game_is_on(letter):
-    global falce_attempts
-    if letter in word:
-        letters.append(letter)
-    else:
-        falce_attempts += 1
-while falce_attempts < max_attempts:
-        game_start()
-        letter = input("Введите букву: ")
-        the_game_is_on(letter)
+            display_word += "*" #если нет то ставим звезду
+    print(display_word)
 
-        if all(letter in letters for letter in word):
-            print("Поздравляем, вы выиграли!")
-        break
-else:
-    print(f"Вы проиграли! Загаданное слово было: {word}")
+# Функция для букв, принимает один аргумент лэтер
+def process_letter(letter):
+    global wrong_attempts
+    if letter in word: #проверяем, содержится ли введённая буква в загаданном слове word
+        guessed_letters.append(letter) #добавляем букву апендом если она есть в word
+    else:
+        wrong_attempts += 1#иначе добавляем в переменную неправильных попыток штрафное очко, тю.е увеличиваем кол-во на 1
+
+def display_hangman(attempts): #берем один аргумент attempts
+    stages = [ #список отображения этапа угадывания
+        """
+           --------
+           |      |
+           |      
+           |    
+           |      
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |    
+           |      
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |      |
+           |      
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     /|
+           |      
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     /|\\
+           |      
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     /|\\
+           |     / 
+           |     
+        --------
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     /|\\
+           |     / \\
+           |     
+        --------
+        """
+    ]
+
+    return stages[attempts] #возврат строки из списка этап соответственно текущему кол-ву неправ-х попыток
+
+
+while wrong_attempts < max_attempts: #в цикле пока число неправильных попыток меньше максимальных
+        print(display_hangman(wrong_attempts)) #на начало каждой проходки отображаем этап висилицы
+        display_game_state() #показываем текущее состояние слова
+        letter = input("Введите букву: ")
+        if letter in guessed_letters: #если буква уже была угадана
+            print("Вы уже угадали эту букву.") #выводится сообщение
+            continue # и идем с начала на следующий круг
+        process_letter(letter) #eсли буква не была угадана ранее, передаем букву  в функцию process_letter для обработки
+        if all(letter in guessed_letters for letter in word): #После обработки буквы проверяем, угаданы ли все буквы в слове
+            print(f"Поздравляем, вы выиграли! Загаданное слово: {word}")
+            break
+else: #eсли количество неправильных попыток равно макс знач., цикл завершается
+    print(display_hangman(wrong_attempts))
+    print(f"Вы проиграли! Загаданное слово было: {word}") #и отображается сообщение о поражении
+
