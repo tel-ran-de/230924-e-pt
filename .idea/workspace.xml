@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/minesweeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/minesweeper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/text_adventure.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/text_adventure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" afterPath="$PROJECT_DIR$/hwtest10.py" afterDir="false" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="проба">
+      <change beforePath="$PROJECT_DIR$/Lesson-18/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.text_adventure">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="hwtest10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -201,10 +198,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.text_adventure" />
         <item itemvalue="Python.hwtest10" />
         <item itemvalue="Python.test_quiz_game" />
-        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.test_hangman" />
       </list>
     </recent_temporary>
@@ -466,7 +463,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731240452147</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731260944216</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1731260944216</updated>
+    </task>
+    <task id="LOCAL-00032" summary="тестовые">
+      <option name="closed" value="true" />
+      <created>1731260954269</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1731260954269</updated>
+    </task>
+    <task id="LOCAL-00033" summary="проба">
+      <option name="closed" value="true" />
+      <created>1731260959464</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1731260959464</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -491,7 +512,9 @@
     <MESSAGE value="тестирование игры Сапер, не завершена" />
     <MESSAGE value="модернизация игры Викторина" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="тестовые" />
+    <MESSAGE value="проба" />
+    <option name="LAST_COMMIT_MESSAGE" value="проба" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
