@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="реализация игры Сапер, экспериментальный вариант" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -566,11 +566,26 @@
       <option name="project" value="LOCAL" />
       <updated>1731273300469</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731273617932</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1731273617932</updated>
+    </task>
+    <task id="LOCAL-00045" summary="реализация игры Сапер, экспериментальный вариант">
+      <option name="closed" value="true" />
+      <created>1731273782595</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1731273782595</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="игра Угадай число выполнена, ввел корректность ввода только чисел в диапазоне от 1 до 100" />
     <MESSAGE value="предложение Евгения для старта" />
     <MESSAGE value="запуск функции в случае выполнения напрямую" />
     <MESSAGE value="добавил код игра камень ножницы бумага" />
@@ -595,7 +610,8 @@
     <MESSAGE value="игра Сапер сложный вариант" />
     <MESSAGE value="игра Виселица коррекция" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="реализация игры Сапер, экспериментальный вариант" />
+    <option name="LAST_COMMIT_MESSAGE" value="реализация игры Сапер, экспериментальный вариант" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
