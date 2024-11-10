@@ -4,13 +4,180 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение ДЗ урок 14" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение ДЗ урок 14">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/branch-check.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/230924-e-pt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/230924-e-pt/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-10/Урок 5. Циклы.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/list_comprehension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-12/Урок 7. Словари, кортежи, множества.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/Урок 8. Функции.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/live-coding5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/Урок 9. Args, kwargs. Замыкания функций.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/factorial.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/flatten.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/Урок 10. Рекурсия.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/live-coding3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/live_coding4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/Урок 11. Декораторы.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-17/Урок 12. Модули и пакеты. Модули Random и Math.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-2/Урок 2. Основы работы в Terminal и PyCharm.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-3/Урок 3. Основы работы в Git и GitHub.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-4/Урок 4. Ветвление и слияния в Git.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-5/Урок 5. Pull requests и дебаг кода.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-6/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/live-coding3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-8/Урок 3. Условия.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/homework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/live-coding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-9/Урок 4. Списки.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-X/exercise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/0_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/1_git_install.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/3_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/4_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/5_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/6_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/7_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/7_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/7_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/7_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/1_git_install/8_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/1_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/1_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/1_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/2_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/2_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/2_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/2_git_workflow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manuals/2_git_workflow/7_1.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Viktor-Yerokhov-h18" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -138,16 +305,5 @@
     <MESSAGE value="перезапись" />
     <MESSAGE value="выполнение ДЗ урок 14" />
     <option name="LAST_COMMIT_MESSAGE" value="выполнение ДЗ урок 14" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
