@@ -1,7 +1,7 @@
 import random
 
 def create_board(size, num_mines):
-    board = [['0' for _ in range(size)] for _ in range(size)]
+    board = [['1' for _ in range(size)] for _ in range(size)]
     mines = random.sample(range(size * size), num_mines)
     for mine in mines:
         row, col = divmod(mine, size)
@@ -14,7 +14,7 @@ def count_mines(board, row, col):
     count = 0
     for dr, dc in directions:
         r, c = row + dr, col + dc
-        if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
+        if 0 <= r < size and 0 <= c < size and board[r][c] == '✹':
             count += 1
     return count
 
