@@ -47,7 +47,7 @@ def analyze_strings(strings):
 
     longest_string = max(strings, key=len)                 # "длинная строка"
     shortest_string = min(strings, key=len)                # "короткая строка"
-    count_with_a = sum(1 for s in strings if 'a' in s)     # "Количество строк, содержащих букву" "a"
+    count_with_a = sum(1 for s in strings if 'a' in s)     # "Количество строк, буквa" "a"
 
     return (longest_string, shortest_string, count_with_a)
 

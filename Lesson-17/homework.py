@@ -233,47 +233,92 @@ generate_and_round()
 # Для создания виртуальной среды используйте модуль `venv`, который встроен в Python 3.
 # Находясь в папке задания в терминале введите python -m venv myenv
 #
+
+bash
+mkdir django_project
+cd django_project
+
+python -m venv myenv
+
+
+
 # 2. Активация виртуальной среды
 # После создания виртуального окружения, его нужно активировать.
 # На Windows: myenv\\Scripts\\activate
 # На MacOS и Linux: source myenv/bin/activate
 #
+
+myenv\Scripts\activate
+
+source myenv/bin/activate
+
 # 3. Установка Django
 # Когда виртуальная среда активирована, можно установить Django с помощью `pip`.
 # pip install django
 #
+
+
+bash
+pip install django
+
+
 # 4. Проверка установки Django
 # После установки Django проверьте его версию, чтобы убедиться, что установка прошла успешно.
 # django-admin --version
 #
+
+django-admin --version
+
+4.1.7
+
 # 5. Создайте файл requirements.txt, где будет указан django.
 #
 # После завершения работы в виртуальной среде, её можно деактивировать: deactivate
 
 
+pip freeze > requirements.txt
+
+
+makefile
+Django==4.1.7
+
+"deaktivazija"
+
+deactivate
+
+
+######################################################################
 
 
 
 # Шаг 1: Создание папки и виртуального окружения
+
 mkdir django_project
 cd django_project
 python -m venv myenv
 
+
 # Шаг 2: Активация виртуального окружения
 # Для Windows:
+
 myenv\Scripts\activate
 # Для MacOS/Linux:
 source myenv/bin/activate
 
+
 # Шаг 3: Установка Django
+
 pip install django
 
 # Шаг 4: Проверка установки Django
+
 django-admin --version
 
 # Шаг 5: Создание файла requirements.txt
+
 pip freeze > requirements.txt
 
 # Шаг 6: Деактивация виртуального окружения
+
 deactivate
 
