@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="удаление лишних файлов">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="дз Урок 15 выполнен полностью" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +170,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731274431653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="удаление лишних файлов">
+      <option name="closed" value="true" />
+      <created>1731277134298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731277134298</updated>
+    </task>
+    <task id="LOCAL-00005" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731277146135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731277146135</updated>
+    </task>
+    <task id="LOCAL-00006" summary="дз Урок 15 выполнен полностью">
+      <option name="closed" value="true" />
+      <created>1731277162056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731277162056</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +211,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="сохранение" />
     <MESSAGE value="удаление лишних файлов" />
-    <option name="LAST_COMMIT_MESSAGE" value="удаление лишних файлов" />
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="дз Урок 15 выполнен полностью" />
+    <option name="LAST_COMMIT_MESSAGE" value="дз Урок 15 выполнен полностью" />
   </component>
 </project>
