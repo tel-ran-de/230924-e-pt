@@ -254,8 +254,8 @@ greet("Боб")
 
 def to_upper(func):
     def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)  # Вызываем оригинальную функцию
-        return result.upper()  # Преобразуем результат в верхний регистр
+        result = func(*args, **kwargs),       "Вызываем функцию"
+        return result.upper(),                "результат в верхний регистр"
     return wrapper
 
 @to_upper
@@ -296,13 +296,13 @@ print(get_greeting("Боб")),      #  "ПРИВЕТ, БОБ"
 
 def limit_calls(max_calls):
     def decorator(func):
-        count = 0,  "Переменная для отслеживания вызовов"
+        count = 0,                               "Переменная , отслеживания вызовов"
 
         def wrapper(*args, **kwargs):
             nonlocal count
             if count < max_calls:
                 count += 1
-                return func(*args, **kwargs),  "оригинальную функцию"
+                return func(*args, **kwargs),     "оригинальную функцию"
             else:
                 print(f"Ошибка: функция {func.__name__} может быть вызвана не более {max_calls} раз")
                 return None
