@@ -1,54 +1,122 @@
+# Игра: Сапёр
+#
+# Цель игры: открыть все клетки, не содержащие мин.
+#
+# Правила игры:
+#
+# 1. Игровое поле состоит из клеток размером 5x5.
+# 2. На поле случайным образом размещены 5 мин.
+# 3. Игрок вводит координаты клетки (например, "2 3" для второй строки и третьего столбца), чтобы проверить ее.
+# 4. Если игрок открывает клетку с миной, он проигрывает.
+# 5. Если игрок открывает клетку без мины, на этой клетке отображается число, указывающее, сколько мин находится в соседних клетках (по горизонтали, вертикали и диагоналям).
+# 6. Игрок побеждает, если открывает все клетки, не содержащие мин.
+#
+# Пример игрового процесса:
+#
+# 1. Игроку показывается пустое поле:
+# - - - - -
+# - - - - -
+# - - - - -
+# - - - - -
+# - - - - -
+#
+# 2. Игрок вводит координаты клетки:
+# Введите координаты клетки (строка столбец): 2 3
+#
+# 3. Если в этой клетке нет мины, открывается число:
+# - - - - -
+# - - 1 - -
+# - - - - -
+# - - - - -
+# - - - - -
+#
+# 4. Игрок продолжает вводить координаты, пока не откроет все безопасные клетки или не попадет на мину.
+# 5. Если игрок открывает клетку с миной, игра заканчивается:
+# - - - - -
+# - - * - -
+# - - - - -
+# - - - - -
+# - - - - -
+# Вы проиграли! Вы попали на мину.
+#
+# 6. Если игрок открывает все клетки без мин, игра заканчивается победой:
+# - 1 1 1 -
+# - 1 * 1 -
+# - 2 2 2 -
+# - 1 * 1 -
+# - 1 1 1 -
+# Поздравляем! Вы открыли все безопасные клетки.
 import random
 
-def get_user_choice():
-    while True:
-        try:
-            print("1. Камень")
-            print("2. Ножницы")
-            print("3. Бумага")
-            user_choice = int(input("Выберите действие: "))
-            if 1 <= user_choice <= 3:
-                return user_choice
+def create_board(size, num_mines):
+    board = [['1' for _ in range(size)] for _ in range(size)]
+    mines = random.sample(range(size * size), num_mines)
+    for mine in mines:
+        row, col = divmod(mine, size)
+        board[row][col] = '✹'
+    return board
+
+def count_mines(board, row, col):
+    size = len(board)
+    directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    count = 0
+    for dr, dc in directions:
+        r, c = row + dr, col + dc
+        if 0 <= r < size and 0 <= c < size and board[r][c] == '✹':
+            count += 1
+    return count
+
+def reveal_board(board, revealed, row, col):
+    size = len(board)
+    if not (0 <= row < size and 0 <= col < size) or revealed[row][col]:
+        return
+    revealed[row][col] = True
+    if board[row][col] == '*':
+        return
+    count = count_mines(board, row, col)
+    if count > 0:
+        board[row][col] = str(count)
+    else:
+        board[row][col] = ' '
+        for dr, dc in [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]:
+            reveal_board(board, revealed, row + dr, col + dc)
+
+def print_board(board, revealed):
+    size = len(board)
+    for row in range(size):
+        for col in range(size):
+            if revealed[row][col]:
+                print(board[row][col], end=' ')
             else:
-                print("Некорректный ввод! Пожалуйста, введите число от 1 до 3.")
+                print('.', end=' ')
+        print()
+
+def main():
+    size = 5
+    num_mines = 5
+    board = create_board(size, num_mines)
+    revealed = [[False for _ in range(size)] for _ in range(size)]
+
+    while True:
+        print_board(board, revealed)
+        try:
+            row, col = map(int, input("Введите координаты клетки (например, '2 3'): ").split())
+            if not (0 <= row < size and 0 <= col < size):
+                print("Неверные координаты. Попробуйте снова.")
+                continue
         except ValueError:
-            print("Некорректный ввод! Пожалуйста, введите число.")
+            print("Неверный ввод. Попробуйте снова.")
+            continue
 
-def determine_winner(user_choice, comp_choice):
-    if user_choice == comp_choice:
-        return "ничья"
-    elif (user_choice == 1 and comp_choice == 2) or \
-         (user_choice == 2 and comp_choice == 3) or \
-         (user_choice == 3 and comp_choice == 1):
-        return "пользователь"
-    else:
-        return "компьютер"
+        if board[row][col] == '*':
+            print("Вы наступили на мину! Игра окончена.")
+            break
 
-def game_paper_scissors():
-    win_comp = 0
-    win_user = 0
-    print("---------------Игра: 'Камень, ножницы, бумага'.---------------")
-    print("Игра продолжается до тех пор, пока один из игроков не одержит на три победы больше, чем соперник.")
+        reveal_board(board, revealed, row, col)
 
-    while abs(win_comp - win_user) < 3:
-        comp_choice = random.randint(1, 3)
-        user_choice = get_user_choice()
+        if sum(sum(row) for row in revealed) == size * size - num_mines:
+            print("Поздравляю! Вы открыли все клетки без мин и победили!")
+            break
 
-        result = determine_winner(user_choice, comp_choice)
-        if result == "ничья":
-            print("Ничья")
-        elif result == "пользователь":
-            win_user += 1
-            print(f"Победил пользователь. Счет: {win_user} - {win_comp}")
-        else:
-            win_comp += 1
-            print(f"Победил компьютер. Счет: {win_comp} - {win_user}")
-
-    if win_user > win_comp:
-        print(f"Победил пользователь счет {win_user} - {win_comp}")
-    else:
-        print(f"Победил компьютер счет {win_comp} - {win_user}")
-
-if __name__ == '__main__':
-    print('Файл запущен напрямую')
-    game_paper_scissors()
+if __name__ == "__main__":
+    main()
