@@ -375,7 +375,7 @@ def menu(inventory):
             if filtered_items:
                 print(show_inventory(filtered_items))
             else:
-                print(f"Нет товаров с количеством ниже {max_count}.")
+                print(f"Нет товаров ниже {max_count}.")
 
         elif choice == '8':
             print("Выход из программы.")
@@ -447,7 +447,8 @@ def filter_by_price(inventory, max_price):
 def filter_by_count(inventory, max_count):
     return [item for item in inventory if item['count'] < max_count]
 
-"Функция для меню"
+"Функция меню"
+
 def display_menu():
     print("\nМеню:")
     print("1. Показать список товаров.")
@@ -478,7 +479,7 @@ def main():
             name = input("название товара, который хотите удалить: ")
             current_inventory = remove_product(current_inventory, name)
         elif choice == '4':
-            name = input("название товара, который хотите обновить: ")
+            name = input("товар, который обновить: ")
             new_name = input("новое название товара (или Enter, чтобы не менять): ")
             new_price = input("новую цену товара (или Enter, чтобы не менять): ")
             new_count = input("новое количество товара (или Enter, чтобы не менять): ")
@@ -500,7 +501,7 @@ def main():
             if filtered:
                 show_inventory(filtered)
             else:
-                print("Нет товаров с такой ценой.")
+                print("Нет с такой ценой.")
         elif choice == '7':
             max_count = int(input("максимальное количество: "))
             filtered = filter_by_count(current_inventory, max_count)
