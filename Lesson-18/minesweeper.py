@@ -46,48 +46,88 @@
 # - 1 * 1 -
 # - 1 1 1 -
 # Поздравляем! Вы открыли все безопасные клетки.
-pattern_list = [
-    ["-", "-", "-", "-", "-"],
-    ["-", "-", "-", "-", "-"],
-    ["-", "-", "-", "-", "-"],
-    ["-", "-", "-", "-", "-"],
-    ["-", "-", "-", "-", "-"]
-]
-
 import random
 
+def minesweeper():
+    size = 5
+    num_mines = 5
+    board = [[' ' for _ in range(size)] for _ in range(size)]
+    mines = random.sample(range(size * size), num_mines)
+    for mine in mines:
+        row, col = divmod(mine, size)
+        board[row][col] = '*'
 
-for row in pattern_list:
-    print(" ".join(row))
-print()
+    revealed = [[False for _ in range(size)] for _ in range(size)]
 
-game_coord = []
+    def count_mines(row, col):
+        directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+        count = 0
+        for dr, dc in directions:
+            r, c = row + dr, col + dc
+            if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
+                count += 1
+        return count
 
-for v in range(0, 5):
-    x1 = random.randrange(0, 5)
-    y1 = random.randrange(0, 5)
-    pattern_list[int(x1)][int(y1)] = 'X'
-    pl = [x1, y1]
-    game_coord.append(pl)
+    def reveal_board(row, col):
+        if not (0 <= row < size and 0 <= col < size) or revealed[row][col]:
+            return
+        revealed[row][col] = True
+        if board[row][col] == '*':
+            return
+        count = count_mines(row, col)
+        if count > 0:
+            board[row][col] = str(count)
+        else:
+            board[row][col] = ' '
+            for dr, dc in [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]:
+                reveal_board(row + dr, col + dc)
 
-for row in pattern_list:
-    print(" ".join(row))
+    def print_board():
+        for row in range(size):
+            for col in range(size):
+                if revealed[row][col]:
+                    print(board[row][col], end=' ')
+                else:
+                    print('.', end=' ')
+            print()
 
+    while True:
+        print_board()
+        try:
+            user_row, user_col = map(int, input("Введите координаты клетки (например, '2 3'): ").split())
+            if not (1 <= user_row <= size and 1 <= user_col <= size):
+                print("Неверные координаты. Попробуйте снова.")
+                continue
+            row, col = user_row - 1, user_col - 1  # Преобразование координат из диапазона 1-5 в 0-4
+        except ValueError:
+            print("Неверный ввод. Попробуйте снова.")
+            continue
 
-while True:
-    user = True
+        if board[row][col] == '*':
+            print("Вы наступили на мину! Игра окончена.")
+            # print_board_with_mines()
+            for row in range(size):
+                for col in range(size):
+                    if board[row][col] == '*':
+                        print('*', end=' ')
+                    else:
+                        print(board[row][col], end=' ')
+                print()
+            break
 
-    a = input()
-    c = a.split()
-    print(a, c)
-    print(c)  # list
+        reveal_board(row, col)
 
-    x, y = c[0], c[1]
-    print("Координаты : x:", int(x) + 1, " y:", int(y) + 1)
+        if sum(sum(row) for row in revealed) == size * size - num_mines:
+            print("Поздравляю! Вы открыли все клетки без мин и победили!")
+            # print_board_with_mines()
+            for row in range(size):
+                for col in range(size):
+                    if board[row][col] == '*':
+                        print('*', end=' ')
+                    else:
+                        print(board[row][col], end=' ')
+                print()
+            break
 
-    # if user == True:
-    #    pattern_list[int(x)][int(y)] = 'X'
-
-    for row in pattern_list:
-        print(" ".join(row))
-    print()
+if __name__ == "__main__":
+    minesweeper()
