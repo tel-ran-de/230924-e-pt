@@ -16,19 +16,19 @@
 
 import random
 
-
 def game_hangman():
     word_list = ["обучение", "программирование", "компьютер", "профессия", "автомобиль", "крепость", "синхрофазотрон"]
     word_from_list = random.choice(word_list)   # Случайно выбранное слово из списка.
     word_from_list_letters = []                 # Список для хранения угаданных букв.
     count_attempt = 0
     max_attempt = 6
+    guessed_word = ['*'] * len(word_from_list)  # Список для хранения текущего состояния угаданного слова.
 
     print("------------- Игра: Виселица.-------------")
     print("У вас есть 6 попыток, чтобы угадать слово.")
 
     while count_attempt < max_attempt:
-        print_word = ''.join([letter if letter in word_from_list_letters else '*' for letter in word_from_list])
+        print_word = ''.join(guessed_word)
         print("\nТекущее состояние слова:", print_word)
         print("Неправильные попытки:", count_attempt)
 
@@ -46,11 +46,14 @@ def game_hangman():
 
         if letter in word_from_list:
             print("Правильно!")
+            for i, char in enumerate(word_from_list):
+                if char == letter:
+                    guessed_word[i] = letter
         else:
             count_attempt += 1
             print("Неправильно!")
 
-        if all(letter in word_from_list_letters for letter in word_from_list):
+        if '*' not in guessed_word:
             print("\nПоздравляю! Вы угадали слово:", word_from_list)
             break
 
@@ -59,3 +62,4 @@ def game_hangman():
 
 if __name__ == "__main__":
     game_hangman()
+
