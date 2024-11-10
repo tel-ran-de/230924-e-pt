@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="синтексис">
       <change afterPath="$PROJECT_DIR$/Lesson-18/test_hangman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-18/hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/hangman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/quiz_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/quiz_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" afterPath="$PROJECT_DIR$/hwtest10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +66,28 @@
   }
 }</component>
   <component name="RunManager" selected="Python.main (1)">
+    <configuration name="hwtest10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hwtest10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -175,35 +199,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_miniproject" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="230924-e-pt" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-18" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-18/test_miniproject.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.test_hangman" />
+        <item itemvalue="Python.hwtest10" />
         <item itemvalue="Python.quiz_game" />
         <item itemvalue="Python.rock_paper_scissors" />
-        <item itemvalue="Python.test_miniproject" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +338,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731182708934</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="синтаксис">
+      <option name="closed" value="true" />
+      <created>1731183483907</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731183483907</updated>
+    </task>
+    <task id="LOCAL-00016" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731183500841</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731183500841</updated>
+    </task>
+    <task id="LOCAL-00017" summary="синтексис">
+      <option name="closed" value="true" />
+      <created>1731183513398</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731183513398</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -350,8 +376,10 @@
     <MESSAGE value="тестовый файл" />
     <MESSAGE value="тестовый файл сапер базовый" />
     <MESSAGE value="проба написать игру сапер не выполнен" />
+    <MESSAGE value="синтаксис" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="синтексис" />
+    <option name="LAST_COMMIT_MESSAGE" value="синтексис" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
