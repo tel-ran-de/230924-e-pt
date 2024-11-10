@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="игра Сапер сложный вариант">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +45,7 @@
   "keyToString": {
     "Python.Viktor-Yerokhov-h10 17_10_24.executor": "Run",
     "Python.guess_number.executor": "Run",
+    "Python.hangman.executor": "Run",
     "Python.hwtest10.executor": "Run",
     "Python.main (1).executor": "Run",
     "Python.minesweeper.executor": "Run",
@@ -62,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.hangman">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="hangman" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -198,8 +197,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hangman" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.hangman" />
         <item itemvalue="Python.test_miniproject" />
         <item itemvalue="Python.minesweeper" />
         <item itemvalue="Python.text_adventure" />
@@ -551,11 +550,26 @@
       <option name="project" value="LOCAL" />
       <updated>1731269633705</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="игра Виселица коррекция">
+      <option name="closed" value="true" />
+      <created>1731273293473</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1731273293473</updated>
+    </task>
+    <task id="LOCAL-00043" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731273300469</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1731273300469</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="игра Викторина выполнена" />
     <MESSAGE value="игра Угадай число выполнена, ввел корректность ввода только чисел в диапазоне от 1 до 100" />
     <MESSAGE value="предложение Евгения для старта" />
     <MESSAGE value="запуск функции в случае выполнения напрямую" />
@@ -576,11 +590,12 @@
     <MESSAGE value="модернизация игры Викторина" />
     <MESSAGE value="тестовые" />
     <MESSAGE value="проба" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="добавил последнюю игру" />
     <MESSAGE value="тестовый файл" />
     <MESSAGE value="игра Сапер сложный вариант" />
-    <option name="LAST_COMMIT_MESSAGE" value="игра Сапер сложный вариант" />
+    <MESSAGE value="игра Виселица коррекция" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
