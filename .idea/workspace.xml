@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-13/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-14/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-16/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-16/homework.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,5 +135,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="добавил изменения" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил изменения" />
   </component>
 </project>

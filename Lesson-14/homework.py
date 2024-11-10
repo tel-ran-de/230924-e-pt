@@ -98,7 +98,7 @@ counter = 0
 
 def increment_global():
     global counter
-    counter += 1,     ("увеличивает значение на 1")
+    counter += 1,     ("увеличивает на 1")
 
 increment_global()
 print(counter),        # 1

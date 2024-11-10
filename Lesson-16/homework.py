@@ -205,12 +205,12 @@ greet("Боб")
 
 
 def call_counter(func):
-                                   # подсчет количества вызовов
+    ("подсчет количества вызовов")
     def wrapper(*args, **kwargs):
-                                   # переменную, которая хранит количество вызовов
+        ("переменную, хранит количество вызовов")
         wrapper.calls += 1
-        print(f"Функция {func.__name__} вызвана {wrapper.calls} раз")
-        return func(*args, **kwargs)
+        print(f"Функция {func.__name__} вызвана {wrapper.calls} раз"),
+        return func(*args, **kwargs),
 
     "количества вызовов"
     wrapper.calls = 0
@@ -235,6 +235,7 @@ greet("Боб")
 
 # Функция greet вызвана 2 раза
 # Привет, Боб!
+
 
 
 
