@@ -35,19 +35,22 @@ print(quetz_num())
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
-try:
-    file = open("exercise_1.py", "r", encoding="utf-8")
-    content = file.readline()
-    print(content)
-
-except FileNotFoundError:
-    print("Файл не найден")
-except PermissionError:
-    print("Ошибка: нет доступа к файлу")
-except IOError:
-    print("Ошибка ввода-вывода")
-else:
-    print('Файл обработан. Файл закрыт.')
-    file.close()
-finally:
-    print('Операция завершена')
+def kind_errors():
+    try:
+        file = open("examples.py", "r", encoding="utf-8")
+        content = file.readline()
+        print(content)
+        file1 = open("C:/Windows/System32/example.txt", "w", encoding="utf-8")
+        file1.write("Привет от Виктора!")
+    except FileNotFoundError:
+        print("Файл не найден")
+    except PermissionError:
+        print("Ошибка: нет доступа к файлу")
+    except IOError:
+        print("Ошибка ввода-вывода")
+    else:
+        print('Файл обработан. Файл закрыт.')
+        file.close()
+    finally:
+        print('Операция завершена')
+kind_errors()
