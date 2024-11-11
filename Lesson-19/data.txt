@@ -1,0 +1,5 @@
+# 1. Open the data.txt file for reading.
+# 2. Read all the content of the file and display it on the screen.
+# 3. Read the first 10 characters of the file and display them on the screen.
+# 4. Read one line from the file and display it on the screen.
+# 5. Read all lines of the file and display them on the screen.
