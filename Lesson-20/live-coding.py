@@ -122,31 +122,33 @@
 #     print(f"Число: {number}")
 #
 # try:
-#     check_positive(-5)
+#     check_positive(5)
 # except ValueError as e:
 #     print(f"Ошибка: {e}")
 
 # ПРИМЕР 2
-# class MyCustomError(Exception):
+# class NegativeNumberError(Exception):
 #     pass
 #
 # def custom_function(value):
 #     if value < 0:
-#         raise MyCustomError("Значение должно быть неотрицательным")
+#         raise NegativeNumberError("Значение должно быть неотрицательным")
 #     print(f"Значение: {value}")
 #
 # try:
-#     custom_function(-10)
-# except MyCustomError as e:
+#     custom_function(10)
+# except NegativeNumberError as e:
 #     print(f"Ошибка: {e}")
 
 ## ПРИМЕР 3
 # def check_age(age):
 #     if age < 18:
 #         raise ValueError("Вход только для взрослых!")
+#     elif age > 120:
+#         raise ValueError("Неправильный возраст!")
 #     print(f"Возраст: {age}")
 #
 # try:
-#     check_age(19)
+#     check_age(119)
 # except ValueError as e:
 #     print(f"Ошибка: {e}")
