@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Lesson-20/examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/exercise_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/exercise_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/exercise_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/live-coding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-20/Урок 15. Обработка ошибок.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hwtest10.py" beforeDir="false" afterPath="$PROJECT_DIR$/hwtest10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#152 on Viktor-Yerokhov&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.hwtest10.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Viktor-Yerokhov-h20",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.hwtest10">
     <configuration name="hwtest10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
