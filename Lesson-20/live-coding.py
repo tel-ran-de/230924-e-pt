@@ -22,12 +22,19 @@
 # # finally
 # try:
 #     file = open("examples.py", "r", encoding="utf-8")
-#     content = file.read()
+#     content = file.readline()
+#     print(content)
 # except FileNotFoundError:
 #     print("Файл не найден")
+# except IOError:
+#     print("Ошибка ввода-вывода")
+# except Exception as e:
+#     print("")
+# else:
+#     print('Файл обработан. Файл закрыт.')
+#     file.close()
 # finally:
 #     print('Операция завершена')
-#     file.close()
 
 # # else
 # try:
@@ -42,7 +49,7 @@
 
 # # именование исключений
 # try:
-#     file = open("example.txt", "r")
+#     file = open("examples.py", "r", encoding="utf-8")
 #     content = file.read()
 # except FileNotFoundError as e:
 #     print(f"Ошибка: файл не найден: {e}")
@@ -134,12 +141,12 @@
 #     print(f"Ошибка: {e}")
 
 ## ПРИМЕР 3
-def check_age(age):
-    if age < 18:
-        raise ValueError("Вход только для взрослых!")
-    print(f"Возраст: {age}")
-
-try:
-    check_age(19)
-except ValueError as e:
-    print(f"Ошибка: {e}")
+# def check_age(age):
+#     if age < 18:
+#         raise ValueError("Вход только для взрослых!")
+#     print(f"Возраст: {age}")
+#
+# try:
+#     check_age(19)
+# except ValueError as e:
+#     print(f"Ошибка: {e}")
