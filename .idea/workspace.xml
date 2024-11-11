@@ -7,6 +7,7 @@
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-18/minesweeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/minesweeper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/test_miniproject.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.test_miniproject">
     <configuration name="hangman" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -200,9 +201,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_miniproject" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.hangman" />
-        <item itemvalue="Python.test_miniproject" />
         <item itemvalue="Python.minesweeper" />
         <item itemvalue="Python.text_adventure" />
       </list>
@@ -585,7 +586,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731273782595</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731347657112</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1731347657112</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -612,9 +621,9 @@
     <MESSAGE value="тестовый файл" />
     <MESSAGE value="игра Сапер сложный вариант" />
     <MESSAGE value="игра Виселица коррекция" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="реализация игры Сапер, экспериментальный вариант" />
-    <option name="LAST_COMMIT_MESSAGE" value="реализация игры Сапер, экспериментальный вариант" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
