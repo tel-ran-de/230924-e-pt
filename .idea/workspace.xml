@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-20/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-20/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-20/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-20/live-coding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/live-coding.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,24 +42,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Viktor-Yerokhov-h20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/КУРС IT back-end developer Phyton/ДЗ&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.exercise_1.executor": "Run",
+    "Python.hwtest10.executor": "Run",
+    "Python.quiz_game.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Viktor-Yerokhov-h20",
+    "last_opened_file_path": "E:/КУРС IT back-end developer Phyton/ДЗ",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ" />
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ\Viktor-Yerokhov-h18 6_11_24" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.quiz_game">
+  <component name="RunManager" selected="Python.exercise_1">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -154,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.quiz_game" />
         <item itemvalue="Python.exercise_1" />
+        <item itemvalue="Python.quiz_game" />
         <item itemvalue="Python.hwtest10" />
       </list>
     </recent_temporary>
@@ -185,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731003370172</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731353292034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731353292034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731353322033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731353322033</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -208,7 +224,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Lesson-20/exercise_1.py</url>
-          <line>24</line>
+          <line>25</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
