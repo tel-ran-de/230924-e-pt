@@ -129,136 +129,68 @@ inventory = [
     {'product': "Monitor", 'price': 20, 'count': 10}
 ]
 
-
-def check_input(product, product_list=inventory):
-    product_name_list = [item['product'].lower() for item in product_list]
-    if product.lower() not in product_name_list:
-        print(f'Товар: {product} - отсутствует в списке.')
-        result = False
+def print_products():
+    if not inventory:
+        print("Инвентарь пуст.")
     else:
-        result = True
-    return result
+        for item in inventory:
+            print(f"Название: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
 
+def add_product():
+    product = input("Введите название товара: ")
+    price = int(input("Введите цену товара: "))
+    count = int(input("Введите количество товара: "))
+    inventory.append({"product": product, "price": price, "count": count})
+    print(f"Товар {product} добавлен.")
 
-def print_products(product_list = inventory):
-    print("---------------------------")
-    columns = list(product_list[0].keys())
-    print('|', end='')
-    for item in columns:
-        print(f' {item} ', end='|')
-    print()
-    print("---------------------------")
-    for product in product_list:
-        vals = list(product.items())
-        print('|', end='')
-        for val in vals:
-            print(f' {val[1]:{len(val[0]) + 1}}', end='|')
-        print()
-        print("---------------------------")
-
-
-def add_product(product_list = inventory):
-    new_product = input("Введите название товара: ")
-    if not check_input(new_product, product_list):
-        np_price = int(input("Введите цену товара: "))
-        np_count = int(input("Введите количество товара: "))
-        product_list.append({'product': new_product,
-                             'price': np_price,
-                             'count': np_count
-                             })
-    else:
-        print(f'Товар есть в списке.')
-    print_products(product_list)
-
-
-def delete_product(product_list=inventory):
-    product_to_delete = input('Введите наименование, удаляемого товара: ')
-    if check_input(product_to_delete, product_list):
-        for item in product_list:
-            if item['product'] == product_to_delete:
-                product_list.remove(item)
-        print(f'Товар: {product_to_delete} - удален из списка.')
-    else:
-        print(f'Удалить можно только товар из списка.')
-    print_products(product_list)
-
-
-def update_product(product_list = inventory):
-    product_to_update = input("Введите название обновляемого товара: ")
+def delete_product():
+    product = input("Введите название товара для удаления: ").lower()
     for item in inventory:
-        if product_to_update.lower() == item['product'].lower():
-            have_product = True
-            break
-        else:
-            have_product = False
-    if have_product == True:
-        item['product'] = input("Введите новое название товара: ")
-        item['price'] = int(input("Введите новую цену товара: "))
-        item['count'] = int(input("Введите новое количество товара: "))
-        print("-----------------------------------------------------------------")
-        print(f"Даные товара: '{product_to_update}' - изменены.")
-        # break1
+        if item["product"].lower() == product.lower():
+            inventory.remove(item)
+            print(f"Товар {product} удален.")
+            return
+    print(f"Товар {product} не найден.")
+
+def update_product():
+    product = input("Введите название товара для обновления: ").lower()
+    for item in inventory:
+        if item["product"].lower() == product.lower():
+            new_product = input("Введите новое название товара: ")
+            new_price = int(input("Введите новую цену товара: "))
+            new_count = int(input("Введите новое количество товара: "))
+            item["product"] = new_product
+            item["price"] = new_price
+            item["count"] = new_count
+            print(f"Товар {product} обновлен.")
+            return
+    print(f"Товар {product} не найден.")
+
+def find_product_name():
+    product = input("Введите название товара для поиска: ").lower()
+    for item in inventory:
+        if item["product"].lower() == product.lower():
+            print(f"Название: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+            return
+    print(f"Товар {product} не найден.")
+
+def find_product_price():
+    price = int(input("Введите максимальную цену: "))
+    found_items = [item for item in inventory if item["price"] <= price]
+    if not found_items:
+        print("Товары с ценой ниже заданной не найдены.")
     else:
-        print(f"Товара: {product_to_update} - нет в наличии.")
-    # if check_input(product_to_update, product_list):
-    #     article_to_update = input(f'Если хотите обновить наименование товара выберите - 1\n'
-    #                               f'Если хотите обновить цену товара выберите - 2\n'
-    #                               f'Если хотите обновить количество товара выберите - 3 \n')
-    #     if article_to_update == '1':
-    #         new_product = input("Введите новое название товара: ")
-    #         for item in product_list:
-    #             if item['product'].lower() == product_to_update.lower():
-    #                 item['product'] = new_product.title()
-    #                 print_products([item])
-    #         print(f'Название продукта "{product_to_update}" изменено на "{new_product}" ')
-    #     elif article_to_update == '2':
-    #         new_price = int(input("Введите новую цену товара: "))
-    #         for item in product_list:
-    #             if item['product'].lower() == product_to_update.lower():
-    #                 item['price'] = new_price
-    #                 print_products([item])
-    #         print(f'Новая цена продукта: {product_to_update} изменена на {new_price} ')
-    #     elif article_to_update == '3':
-    #         new_count = int(input("Введите новое количество товара: "))
-    #         for item in product_list:
-    #             if item['product'].lower() == product_to_update.lower():
-    #                 item['count'] = new_count
-    #                 print_products([item])
-    #         print(f'Новое количество продукта: {product_to_update} изменена на {new_count} ')
-    #     else:
-    #         print("Выбор действия неверен.")
-    # else:
-    #     print(f'Обновлять можно только продукт из списка товаров.')
-    print_products(product_list)
+        for item in found_items:
+            print(f"Название: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
 
-
-def find_product_name(product_list = inventory):
-    product_to_search = input("Введите название товара: ")
-    if check_input(product_to_search, product_list):
-        print_products([product_to_search])
+def find_product_count():
+    count = int(input("Введите максимальное количество: "))
+    found_items = [item for item in inventory if item["count"] <= count]
+    if not found_items:
+        print("Товары с количеством ниже заданного не найдены.")
     else:
-        print("Запрашиваемый товар не найден.")
-
-
-def find_product_price(product_list = inventory):
-    max_price = int(input("Введите максимальную цену товара: "))
-    search_list = []
-    for item in product_list:
-        if item['price'] <= max_price:
-            search_list.append(item)
-    print("-------------------------------------------------")
-    print(f'Товары с ценой меньшей или равной - {max_price}:')
-    print_products(search_list)
-
-
-def find_product_count(product_list = inventory):
-    max_count = int(input("Введите максимальное количество товара: "))
-    search_list = []
-    for item in product_list:
-        if item['count'] <= max_count:
-            search_list.append(item)
-    print(f'Товары количеством меньшим или равным {max_count}:')
-    print_products(search_list)
+        for item in found_items:
+            print(f"Название: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
 
 while True:
     print("     М Е Н Ю:")
