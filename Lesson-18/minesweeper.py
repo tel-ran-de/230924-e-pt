@@ -53,7 +53,7 @@ def minesweeper():
     size = 5
     max_mines = 5
     board = [['-' for _ in range(size)] for _ in range(size)]
-    revealed = [[False] * size for _ in range(size)]
+    revealed = [[False] * size for _ in range(size)] # матрица размера size со значением каждой ячейки False
     directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
     # Генерация мин
     count_mines = 0
@@ -63,27 +63,12 @@ def minesweeper():
             board[row][col] = '*'
             count_mines += 1
 
-    def count_mines(row, col):
         count = 0
         for dr, dc in directions:
             r, c = row + dr, col + dc
             if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
                 count += 1
         return count
-
-    def reveal_board(row, col):
-        if not (0 <= row < size and 0 <= col < size) or revealed[row][col]:
-            return
-        revealed[row][col] = True
-        if board[row][col] == '*':
-            return
-        count = count_mines(row, col)
-        if count > 0:
-            board[row][col] = str(count)
-        else:
-            board[row][col] = ' '
-            for dr, dc in directions:
-                reveal_board(row + dr, col + dc)
 
     print(47 * "-")
     print("Игра: Сапёр.")
@@ -124,8 +109,6 @@ def minesweeper():
                             print('-', end=' ')
                 print()
             break
-
-        reveal_board(row, col)
 
         if sum(sum(row) for row in revealed) == size * size - max_mines:
             print("Поздравляю! Вы победили!")
