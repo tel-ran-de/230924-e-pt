@@ -39,7 +39,87 @@ power_two()
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
+# Тема: Чтение и запись данных в файл.
 
+# Задание 1: Чтение данных из файла
+# 1. Откройте файл `data.txt` для чтения.
+# 2. Прочитайте весь контент файла и выведите его на экран.
+# 3. Прочитайте первые 10 символов файла и выведите их на экран.
+# 4. Прочитайте одну строку из файла и выведите ее на экран.
+# 5. Прочитайте все строки файла и выведите их на экран.
+import os
+import stat
+
+try:
+    file = open('file.txt' 'r')
+    text = file.read()
+except FileNotFoundError:
+    print('Вы пытаетесь открыть несуществующий файл!')
+except PermissionError:
+    print("У вас нет права доступа в файлу")
+except IOError:
+    print('Ошибка ввода/вывода')
+else:
+    print(text)
+    file.close()
+
+# Задание 2: Запись данных в файл
+# 1. Откройте (создайте) файл `output.txt` для записи.
+# 2. Запишите в файл строку "Hello, World!".
+# 3. Запишите в файл список строк: ["This is line 1\n", "This is line 2\n"].
+# 4. Закройте файл.
+# 5. Откройте файл `output.txt` для чтения и выведите его содержимое на экран.
+
+os.chmod("output.txt", stat.S_ENFMT)
+try:
+    file = open('output.txt', 'w')
+except PermissionError:
+    print('Нет права доступа к файлу!')
+except FileNotFoundError:
+    print('Вы пытаетесь открыть несуществующий файл!')
+except IOError:
+    print('Ошибка ввода/вывода')
+else:
+    file.write('Hello, World!')
+    file.close()
+
+# Задание 3: Добавление данных в файл
+# 1. Откройте (создайте) файл `log.txt` для добавления данных.
+# 2. Добавьте строку "New log entry\n" в конец файла.
+# 3. Добавьте список строк ["Log entry 1\n", "Log entry 2\n"] в конец файла.
+# 4. Закройте файл.
+# 5. Откройте файл `log.txt` для чтения и выведите его содержимое на экран.
+
+os.chmod("log.txt", stat.S_ENFMT)
+try:
+    file = open('log.txt', 'w')
+except PermissionError:
+    print('Нет права доступа к файлу!')
+except FileNotFoundError:
+    print('Вы пытаетесь открыть несуществующий файл!')
+except IOError:
+    print('Ошибка ввода/вывода')
+else:
+    file.writeline('New log entry\n')
+    file.close()
+# Задание 4: Работа с указателем
+# 1. Откройте (создайте) файл `pointer_example.txt` для чтения и записи.
+# 2. Запишите в файл строку "Python File Handling\n".
+# 3. Переместите указатель в начало файла и прочитайте первую строку.
+# 4. Переместите указатель на позицию 7 и прочитайте следующие 5 символов.
+# 5. Переместите указатель в конец файла и добавьте строку "End of file\n".
+# 6. Переместите указатель в начало файла и прочитайте весь файл.
+try:
+    file = open('pointer_example.txt', 'r+')
+except PermissionError:
+    print('Нет права доступа к файлу!')
+except FileNotFoundError:
+    print('Вы пытаетесь открыть несуществующий файл!')
+except IOError:
+    print('Ошибка ввода/вывода')
+else:
+    file.writeline("Python File Handling\n")
+    file.close()
 
 # Тема: Расространение исключения. Возбуждение исключения.
 
