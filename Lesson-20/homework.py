@@ -1,3 +1,7 @@
+import json
+import os
+import stat
+
 # Тема: Обработка исключений (try/except/else/finally)
 
 # Задача 1: Деление чисел
@@ -47,8 +51,6 @@ power_two()
 # 3. Прочитайте первые 10 символов файла и выведите их на экран.
 # 4. Прочитайте одну строку из файла и выведите ее на экран.
 # 5. Прочитайте все строки файла и выведите их на экран.
-import os
-import stat
 
 try:
     file = open('file.txt' 'r')
@@ -166,7 +168,8 @@ safe_convert_to_number("abc")  # Ожидаемый результат: Ошиб
 
 # Тема: Интеграционная практика. Мини-проект
 
-# Проект: Перепишите проект из уроков 7-8, 14, добавив в него обработку ошибок, где это необходимо.
+# Проект: Перепишите проект из уроков 7-8, 14, добавив в него обработку ошибок,
+# где это необходимо.
 #
 # Используйте файл как базу данных проекта.
 # Управление инвентарем в интернет-магазине
@@ -184,41 +187,84 @@ safe_convert_to_number("abc")  # Ожидаемый результат: Ошиб
 # 5. Найти товар по названию.
 # 6. Вывести список товаров меньше определнной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
-
+DATA_BASE = 'inventory.json'
 inventory = [
     {'product': "Laptop", 'price': 10, 'count': 13},
     {'product': "Mouse", 'price': 50, 'count': 1},
     {'product': "Keyboard", 'price': 30, 'count': 33},
     {'product': "Monitor", 'price': 20, 'count': 10}
 ]
-with open('text_files/inventory.json', 'w') as database:
-    json.dump(inventory, database)
+try:
+    with open(DATA_BASE, 'w') as database:
+        json.dump(inventory, database)
+except PermissionError:
+    print('Нет права доступа к файлу!')
+except FileNotFoundError:
+    print('Вы пытаетесь открыть несуществующий файл!')
+except IOError:
+    print('Ошибка ввода/вывода')
+else:
+    print(f'Данные сохранены в базу данных - файл с именем {DATA_BASE}')
 
-def inventory_read(file_name = 'text_files/inventory.json'):
-    with open(file_name, 'r') as inventory_file:
-        inventory_database = json.load(inventory_file)
+def inventory_read(file_name = DATA_BASE):
+    try:
+        with open(file_name, 'r') as database:
+            inventory_database = json.load(database)
+    except PermissionError:
+        print('Нет права доступа к файлу!')
+    except FileNotFoundError:
+        print('Вы пытаетесь открыть несуществующий файл!')
+    except IOError:
+        print('Ошибка ввода/вывода')
+    else:
         return inventory_database
 
-def inventory_write(file_name = 'text_files/inventory.json', product_list=inventory):
-    with open(file_name, 'w') as inventory_file:
-        json.dump(product_list, inventory_file)
+def inventory_write(file_name = DATA_BASE, product_list=inventory_read()):
+    try:
+        with open(file_name, 'w') as database:
+            json.dump(product_list, database)
+    except PermissionError:
+        print('Нет права доступа к файлу!')
+    except FileNotFoundError:
+        print('Вы пытаетесь открыть несуществующий файл!')
+    except IOError:
+        print('Ошибка ввода/вывода')
+    else:
         print(f'обновленный список продуктов сохранен в файл {file_name}!' )
 
+def check_number_input(message):
+    while True:
+        user_input = input(message)
+        try:
+            number = float(user_input)
+        except ValueError:
+            print('Введено не число')
+        else:
+            if number <= 0:
+                raise ValueError('Число должно быть больше 0')
+            else:
+                return number
+                break
 
-def check_input(product, product_list=inventory):
-    '''функция проверяет есть ли введенный товар в списке товара'''
-    product_list = inventory_read()
-    product_name_list = [item['product'].lower() for item in product_list]
+def check_positive_number(message):
+    while True:
+        try:
+            number = check_number_input(message)
+        except ValueError as e:
+            print(f'Ошибка - {e}')
+        else:
+            return number
+            break
+
+def check_product_input(product):
+    '''Функция проверяет есть ли введенный товар в списке товара'''
+    product_name_list = [item['product'].lower() for item in inventory_read()]
     if product.lower() not in product_name_list:
-        print(f'Продукт {product} отсутствует в списке продуктов')
-        res = False
+        return False
     else:
-        res = True
-    return res
+        return True
 
-
-def print_products(product_list=inventory):
-    product_list = inventory_read()
+def print_products(product_list = inventory_read()):
     print('-' * 27)
     columns = list(product_list[0].keys())
     print('|', end='')
@@ -235,29 +281,23 @@ def print_products(product_list=inventory):
         print('-' * 27)
 
 
-def add_product(product_list=inventory):
-    product_list = inventory_read()
+def add_product():
     new_product = input('Введите название товара: ')
-    if not check_input(new_product, product_list):
-        np_price = int(input('Введите цену товара: '))
-        np_count = int(input('Введите количество товара: '))
-        product_list.append({'product': new_product,
-                             'price': np_price,
-                             'count': np_count
-                             })
+    if not check_product_input(new_product):
+        np_price = check_positive_number('Введите цену товара: ')
+        np_count = check_positive_number('Введите количество товара: ')
+        product_list = inventory_read()
+        product_list.append({'product': new_product, 'price': np_price, 'count': np_count})
         inventory_write(product_list=product_list)
     else:
         print(f'Добавить можно только отсутствующий в списке продукт!')
-    print_products(product_list)
+    print_products(inventory_read())
 
 
-def delete_product(product_list=inventory):
-    product_list = inventory_read()
+def delete_product(product_list = inventory_read()):
     product_to_delete = input('Введите название удаляемого товара: ')
-    if check_input(product_to_delete, product_list):
-        for item in product_list:
-            if item['product'] == product_to_delete:
-                product_list.remove(item)
+    if check_product_input(product_to_delete):
+        product_list[:] = [item for item in product_list if item['product'] != product_to_delete]
         print(f'продукт {product_to_delete} удален из списка продуктов!')
         inventory_write(product_list=product_list)
     else:
@@ -265,33 +305,24 @@ def delete_product(product_list=inventory):
     print_products(product_list)
 
 
-def update_product(product_list=inventory):
-    product_list = inventory_read()
+def update_product():
     product_to_update = input('Введите название обновляемого товара: ')
-    if check_input(product_to_update, product_list):
+    if check_product_input(product_to_update):
         article_to_update = input(f'Если хотите обновить название продукта выберите 1\n'
                                   f'Если хотите обновить цену продукта выберите 2\n'
                                   f'Если хотите обновить количество продукта выберите 3: \n')
+        product_list = inventory_read()
         if article_to_update == '1':
             new_product = input('Введите новое название товара: ')
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['product'] = new_product.title()
-                    print_products([item])
+            [item for item in product_list if item['product'] == product_to_update][0]['product'] = new_product
             print(f'Название продукта {product_to_update} изменено на {new_product} ')
         elif article_to_update == '2':
-            new_price = int(input('Введите новую цену товара: '))
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['price'] = new_price
-                    print_products([item])
+            new_price =  check_positive_number('Введите новую цену товара: ')
+            [item for item in product_list if item['product'] == product_to_update][0]['price'] = new_price
             print(f'Новая цена продукта {product_to_update} изменена на {new_price} ')
         elif article_to_update == '3':
-            new_count = int(input('Введите новое количество товара: '))
-            for item in product_list:
-                if item['product'].lower() == product_to_update.lower():
-                    item['count'] = new_count
-                    print_products([item])
+            new_count =  check_positive_number('Введите новое количество товара: ')
+            [item for item in product_list if item['product'] == product_to_update][0]['count'] = new_count
             print(f'Новое количество продукта {product_to_update} изменена на {new_count} ')
         else:
             print('Выбор действия неверен!')
@@ -302,40 +333,51 @@ def update_product(product_list=inventory):
     print_products(product_list)
 
 
-def find_product_name(product_list=inventory):
+def update_product_new():
     product_list = inventory_read()
+    articles_dict = dict(enumerate(product_list[0].keys(), 1))
+    product_to_update = input('Введите название обновляемого товара: ')
+    if check_product_input(product_to_update):
+        article_to_update = int(input(f'Если хотите обновить название продукта выберите 1\n'
+                                  f'Если хотите обновить цену продукта выберите 2\n'
+                                  f'Если хотите обновить количество продукта выберите 3: \n'))
+        if int(article_to_update) in list(articles_dict.keys()):
+            new_article = input(f'Введите новое значение для {articles_dict[article_to_update]}')
+            [item for item in product_list if item['product'] ==
+            product_to_update][0][articles_dict[article_to_update]] = new_article
+            print(f'Новое значение для {articles_dict[article_to_update]} продукта {product_to_update} '
+                  f'изменена на {new_article} ')
+        else:
+            print('Выбор действия неверен!')
+    else:
+        print(f'Обновлять можно только продукт находящийся в списке товара!')
+    inventory_write(product_list=product_list)
+    product_list = inventory_read()
+    print_products(product_list)
+
+def find_product_name(product_list = inventory_read()):
     product_to_search = input('Введите название искомого товара: ')
-    if check_input(product_to_search, product_list):
-        print_products([product_to_search])
+    if check_product_input(product_to_search):
+        print_products([item for item in product_list if item['product'] == product_to_search])
     else:
         print("Запрашиваемый товар не найден!")
 
 
-def find_product_price(product_list=inventory):
-    product_list = inventory_read()
-    max_price = int(input('Введите максимальную цену товара: '))
-    search_list = []
-    for item in product_list:
-        if item['price'] <= max_price:
-            search_list.append(item)
-    print('-' * 7)
+def find_product_price( product_list = inventory_read()):
+    max_price =  check_positive_number('Введите максимальную цену товара: ')
+    search_list = [item for item in product_list if item['price'] <= max_price]
     print(f'Товары с ценой меньшей или равной {max_price}:')
     print_products(search_list)
 
 
-def find_product_count(product_list=inventory):
-    product_list = inventory_read()
-    max_count = int(input('Введите максимальное количество товара: '))
-    search_list = []
-    for item in product_list:
-        if item['count'] <= max_count:
-            search_list.append(item)
+def find_product_count(product_list = inventory_read()):
+    max_count = check_positive_number('Введите максимальное количество товара: ')
+    search_list = [item for item in product_list if item['count'] <= max_count ]
     print(f'Товары количеством меньшим или равным {max_count}:')
     print_products(search_list)
 
 
 while True:
-    print('-------')
     print('\nМеню:')
     print('1. Показать список товаров.')
     print('2. Добавить товар.')
