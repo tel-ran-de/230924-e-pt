@@ -39,7 +39,6 @@ def power_two():
 
 power_two()
 
-
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
@@ -194,6 +193,7 @@ inventory = [
     {'product': "Keyboard", 'price': 30, 'count': 33},
     {'product': "Monitor", 'price': 20, 'count': 10}
 ]
+#
 try:
     with open(DATA_BASE, 'w') as database:
         json.dump(inventory, database)
