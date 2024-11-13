@@ -35,7 +35,7 @@ def format_memory_size(size_in_bytes, size_in_kb, size_in_mb, size_in_gb):
 
 
 # Параметры для тестирования
-n = 10**9  # Большое число для демонстрации разницы
+n = (10**8) * 10  # Большое число для демонстрации разницы
 
 # Измерение времени и памяти для итератора (списка)
 list_time, list_result = measure_time(create_list, n)
