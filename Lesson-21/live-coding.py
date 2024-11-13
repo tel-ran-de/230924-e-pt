@@ -99,33 +99,117 @@
 
 
 
-
-
-
-
-
 # Тема: Генераторы и встроенные функции
 # Покажите в режиме live-coding и объясните:
 # - Использование генератора вместе с встроенными функциями list, set, min, max, sum.
 # - Использование генератора вместе с циклом for.
 
+# Пример 11
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# gen = number_generator(10)
+# # Преобразование генератора в список
+# num_list = list(gen)
+# print(num_list)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+# Пример 12
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# gen = number_generator(10)
+# # Преобразование генератора в множество
+# num_set = set(gen)
+# print(num_set)  # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 
+# Пример 13
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+# gen = number_generator(10)
+# # Суммирование чисел из генератора
+# total = sum(gen)
+# print(total)  # 45
 
+# Пример 14
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+# gen = number_generator(10)
+# Нахождение максимального значения
+# max_value = max(gen)
+# print(max_value)  # 9
+#
+# gen = number_generator(10)
+# Нахождение минимального значения
+# min_value = min(gen)
+# print(min_value)  # 0
 
-
-
-
-
-
+# Пример 15
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# # Итерация с использованием цикла for
+# gen = number_generator(5)
+# for num in gen:
+#     print(num)
 
 # Тема: Генераторы и файлы
 # Покажите в режиме live-coding и объясните:
 # - Чтение файлов построчно через генераторы
 # - Чтение файлов по частям через генераторы
 # - Фильтрацию с файлами через генераторы
+# def read_file(file_path):
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             yield line  # Возвращает одну строку за раз
+#
+# file_path = 'large_file.txt'
+# # Использование генератора
+# line_generator = read_file(file_path)
+#
+# for line in line_generator:
+#     print(line.strip())  # Выводит строку без пробелов в начале и конце
+
+# Пример 17
+# def read_file(file_path, chunk_size=16):
+#     with open(file_path, 'r') as file:
+#         while True:
+#             chunk = file.read(chunk_size)  # Читает часть файла
+#             if not chunk:
+#                 break
+#             yield chunk  # Возвращает часть файла
+#
+# file_path = 'large_file.txt'
+# # Использование генератора
+# chunk_generator = read_file(file_path)
+#
+# for chunk in chunk_generator:
+#     print(chunk)  # Выводит часть файла
+
+def read_and_filter_lines(file_path, keyword):
+    with open(file_path, 'r') as file:
+        for line in file:
+            if keyword in line:
+                yield line  # Возвращает строку, если она содержит ключевое слово
 
 
+file_path = 'large_file.txt'
+keyword = 'line'
+filtered_line_generator = read_and_filter_lines(file_path, keyword)
 
-
-
+for line in filtered_line_generator:
+    print(line.strip().swapcase())  # Обрабатывает и выводит строки, содержащие ключевое слово
