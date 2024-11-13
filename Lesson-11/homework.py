@@ -15,13 +15,12 @@ while number <= 50:
     while i < number:
         if number % i == 0:
            is_prime = False
-             break
+        break
         i += 1
     if is_prime:
 
      print(number)
     number += 1
-
 # Упражнение 2: Таблица умножения
 
 # - Создайте программу, которая выводит таблицу умножения размером 10x10.
@@ -148,9 +147,9 @@ for row in matrix:
     min_value = min(row)
     max_value = max(row)
 
-    print(f"Строка: {row}")
-    print(f"Минимальное значение: {min_value}")
-   print(f"Максимальное значение: {max_value}")
+print(f"Строка: {row}")
+print(f"Минимальное значение: {min_value}")
+print(f"Максимальное значение: {max_value}")
 
 # Упражнение 8: Перемножение матриц
 #
