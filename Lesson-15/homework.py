@@ -108,7 +108,6 @@ def make_flatten():
                 result.append(element)
         return result
     return flatten
-
 # Пример использования функции
 flatten = make_flatten()
 print(flatten([1, [2, [3, 4], 5], 6]))  # Вывод: [1, 2, 3, 4, 5, 6]
@@ -131,10 +130,10 @@ print("-------")
 def show_info(*args, **kwargs):
     print(f"Args: {args}")
     print(f"Kwargs: {kwargs}")
-
 args = (1, 2, 3)
 kwargs = {"name": "Alice", "age": 30}
 show_info(*args, **kwargs)
 #Вывод:
 #Args: (1, 2, 3)
 #Kwargs: {'name': 'Alice', 'age': 30}
+
