@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment=".idea">
-      <change afterPath="$PROJECT_DIR$/Lesson-21/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-21/text_files/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment=".idea" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,14 +22,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "igor-pronin-h21",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;igor-pronin-h21&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject2" />
@@ -79,6 +73,31 @@
       <updated>1730132970358</updated>
       <workItem from="1730132980995" duration="7000" />
     </task>
+    <task id="LOCAL-00001" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1731530958390</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731530958390</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1731530971433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731530971433</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".idea">
+      <option name="closed" value="true" />
+      <created>1731530975806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731530975806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
