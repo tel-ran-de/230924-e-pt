@@ -99,25 +99,73 @@
 
 
 
-
-
-
-
-
 # Тема: Генераторы и встроенные функции
 # Покажите в режиме live-coding и объясните:
 # - Использование генератора вместе с встроенными функциями list, set, min, max, sum.
 # - Использование генератора вместе с циклом for.
 
+# Пример 11
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# gen = number_generator(10)
+# # Преобразование генератора в список
+# num_list = list(gen)
+# print(num_list)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+# Пример 12
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# gen = number_generator(10)
+# # Преобразование генератора в множество
+# num_set = set(gen)
+# print(num_set)  # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 
+# Пример 13
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+# gen = number_generator(10)
+# # Суммирование чисел из генератора
+# total = sum(gen)
+# print(total)  # 45
 
+# Пример 14
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+# gen = number_generator(10)
+# Нахождение максимального значения
+# max_value = max(gen)
+# print(max_value)  # 9
+#
+# gen = number_generator(10)
+# Нахождение минимального значения
+# min_value = min(gen)
+# print(min_value)  # 0
 
-
-
-
-
-
+# Пример 15
+# Генератор для создания последовательности чисел
+# def number_generator(n):
+#     for i in range(n):
+#         yield i
+#
+#
+# # Итерация с использованием цикла for
+# gen = number_generator(5)
+# for num in gen:
+#     print(num)
 
 # Тема: Генераторы и файлы
 # Покажите в режиме live-coding и объясните:
