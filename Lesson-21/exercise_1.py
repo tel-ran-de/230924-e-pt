@@ -4,10 +4,15 @@
 # Обработайте исключение StopIteration
 
 def create_iterator(n):
-    for i in range(1, n+1):
-        yield i
-result = create_iterator(9)
+    # for i in range(1, n+1):
+    #     yield i
+    current = 1
+    while current <= n:
+        yield current
+        current += 1
+
 try:
+    result = create_iterator(9)
     while True:
         print(next(result))
 except StopIteration:
@@ -16,7 +21,7 @@ except StopIteration:
 # Задание 2: Напишите выражение-генератор, которое возвращает квадраты чисел от 0 до 10.
 # Обработайте исключение StopIteration
 
-squares_engine = (x ** 2 for x in range(0, 11))
+squares_engine = (x * x for x in range(0, 11))
 try:
     for elem in squares_engine:
         print(elem)
