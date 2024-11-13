@@ -89,3 +89,6 @@ Log entry 2
 New log entry
 Log entry 1
 Log entry 2
+New log entry
+Log entry 1
+Log entry 2
