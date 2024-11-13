@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="74627c53-2f2b-45f2-98f3-704361e9c1ee" name="Changes" comment="commit merge h-11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-14/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/homework.py" afterDir="false" />
+=======
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/homework.py" afterDir="false" />
+>>>>>>> giorgi-okropiridze-h15
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +23,15 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="main" />
+=======
+        <entry key="$PROJECT_DIR$" value="giorgi-okropiridze" />
+>>>>>>> giorgi-okropiridze-h15
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -44,11 +56,20 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< HEAD
     &quot;Python.exercise_2.executor&quot;: &quot;Run&quot;,
     &quot;Python.homework.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;giorgi-okropiridze-h-14&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+=======
+    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging giorgi-okropiridze&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tel-ran.de/tamu&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> giorgi-okropiridze-h15
   }
 }</component>
   <component name="SharedIndexes">
@@ -69,8 +90,32 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit merge h-11" />
     <option name="LAST_COMMIT_MESSAGE" value="commit merge h-11" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+>>>>>>> giorgi-okropiridze-h15
   </component>
 </project>
