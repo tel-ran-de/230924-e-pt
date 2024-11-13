@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись в процессе обучения" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731525741810</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731525819063</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731525819063</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -190,9 +198,9 @@
     <MESSAGE value="не рабочий пока текст игры Сапер" />
     <MESSAGE value="коммит из-за мерж конфликта" />
     <MESSAGE value="1 практика выполнена" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="перезапись в процессе обучения" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись в процессе обучения" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
