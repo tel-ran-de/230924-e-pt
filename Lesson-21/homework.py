@@ -2,7 +2,17 @@
 
 # Задание 1: Напишите функцию, которая создает итератор, возвращающий числа от 1 до заданного числа `n`.
 # Обработайте исключение StopIteration
-
+# def number_generator(n):
+#     numb =1
+#     while numb <= n:
+#         yield numb
+#         numb +=1
+# try:
+#     gen = number_generator(5)
+#     while True:
+#         print(next(gen))
+# except StopIteration:
+#     print("Итерация завершена")
 
 # Задание 2: Напишите выражение-генератор, которое возвращает квадраты чисел от 0 до 10.
 # Обработайте исключение StopIteration
@@ -37,14 +47,35 @@
 # которые содержат заданное ключевое слово (x_word).
 # Программа должна одинаково реагировать на написание слова строчными и заглавными буквами.
 # Файл: data.txt
+# def read_file(n):
+#     with open(n, 'r') as file:
+#         for line in file:
+#             if x_word.lower() in line.lower():
+#                 yield line
+# n = 'text_files/data.txt'
+# gen = read_file(n)
+# x_word = 'this'
+# for line in gen :
+#     print(line)
 
-x_word = 'this'
 
 
 # Задача 2: Чтение файла по частям и подсчет строк
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
 # и подсчитывает количество строк в каждой части.
 # Файл: data.txt
+# def read_file(n,chunk_size=50):
+#     with open(n, 'r') as file:
+#         while True :
+#             chunk = file.read(chunk_size)
+#             if not chunk:
+#                 break
+#             line_count = chunk.count('\n')
+#             yield line_count
+# n = 'text_files/data.txt'
+# chunk_gen = read_file(n)
+# for line_count in read_file(n, chunk_size = 50):
+#     print(f"Количество строк в части: {line_count}")
 
 
 # Задача 3: Поиск строк, содержащих числа
