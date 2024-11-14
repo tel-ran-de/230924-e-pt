@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 Hello, World!\nWelcome to file handling in Python.
+=======
+Hello, World!
+Welcome to file handling in Python.
+>>>>>>> bbf0bdd0267ecbf6806792698267368374953364
