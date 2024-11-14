@@ -1,5 +1,4 @@
 # Тема: Чтение и запись данных в файл.
-from idlelib.editor import keynames
 
 # Задание 1: Чтение данных из файла
 # 1. Откройте файл `data.txt` для чтения.
@@ -157,8 +156,8 @@ with open('users.json', 'w') as file:
 with open('users.json', 'r') as file:
     all_users = json.load(file)
     print(all_users)
-
-print('Project================================')
+print()
+print('==============Project==================')
 # Тема: Интеграционная практика. Мини-проект
 
 # Проект: Перепишите проект из уроков 7-8 с записью, чтением, обновлением и удалением товаров в файле (через JSON).
@@ -180,11 +179,17 @@ print('Project================================')
 # 6. Вывести список товаров меньше определнной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
 
+
 import json
 
 def load_inventory():
-    with open('inventory.json', 'r') as file:
-        inventory = json.load(file)
+    try:
+        with open('inventory.json', 'r') as file:
+            inventory = json.load(file)
+    except FileNotFoundError:
+        inventory = []
+    return inventory
+
 
 def save_inventory(inventory):
     with open('inventory.json', 'w') as file:
@@ -197,22 +202,27 @@ def show_inventory():
         print(f'Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}')
 
 def add_item():
+    inventory = load_inventory()
     product_name = input('Введите название товара: ')
     price_item = input('Введите цену: ')
-    count_item = input('введите количество:')
+    count_item = input('Введите количество: ')
     inventory.append({'product': product_name, 'price': price_item, 'count': count_item})
+    save_inventory(inventory)
     print(f'product: {product_name}, price: {price_item}, count: {count_item} добавлен в список товаров.')
 
 def delete_items():
+    inventory = load_inventory()
     delete_item = input('Какой товар вы хотите удалить: ')
     for item in inventory:
         if item['product'] == delete_item:
             inventory.remove(item)
+            save_inventory(inventory)
             print(f'product: {delete_item} удален!')
             return
     print('Продукт не найден.')
 
 def update_item():
+    inventory = load_inventory()
     name_item = input('Введите название товара для обновления: ')
     for item in inventory:
         if item['product'] == name_item:
@@ -223,20 +233,23 @@ def update_item():
                 item['price'] = float(input('Введите новую цену товара: '))
             elif items == 'count':
                 item['count'] = int(input('Введите новое количество товара: '))
-                break
             else:
-                 print('Продукт не найден.')
+                print('Продукт не найден.')
+            save_inventory(inventory)
+            return
 
 def find_item():
+    inventory = load_inventory()
     name_item = input('Введите название товара для поиска: ')
     for item in inventory:
         if item['product'] == name_item:
             print(f'Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}')
-            break
+            return
     else:
         print('Продукт не найден.')
 
 def below_price():
+    inventory = load_inventory()
     below_item_price = float(input('Введите определенную стоимость: '))
     print(f'\nТовары меньше {below_item_price} стоимости:')
     for item in inventory:
@@ -244,6 +257,7 @@ def below_price():
             print(f'Товар: {item['product']}')
 
 def below_count():
+    inventory = load_inventory()
     below_item_count = int(input('Введите определенное количество: '))
     print(f'\nТовары меньше количества {below_item_count}')
     for item in inventory:
