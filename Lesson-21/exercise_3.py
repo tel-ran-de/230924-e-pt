@@ -53,7 +53,6 @@ def read_and_count_lines_in_chunks(file_path, chunk_size):
         if remaining_data:
             yield 1
 
-# Пример использования
 file_path = 'text_files/data.txt'
 chunk_size = 50
 
