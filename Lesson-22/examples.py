@@ -2,23 +2,30 @@
 # def square(x):
 #     return x * x
 #
+#
 # numbers = [1, 2, 3, 4, 5]
 # squared_numbers = map(square, numbers)
+# print(squared_numbers)
 # print(list(squared_numbers))  # Результат: [1, 4, 9, 16, 25]
-#
+
+
 # # Пример 2: Фильтрация списка с помощью функции filter
 # def is_even(x):
 #     return x % 2 == 0
 #
 # numbers = [1, 2, 3, 4, 5, 6]
 # even_numbers = filter(is_even, numbers)
+# print(even_numbers)
 # print(list(even_numbers))  # Результат: [2, 4, 6]
-#
+
 # # Пример 3: Объединение двух списков в список кортежей с помощью zip
 # names = ["Alice", "Bob", "Charlie"]
 # ages = [25, 30, 35]
-# combined = zip(names, ages)
-# print(list(combined))  # Вывод: [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
+# cities = ["Tashkent", "Tbilisi", "Warsaw"]
+# combined = zip(names, ages, cities)
+# print(list(combined))  # Вывод: [('Alice', 25, 'Tashkent'), ('Bob', 30, 'Tbilisi'), ('Charlie', 35, 'Warsaw')]
+# print(list(zip(["Alice", "Bob", "Charlie"], [25, 30, 35])))
+
 #
 # # Пример 4: Итерация по двум спискам одновременно с помощью zip
 # names = ["Alice", "Bob", "Charlie"]
