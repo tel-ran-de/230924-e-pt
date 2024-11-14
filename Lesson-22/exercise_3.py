@@ -50,15 +50,15 @@ print(formatted_result)
 # Затем примените функцию `map` с лямбда функцией для преобразования этих строк в целые числа и выведите результат.
 
 
-def read_file_lines(file_path):
+def read_file(file_path):
     with open(file_path, 'r') as file:
         for line in file:
             yield line.strip()
 
-filtered_lines = filter(lambda line: any(char.isdigit() for char in line), read_file_lines('text_files\data.txt'))
-converted_numbers = map(lambda line: int(line), filtered_lines)
+filter_lines = filter(lambda line: any(char.isdigit() for char in line), read_file("text_files/data.txt"))
+convert_num = map(lambda line: int(line), filter_lines)
 
-for number in converted_numbers:
+for number in convert_num:
     print(number)
 
 
@@ -67,18 +67,18 @@ for number in converted_numbers:
 # Используйте функцию `zip`, чтобы объединить данные из этих файлов, и примените лямбда функцию
 # для вывода данных в формате "file1_line - file2_line".
 
-# def read_file1_lines(file_path):
-#     with open(file_path, 'r') as file:
-#         for line in file:
-#             yield line.strip()
-#
-# def read_file2_lines(file_path):
-#     with open(file_path, 'r') as file:
-#         for line in file:
-#             yield line.strip()
-#
-# main_lines = zip(read_file1_lines("text_files\file1.txt"), read_file2_lines("text_files\file2.txt"))
-# format_result = list(map(lambda x: f"{x[0]} - {x[1]}", main_lines))
-#
-# for line in format_result:
-#     print(line)
+def read_file1(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+def read_file2(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+main_lines = zip(read_file1("text_files/file1.txt.txt"), read_file2("text_files/file2.txt"))
+format_result = list(map(lambda x: f"{x[0]} - {x[1]}", main_lines))
+
+for line in format_result:
+    print(line)
