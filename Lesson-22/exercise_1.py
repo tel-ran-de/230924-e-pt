@@ -6,7 +6,11 @@
 #
 # numbers = [1, 2, 3, 4, 5]
 # Ожидаемый результат: [1, 4, 9, 16, 25]
-
+def square(numbers):
+    return numbers ** 2
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+print(list(squared_numbers))
 
 # Задача 2: Применение функции filter для отбора четных чисел
 # Напишите функцию `is_even`, которая принимает число и возвращает `True`, если число четное,
@@ -15,17 +19,23 @@
 #
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Ожидаемый результат: [2, 4, 6, 8, 10]
+def is_even(x):
+    return x % 2 == 0
 
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))  # Результат: [2, 4, 6]
 
 # Задача 3: Применение функции zip для объединения списков
 # У вас есть два списка: `names = ["Alice", "Bob", "Charlie"]` и `ages = [25, 30, 35]`.
 # Используйте функцию `zip`, чтобы создать список кортежей, где каждый кортеж содержит имя и возраст,
 # и выведите результат.
-#
-# names = ["Alice", "Bob", "Charlie"]
-# ages = [25, 30, 35]
-# Ожидаемый результат: [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
 
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35] # Ожидаемый результат: [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
+
+combined = zip(names, ages)
+print(list(combined))  # Вывод: [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
 
 # Задача 4: Применение функции map для преобразования строк в числа
 # Напишите функцию `to_int`, которая принимает строку и возвращает ее преобразование в целое число.
@@ -34,6 +44,13 @@
 #
 # str_numbers = ["1", "2", "3", "4", "5"]
 # Ожидаемый результат: [1, 2, 3, 4, 5]
+# Функция, которая принимает строку и возвращает её преобразование в целое число
+def to_int(string):
+    return int(string)
+
+str_numbers = ["1", "2", "3", "4", "5"]
+
+print(list(map(to_int, str_numbers)))
 
 
 # Задача 5: Применение функции filter для отбора слов длиннее 4 символов
@@ -43,3 +60,12 @@
 #
 # words = ["apple", "kiwi", "banana", "pear"]
 # Ожидаемый результат: ["apple", "banana"]
+# Функция, которая принимает строку и возвращает True, если длина строки больше 4 символов, и False в противном случае
+def longer_than_four(word):
+    return len(word) > 4
+
+words = ["apple", "kiwi", "banana", "pear"]
+
+# long_words = list(filter(longer_than_four, words))
+
+print(list(filter(longer_than_four, words)))
