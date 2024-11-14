@@ -49,7 +49,6 @@ def to_int(string):
     return int(string)
 
 str_numbers = ["1", "2", "3", "4", "5"]
-
 print(list(map(to_int, str_numbers)))
 
 
@@ -65,7 +64,4 @@ def longer_than_four(word):
     return len(word) > 4
 
 words = ["apple", "kiwi", "banana", "pear"]
-
-# long_words = list(filter(longer_than_four, words))
-
 print(list(filter(longer_than_four, words)))

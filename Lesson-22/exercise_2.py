@@ -40,10 +40,8 @@ def read_file_lines(file_path):
         for line in file:
             yield line.strip()
 
-filtered_lines = filter(lambda line: "Python" in line, read_file_lines('example.txt'))
-
+filtered_lines = filter(lambda line: "Python" in line, read_file_lines("text_files/example.txt"))
 uppercased_lines = map(lambda line: line.upper(), filtered_lines)
 
-# Выводим результат
 for line in uppercased_lines:
     print(line)

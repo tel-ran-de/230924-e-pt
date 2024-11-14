@@ -10,7 +10,6 @@ def temperature_generator():
         yield temp
 
 celsius_to_fahrenheit = lambda c: (c * 9/5) + 32
-
 print(list(map(celsius_to_fahrenheit, temperature_generator())))
 
 # Задача 2: Использование filter с итератором и лямбда функцией для фильтрации строк по длине
