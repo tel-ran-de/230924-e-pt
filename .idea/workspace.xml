@@ -5,6 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Lesson-22/examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/exercise_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/exercise_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/exercise_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/live-coding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/text_files/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/text_files/example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/text_files/file1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/text_files/file2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson-22/Урок 17. Map, filter, zip. Лямбда функции.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +39,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.exercise_1.executor": "Run",
+    "Python.exercise_2.executor": "Run",
+    "Python.exercise_3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "igor-pronin",
+    "git-widget-placeholder": "igor-pronin-h22",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
