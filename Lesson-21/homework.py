@@ -2,6 +2,14 @@
 
 # Задание 1: Напишите функцию, которая создает итератор, возвращающий числа от 1 до заданного числа `n`.
 # Обработайте исключение StopIteration
+numbs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+iter_numbs = iter(numbs)
+
+print(next(iter_numbs))
+print(next(iter_numbs))
+print(next(iter_numbs))
+print(next(iter_numbs))
+print(next(iter_numbs))
 
 
 # Задание 2: Напишите выражение-генератор, которое возвращает квадраты чисел от 0 до 10.
