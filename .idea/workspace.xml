@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="практика 3 урок 22 выполнена">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-22/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/exercise_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-22/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/homework.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     "Python.exercise_1.executor": "Run",
     "Python.exercise_2.executor": "Run",
     "Python.exercise_3.executor": "Run",
+    "Python.homework.executor": "Run",
     "Python.hwtest10.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Viktor-Yerokhov-h22",
@@ -54,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.exercise_3">
+  <component name="RunManager" selected="Python.homework">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -121,6 +122,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="homework" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-22" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-22/homework.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="hwtest10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -168,6 +191,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.homework" />
         <item itemvalue="Python.exercise_3" />
         <item itemvalue="Python.exercise_2" />
         <item itemvalue="Python.exercise_1" />
@@ -248,14 +272,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731619098663</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731619659566</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619659566</updated>
+    </task>
+    <task id="LOCAL-00009" summary="практика 3 урок 22 выполнена">
+      <option name="closed" value="true" />
+      <created>1731619799473</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731619799473</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="решение урока 18" />
     <MESSAGE value="выполнение доп практики урок 22" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="практика 3 урок 22 выполнена" />
+    <option name="LAST_COMMIT_MESSAGE" value="практика 3 урок 22 выполнена" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
