@@ -81,7 +81,7 @@
 #         for line in file:
 #             yield line.strip()
 #
-# lines = file_reader('example.txt')
+#
+# lines = file_reader('text_files/example.txt')
 # filtered_lines = filter(lambda line: 'Python' in line, lines)
 # print(list(filtered_lines))
-#
