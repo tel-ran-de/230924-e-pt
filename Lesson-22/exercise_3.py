@@ -69,6 +69,30 @@ print(lambda_list)
 # Напишите генератор, который читает строки из файла `data.txt`.
 # Используйте функцию `filter` с лямбда функцией для отбора строк, содержащих числа.
 # Затем примените функцию `map` с лямбда функцией для преобразования этих строк в целые числа и выведите результат.
+def read_file_lines(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+
+def contains_digit(line):
+    for char in line:
+        return char.isdigit()
+
+
+# Создаем генератор для чтения строк из файла data.txt
+file_path = 'text_files/data.txt'
+lines = read_file_lines(file_path)
+
+# Используем filter с функцией contains_digit для отбора строк, содержащих числа
+filtered_lines = filter(contains_digit, lines)
+
+
+# Применяем map с лямбда функцией для преобразования строк в целые числа
+numbers = list(map(lambda line: int(''.join(filter(lambda char: char.isdigit(), line))), filtered_lines))
+
+print(numbers)
+
 
 
 
