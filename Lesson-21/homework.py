@@ -2,23 +2,42 @@
 
 # Задание 1: Напишите функцию, которая создает итератор, возвращающий числа от 1 до заданного числа `n`.
 # Обработайте исключение StopIteration
+def iteration():
+	try:
+		while True:
+			print(next(iter_numbs))
+	except StopIteration:
+		print("finish")
 numbs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 iter_numbs = iter(numbs)
 
-print(next(iter_numbs))
-print(next(iter_numbs))
-print(next(iter_numbs))
-print(next(iter_numbs))
-print(next(iter_numbs))
-
+iteration()
 
 # Задание 2: Напишите выражение-генератор, которое возвращает квадраты чисел от 0 до 10.
 # Обработайте исключение StopIteration
+gen = (x ** 2 for x in range (11))
 
+try:
+	while True:
+		print(next(gen))
+except StopIteration:
+	print("finish")
 
 # Задание 3: Напишите функцию-генератор, которая принимает предложение и возвращает слова по одному.
 # Обработайте исключение StopIteration
+def satz_gen(exemple):
+	words = exemple.split()
+	for word in words:
+		yield word
 
+exemple = "На душе у него было гнусно, как никогда."
+gen = satz_gen(exemple)
+
+try:
+	while True:
+		print(next(gen))
+except StopIteration:
+	print("Конец")
 
 # Тема: Генераторы и встроенные функции
 
