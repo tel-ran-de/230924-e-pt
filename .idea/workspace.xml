@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
-      <change beforePath="$PROJECT_DIR$/Lesson-21/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-21/homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="ДЗ урок 21 выполнено" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +297,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731698150570</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731698594140</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731698594140</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ДЗ урок 21 выполнено">
+      <option name="closed" value="true" />
+      <created>1731698619945</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731698619945</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -313,7 +327,8 @@
     <MESSAGE value="выполнение практики 3 урок 21" />
     <MESSAGE value="выполнение ДЗ урок 21" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="ДЗ урок 21 выполнено" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ урок 21 выполнено" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
