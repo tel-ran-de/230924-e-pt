@@ -9,11 +9,13 @@
 
 
 
-def square(args):
-    return args ** 2
+def square(x):
+    return x ** 2
 numbers = ([1,2,3,4,5]
 
-print(list(map(sguare, numbers)))
+sguared_numbers = list(map(sguare, numbers))
+
+print(sguare, numbers)
 
 
 # Задача 2: Применение функции filter для отбора четных чисел
@@ -46,7 +48,12 @@ print(list(filter(is_even, numbers)))
 # Ожидаемый результат: [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
 
 
-list_x - zip(names, ages)
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+"Используем zip для объединения списков"
+result = list(zip(names, ages))
+"Выводим результат"
 print(list(list_x))
 
 
