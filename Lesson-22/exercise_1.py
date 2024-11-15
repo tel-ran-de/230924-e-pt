@@ -45,6 +45,7 @@ print(list(filter(is_even, numbers)))
 # ages = [25, 30, 35]
 # Ожидаемый результат: [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
 
+
 list_x - zip(names, ages)
 print(list(list_x))
 
