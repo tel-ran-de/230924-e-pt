@@ -11,11 +11,26 @@
 
 def square(x):
     return x ** 2
-numbers = ([1,2,3,4,5]
+numbers = [1, 2, 3, 4, 5]
 
 sguared_numbers = list(map(sguare, numbers))
 
-print(sguare, numbers)
+print(sguared_numbers)
+
+
+# Функция для возведения числа в квадрат
+def square(x):
+    return x ** 2
+
+# Список чисел
+numbers = [1, 2, 3, 4, 5]
+
+# Применяем функцию square ко всем элементам списка с помощью map
+squared_numbers = list(map(square, numbers))
+
+# Выводим результат
+print(squared_numbers)
+
 
 
 # Задача 2: Применение функции filter для отбора четных чисел
