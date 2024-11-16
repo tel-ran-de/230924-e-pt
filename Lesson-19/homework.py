@@ -9,26 +9,26 @@ print("Тема: Чтение и запись данных в файл.")
 # 5. Прочитайте все строки файла и выведите их на экран.
 
 print("---------Задание 1: Чтение данных из файла--------")
-# file_data = open('text_files/data.txt', 'r')
-# content = file_data.read()
-# print("Весь контент файла:")
-# print(content)
-# print(50 * "-")
-# file_data.seek(0)    # Возвращаем указатель на начало файла
-# first_10_chars = file_data.read(10)
-# print("Первые 10 символов файла:")
-# print(first_10_chars)
-# print(50 * "-")
-# file_data.seek(0)    # Возвращаем указатель на начало файла
-# first_line = file_data.readline()
-# print("Первая строка файла:")
-# print(first_line)
-# print(50 * "-")
-# file_data.seek(0)    # Возвращаем указатель на начало файла
-# all_lines_file = file_data.readlines()
-# print("Все строки файла:")
-# for line in all_lines_file:
-#     print(line, end='')
+file_data = open('text_files/data.txt', 'r')
+content = file_data.read()
+print("Весь контент файла:")
+print(content)
+print(50 * "-")
+file_data.seek(0)    # Возвращаем указатель на начало файла
+first_10_chars = file_data.read(10)
+print("Первые 10 символов файла:")
+print(first_10_chars)
+print(50 * "-")
+file_data.seek(0)    # Возвращаем указатель на начало файла
+first_line = file_data.readline()
+print("Первая строка файла:")
+print(first_line)
+print(50 * "-")
+file_data.seek(0)    # Возвращаем указатель на начало файла
+all_lines_file = file_data.readlines()
+print("Все строки файла:")
+for line in all_lines_file:
+    print(line, end='')
 
 # Задание 2: Запись данных в файл
 # 1. Откройте (создайте) файл `output.txt` для записи.
@@ -38,16 +38,16 @@ print("---------Задание 1: Чтение данных из файла-----
 # 5. Откройте файл `output.txt` для чтения и выведите его содержимое на экран.
 
 print("---------Задание 2: Запись данных в файл--------")
-# file_output = open('text_files/output.txt', 'w')
-# file_output.write("Hello, World!\n")
-# lines = ["This is line 1\n", "This is line 2\n"]
-# file_output.writelines(lines)
-# file_output.close()
-#
-# file_output = open('text_files/output.txt', 'r')
-# content = file_output.read()
-# print("Содержимое файла output.txt:")
-# print(content)
+file_output = open('text_files/output.txt', 'w')
+file_output.write("Hello, World!\n")
+lines = ["This is line 1\n", "This is line 2\n"]
+file_output.writelines(lines)
+file_output.close()
+
+file_output = open('text_files/output.txt', 'r')
+content = file_output.read()
+print("Содержимое файла output.txt:")
+print(content)
 
 # Задание 3: Добавление данных в файл
 # 1. Откройте (создайте) файл `log.txt` для добавления данных.
@@ -56,16 +56,16 @@ print("---------Задание 2: Запись данных в файл--------"
 # 4. Закройте файл.
 # 5. Откройте файл `log.txt` для чтения и выведите его содержимое на экран.
 print("---------Задание 3: Добавление данных в файл--------")
-# file_log = open('text_files/log.txt', 'a')
-# file_log.write("New log entry\n")
-# lines = ["Log entry 1\n", "Log entry 2\n"]
-# file_log.writelines(lines)
-# file_log.close()
-#
-# file_log = open('text_files/log.txt', 'r')
-# content = file_log.read()
-# print("Содержимое файла log.txt:")
-# print(content)
+file_log = open('text_files/log.txt', 'a')
+file_log.write("New log entry\n")
+lines = ["Log entry 1\n", "Log entry 2\n"]
+file_log.writelines(lines)
+file_log.close()
+
+file_log = open('text_files/log.txt', 'r')
+content = file_log.read()
+print("Содержимое файла log.txt:")
+print(content)
 # Задание 4: Работа с указателем
 # 1. Откройте (создайте) файл `pointer_example.txt` для чтения и записи.
 # 2. Запишите в файл строку "Python File Handling\n".
@@ -74,25 +74,25 @@ print("---------Задание 3: Добавление данных в файл-
 # 5. Переместите указатель в конец файла и добавьте строку "End of file\n".
 # 6. Переместите указатель в начало файла и прочитайте весь файл.
 print("---------Задание 4: Работа с указателем--------")
-# file_pointer_example = open('pointer_example.txt', 'r+')
-# file_pointer_example.write("Python File Handling\n")
-# # 3. Переместите указатель в начало файла и прочитайте первую строку.
-# file_pointer_example.seek(0)
-# first_line = file_pointer_example.readline()
-# print("Первая строка файла:")
-# print(first_line)
-# # 4. Переместите указатель на позицию 7 и прочитайте следующие 5 символов.
-# file_pointer_example.seek(7)
-# next_5_chars = file_pointer_example.read(5)
-# print("\nСледующие 5 символов после позиции 7:")
-# print(next_5_chars)
-# # 5. Переместите указатель в конец файла и добавьте строку "End of file\n".
-# file_pointer_example.seek(0, 2)  # 2 означает перемещение указателя в конец файла
-# file_pointer_example.write("End of file\n")
-# file_pointer_example.close()
-#
-# file_pointer_example = open('pointer_example.txt', 'r')
-# print(file_pointer_example.read())
+file_pointer_example = open('pointer_example.txt', 'r+')
+file_pointer_example.write("Python File Handling\n")
+# 3. Переместите указатель в начало файла и прочитайте первую строку.
+file_pointer_example.seek(0)
+first_line = file_pointer_example.readline()
+print("Первая строка файла:")
+print(first_line)
+# 4. Переместите указатель на позицию 7 и прочитайте следующие 5 символов.
+file_pointer_example.seek(7)
+next_5_chars = file_pointer_example.read(5)
+print("\nСледующие 5 символов после позиции 7:")
+print(next_5_chars)
+# 5. Переместите указатель в конец файла и добавьте строку "End of file\n".
+file_pointer_example.seek(0, 2)  # в конец файла
+file_pointer_example.write("End of file\n")
+file_pointer_example.close()
+
+file_pointer_example = open('pointer_example.txt', 'r')
+print(file_pointer_example.read())
 
 # Тема: Менеджер контекста и JSON
 print("Тема: Менеджер контекста и JSON")
