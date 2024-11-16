@@ -86,9 +86,15 @@ print(max(z))
 # которые содержат заданное ключевое слово (x_word).
 # Программа должна одинаково реагировать на написание слова строчными и заглавными буквами.
 # Файл: data.txt
-
 x_word = 'this'
-
+def gen_filter(file_path = "text_files/data.txt", f = x_word):
+	with open (file_path) as file:
+		for line in file.readlines():
+			if f in line.lower():
+				yield line
+gen = gen_filter()
+for line in gen:
+	print(list(gen))
 
 # Задача 2: Чтение файла по частям и подсчет строк
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
