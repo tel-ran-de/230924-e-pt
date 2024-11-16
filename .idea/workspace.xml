@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="практика 3 урок 22 выполнена">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change afterPath="$PROJECT_DIR$/Lesson-22/test_Python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -296,15 +296,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731619799473</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731704733449</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731704733449</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="решение урока 18" />
     <MESSAGE value="выполнение доп практики урок 22" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="практика 3 урок 22 выполнена" />
-    <option name="LAST_COMMIT_MESSAGE" value="практика 3 урок 22 выполнена" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
