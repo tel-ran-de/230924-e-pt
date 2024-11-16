@@ -1,4 +1,5 @@
 # Тема: map, filter, zip
+from curses.ascii import isdigit
 from tkinter.font import names
 
 # Задача 1: Применение функции map для преобразования чисел
@@ -135,6 +136,17 @@ from tkinter.font import names
 # Напишите генератор, который читает строки из файла `data.txt`.
 # Используйте функцию `filter` с лямбда функцией для отбора строк, содержащих числа.
 # Затем примените функцию `map` с лямбда функцией для преобразования этих строк в целые числа и выведите результат.
+# def file_reader(file_path):
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             yield line.strip()
+#
+#
+# file_path = "text_files/data.txt"
+# lines_generator = file_reader(file_path)
+# filtered_lines = filter(lambda line: any(char.isdigit() for char in line), lines_generator)
+# mapped_lines = map(lambda line: int(line), filtered_lines)
+# print(list(mapped_lines))
 
 
 # Задача 5: Использование zip с итераторами для обработки данных из двух файлов
@@ -142,3 +154,21 @@ from tkinter.font import names
 # Используйте функцию `zip`, чтобы объединить данные из этих файлов, и примените лямбда функцию
 # для вывода данных в формате "file1_line - file2_line".
 
+def read_file_lines(file_path):
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+file1_path = 'file1.txt'
+file2_path = 'file2.txt'
+
+file1_lines = read_file_lines(file1_path)
+file2_lines = read_file_lines(file2_path)
+
+combined_lines = zip(file1_lines, file2_lines)
+
+formatted_lines = map(lambda pair: f"{pair[0]} - {pair[1]}", combined_lines)
+
+for line in formatted_lines:
+    print(line)
