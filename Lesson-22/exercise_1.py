@@ -9,27 +9,19 @@
 
 
 
-def square(x):
-    return x ** 2
-numbers = [1, 2, 3, 4, 5]
-
-sguared_numbers = list(map(sguare, numbers))
-
-print(sguared_numbers)
 
 
-# Функция для возведения числа в квадрат
 def square(x):
     return x ** 2
 
-# Список чисел
 numbers = [1, 2, 3, 4, 5]
 
-# Применяем функцию square ко всем элементам списка с помощью map
 squared_numbers = list(map(square, numbers))
 
-# Выводим результат
+
 print(squared_numbers)
+
+
 
 
 
@@ -53,6 +45,16 @@ print(list(filter(is_even, numbers)))
 
 
 
+def is_even(digit):
+    return digit % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(is_even, numbers))
+
+print(even_numbers)
+
+
+
 # Задача 3: Применение функции zip для объединения списков
 # У вас есть два списка: `names = ["Alice", "Bob", "Charlie"]` и `ages = [25, 30, 35]`.
 # Используйте функцию `zip`, чтобы создать список кортежей, где каждый кортеж содержит имя и возраст,
@@ -63,13 +65,13 @@ print(list(filter(is_even, numbers)))
 # Ожидаемый результат: [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
 
 
+
 names = ["Alice", "Bob", "Charlie"]
 ages = [25, 30, 35]
 
-"Используем zip для объединения списков"
 result = list(zip(names, ages))
-"Выводим результат"
-print(list(list_x))
+
+print(result)
 
 
 
