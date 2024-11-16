@@ -7,11 +7,6 @@
 # file = open("non_existent_file.txt", "r")  # FileNotFoundError
 # int("abc")  # ValueError
 
-try:
-    x = 1 / 0
-except ZeroDivisionError:
-    print("Деление на ноль невозможно")
-print('Программа продолжает свою работу')
 
 # # try
 # try:
@@ -20,14 +15,6 @@ print('Программа продолжает свою работу')
 #     print("Произошла ошибка")
 
 # # finally
-try:
-    file = open("examples.py", "r", encoding="utf-8")
-    content = file.read()
-except FileNotFoundError:
-    print("Файл не найден")
-finally:
-    print('Операция завершена')
-    file.close()
 
 # # else
 # try:
@@ -42,7 +29,6 @@ finally:
 
 # # именование исключений
 # try:
-#     file = open("example.txt", "r")
 #     content = file.read()
 # except FileNotFoundError as e:
 #     print(f"Ошибка: файл не найден: {e}")
@@ -115,22 +101,17 @@ finally:
 #     print(f"Число: {number}")
 #
 # try:
-#     check_positive(-5)
 # except ValueError as e:
 #     print(f"Ошибка: {e}")
 
 # ПРИМЕР 2
-# class MyCustomError(Exception):
 #     pass
 #
 # def custom_function(value):
 #     if value < 0:
-#         raise MyCustomError("Значение должно быть неотрицательным")
 #     print(f"Значение: {value}")
 #
 # try:
-#     custom_function(-10)
-# except MyCustomError as e:
 #     print(f"Ошибка: {e}")
 
 ## ПРИМЕР 3
@@ -140,6 +121,5 @@ finally:
 #     print(f"Возраст: {age}")
 #
 # try:
-#     check_age(19)
 # except ValueError as e:
 #     print(f"Ошибка: {e}")
