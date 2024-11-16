@@ -109,6 +109,15 @@ print(list(filter(longer_than_four)))
 
 
 
+numbers = (x for x in range(1, 21))
+
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+
+print(list(even_numbers))
+
+
+
+
 
 
 # Задача 2: Использование zip с итераторами и лямбда функцией
