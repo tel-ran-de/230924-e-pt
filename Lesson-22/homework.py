@@ -90,11 +90,11 @@ print (list(str_stirng)
 
 
 
-# def longer_than_four(word_3):
-#   return len(word_3) > 3
+def longer_than_four(word_3):
+    return len(word_3) > 3
 
-# words = ["apple", "kiwi", "banana","pear"]
-# print(list(filter(longer_than_four)))
+words = ["apple", "kiwi", "banana","pear"]
+print(list(filter(longer_than_four)))
 
 
 
@@ -105,6 +105,10 @@ print (list(str_stirng)
 # Напишите генератор, который возвращает числа от 1 до 20.
 # Используйте функцию `filter` с лямбда функцией для отбора четных чисел и выведите результат.
 # Ожидаемый результат: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+
+
 
 
 # Задача 2: Использование zip с итераторами и лямбда функцией
