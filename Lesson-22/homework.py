@@ -8,6 +8,12 @@
 # Ожидаемый результат: [1, 4, 9, 16, 25]
 
 
+
+
+
+
+
+
 # Задача 2: Применение функции filter для отбора четных чисел
 # Напишите функцию `is_even`, которая принимает число и возвращает `True`, если число четное,
 # и `False` в противном случае. Используйте функцию `filter`, чтобы отобрать четные числа из
@@ -15,6 +21,20 @@
 #
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Ожидаемый результат: [2, 4, 6, 8, 10]
+
+
+
+
+def is_even(digit):
+    return digit % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(is_even, numbers))
+
+print(even_numbers)
+
+
+
 
 
 # Задача 3: Применение функции zip для объединения списков
@@ -28,12 +48,12 @@
 
 
 
-# names = ["Alice", "Bob", "Charlie"]
-# ages = [25, 30, 35]
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
 
-# result = list(zip(names, ages))
+result = list(zip(names, ages))
 
-# print(result)
+print(result)
 
 
 
@@ -50,13 +70,11 @@
 
 
 
-# def to_int(string):
-#    return int(string)
+def to_int(string):
+    return int(string)
 
-# str_numbers = ["1", "2", "3", "4", "5"]
-# print (list(str_stirng))
-
-
+str_numbers = ["1", "2", "3", "4", "5"]
+print (list(str_stirng)
 
 
 
