@@ -2,27 +2,10 @@
 
 # Задание 1: Чтение данных из файла
 # 1. Откройте файл `data.txt` для чтения.
-file = open("text_files/data.txt", "r")
 # 2. Прочитайте весь контент файла и выведите его на экран.
-content = file.read()
-print(content)
 # 3. Прочитайте первые 10 символов файла и выведите их на экран.
-file.seek(0)
-file_read_10 = file.read(10)
-print(file_read_10)
-
 # 4. Прочитайте одну строку из файла и выведите ее на экран.
-file.seek(0)
-file_line = file.readline()
-print(file_line)
 # 5. Прочитайте все строки файла и выведите их на экран.
-file.seek(0)
-all_lines = file.readlines()
-print(all_lines)
-file.close()
-
-
-
 
 
 # Задание 2: Запись данных в файл
