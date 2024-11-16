@@ -44,18 +44,40 @@ except StopIteration:
 # Задача 1: Генератор и функция set()
 # Задание: Напишите генератор, который возвращает числа от 1 до 10, но если число четное, возвратите его удвоенным.
 # Используйте функцию set(), чтобы преобразовать результат генератора в множество и выведите его.
+def gen_func():
+	for x in range(11):
+		if x % 2 == 0:
+			yield x * 2
+		else:
+			yield x
+a = gen_func()
+print(set(list(a)))
 
 
 # Задача 2: Генератор и функция sum()
 # Задание: Напишите генератор, который возвращает числа от 1 до 20, кратные 3. Используйте функцию sum(),
 # чтобы найти сумму всех этих чисел и выведите результат.
-
+def gen_sum():
+	for x in range(21):
+		if x % 3 == 0:
+			yield x
+i = gen_sum()
+print(sum(i))
 
 # Задача 3: Генератор и функции min() и max()
 # Задание: Напишите генератор, который возвращает длины слов в заданной строке. Используйте функции min() и max(),
 # чтобы найти минимальную и максимальную длину слов и выведите их.
 # sentence = "Write a generator that returns word lengths from a given sentence"
+def gen_string():
+	x = sentence.split()
+	for word in x:
+		yield len(word)
+sentence = "Write a generator that returns word lengths from a given sentence"
+w = gen_string()
+z = list(w)
 
+print(min(z))
+print(max(z))
 
 # Тема: Генераторы и файлы
 
