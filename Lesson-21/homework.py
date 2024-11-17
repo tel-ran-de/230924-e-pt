@@ -119,6 +119,20 @@ chunk_size = 50
 
 for lines_count in count_lines_chunk(file_path, chunk_size):
 	print(f"Количество строк в текущей части: {lines_count}")
+
 # Задача 3: Поиск строк, содержащих числа
 # Создайте генератор, который читает строки из файла и возвращает только те строки, которые содержат числа.
 # Файл: data.txt
+import re
+
+
+def read_line_numbers(file_path):
+	with open(file_path, encoding="utf-8") as file:
+		for line in file:
+			if re.search(r"\d", line):
+				yield line.strip()
+
+file_path = "text_files/data.txt"
+
+for line in read_line_numbers(file_path):
+	print(line)
