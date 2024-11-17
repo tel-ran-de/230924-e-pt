@@ -48,13 +48,13 @@
 # Поздравляем! Вы открыли все безопасные клетки.
 import random
 
-
-def minesweeper():
+def main_game_minesweeper():
     size = 5
     max_mines = 5
     board = [['-' for _ in range(size)] for _ in range(size)]
-    revealed = [[False] * size for _ in range(size)] # матрица размера size со значением каждой ячейки False
+    revealed = [[False] * size for _ in range(size)]
     directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+
     # Генерация мин
     count_mines = 0
     while count_mines < max_mines:
@@ -63,25 +63,20 @@ def minesweeper():
             board[row][col] = '*'
             count_mines += 1
 
-        count = 0
-        for dr, dc in directions:
-            r, c = row + dr, col + dc
-            if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
-                count += 1
-        return count
-
     print(47 * "-")
     print("Игра: Сапёр.")
     print(47 * "-")
+
     while True:
-        for row in range(size):
+        for row in range(size): # Вывод игрового поля
             for col in range(size):
                 if revealed[row][col]:
                     print(board[row][col], end=' ')
                 else:
-                    print('-', end=' ')
+                    print('-', end=' ') # если revealed == False в клетке печатаем "-"
             print()
-        try:
+
+        try:    # проверка ввода пользователя
             print(47 * "-")
             user_input = input("Введите координаты клетки (строка столбец): ")
             print(47 * "-")
@@ -95,14 +90,18 @@ def minesweeper():
             print("Неверный ввод. Попробуйте снова.")
             continue
 
-        if board[row][col] == '*':
+        if board[row][col] == '*':  # проверка на мину
             print("Вы наступили на мину! Игра окончена.")
             for row in range(size):
                 for col in range(size):
                     if board[row][col] == '*':
                         print('*', end=' ')
-                    else:
-                        count = count_mines(row, col)
+                else:
+                        count = 0
+                        for dr, dc in directions:
+                            r, c = row + dr, col + dc
+                            if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
+                                count += 1
                         if count > 0:
                             print(count, end=' ')
                         else:
@@ -110,6 +109,29 @@ def minesweeper():
                 print()
             break
 
+        # Открытие клетки, если есть вокруг мины, пишем их кол-во иначе пустая клетка " "
+        queue = [(row, col)]
+        while queue:
+            r, c = queue.pop(0)
+            if not (0 <= r < size and 0 <= c < size) or revealed[r][c]:
+                continue
+            revealed[r][c] = True
+            if board[r][c] == '*':
+                continue
+            count = 0
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < size and 0 <= nc < size and board[nr][nc] == '*':
+                    count += 1
+            if count > 0:
+                board[r][c] = str(count)
+            else:
+                board[r][c] = ' '
+                for dr, dc in directions:
+                    nr, nc = r + dr, c + dc
+                    if 0 <= nr < size and 0 <= nc < size and not revealed[nr][nc]:
+                        queue.append((nr, nc))
+        # все клетки без мин открыты - Победа
         if sum(sum(row) for row in revealed) == size * size - max_mines:
             print("Поздравляю! Вы победили!")
             for row in range(size):
@@ -117,7 +139,11 @@ def minesweeper():
                     if board[row][col] == '*':
                         print('*', end=' ')
                     else:
-                        count = count_mines(row, col)
+                        count = 0
+                        for dr, dc in directions:
+                            r, c = row + dr, col + dc
+                            if 0 <= r < size and 0 <= c < size and board[r][c] == '*':
+                                count += 1
                         if count > 0:
                             print(count, end=' ')
                         else:
@@ -126,4 +152,5 @@ def minesweeper():
             break
 
 if __name__ == "__main__":
-    minesweeper()
+    print('Файл запущен напрямую')
+    main_game_minesweeper()
