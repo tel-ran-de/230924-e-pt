@@ -4,12 +4,89 @@
 # Обработайте исключение StopIteration
 
 
+
+class NumberIterator:
+    def __init__(self, n):
+        self.n = n
+        self.current = 1  # Начинаем с числа 1
+
+    def __iter__(self):
+        return self  # Итератор возвращает себя
+
+    def __next__(self):
+        if self.current > self.n:  # Когда current превышает n, выбрасываем исключение StopIteration
+            raise StopIteration
+        else:
+            current_value = self.current
+            self.current += 1  # Увеличиваем текущее значение на 1
+            return current_value
+
+# Функция для создания итератора
+def create_number_iterator(n):
+    return NumberIterator(n)
+
+# Пример использования
+iterator = create_number_iterator(5)
+
+for num in iterator:
+    print(num)
+
+
+
+
+
 # Задание 2: Напишите выражение-генератор, которое возвращает квадраты чисел от 0 до 10.
 # Обработайте исключение StopIteration
 
 
+
+
+# Генератор для вычисления квадратов чисел от 0 до 10
+squares_generator = (x**2 for x in range(11))
+
+# Используем next() для извлечения значений и обработку исключения StopIteration
+try:
+    while True:
+        square = next(squares_generator)
+        print(square)
+except StopIteration:
+    print("Генератор завершил работу.")
+
+
+
+
+
 # Задание 3: Напишите функцию-генератор, которая принимает предложение и возвращает слова по одному.
 # Обработайте исключение StopIteration
+
+
+
+
+# Функция-генератор, которая возвращает слова из предложения по одному
+def word_generator(sentence):
+    words = sentence.split()  # Разделяем предложение на слова
+    for word in words:
+        yield word  # Возвращаем слово по одному
+
+# Пример использования функции-генератора
+sentence = "Python is an awesome programming language"
+
+# Создаем генератор
+generator = word_generator(sentence)
+
+# Используем next() для извлечения слов и обработку исключения StopIteration
+try:
+    while True:
+        word = next(generator)  # Получаем следующее слово
+        print(word)
+except StopIteration:
+    print("Все слова
+
+
+
+
+
+
 
 
 # Тема: Генераторы и встроенные функции
@@ -18,16 +95,86 @@
 # Задание: Напишите генератор, который возвращает числа от 1 до 10, но если число четное, возвратите его удвоенным.
 # Используйте функцию set(), чтобы преобразовать результат генератора в множество и выведите его.
 
+  
+  
+   
+
+"Генератор, который возвращает числа от 1 до 10, удваивая четные числа"
+
+
+    def number_generator():
+        for num in range(1, 11):   "Числа от 1 до 10"
+            if num % 2 == 0:  "Если число четное"
+                yield num * 2,  "Возвращаем удвоенное значение"
+            else:
+                yield num  "Если нечетное, просто возвращаем число"
+
+"Преобразуем результат генератора в множество и выводим"
+    result_set = set(number_generator())
+
+    print(result_set)
+
+
+
+
+
+
+
+
 
 # Задача 2: Генератор и функция sum()
 # Задание: Напишите генератор, который возвращает числа от 1 до 20, кратные 3. Используйте функцию sum(),
 # чтобы найти сумму всех этих чисел и выведите результат.
 
 
+
+# Генератор, который возвращает числа от 1 до 20, кратные 3
+def multiples_of_three():
+    for num in range(1, 21):  # Числа от 1 до 20
+        if num % 3 == 0:  # Если число кратно 3
+            yield num  # Возвращаем число
+
+# Находим сумму всех чисел, кратных 3, с помощью функции sum()
+result_sum = sum(multiples_of_three())
+
+# Выводим результат
+print(result_sum)
+
+
+
+
+
+
 # Задача 3: Генератор и функции min() и max()
 # Задание: Напишите генератор, который возвращает длины слов в заданной строке. Используйте функции min() и max(),
 # чтобы найти минимальную и максимальную длину слов и выведите их.
 # sentence = "Write a generator that returns word lengths from a given sentence"
+
+
+
+
+
+# Генератор, который возвращает длины слов в строке
+def word_lengths(sentence):
+    words = sentence.split()  # Разделяем строку на слова
+    for word in words:
+        yield len(word)  # Возвращаем длину каждого слова
+
+# Исходная строка
+sentence = "Write a generator that returns word lengths from a given sentence"
+
+# Находим минимальную и максимальную длину с помощью функций min() и max()
+min_length = min(word_lengths(sentence))
+max_length = max(word_lengths(sentence))
+
+# Выводим результаты
+print(f"Минимальная длина слова: {min_length}")
+print(f"Максимальная длина слова: {max_length}"
+
+
+
+
+
 
 
 # Тема: Генераторы и файлы
@@ -40,13 +187,71 @@
 
 x_word = 'this'
 
+# Генератор для чтения строк из файла и фильтрации по ключевому слову
+def keyword_filter(filename, x_word):
+    # Открываем файл в режиме чтения
+    with open(filename, 'r') as file:
+        # Перебираем строки файла
+        for line in file:
+            # Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистру
+            if x_word.lower() in line.lower():
+                yield line.strip()  # Возвращаем строку без символов новой строки
 
-# Задача 2: Чтение файла по частям и подсчет строк
-# Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
-# и подсчитывает количество строк в каждой части.
-# Файл: data.txt
+# Пример использования генератора
+filename = 'data.txt'
+keyword = 'Python'
+
+# Используем генератор для получения строк, содержащих ключевое слово
+for line in keyword_filter(filename, keyword):
+    pr
+
+# Задача 2:Генератор и функции min() и max()
+# Задание: Напишите генератор, который возвращает длины слов в заданной строке. Используйте функции min() и max(),
+# чтобы найти минимальную и максимальную длину слов и выведите их.
+# sentence = "Write a generator that returns word lengths from a given sentence"
+
+
+
+# Генератор, который возвращает длины слов в строке
+def word_lengths(sentence):
+#    words = sentence.split()  # Разделяем строку на слова
+#    for word in words:
+#        yield len(word)  # Возвращаем длину каждого слова
+#
+# # Исходная строка
+sentence = "Write a generator that returns word lengths from a given sentence"
+#
+# # Находим минимальную и максимальную длину с помощью функций min() и max()
+min_length = min(word_lengths(sentence))
+max_length = max(word_lengths(sentence))
+#
+# # Выводим результаты
+print(f"Минимальная длина слова: {min_length}")
+print(f"Максимальная длина слова: {max_length}"
+
+
+
+
+
 
 
 # Задача 3: Поиск строк, содержащих числа
 # Создайте генератор, который читает строки из файла и возвращает только те строки, которые содержат числа.
 # Файл: data.txt
+
+
+
+import re
+
+# Генератор для чтения строк из файла, содержащих числа
+def read_lines_with_numbers(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            if re.search(r'\d', line):  # Проверка, содержит ли строка хотя бы одно число
+                yield line.strip()  # Возвращаем строку без символов новой строки
+
+# Пример использования
+filename = 'data.txt'
+
+for line in read_lines_with_numbers(filename):
+    print(line)

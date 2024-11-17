@@ -8,8 +8,15 @@
 # Ожидаемый результат: [1, 4, 9, 16, 25]
 
 
+def square(x):
+    return x ** 2
+
+numbers = [1, 2, 3, 4, 5]
+
+squared_numbers = list(map(square, numbers))
 
 
+print(squared_numbers)
 
 
 
@@ -90,11 +97,19 @@ print (list(str_stirng)
 
 
 
-def longer_than_four(word_3):
-    return len(word_3) > 3
+def longer_than_four(word):
+    return len(word) > 4
 
-words = ["apple", "kiwi", "banana","pear"]
-print(list(filter(longer_than_four)))
+# Список слов
+words = ["apple", "kiwi", "banana", "pear"]
+
+# Используем filter с функцией longer_than_four для отбора слов длиной больше 4
+long_words = filter(longer_than_four, words)
+
+# Преобразуем результат в список и выводим
+print(list(long_words))
+
+
 
 
 
@@ -119,7 +134,6 @@ print(list(even_numbers))
 
 
 
-
 # Задача 2: Использование zip с итераторами и лямбда функцией
 # Создайте два итератора: один для чисел от 1 до 5, другой для их квадратов. Используйте функцию `zip`,
 # чтобы объединить эти итераторы в список кортежей, и примените лямбда функцию для их вывода
@@ -127,10 +141,49 @@ print(list(even_numbers))
 # Ожидаемый результат: ['1: 1', '2: 4', '3: 9', '4: 16', '5: 25']
 
 
+
+
+numbers = iter(range(1, 6))
+
+squares = iter(x ** 2 for x in range(1, 6))
+
+
+result = map(lambda x: f"{x[0]}: {x[1]}", zip(numbers, squares))
+
+print(list(result))
+
+
+
+
 # Задача 3: Использование map и filter с файлом и лямбда функцией
 # Напишите генератор, который читает строки из файла `example.txt`.
 # Используйте функцию `filter` с лямбда функцией, чтобы отобрать строки, содержащие слово "Python",
 # и затем примените функцию `map` с лямбда функцией для преобразования этих строк в верхний регистр.
+
+
+
+
+
+# Генератор, который читает строки из файла
+def read_lines(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()  # Убираем лишние пробелы и символы новой строки
+
+# Используем фильтрацию для строк, содержащих слово "Python"
+lines = read_lines('example.txt')
+
+# Применяем filter для отбора строк, содержащих "Python"
+filtered_lines = filter(lambda line: 'Python' in line, lines)
+
+# Применяем map для преобразования строк в верхний регистр
+uppercase_lines = map(lambda line: line.upper(), filtered_lines)
+
+for line in uppercase_lines:
+    print(line)
+
+
+
 
 
 # Тема: Дополнительная практика
@@ -142,10 +195,43 @@ print(list(even_numbers))
 # 32.0, 33.8, 35.6, 37.4, 39.2, 41.0, 42.8, 44.6, 46.4, 48.2, 50.0]
 
 
+
+
+def celsius_generator():
+    for celsius in range(-10, 11):
+        yield celsius
+
+# Используем map для конвертации температур в Фаренгейты
+celsius_values = celsius_generator()
+fahrenheit_values = map(lambda c: (9/5) * c + 32, celsius_values)
+
+# Преобразуем результат в список и выводим
+print(list(fahrenheit_values))
+
+
+
+
+
+
 # Задача 2: Использование filter с итератором и лямбда функцией для фильтрации строк по длине
 # Создайте итератор для списка строк `["hello", "world", "python", "is", "awesome"]`.
 # Используйте функцию `filter` с лямбда функцией для отбора строк длиной более 5 символов и выведите результат.
 # Ожидаемый результат: ['python', 'awesome']
+
+
+
+
+words = ["hello", "world", "python", "is", "awesome"]
+
+# Используем filter для отбора строк, длина которых больше 5 символов
+long_words = filter(lambda word: len(word) > 5, words)
+
+# Преобразуем результат в список и выводим
+print(list(long_words))
+
+
+
+
 
 
 # Задача 3: Использование zip и map для объединения и форматирования данных из двух генераторов
@@ -155,10 +241,64 @@ print(list(even_numbers))
 # Ожидаемый результат: ['1: 1', '2: 8', '3: 27']
 
 
+
+
+
+# Генератор для чисел от 1 до 3
+def numbers_generator():
+    for i in range(1, 4):
+        yield i
+
+# Генератор для кубов чисел от 1 до 3
+def cubes_generator():
+    for i in range(1, 4):
+        yield i ** 3
+
+# Создаем два генератора
+numbers = numbers_generator()
+cubes = cubes_generator()
+
+# Используем zip для объединения генераторов
+zipped = zip(numbers, cubes)
+
+# Применяем map с лямбда функцией для форматирования
+formatted_result = map(lambda x: f"{x[0]}: {x[1]}", zipped)
+
+# Преобразуем результат в список и выводим
+print(list(formatted_result))
+
+
+
+
+
 # Задача 4: Использование filter и map с файлом для преобразования данных
 # Напишите генератор, который читает строки из файла `data.txt`.
 # Используйте функцию `filter` с лямбда функцией для отбора строк, содержащих числа.
 # Затем примените функцию `map` с лямбда функцией для преобразования этих строк в целые числа и выведите результат.
+
+
+
+
+# Генератор для чтения строк из файла
+def read_lines(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+
+# Чтение строк из файла
+lines = read_lines('data.txt')
+
+# Используем filter для отбора строк, содержащих числа
+lines_with_numbers = filter(lambda line: any(char.isdigit() for char in line), lines)
+
+# Используем map для преобразования строк в целые числа (поиск чисел в строках)
+numbers = map(lambda line: int(''.join(filter(str.isdigit, line))), lines_with_numbers)
+
+# Выводим результат
+print(list(numbers))
+
+
+
 
 
 # Задача 5: Использование zip с итераторами для обработки данных из двух файлов
@@ -166,3 +306,35 @@ print(list(even_numbers))
 # Используйте функцию `zip`, чтобы объединить данные из этих файлов, и примените лямбда функцию
 # для вывода данных в формате "file1_line - file2_line".
 
+
+
+
+# Генератор для чтения строк из первого файла
+def read_file1(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+
+# Генератор для чтения строк из второго файла
+def read_file2(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+
+# Чтение строк из файлов
+file1_lines = read_file1('file1.txt')
+file2_lines = read_file2('file2.txt')
+
+# Используем zip для объединения строк из двух файлов
+zipped_lines = zip(file1_lines, file2_lines)
+
+# Применяем map с лямбда функцией для вывода в нужном формате
+formatted_lines = map(lambda x: f"{x[0]} - {x[1]}", zipped_lines)
+
+# Выводим результат
+for line in formatted_lines:
+    print(line)
+
+
+
+#############################################################################################################
