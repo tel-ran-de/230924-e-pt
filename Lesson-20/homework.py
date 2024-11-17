@@ -279,9 +279,9 @@ def update_item():
         name_item = input('Введите название товара для обновления: ')
         for item in inventory:
             if item['product'] == name_item:
-                items = input("Что вы хотите обновить: product, price, count ")
+                items = input("Что вы хотите обновить: product, price, count: ").lower()
                 if items == 'product':
-                    item['product'] = input('Введите новое название товара; ')
+                    item['product'] = input('Введите новое название товара: ')
                 elif items == 'price':
                     item['price'] = float(input('Введите новую цену товара: '))
                 elif items == 'count':
@@ -289,6 +289,7 @@ def update_item():
                 else:
                     print('Продукт не найден.')
                 save_inventory(inventory)
+                print(f'Продукт {item['product']} обновлён.')
                 return
     except ValueError:
         print('Цена и количество должны быть числами.')
