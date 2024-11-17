@@ -10,8 +10,6 @@
 
 
 
-
-
 with open('data.txt', 'r') as file:
     # 2. Прочитаем весь контент файла и выведем его на экран
     content = file.read()

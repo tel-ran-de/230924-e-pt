@@ -29,7 +29,7 @@ def create_number_iterator(n):
 iterator = create_number_iterator(5)
 
 for num in iterator:
-    print(num)
+   print(num)
 
 
 
@@ -43,13 +43,13 @@ for num in iterator:
 
 "Генератор квадратов"
 
-squares_generator = (x**2 for x in range(11))
+#squares_generator = (x**2 for x in range(11))
 
 "next() извлечения и обработку StopIteration"
 
 try:
     while True:
-        square = next(squares_generator)
+#       square = next(squares_generator)
     print(square)
 except StopIteration:
     print("Генератор завершил работу.")
@@ -125,7 +125,7 @@ print(result_set)
 
 
 def multiples_of_three():
-    for num in range(1, 21):
+#   for num in range(1, 21):
         if num % 3 == 0:
             yield num
 
@@ -186,17 +186,16 @@ x_word = 'this'
 
 def keyword_filter(filename, x_word):
 
-    "Открываем файл"
 
     with open(filename, 'r') as file:
 
         for line in file:
-            # Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистру
+            "Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистрy"
 
             if x_word.lower() in line.lower():
                 yield line.strip()  # Возвращаем строку без символов новой строки
 
-# Пример использования генератора
+"Пример использования генератора"
 filename = 'data.txt'
 keyword = 'Python'
 
@@ -214,8 +213,9 @@ for line in keyword_filter(filename, keyword):
 
 
 
+
+
 # Генератор, который возвращает длины слов в строке
-def word_lengths(sentence):
 #    words = sentence.split()  # Разделяем строку на слова
 #    for word in words:
 #        yield len(word)  # Возвращаем длину каждого слова
@@ -240,6 +240,8 @@ print(f"Максимальная длина слова: {max_length}"
 # Задача 3: Поиск строк, содержащих числа
 # Создайте генератор, который читает строки из файла и возвращает только те строки, которые содержат числа.
 # Файл: data.txt
+
+
 
 
 
