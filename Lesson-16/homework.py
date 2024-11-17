@@ -92,7 +92,34 @@ print(fibonacci(10))  #  55 (использует кеш)
 print(fibonacci(5))   #  5
 
 
+######################################################################
 
+def cache(func):
+    # Словарь для хранения вычисленных результатов
+    cache_dict = {}
+
+    def wrapper(*args):
+        # Проверка, был ли уже вычислен результат для данных аргументов
+        if args in cache_dict:
+            print(f"Используем кеш для {args}")
+            return cache_dict[args]  # Возвращаем закешированный результат
+        # Если нет, вызываем исходную функцию и сохраняем результат
+        result = func(*args)
+        cache_dict[args] = result
+        return result
+
+    return wrapper
+
+# Пример использования декоратора
+@cache
+def fibonacci(n):
+    if n in (0, 1):
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Тестируем работу декоратора
+print(fibonacci(10))  # Вычислит и запишет в кеш
+print(fibonacci(10))  # Использует кеш
 
 
 ####################################################################################
