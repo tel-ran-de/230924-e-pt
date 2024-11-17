@@ -70,12 +70,6 @@ with open('output.txt', 'r') as file:
 
 
 
-
-
-
-
-
-
 # Задание 3:
 
 
@@ -95,7 +89,7 @@ with open('output.txt', 'r') as file:
 
 
 
- "1. Открываем (создаем) файл для чтения и записи"
+ "1. Открываем (создаем) файл"
 with open('pointer_example.txt', 'w+') as file:
 
     "2. Записываем строку в файл"
@@ -133,10 +127,55 @@ with open('pointer_example.txt', 'w+') as file:
 # 3. Прочитайте данные из файла `user.json` и выведите их на экран.
 
 
+
+
+
+import json
+
+# 1. Создаем словарь с информацией о пользователе
+user_info = {
+    "name": "John Doe",
+    "age": 30,
+    "city": "New York"
+}
+
+# 2. Записываем этот словарь в файл user.json с использованием менеджера контекста
+with open('user.json', 'w') as file:
+    json.dump(user_info, file)
+
+# 3. Читаем данные из файла user.json и выводим их на экран
+with open('user.json', 'r') as file:
+    data = json.load(file)
+    print("Данные из файла user.json:")
+    print(data)
+
+
+
+
+
+
 # Задача 2: Обновление данных в файле JSON
 # 1. Прочитайте данные из файла `user.json`.
 # 2. Обновите возраст пользователя на 29 лет.
 # 3. Запишите обновленные данные обратно в файл JSON с использованием менеджера контекста.
+
+
+
+import json
+
+# 1. Читаем данные из файла 'user.json'
+with open('user.json', 'r') as file:
+    user_info = json.load(file)
+
+# 2. Обновляем возраст пользователя на 29 лет
+user_info['age'] = 29
+
+# 3. Записываем обновленные данные обратно в файл 'user.json'
+with open('user.json', 'w') as file:
+    json.
+
+
+
 
 
 # Задача 3: Добавление нового пользователя в массив JSON
