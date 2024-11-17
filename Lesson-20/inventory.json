@@ -1,0 +1,37 @@
+[
+    {
+        "product": "Mouse",
+        "price": 12,
+        "count": 21
+    },
+    {
+        "product": "Monitor Acer",
+        "price": 55,
+        "count": 8
+    },
+    {
+        "product": "Mouse Logitec",
+        "price": 12,
+        "count": 25
+    },
+    {
+        "product": "Motherboard",
+        "price": 85,
+        "count": 18
+    },
+    {
+        "product": "Laptop",
+        "price": 50,
+        "count": 17
+    },
+    {
+        "product": "Monitor",
+        "price": 50,
+        "count": 11
+    },
+    {
+        "product": "Keyboard",
+        "price": 25,
+        "count": 27
+    }
+]
