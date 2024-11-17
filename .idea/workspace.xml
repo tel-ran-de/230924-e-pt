@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="завершение выполнения ДЗ урок 20">
-      <change beforePath="$PROJECT_DIR$/Lesson-20/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/homework.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="завершение ДЗ урок 20" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -339,7 +337,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731874746119</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731875075262</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731875075262</updated>
+    </task>
+    <task id="LOCAL-00016" summary="добавление товара в мини проект">
+      <option name="closed" value="true" />
+      <created>1731875092008</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731875092008</updated>
+    </task>
+    <task id="LOCAL-00017" summary="завершение ДЗ урок 20">
+      <option name="closed" value="true" />
+      <created>1731875109882</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731875109882</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -348,10 +370,12 @@
     <MESSAGE value="просмотр" />
     <MESSAGE value="выполнена практика 2" />
     <MESSAGE value="удаление лишних файлов" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="пробное выполнение с помощью подсказки вывода красивой таблицы" />
     <MESSAGE value="завершение выполнения ДЗ урок 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="завершение выполнения ДЗ урок 20" />
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="добавление товара в мини проект" />
+    <MESSAGE value="завершение ДЗ урок 20" />
+    <option name="LAST_COMMIT_MESSAGE" value="завершение ДЗ урок 20" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
