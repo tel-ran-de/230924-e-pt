@@ -7,14 +7,8 @@
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-17/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-17/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/guess_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/guess_number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/hangman.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/rock_paper_scissors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/rock_paper_scissors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-19/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-20/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-21/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-21/exercise_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-21/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-21/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-22/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/homework.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,24 +30,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.examples.executor": "Run",
-    "Python.exercise_1.executor": "Run",
-    "Python.exercise_2.executor": "Run",
-    "Python.exercise_3.executor": "Run",
-    "Python.guess_number.executor": "Run",
-    "Python.homework (1).executor": "Run",
-    "Python.homework.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "SHNAYDER",
-    "last_opened_file_path": "C:/Users/SHNAYDER/PycharmProjects/230924-e-pt",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.examples.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.guess_number.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SHNAYDER&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SHNAYDER/PycharmProjects/230924-e-pt&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.homework (1)">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject2" />
@@ -335,7 +329,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731802134784</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1731828441002</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731828441002</updated>
+    </task>
+    <task id="LOCAL-00020" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1731828732791</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731828732791</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

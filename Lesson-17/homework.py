@@ -86,6 +86,7 @@ def round_and_sqrt(ceil_num, floor_num):
     floor_rounded = math.floor(floor_num)
 
     "квадратные корни"
+
     sqrt_ceil = math.sqrt(ceil_rounded)
     sqrt_floor = math.sqrt(floor_rounded)
 
@@ -113,13 +114,15 @@ round_and_sqrt(7.3, 15.8)
 
 
 def factorial_and_power(number):
-    # Вычисляем факториал
+    "Вычисляем факториал"
+
     factorial_result = math.factorial(number)
 
-    # Считаем количество цифр в факториале
+    "Считаем цифр в факториале"
+
     digits_count = len(str(factorial_result))
 
-    # Возводим факториал в степень, равную количеству цифр
+    "факториал в степень, количеству цифр"
     result = math.pow(factorial_result, digits_count)
 
 #    print(f"Факториал числа {number} равен {factorial_result}.")
@@ -185,7 +188,8 @@ def drop_fraction_and_factorial(number):
 #    print(f"Факториал {integer_part} равен: {factorial_result}")
 
 
-# Пример использования
+"Пример"
+
 drop_fraction_and_factorial(7.85)
 
 

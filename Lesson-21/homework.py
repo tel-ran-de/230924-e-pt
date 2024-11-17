@@ -41,14 +41,16 @@ for num in iterator:
 
 
 
-# Генератор для вычисления квадратов чисел от 0 до 10
+"Генератор квадратов"
+
 squares_generator = (x**2 for x in range(11))
 
-# Используем next() для извлечения значений и обработку исключения StopIteration
+"next() извлечения и обработку StopIteration"
+
 try:
     while True:
         square = next(squares_generator)
-        print(square)
+    print(square)
 except StopIteration:
     print("Генератор завершил работу.")
 
@@ -62,7 +64,8 @@ except StopIteration:
 
 
 
-# Функция-генератор, которая возвращает слова из предложения по одному
+
+"Функция-генератор, возвращает слова по одному"
 def word_generator(sentence):
     words = sentence.split()  # Разделяем предложение на слова
     for word in words:
@@ -80,10 +83,7 @@ try:
         word = next(generator)  # Получаем следующее слово
         print(word)
 except StopIteration:
-    print("Все слова
-
-
-
+    print("Все слова")
 
 
 
@@ -95,27 +95,22 @@ except StopIteration:
 # Задание: Напишите генератор, который возвращает числа от 1 до 10, но если число четное, возвратите его удвоенным.
 # Используйте функцию set(), чтобы преобразовать результат генератора в множество и выведите его.
 
-  
-  
-   
-
-"Генератор, который возвращает числа от 1 до 10, удваивая четные числа"
-
-
-    def number_generator():
-        for num in range(1, 11):   "Числа от 1 до 10"
-            if num % 2 == 0:  "Если число четное"
-                yield num * 2,  "Возвращаем удвоенное значение"
-            else:
-                yield num  "Если нечетное, просто возвращаем число"
-
-"Преобразуем результат генератора в множество и выводим"
-    result_set = set(number_generator())
-
-    print(result_set)
 
 
 
+
+def generate_numbers():
+    for i in range(1, 11):
+        if i % 2 == 0:
+            yield i * 2,  "Если число четное, удваиваем его"
+        else:
+            yield i,  "число нечетное, возвращаем без изменений"
+
+
+result_set = set(generate_numbers())
+
+"Вывод"
+print(result_set)
 
 
 
@@ -128,16 +123,16 @@ except StopIteration:
 
 
 
-# Генератор, который возвращает числа от 1 до 20, кратные 3
-def multiples_of_three():
-    for num in range(1, 21):  # Числа от 1 до 20
-        if num % 3 == 0:  # Если число кратно 3
-            yield num  # Возвращаем число
 
-# Находим сумму всех чисел, кратных 3, с помощью функции sum()
+def multiples_of_three():
+    for num in range(1, 21):
+        if num % 3 == 0:
+            yield num
+
+
 result_sum = sum(multiples_of_three())
 
-# Выводим результат
+"Вывод"
 print(result_sum)
 
 
@@ -153,16 +148,17 @@ print(result_sum)
 
 
 
-# Генератор, который возвращает длины слов в строке
 def word_lengths(sentence):
-    words = sentence.split()  # Разделяем строку на слова
+    words = sentence.split(),
     for word in words:
-        yield len(word)  # Возвращаем длину каждого слова
+        yield len(word),   "Возвращаем длину слова"
 
-# Исходная строка
+"строка"
+
 sentence = "Write a generator that returns word lengths from a given sentence"
 
-# Находим минимальную и максимальную длину с помощью функций min() и max()
+
+
 min_length = min(word_lengths(sentence))
 max_length = max(word_lengths(sentence))
 
@@ -188,13 +184,15 @@ x_word = 'this'
 
 
 
-# Генератор для чтения строк из файла и фильтрации по ключевому слову
 def keyword_filter(filename, x_word):
-    # Открываем файл в режиме чтения
+
+    "Открываем файл"
+
     with open(filename, 'r') as file:
-        # Перебираем строки файла
+
         for line in file:
             # Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистру
+
             if x_word.lower() in line.lower():
                 yield line.strip()  # Возвращаем строку без символов новой строки
 
