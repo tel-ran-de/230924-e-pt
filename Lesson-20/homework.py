@@ -6,56 +6,98 @@
 # - деление на ноль
 # - ввод не числовых значений.
 
+def division_num(x, y):
+    try:
+        z = x / y
+    except ZeroDivisionError:
+        print("Деление на ноль невозможно")
+    except TypeError:
+        print("Вводите только числовые значения")
+    else:
+        return z
+print(division_num(4, 0))
+print(division_num(8, 4))
+print(division_num(8, "a"))
 
 # Задача 2: Обработка пользовательского ввода
 # Напишите программу, которая запрашивает у пользователя ввод числа и выводит его квадрат.
 # Обработайте исключения для случаев, когда ввод не является числом.
 
+def quetz_num():
+    while True:
+        try:
+            user_num = int(input("Введите число: "))
+            result = user_num ** 2
+        except ValueError:
+            print("Некорректный ввод.")
+        else:
+            return result
+print(quetz_num())
 
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
 
+def kind_errors():
+    try:
+        file = open("examples.py", "r", encoding="utf-8")
+        content = file.readline()
+        print(content)
+        file1 = open("C:/Windows/System32/example.txt", "w", encoding="utf-8")
+        file1.write("Привет от Виктора!")
+    except FileNotFoundError:
+        print("Файл не найден")
+    except PermissionError:
+        print("Ошибка: нет доступа к файлу")
+    except IOError:
+        print("Ошибка ввода-вывода")
+    else:
+        print('Файл обработан. Файл закрыт.')
+        file.close()
+    finally:
+        print('Операция завершена')
+kind_errors()
 
-# Тема: Расространение исключения. Возбуждение исключения.
+# Тема: Распространение исключения. Возбуждение исключения.
 
 # Задача 1. Допишите код ниже.
-#
-# import math
-#
-# def calculate_square_root(number):
-#     # Добавьте проверку на отрицательное число и возбуждение исключения
-#
-#     return math.sqrt(number)
-#
-# def safe_calculate_square_root(number):
-#     try:
-#         result = calculate_square_root(number)
-#         print(f"Квадратный корень из {number} равен {result}")
-#     except ValueError as e:
-#         print(f"Ошибка: {e}")
-#
-# # Тесты функции
-# safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
-# safe_calculate_square_root(-9)  # Ожидаемый результат: Ошибка: Число должно быть положительным
+
+import math
+
+def calculate_square_root(number):
+    # Добавьте проверку на отрицательное число и возбуждение исключения
+    if number < 0:
+        raise ValueError("Число должно быть положительным")
+
+    return math.sqrt(number)
+
+def safe_calculate_square_root(number):
+    try:
+        result = calculate_square_root(number)
+        print(f"Квадратный корень из {number} равен {result}")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
+# Тесты функции
+safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
+safe_calculate_square_root(-9)  # Ожидаемый результат: Ошибка: Число должно быть положительным
 
 
 # Задача 2. Допишите код ниже.
-# def convert_to_number(string):
-#     # Добавьте проверку на некорректное значение и возбуждение исключения
-#
-#     return int(string)
-#
-# def safe_convert_to_number(string):
-#     try:
-#         number = convert_to_number(string)
-#         print(f"Конвертированное число: {number}")
-#     except ValueError as e:
-#         print(f"Ошибка: {e}")
-#
-# # Тесты функции
-# safe_convert_to_number("123")  # Ожидаемый результат: Конвертированное число: 123
-# safe_convert_to_number("abc")  # Ожидаемый результат: Ошибка: Введенное значение не является числом
+def convert_to_number(string):
+    # Добавьте проверку на некорректное значение и возбуждение исключения
+    if not string.isdigit():
+        raise ValueError("Введенное значение не является числом")
+    return int(string)
+
+def safe_convert_to_number(string):
+    try:
+        number = convert_to_number(string)
+        print(f"Конвертированное число: {number}")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
+# Тесты функции
+safe_convert_to_number("123")  # Ожидаемый результат: Конвертированное число: 123
+safe_convert_to_number("abc")  # Ожидаемый результат: Ошибка: Введенное значение не является числом
 
 
 # Тема: Интеграционная практика. Мини-проект
