@@ -44,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Viktor-Yerokhov-h12 23_10_24.executor": "Run",
-    "Python.exercise_1.executor": "Run",
-    "Python.homework.executor": "Run",
-    "Python.hwtest10.executor": "Run",
-    "Python.test_project_json.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/КУРС IT back-end developer Phyton/ДЗ",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Viktor-Yerokhov-h12 23_10_24.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_project_json.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/КУРС IT back-end developer Phyton/ДЗ&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ" />
