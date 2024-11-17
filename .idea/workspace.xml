@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment=".idea" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="Задача 3.1 решена">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +27,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;igor-pronin-h21&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -59,7 +63,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
       </set>
     </attachedChunks>
   </component>
@@ -121,14 +125,41 @@
       <option name="project" value="LOCAL" />
       <updated>1731608447679</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Задача 1.3, добавлено решение">
+      <option name="closed" value="true" />
+      <created>1731702083876</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731702083876</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Задачи 2.1 - 3 решены">
+      <option name="closed" value="true" />
+      <created>1731779672634</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731779672634</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Задача 3.1 решена">
+      <option name="closed" value="true" />
+      <created>1731790230998</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731790230998</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="попытка номер раз" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="Задача 1.3, добавлено решение" />
+    <MESSAGE value="Задачи 2.1 - 3 решены" />
+    <MESSAGE value="Задача 3.1 решена" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задача 3.1 решена" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
