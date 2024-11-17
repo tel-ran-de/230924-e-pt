@@ -113,7 +113,7 @@ def search_product():
 
 def filter_by_price():
     inventory = load_inventory()
-    max_price = float(input("Введите максимальную цену: "))
+    max_price = int(input("Введите максимальную цену: "))
     filtered = [item for item in inventory if item['price'] <= max_price]
     if not filtered:
         print("Нет товаров дешевле указанной цены.")
