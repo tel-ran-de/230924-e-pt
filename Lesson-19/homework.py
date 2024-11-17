@@ -188,62 +188,24 @@ with open('user.json', 'w') as file:
 
 
 
+
 import json
-import os
 
-# Путь к файлу с пользователями
-FILE_NAME = 'users.json'
+# 1. Читаем массив объектов из файла 'users.json'
+with open('users.json', 'r') as file:
+    users = json.load(file)
 
-# Функция для загрузки данных из файла
-def load_users():
-    if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, 'r') as file:
-            return json.load(file)
-    return []
+# 2. Добавляем нового пользователя в массив
+new_user = {
+    "name": "Alice Smith",
+    "age": 28,
+    "city": "Los Angeles"
+}
+users.append(new_user)
 
-# Функция для сохранения данных в файл
-def save_users(users):
-    with open(FILE_NAME, 'w') as file:
-        json.dump(users, file, indent=4)
-
-# Функция для добавления нового пользователя
-def add_user(users, name, age, city):
-    new_user = {
-        'name': name,
-        'age': age,
-        'city': city
-    }
-    users.append(new_user)
-    print(f"Пользователь '{name}' добавлен.")
-
-# Главная функция для работы с пользователями
-def main():
-    # Загружаем пользователей из файла
-    users = load_users()
-
-    # Запрашиваем информацию о новом пользователе
-    print("Введите данные нового пользователя:")
-    name = input("Имя: ")
-    age = input("Возраст: ")
-    city = input("Город: ")
-
-    # Проверяем, что возраст — это число
-    try:
-        age = int(age)
-    except ValueError:
-        print("Возраст должен быть числом!")
-        return
-
-    # Добавляем нового пользователя в список
-    add_user(users, name, age, city)
-
-    # Сохраняем обновленный список пользователей в файл
-    save_users(users)
-
-# Запуск программы
-if __name__ == "__main__":
-    main()
-
+# 3. Записываем обновленный массив обратно в файл 'users.json'
+with open('users.json', 'w') as file:
+    json.dump(users, file, indent=4)  # indent=4 добавляет форматирование для улучшения читаемости
 
 
 
@@ -258,68 +220,20 @@ if __name__ == "__main__":
 
 
 
-
 import json
-import os
 
-# Путь к файлу с пользователями
-FILE_NAME = 'users.json'
+# 1. Читаем массив объектов из файла 'users.json'
+with open('users.json', 'r') as file:
+    users = json.load(file)
 
-# Функция для загрузки данных из файла
-def load_users():
-    if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, 'r') as file:
-            return json.load(file)
-    return []
+# 2. Удаляем пользователя по имени (например, "John Doe")
+user_to_remove = "John Doe"
+users = [user for user in users if user['name'] != user_to_remove]
 
-# Функция для сохранения данных в файл
-def save_users(users):
-    with open(FILE_NAME, 'w') as file:
-        json.dump(users, file, indent=4)
-
-# Функция для удаления пользователя по имени
-def delete_user(users, username):
-    user_to_delete = None
-    for user in users:
-        if user['name'].lower() == username.lower():
-            user_to_delete = user
-            break
-
-    if user_to_delete:
-        users.remove(user_to_delete)
-        print(f"Пользователь '{username}' удален.")
-    else:
-        print(f"Пользователь с именем '{username}' не найден.")
-
-# Главная функция для работы с пользователями
-def main():
-    # Загружаем пользователей из файла
-    users = load_users()
-
-    if not users:
-        print("Нет пользователей для удаления.")
-        return
-
-    # Печатаем список пользователей
-    print("Список пользователей:")
-    for index, user in enumerate(users, start=1):
-        print(f"{index}. Имя: {user['name']}, Возраст: {user['age']}")
-
-    # Запрашиваем пользователя, которого нужно удалить
-    username_to_delete = input("Введите имя пользователя для удаления: ")
-
-    # Удаляем пользователя
-    delete_user(users, username_to_delete)
-
-    # Сохраняем обновленный список пользователей в файл
-    save_users(users)
-
-# Запуск программы
-if __name__ == "__main__":
-    main()
-
-
-
+# 3. Записываем обновленный массив обратно в файл 'users.json'
+with open('users.json', 'w') as file:
+    json.dump(users, file, indent=4)  # indent=4 для форматированного вывода
+Описание кода:
 
 
 
@@ -353,126 +267,114 @@ inventory = [
     {'product': "Monitor", 'price': 20, 'count': 10}
 ]
 
+
+
 import json
-import os
-
-# Путь к файлу, который будет хранить инвентарь
-FILE_NAME = 'inventory.json'
-
 
 # Функция для загрузки данных из файла
 def load_inventory():
-    if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, 'r') as file:
+    try:
+        with open('inventory.json', 'r') as file:
             return json.load(file)
-    return []
-
+    except FileNotFoundError:
+        return []  # Если файл не найден, возвращаем пустой список
 
 # Функция для сохранения данных в файл
 def save_inventory(inventory):
-    with open(FILE_NAME, 'w') as file:
+    with open('inventory.json', 'w') as file:
         json.dump(inventory, file, indent=4)
 
-
-# Функция для отображения списка всех товаров
+# 1. Показать список товаров
 def show_inventory(inventory):
-    if not inventory:
-        print("Инвентарь пуст.")
+    if inventory:
+        print("Список товаров:")
+        for item in inventory:
+            print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        for index, item in enumerate(inventory, start=1):
-            print(f"{index}. Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+        print("Инвентарь пуст.")
 
-
-# Функция для добавления товара
+# 2. Добавить товар
 def add_product(inventory):
-    name = input("Введите название товара: ")
+    product = input("Введите название товара: ")
     price = float(input("Введите цену товара: "))
     count = int(input("Введите количество товара: "))
-    inventory.append({'product': name, 'price': price, 'count': count})
+    inventory.append({'product': product, 'price': price, 'count': count})
     save_inventory(inventory)
-    print(f"Товар '{name}' добавлен в инвентарь.")
+    print(f"Товар {product} добавлен.")
 
+# 3. Удалить товар
+def remove_product(inventory):
+    product = input("Введите название товара для удаления: ")
+    inventory = [item for item in inventory if item['product'] != product]
+    save_inventory(inventory)
+    print(f"Товар {product} удален.")
+    return inventory
 
-# Функция для удаления товара
-def delete_product(inventory):
-    name = input("Введите название товара для удаления: ")
-    for item in inventory:
-        if item['product'].lower() == name.lower():
-            inventory.remove(item)
-            save_inventory(inventory)
-            print(f"Товар '{name}' удален из инвентаря.")
-            return
-    print(f"Товар '{name}' не найден в инвентаре.")
-
-
-# Функция для обновления данных о товаре
+# 4. Обновить товар
 def update_product(inventory):
-    name = input("Введите название товара для обновления: ")
+    product = input("Введите название товара для обновления: ")
     for item in inventory:
-        if item['product'].lower() == name.lower():
-            print(f"Найден товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
-            choice = input("Что хотите обновить? (name/price/count): ").lower()
-            if choice == 'name':
-                item['product'] = input("Введите новое название товара: ")
-            elif choice == 'price':
-                item['price'] = float(input("Введите новую цену товара: "))
-            elif choice == 'count':
-                item['count'] = int(input("Введите новое количество товара: "))
-            else:
-                print("Неверный выбор.")
-                return
+        if item['product'] == product:
+            print(f"Обновление товара {product}.")
+            new_name = input(f"Введите новое название (или оставьте пустым, чтобы не менять): ")
+            if new_name:
+                item['product'] = new_name
+            new_price = input(f"Введите новую цену (или оставьте пустым, чтобы не менять): ")
+            if new_price:
+                item['price'] = float(new_price)
+            new_count = input(f"Введите новое количество (или оставьте пустым, чтобы не менять): ")
+            if new_count:
+                item['count'] = int(new_count)
             save_inventory(inventory)
-            print(f"Товар '{item['product']}' обновлен.")
-            return
-    print(f"Товар '{name}' не найден в инвентаре.")
+            print(f"Товар {product} обновлен.")
+            return inventory
+    print(f"Товар {product} не найден.")
+    return inventory
 
-
-# Функция для поиска товара по названию
+# 5. Найти товар по названию
 def find_product(inventory):
-    name = input("Введите название товара для поиска: ")
-    found = [item for item in inventory if name.lower() in item['product'].lower()]
+    product = input("Введите название товара для поиска: ")
+    found = [item for item in inventory if item['product'].lower() == product.lower()]
     if found:
         for item in found:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товар '{name}' не найден.")
+        print(f"Товар с названием {product} не найден.")
 
-
-# Функция для вывода товаров по цене ниже заданной
-def filter_by_price(inventory):
-    price = float(input("Введите максимальную цену товара: "))
+# 6. Вывести товары с ценой меньше заданной
+def show_products_under_price(inventory):
+    price = float(input("Введите максимальную цену: "))
     filtered = [item for item in inventory if item['price'] < price]
     if filtered:
         for item in filtered:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товары дешевле {price} не найдены.")
+        print(f"Товары с ценой ниже {price} не найдены.")
 
-
-# Функция для вывода товаров с количеством ниже заданного
-def filter_by_count(inventory):
+# 7. Вывести товары с количеством меньше заданного
+def show_products_under_count(inventory):
     count = int(input("Введите минимальное количество товара: "))
     filtered = [item for item in inventory if item['count'] < count]
     if filtered:
         for item in filtered:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товары с количеством менее {count} не найдены.")
+        print(f"Товары с количеством меньше {count} не найдены.")
 
-
-# Главная функция для работы с меню
+# Основное меню
 def main():
     inventory = load_inventory()
+
     while True:
         print("\nМеню:")
-        print("1. Показать список товаров.")
-        print("2. Добавить товар.")
-        print("3. Удалить товар.")
-        print("4. Обновить товар.")
-        print("5. Найти товар по названию.")
-        print("6. Вывести товары дешевле заданной цены.")
-        print("7. Вывести товары с количеством меньше заданного.")
-        print("8. Выход.")
+        print("1. Показать список товаров")
+        print("2. Добавить товар")
+        print("3. Удалить товар")
+        print("4. Обновить товар")
+        print("5. Найти товар по названию")
+        print("6. Вывести товары с ценой меньше заданной")
+        print("7. Вывести товары с количеством меньше заданного")
+        print("8. Выход")
 
         choice = input("Выберите действие (1-8): ")
 
@@ -481,22 +383,20 @@ def main():
         elif choice == '2':
             add_product(inventory)
         elif choice == '3':
-            delete_product(inventory)
+            inventory = remove_product(inventory)
         elif choice == '4':
-            update_product(inventory)
+            inventory = update_product(inventory)
         elif choice == '5':
             find_product(inventory)
         elif choice == '6':
-            filter_by_price(inventory)
+            show_products_under_price(inventory)
         elif choice == '7':
-            filter_by_count(inventory)
+            show_products_under_count(inventory)
         elif choice == '8':
             print("Выход из программы.")
             break
         else:
             print("Неверный выбор. Попробуйте снова.")
 
-
-# Запуск программы
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
