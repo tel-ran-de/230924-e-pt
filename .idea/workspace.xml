@@ -44,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Viktor-Yerokhov-h12 23_10_24.executor": "Run",
-    "Python.exercise_1.executor": "Run",
-    "Python.homework.executor": "Run",
-    "Python.hwtest10.executor": "Run",
-    "Python.test_project_json.executor": "Run",
-    "Python.test_project_json_lesson20 (1).executor": "Run",
-    "Python.test_project_json_lesson20.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Viktor-Yerokhov-h19",
-    "last_opened_file_path": "E:/Course IT back-end developer Phyton/HW",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Viktor-Yerokhov-h12 23_10_24.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_project_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_project_json_lesson20 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_project_json_lesson20.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Viktor-Yerokhov-h19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Course IT back-end developer Phyton/HW&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Course IT back-end developer Phyton\HW" />
@@ -67,7 +67,7 @@
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_project_json_lesson20 (1)">
+  <component name="RunManager" selected="Python.test_project_json">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -203,8 +203,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_project_json_lesson20 (1)" />
         <item itemvalue="Python.test_project_json" />
+        <item itemvalue="Python.test_project_json_lesson20 (1)" />
         <item itemvalue="Python.test_project_json_lesson20" />
         <item itemvalue="Python.homework" />
         <item itemvalue="Python.exercise_1" />
