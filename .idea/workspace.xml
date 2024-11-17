@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="запись во время выполнения ДЗ урок 19">
+      <change afterPath="$PROJECT_DIR$/Lesson-19/test_project_json.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-19/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/exercise_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-19/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/homework.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-19/pointer_example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/pointer_example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-19/text_files/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/text_files/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-19/text_files/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/text_files/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-19/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,25 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Viktor-Yerokhov-h12 23_10_24.executor&quot;: &quot;Run&quot;,
-    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Viktor-Yerokhov-h19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/КУРС IT back-end developer Phyton/ДЗ&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Viktor-Yerokhov-h12 23_10_24.executor": "Run",
+    "Python.exercise_1.executor": "Run",
+    "Python.homework.executor": "Run",
+    "Python.hwtest10.executor": "Run",
+    "Python.test_project_json.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Viktor-Yerokhov-h19",
+    "last_opened_file_path": "E:/КУРС IT back-end developer Phyton/ДЗ",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.homework">
+  <component name="RunManager" selected="Python.test_project_json">
     <configuration name="Viktor-Yerokhov-h12 23_10_24" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -175,8 +181,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_project_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-19" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-19/test_project_json.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_project_json" />
         <item itemvalue="Python.homework" />
         <item itemvalue="Python.exercise_1" />
         <item itemvalue="Python.Viktor-Yerokhov-h12 23_10_24" />
@@ -297,14 +326,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731436895459</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731753936714</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753936714</updated>
+    </task>
+    <task id="LOCAL-00014" summary="запись во время выполнения ДЗ урок 19">
+      <option name="closed" value="true" />
+      <created>1731753954051</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753954051</updated>
+    </task>
+    <task id="LOCAL-00015" summary="запись во время выполнения ДЗ урок 19">
+      <option name="closed" value="true" />
+      <created>1731753960669</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753960669</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="решение урока 18" />
     <MESSAGE value="новый файлы выполнение заданий из урока 19" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="запись во время выполнения ДЗ урок 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="запись во время выполнения ДЗ урок 19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
