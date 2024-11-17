@@ -43,11 +43,11 @@ def load_inventory():
     try:
         with open(inventory_file, 'r', encoding='utf-8') as file:
             return json.load(file)
-    except FileNotFoundError:
+    except FileNotFoundError: # Проверка, имеется ли файл в наличии
         print("Ошибка: Файл не найден.")
         return []
     except json.JSONDecodeError:
-        print("Ошибка: Некорректный формат данных в файле.")
+        print("Ошибка: Некорректный формат данных в файле.") # Проверка, в каком виде записан файл
         return []
 
 # Сохранение инвентаря
@@ -55,7 +55,7 @@ def save_inventory(inventory):
     try:
         with open(inventory_file, 'w', encoding='utf-8') as file:
             json.dump(inventory, file, ensure_ascii=False, indent=4)
-    except Exception as e:
+    except Exception as e: # ошибка при сохранении с указанием ее значения
         print(f"Ошибка при сохранении данных: {e}")
 
 # Вывод инвентаря в таблице
@@ -73,7 +73,7 @@ def add_product():
     inventory = load_inventory()
     product = input("Введите название товара: ").strip()
     for item in inventory:
-        if item['product'].lower() == product.lower():
+        if item['product'].lower() == product.lower(): # проверяем наличие товара в списке переводим в нижний регистр
             print("Товар уже существует.")
             return
     while True:
@@ -81,7 +81,7 @@ def add_product():
             price = int(input("Введите цену товара: "))
             count = int(input("Введите количество товара: "))
             break
-        except ValueError:
+        except ValueError: # исключение ввода, только числовое значение
             print("Ошибка: Цена и количество должны быть числовыми значениями.")
     inventory.append({'product': product, 'price': price, 'count': count})
     save_inventory(inventory)
@@ -138,7 +138,7 @@ def filter_by_price():
     inventory = load_inventory()
     while True:
         try:
-            max_price = float(input("Введите максимальную цену: "))
+            max_price = int(input("Введите максимальную цену: "))
             break
         except ValueError:
             print("Ошибка: Введите числовое значение для цены.")
@@ -205,10 +205,3 @@ def menu():
 
 # Запуск программы
 menu()
-
-
-
-
-
-
-
