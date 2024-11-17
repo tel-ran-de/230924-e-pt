@@ -89,6 +89,7 @@ with open('output.txt', 'r') as file:
 
 
 
+
  "1. Открываем (создаем) файл"
 with open('pointer_example.txt', 'w+') as file:
 
@@ -114,6 +115,7 @@ with open('pointer_example.txt', 'w+') as file:
     full_content = file.read()  # Читаем весь файл
     print("\nПолное содержимое файла:")
     print(full_content)
+
 
 
 
@@ -158,6 +160,7 @@ with open('user.json', 'r') as file:
 # 1. Прочитайте данные из файла `user.json`.
 # 2. Обновите возраст пользователя на 29 лет.
 # 3. Запишите обновленные данные обратно в файл JSON с использованием менеджера контекста.
+
 
 
 
@@ -239,6 +242,7 @@ with open('users.json', 'w') as file:
 
 
 
+
 # Тема: Интеграционная практика. Мини-проект
 
 # Проект: Перепишите проект из уроков 7-8 с записью, чтением, обновлением и удалением товаров в файле (через JSON).
@@ -266,6 +270,7 @@ inventory = [
     {'product': "Keyboard", 'price': 30, 'count': 33},
     {'product': "Monitor", 'price': 20, 'count': 10}
 ]
+
 
 
 
