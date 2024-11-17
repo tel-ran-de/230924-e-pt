@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="Задача 3.1 решена">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="д/з к занятию 22 готово">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731790230998</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="решена задача 3.2">
+      <option name="closed" value="true" />
+      <created>1731868486254</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731868486254</updated>
+    </task>
+    <task id="LOCAL-00011" summary="д/з к занятию 22 готово">
+      <option name="closed" value="true" />
+      <created>1731869973801</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731869973801</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,7 +175,9 @@
     <MESSAGE value="Задача 1.3, добавлено решение" />
     <MESSAGE value="Задачи 2.1 - 3 решены" />
     <MESSAGE value="Задача 3.1 решена" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задача 3.1 решена" />
+    <MESSAGE value="решена задача 3.2" />
+    <MESSAGE value="д/з к занятию 22 готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="д/з к занятию 22 готово" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
