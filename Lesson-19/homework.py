@@ -197,7 +197,7 @@ if not isinstance(users, list):
     print("Ошибка: данные в файле не являются списком.")
     users = []
 
-name_to_delete = "Alex" # 2. Удаляем пользователя по имени (например, "Alex")
+name_to_delete = "Alex" # 2. Удаляем пользователя по имени ("Alex")
 users = [user for user in users if user.get("name") != name_to_delete]
 
 with open('users.json', 'w', encoding='utf-8') as file:  # 3. Записываем обновлённый массив обратно в файл JSON
