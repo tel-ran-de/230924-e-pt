@@ -1,6 +1,6 @@
 # Тема: map, filter, zip
-from curses.ascii import isdigit
-from tkinter.font import names
+
+
 
 # Задача 1: Применение функции map для преобразования чисел
 # Напишите функцию `square`, которая принимает число и возвращает его квадрат.
@@ -154,21 +154,21 @@ from tkinter.font import names
 # Используйте функцию `zip`, чтобы объединить данные из этих файлов, и примените лямбда функцию
 # для вывода данных в формате "file1_line - file2_line".
 
-def read_file_lines(file_path):
-
-    with open(file_path, 'r') as file:
-        for line in file:
-            yield line.strip()
-
-file1_path = 'file1.txt'
-file2_path = 'file2.txt'
-
-file1_lines = read_file_lines(file1_path)
-file2_lines = read_file_lines(file2_path)
-
-combined_lines = zip(file1_lines, file2_lines)
-
-formatted_lines = map(lambda pair: f"{pair[0]} - {pair[1]}", combined_lines)
-
-for line in formatted_lines:
-    print(line)
+# def read_file_lines(file_path):
+#
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             yield line.strip()
+#
+# file1_path = 'file1.txt'
+# file2_path = 'file2.txt'
+#
+# file1_lines = read_file_lines(file1_path)
+# file2_lines = read_file_lines(file2_path)
+#
+# combined_lines = zip(file1_lines, file2_lines)
+#
+# formatted_lines = map(lambda pair: f"{pair[0]} - {pair[1]}", combined_lines)
+#
+# for line in formatted_lines:
+#     print(line)
