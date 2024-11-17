@@ -73,7 +73,7 @@ print(list(result))
 # Напишите генератор, который возвращает числа от 1 до 20.
 # Используйте функцию `filter` с лямбда функцией для отбора четных чисел и выведите результат.
 # Ожидаемый результат: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-result = list(filter(lambda x: x % 2 ==0, (x for x in range(1,21))))
+result = list(filter(lambda x: x % 2 ==0, (range(1,21))))
 print(result)
 
 # Задача 2: Использование zip с итераторами и лямбда функцией
@@ -97,8 +97,7 @@ file_path = "text_files/example.txt"
 lines = file_lines_reader(file_path)
 filtered_lines = filter(lambda line: 'Python' in line, lines)
 upper_lines = map(lambda line: line.upper(), filtered_lines)
-for line in upper_lines:
-    print(line)
+print(*upper_lines, sep='\n')
 
 # Тема: Дополнительная практика
 
@@ -108,7 +107,7 @@ for line in upper_lines:
 # Ожидаемый результат: [14.0, 15.8, 17.6, 19.4, 21.2, 23.0, 24.8, 26.6, 28.4, 30.2,
 # 32.0, 33.8, 35.6, 37.4, 39.2, 41.0, 42.8, 44.6, 46.4, 48.2, 50.0]
 
-temperatures = (temp for temp in range(-10, 11))
+temperatures = (range(-10, 11))
 fahrenheit_temp = list(map(lambda c: c * 9/5 + 32, temperatures))
 print(fahrenheit_temp)
 
@@ -129,7 +128,7 @@ print(filter_words)
 # для вывода данных в формате строки "число: куб".
 # Ожидаемый результат: ['1: 1', '2: 8', '3: 27']
 
-zip_number = zip((x for x in range(1,4)), (i ** 3 for i in range(1,4)))
+zip_number = zip((range(1,4)), (i ** 3 for i in range(1,4)))
 format_number = list(map(lambda i: f"{i[0]}: {i[1]}", zip_number))
 print(format_number)
 
@@ -140,7 +139,7 @@ print(format_number)
 
 file_path = "text_files/data.txt"
 lines = file_lines_reader(file_path)
-filtered_lines = filter(lambda line: any([char.isdigit()  for char in line]), lines)
+filtered_lines = filter(lambda line: any([char.isdigit() for char in line]), lines)
 integers = map(int, filtered_lines)
 print(list(integers))
 
@@ -154,5 +153,4 @@ gen2 = file_lines_reader("text_files/file2.txt")
 
 lines_list = list(zip(gen1, gen2))
 result = map(lambda x: f"{x[0]} - {x[1]}", lines_list)
-for item in result:
-    print(item)
+print(*result, sep='\n')
