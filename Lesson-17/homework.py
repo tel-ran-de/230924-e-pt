@@ -143,13 +143,13 @@ factorial_and_power(5)
 
 
 def shuffle_and_choose():
-    # Генерация списка случайных чисел
+
     random_list = [random.randint(1, 100) for _ in range(10)]
 
-    # Перемешивание списка
+
     random.shuffle(random_list)
 
-    # Выбор случайного элемента
+    # Выбор элемента
     chosen_element = random.choice(random_list)
 
 #    print(f"Перемешанный список: {random_list}")
@@ -204,10 +204,10 @@ drop_fraction_and_factorial(7.85)
 
 
 def generate_and_round():
-    # Генерация случайного числа в диапазоне от 1.5 до 10.5
+    "Генерация числа в диапазоне от 1.5 до 10.5"
     random_number = random.uniform(1.5, 10.5)
 
-    # Округление вниз и вверх
+    "Округление вниз и вверх"
     rounded_down = math.floor(random_number)
     rounded_up = math.ceil(random_number)
 
@@ -284,9 +284,8 @@ Django==4.1.7
 
 deactivate
 
-
+#####################################################################
 ######################################################################
-
 
 
 # Шаг 1: Создание папки и виртуального окружения
@@ -319,4 +318,5 @@ pip freeze > requirements.txt
 # Шаг 6: Деактивация виртуального окружения
 
 deactivate
+
 
