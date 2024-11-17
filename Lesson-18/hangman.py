@@ -13,3 +13,82 @@
 # 4. Если игрок назвал неправильную букву, количество штрафных очков должно увеличиваться.
 # 5. Игра заканчивается победой, если все буквы слова угаданы, или проигрышем,
 # если количество штрафных очков достигает лимита (например, 6).
+
+
+
+
+
+import random
+
+"Список слов для игры"
+word_list = ['python', 'programming', 'developer', 'hangman', 'computer', 'algorithm']
+
+"штрафных очков"
+max_tries = 6
+
+
+"Виселица"
+
+
+def play_hangman():
+    "случайное слово"
+    word = random.choice(word_list)
+    word_length = len(word)
+
+    "хранения угаданных букв"
+    guessed_letters = set()
+
+    "списка скрытых букв (звездочек)"
+    hidden_word = ['*' for _ in range(word_length)]
+
+    "штрафных очков"
+    attempts_left = max_tries
+
+    print("'Виселица'!")
+
+    "игровой цикл"
+
+    while attempts_left > 0:
+        print("\nТекущее слово: " + ' '.join(hidden_word))
+        print(f"Осталось попыток: {attempts_left}")
+
+
+        guess = input("Введите букву: ").lower()
+
+
+        if len(guess) != 1 or not guess.isalpha():
+            print("Пожалуйста, введите букву.")
+            continue
+
+        if guess in guessed_letters:
+            print(f"Вы уже угадывали букву '{guess}'. Попробуйте другую.")
+            continue
+
+        "букву в список угаданных"
+        guessed_letters.add(guess)
+
+
+        if guess in word:
+            print(f"Отлично! Буква '{guess}' есть в слове.")
+            for i in range(word_length):
+                if word[i] == guess:
+                    hidden_word[i] = guess
+        else:
+            attempts_left -= 1
+            print(f"Увы! Буквы '{guess}' нет в слове.")
+
+
+        if '*' not in hidden_word:
+            print("\nПоздравляем! Вы угадали слово:", word)
+            break
+
+    "попытки закончились, проигрыш"
+    if attempts_left == 0:
+        print("\nВы проиграли! Слово было:", word)
+
+
+"Запуск"
+if __name__ == "__main__":
+    play_hangman()
+
+

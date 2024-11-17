@@ -8,24 +8,24 @@
 class NumberIterator:
     def __init__(self, n):
         self.n = n
-        self.current = 1  # Начинаем с числа 1
+        self.current = 1, "Начинаем с числа 1"
 
     def __iter__(self):
-        return self  # Итератор возвращает себя
+        return self,  "Итератор возвращается"
 
     def __next__(self):
-        if self.current > self.n:  # Когда current превышает n, выбрасываем исключение StopIteration
+        if self.current > self.n:  # Когда current превышает n, исключение StopIteration
             raise StopIteration
         else:
             current_value = self.current
-            self.current += 1  # Увеличиваем текущее значение на 1
+            self.current += 1,   "Увеличиваем значение на 1"
             return current_value
 
-# Функция для создания итератора
+"задания итератора"
 def create_number_iterator(n):
     return NumberIterator(n)
 
-# Пример использования
+"Пример использования"
 iterator = create_number_iterator(5)
 
 for num in iterator:
@@ -121,10 +121,10 @@ except StopIteration:
 
 
 
-
 # Задача 2: Генератор и функция sum()
 # Задание: Напишите генератор, который возвращает числа от 1 до 20, кратные 3. Используйте функцию sum(),
 # чтобы найти сумму всех этих чисел и выведите результат.
+
 
 
 
@@ -139,7 +139,6 @@ result_sum = sum(multiples_of_three())
 
 # Выводим результат
 print(result_sum)
-
 
 
 
@@ -187,6 +186,8 @@ print(f"Максимальная длина слова: {max_length}"
 
 x_word = 'this'
 
+
+
 # Генератор для чтения строк из файла и фильтрации по ключевому слову
 def keyword_filter(filename, x_word):
     # Открываем файл в режиме чтения
@@ -203,7 +204,10 @@ keyword = 'Python'
 
 # Используем генератор для получения строк, содержащих ключевое слово
 for line in keyword_filter(filename, keyword):
-    pr
+    print(line)
+
+
+
 
 # Задача 2:Генератор и функции min() и max()
 # Задание: Напишите генератор, который возвращает длины слов в заданной строке. Используйте функции min() и max(),

@@ -9,3 +9,53 @@
 #
 # По ходу игры после каждой попытки пользователя компьютер выводит сообщение, было ли число пользователя
 # больше или меньше загаданного числа: "Загаданное число больше.", "Загаданное число меньше." соответственно.
+
+
+
+#import random
+
+
+def guess_the_number():
+
+#   secret_number = random.randint(0, 100)
+    attempts_left = 6,   "6 попыток"
+    attempts = [],  "хранения попыток"
+
+#   print("'Угадай число'!")
+#   print("загадал число от 0 до 100. 6 попыток, чтобы угадать его.")
+
+    while attempts_left > 0:
+        "ввод числа"
+        try:
+            guess = int(input(f"\n осталось {attempts_left} попыток. Введите ваше число: "))
+        except ValueError:
+            print("Пожалуйста, введите корректное число.")
+            continue
+
+        "попытку в список"
+        attempts.append(guess)
+
+        if guess == secret_number:
+            print(f"\nОтлично! угадали число {secret_number} с {7 - attempts_left} попытки!")
+            break
+        elif guess < secret_number:
+            print("число больше.")
+        else:
+            print("число меньше.")
+
+        attempts_left -= 1,   "Уменьшаем попыток"
+
+    "попытки закончились"
+    if attempts_left == 0:
+        print(f"\n не угадали число. Загаданное число было: {secret_number}")
+
+"Вывод"
+#   print("\nВаши попытки:", attempts)
+
+
+"Запуск"
+
+if __name__ == "__main__":
+    guess_the_number()
+
+

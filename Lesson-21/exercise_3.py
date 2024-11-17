@@ -14,6 +14,9 @@ x_word = 'this'
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
 # и подсчитывает количество строк в каждой части.
 # Файл: data.txt
+
+
+
 def read_and_count_lines_in_chunks(file_path, chunk_size):
     with open(file_path, 'r') as file:
         remaining_data = ''

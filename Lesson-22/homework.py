@@ -176,7 +176,7 @@ lines = read_lines('example.txt')
 # Применяем filter для отбора строк, содержащих "Python"
 filtered_lines = filter(lambda line: 'Python' in line, lines)
 
-# Применяем map для преобразования строк в верхний регистр
+"map для преобразования строк в верхний регистр"
 uppercase_lines = map(lambda line: line.upper(), filtered_lines)
 
 for line in uppercase_lines:

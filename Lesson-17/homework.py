@@ -37,35 +37,32 @@ def divide(a, b):
 
 # Этот блок выполняется, только если файл запускается напрямую
 if __name__ == "__main__":
-    print("Модуль запущен напрямую")
 
 
 
+# import math_operations
 
+"использования функций"
 
-
-import math_operations
-
-# Пример использования функций
 a = 10
 b = 5
 
 # Умножение
+
 result_multiply = math_operations.multiply(a, b)
-print(f"{a} * {b} = {result_multiply}")
+# print(f"{a} * {b} = {result_multiply}")
 
 # Вычитание
+
 result_subtract = math_operations.subtract(a, b)
-print(f"{a} - {b} = {result_subtract}")
+# print(f"{a} - {b} = {result_subtract}")
 
 # Деление
+
 result_divide = math_operations.divide(a, b)
-print(f"{a} / {b} = {result_divide}")
 
 
-
-
-
+# print(f"{a} / {b} = {result_divide}")
 
 
 # Тема: модули random, math
@@ -78,25 +75,26 @@ print(f"{a} / {b} = {result_divide}")
 
 
 
-import math
+#import math
 
 
 def round_and_sqrt(ceil_num, floor_num):
-    # Округляем вверх и вниз
+
+    "Округляем вверх и вниз"
+
     ceil_rounded = math.ceil(ceil_num)
     floor_rounded = math.floor(floor_num)
 
-    # Вычисляем квадратные корни
+    "квадратные корни"
     sqrt_ceil = math.sqrt(ceil_rounded)
     sqrt_floor = math.sqrt(floor_rounded)
 
-    print(f"Число {ceil_num} округлено вверх до {ceil_rounded}, квадратный корень: {sqrt_ceil}")
-    print(f"Число {floor_num} округлено вниз до {floor_rounded}, квадратный корень: {sqrt_floor}")
+#   print(f"Число {ceil_num} округлено вверх до {ceil_rounded}, квадратный корень: {sqrt_ceil}")
+#   print(f"Число {floor_num} округлено вниз до {floor_rounded}, квадратный корень: {sqrt_floor}")
 
 
-# Пример использования
+   "Пример"
 round_and_sqrt(7.3, 15.8)
-
 
 
 
@@ -111,7 +109,7 @@ round_and_sqrt(7.3, 15.8)
 
 
 
-import math
+#import math
 
 
 def factorial_and_power(number):
@@ -124,8 +122,8 @@ def factorial_and_power(number):
     # Возводим факториал в степень, равную количеству цифр
     result = math.pow(factorial_result, digits_count)
 
-    print(f"Факториал числа {number} равен {factorial_result}.")
-    print(f"Результат возведения в степень {digits_count}: {result}")
+#    print(f"Факториал числа {number} равен {factorial_result}.")
+#   print(f"Результат возведения в степень {digits_count}: {result}")
 
 
 # Пример использования
@@ -141,7 +139,7 @@ factorial_and_power(5)
 
 
 
-import random
+#import random
 
 
 def shuffle_and_choose():
@@ -154,11 +152,11 @@ def shuffle_and_choose():
     # Выбор случайного элемента
     chosen_element = random.choice(random_list)
 
-    print(f"Перемешанный список: {random_list}")
-    print(f"Случайно выбранный элемент: {chosen_element}")
+#    print(f"Перемешанный список: {random_list}")
+#    print(f"выбранный элемент: {chosen_element}")
 
 
-# Пример использования
+"Пример"
 shuffle_and_choose()
 
 
@@ -173,18 +171,18 @@ shuffle_and_choose()
 
 
 
-import math
+#import math
 
 
 def drop_fraction_and_factorial(number):
-    # Отбрасываем дробную часть
+
     integer_part = math.floor(number)
 
-    # Вычисляем факториал
+    "факториал"
     factorial_result = math.factorial(integer_part)
 
-    print(f"Число {number} после отбрасывания дробной части: {integer_part}")
-    print(f"Факториал {integer_part} равен: {factorial_result}")
+#    print(f"Число {number} после отбрасывания дробной части: {integer_part}")
+#    print(f"Факториал {integer_part} равен: {factorial_result}")
 
 
 # Пример использования
@@ -201,8 +199,8 @@ drop_fraction_and_factorial(7.85)
 
 
 
-import random
-import math
+#import random
+#import math
 
 
 def generate_and_round():
@@ -213,11 +211,10 @@ def generate_and_round():
     rounded_down = math.floor(random_number)
     rounded_up = math.ceil(random_number)
 
-    print(f"Сгенерированное число: {random_number}")
-    print(f"Округлено вниз: {rounded_down}, округлено вверх: {rounded_up}")
+#    print(f"Сгенерированное число: {random_number}")
+#    print(f"Округлено вниз: {rounded_down}, округлено вверх: {rounded_up}")
 
 
-# Пример использования
 generate_and_round()
 
 
