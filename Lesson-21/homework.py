@@ -29,7 +29,7 @@ def create_number_iterator(n):
 iterator = create_number_iterator(5)
 
 for num in iterator:
-   print(num)
+    print(num)
 
 
 
@@ -49,7 +49,7 @@ for num in iterator:
 
 try:
     while True:
-#       square = next(squares_generator)
+#      square = next(squares_generator)
     print(square)
 except StopIteration:
     print("Генератор завершил работу.")
@@ -100,11 +100,11 @@ except StopIteration:
 
 
 def generate_numbers():
-    for i in range(1, 11):
-        if i % 2 == 0:
-            yield i * 2,  "Если число четное, удваиваем его"
-        else:
-            yield i,  "число нечетное, возвращаем без изменений"
+#   for i in range(1, 11):
+#       if i % 2 == 0:
+#           yield i * 2,  "Если число четное, удваиваем его"
+#       else:
+#           yield i,  "число нечетное, возвращаем без изменений"
 
 
 result_set = set(generate_numbers())
@@ -151,7 +151,7 @@ print(result_sum)
 def word_lengths(sentence):
     words = sentence.split(),
     for word in words:
-        yield len(word),   "Возвращаем длину слова"
+        yield len(word),  "Возвращаем длину слова"
 
 "строка"
 
@@ -164,7 +164,7 @@ max_length = max(word_lengths(sentence))
 
 # Выводим результаты
 print(f"Минимальная длина слова: {min_length}")
-print(f"Максимальная длина слова: {max_length}"
+print(f"Максимальная длина слова: {max_length}")
 
 
 
@@ -187,9 +187,9 @@ x_word = 'this'
 def keyword_filter(filename, x_word):
 
 
-    with open(filename, 'r') as file:
+#   with open(filename, 'r') as file:
 
-        for line in file:
+#       for line in file:
             "Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистрy"
 
             if x_word.lower() in line.lower():
@@ -229,7 +229,7 @@ max_length = max(word_lengths(sentence))
 #
 # # Выводим результаты
 print(f"Минимальная длина слова: {min_length}")
-print(f"Максимальная длина слова: {max_length}"
+print(f"Максимальная длина слова: {max_length}")
 
 
 
@@ -245,13 +245,13 @@ print(f"Максимальная длина слова: {max_length}"
 
 
 
-import re
+#import re
 
 # Генератор для чтения строк из файла, содержащих числа
 def read_lines_with_numbers(filename):
-    with open(filename, 'r') as file:
-        for line in file:
-            if re.search(r'\d', line):  # Проверка, содержит ли строка хотя бы одно число
+#   with open(filename, 'r') as file:
+#       for line in file:
+#           if re.search(r'\d', line):  # Проверка, содержит ли строка хотя бы одно число
                 yield line.strip()  # Возвращаем строку без символов новой строки
 
 # Пример использования
