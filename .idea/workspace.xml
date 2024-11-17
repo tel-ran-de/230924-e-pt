@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="удаление лишнего файла" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение мини проекта урок 20">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,19 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Viktor-Yerokhov-h12 23_10_24.executor&quot;: &quot;Run&quot;,
-    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homework.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_project_json.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/КУРС IT back-end developer Phyton/ДЗ&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Viktor-Yerokhov-h12 23_10_24.executor": "Run",
+    "Python.exercise_1.executor": "Run",
+    "Python.homework.executor": "Run",
+    "Python.hwtest10.executor": "Run",
+    "Python.test_project_json.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Viktor-Yerokhov-h19",
+    "last_opened_file_path": "E:/КУРС IT back-end developer Phyton/ДЗ",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\КУРС IT back-end developer Phyton\ДЗ" />
