@@ -100,8 +100,25 @@ for line in gen:
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
 # и подсчитывает количество строк в каждой части.
 # Файл: data.txt
+def read_file_chunks(file_path, chunk_size):
+	with open(file_path, "rb") as file:
+		while True:
+			chunk = file.read(chunk_size)
+			if not chunk:
+				break
+			yield chunk
 
+def count_lines_chunk(file_path, chunk_size):
+	for chunk in read_file_chunks(file_path, chunk_size):
+		chunk_str = chunk.decode("utf-8")
+		lines_count = chunk_str.count("\n")
+		yield lines_count
 
+file_path = "text_files/data.txt"
+chunk_size = 50
+
+for lines_count in count_lines_chunk(file_path, chunk_size):
+	print(f"Количество строк в текущей части: {lines_count}")
 # Задача 3: Поиск строк, содержащих числа
 # Создайте генератор, который читает строки из файла и возвращает только те строки, которые содержат числа.
 # Файл: data.txt
