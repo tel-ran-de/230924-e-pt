@@ -1,4 +1,2 @@
 Python File Handling
 End of file
-End of file
-End of file
