@@ -70,7 +70,6 @@ with open('output.txt', 'r') as file:
 
 
 
-        # Открытие файла для записи
 
 
 

@@ -100,13 +100,13 @@ print (list(str_stirng)
 def longer_than_four(word):
     return len(word) > 4
 
-# Список слов
+"Список"
 words = ["apple", "kiwi", "banana", "pear"]
 
 # Используем filter с функцией longer_than_four для отбора слов длиной больше 4
 long_words = filter(longer_than_four, words)
 
-# Преобразуем результат в список и выводим
+"список и вывод"
 print(list(long_words))
 
 
