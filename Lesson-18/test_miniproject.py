@@ -104,4 +104,5 @@ def main_game_minesweeper():
             break
 
 if __name__ == "__main__":
+    print('Файл запущен напрямую')
     main_game_minesweeper()
