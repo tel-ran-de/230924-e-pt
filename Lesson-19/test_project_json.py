@@ -46,16 +46,16 @@ if not os.path.exists(inventory_file):
     with open(inventory_file, 'w', encoding='utf-8') as file:
         json.dump(inventory, file, ensure_ascii=False, indent=4)
 
-# Функции для работы с инвентарём
+# загрузка файла
 def load_inventory():
     with open(inventory_file, 'r', encoding='utf-8') as file:
         return json.load(file)
-
+# сохранение в файл
 def save_inventory(inventory):
     with open(inventory_file, 'w', encoding='utf-8') as file:
         json.dump(inventory, file, ensure_ascii=False, indent=4)
 
-def show_inventory():
+def print_inventory():
     inventory = load_inventory()
     if not inventory:
         print("Инвентарь пуст.")
@@ -71,7 +71,6 @@ def add_product():
         if item['product'].lower() == product.lower():
             print("Товар уже существует.")
             return
-
     price = int(input("Введите цену товара: "))
     count = int(input("Введите количество товара: "))
     inventory.append({'product': product, 'price': price, 'count': count})
@@ -85,16 +84,15 @@ def delete_product():
     if not item_exists:
         print("Ошибка: Товар не найден.")
         return
-
-    inventory = [item for item in inventory if item['product'].lower() != product]
+    inventory = [item for item in inventory if item['product'].lower() != product.lower()]
     save_inventory(inventory)
     print("Товар удалён.")
 
 def update_product():
     inventory = load_inventory()
-    product = input("Введите название товара для обновления: ").strip().lower()
+    product = input("Введите название товара для обновления: ").strip()
     for item in inventory:
-        if item['product'].lower() == product:
+        if item['product'].lower() == product.lower():
             item['price'] = int(input("Введите новую цену: "))
             item['count'] = int(input("Введите новое количество: "))
             save_inventory(inventory)
@@ -104,9 +102,9 @@ def update_product():
 
 def search_product():
     inventory = load_inventory()
-    product = input("Введите название товара для поиска: ").strip().lower()
+    product = input("Введите название товара для поиска: ").strip()
     for item in inventory:
-        if item['product'].lower() == product:
+        if item['product'].lower() == product.lower():
             headers = ["Название товара", "Цена", "Количество"]
             table = [[item['product'].title(), item['price'], item['count']]]
             print(tabulate(table, headers=headers, tablefmt="grid"))
@@ -149,7 +147,7 @@ def menu():
         choice = input("Выберите действие: ")
 
         if choice == '1':
-            show_inventory()
+            print_inventory()
         elif choice == '2':
             add_product()
         elif choice == '3':
