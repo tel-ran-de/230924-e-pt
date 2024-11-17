@@ -6,6 +6,17 @@
 # Программа должна одинаково реагировать на написание слова строчными и заглавными буквами.
 # Файл: data.txt
 
+def read_filter(file_path, x_word):
+    with open(file_path, "r") as file:
+        for line in file:
+            if x_word.lower() in line.lower():
+                yield line.strip()
+fileExmpl = 'text_files/data.txt'
+x_word = 'This'
+try:
+fltr_lines = read_filter(fileExmpl, x_word)
+for string in fltr_lines:
+    print(string)
 
 # Задача 2: Чтение файла по частям и подсчет строк
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
