@@ -55,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.exercise_3">
+  <component name="RunManager" selected="Python.exercise_2">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -169,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exercise_3" />
         <item itemvalue="Python.exercise_2" />
+        <item itemvalue="Python.exercise_3" />
         <item itemvalue="Python.exercise_1" />
         <item itemvalue="Python.hwtest10" />
         <item itemvalue="Python.hwtest10" />
