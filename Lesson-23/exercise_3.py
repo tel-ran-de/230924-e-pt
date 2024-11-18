@@ -13,11 +13,6 @@
 # что все элементы списков являются положительными, с помощью функции `all`.
 # Ожидаемый результат: [[3, 5, 1], [4, 4, 4]]
 
-lists = [[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]
-
-sorted_lists = sorted([lst for lst in lists if all(x > 0 for x in lst)], key=lambda x: min(x))
-print(sorted_lists)
-
 
 # Задача 3: Сортировка списка словарей по статусу пользователя и преобразование с помощью map
 # **Задание:**
@@ -30,16 +25,6 @@ print(sorted_lists)
 # [{'username': 'alice', 'status': 'ACTIVE'},
 # {'username': 'charlie', 'status': 'ACTIVE'},
 # {'username': 'bob', 'status': 'INACTIVE'}]
-users = [
-    {"username": "alice", "status": "active"},
-    {"username": "bob", "status": "inactive"},
-    {"username": "charlie", "status": "active"}
-]
-
-sorted_users = sorted(users, key=lambda x: x['status'])
-# {'username': 'alice', 'status': 'active', 'status': 'ACTIVE'}
-sorted_users = list(map(lambda x: {**x, 'status': x['status'].upper()}, sorted_users))
-print(sorted_users)
 
 
 # Задача 4: Сортировка списка URL по длине и фильтрация с помощью filter
