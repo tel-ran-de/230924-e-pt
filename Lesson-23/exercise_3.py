@@ -25,6 +25,14 @@
 # [{'username': 'alice', 'status': 'ACTIVE'},
 # {'username': 'charlie', 'status': 'ACTIVE'},
 # {'username': 'bob', 'status': 'INACTIVE'}]
+tuples_list = [
+    {"username": "alice", "status": "active"},
+    {"username": "bob", "status": "inactive"},
+    {"username": "charlie", "status": "active"}
+]
+sorted_t_lists = sorted(tuples_list, key=lambda x: x['status'])
+status_upper = list(map(lambda x: {**x, 'status': x['status'].upper()}, sorted_t_lists))
+print(status_upper)
 
 
 # Задача 4: Сортировка списка URL по длине и фильтрация с помощью filter
