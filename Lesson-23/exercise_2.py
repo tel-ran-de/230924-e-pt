@@ -61,14 +61,15 @@ countries = [
     { "country": "UK", "capital": "London" },
     { "country": "Australia", "capital": "Canberra" }
 ]
-# if any(len(i['capital']) > 6 for i in countries):
-#     sorted_countries = sorted(countries, key=lambda x: len(x['capital']))
-#     print(sorted_countries)
-# else:
-#     print("Условие не выполнено.")
-any_long_countres = any(len(i['capital']) > 6 for i in countries)
-if any_long_countres:
+if any(len(i['capital']) > 6 for i in countries):
     sorted_countries = sorted(countries, key=lambda x: len(x['capital']))
     print(sorted_countries)
 else:
     print("Условие не выполнено.")
+# any_long_capital = any(len(i['capital']) > 6 for i in countries)
+# if any_long_capital:
+#     sorted_countries = sorted(countries, key=lambda x: len(x['capital']))
+#     print(sorted_countries)
+# else:
+#     print("Условие не выполнено.")
+# print(sorted(countries, key=lambda x: len(x['capital'])) if any_long_capital else 'Ни одна длина значения capital не больше 6')
