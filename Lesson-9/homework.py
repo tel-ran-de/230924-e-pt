@@ -6,21 +6,18 @@ shopping_list = ["bread", "milk", "eggs"]
 
 
 # Измените элемент "milk" на "almond milk".
-shopping_list[1] = "almond milk"
-Aleksandr_Samborskij
-print(shopping_list)
 
-main
 # Создайте срез, содержащий первые два элемента списка.
 slice_shopping_list = shopping_list[:2]
-
 # Создайте вложенный список, где каждый элемент списка покупок будет содержать его цену.
-detailed_shopping_list = [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
-
+detailed_shopping_list = []
+for element in shopping_list:
+    price = float(input(f'Please input price for {element}: '))
+    detailed_shopping_list.append([element, price])
 # Выведите список покупок, срез и вложенный список.
-print(shopping_list)  # ["bread", "almond milk", "eggs"]
-print(slice_shopping_list)  # ["bread", "almond milk"]
-print(detailed_shopping_list)  # [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
+print(5*'#', 'RESULT', 5*'#')
+print(f'shopping_list: {shopping_list}', f'slice_shopping_list: {slice_shopping_list}',
+      f'detailed_shopping_list: {detailed_shopping_list}', sep='\n' )
 
 # Измените элемент "milk" на "almond milk".
 el_to_change = shopping_list.index('milk')
@@ -93,6 +90,7 @@ print(student_grades)  # Ожидаемый результат:
 # Создайте список задач, содержащий элементы "task1", "task2", "task3", "task4.
 tasks = ["task1", "task2", "task3", "task4"]
 
+
 # Измените третью задачу на "task3 updated".
 tasks[2] = "task3 updated"
 
@@ -138,35 +136,29 @@ movie_list = ["Movie1", "Movie2", "Movie3"]
 # 1.2 Пропишите условие: добавить в список фильм "Movie4", если его еще нет в списке.
 if "Movie4" not in movie_list:
     movie_list.append("Movie4")
-
 # 1.3 Пропишите условия: если количество фильмов больше 2, то название второго фильма меняется на "Updated Movie2".
 if len(movie_list) > 2:
     movie_list[1] = "Updated Movie2"
-
 # Если количество фильмов меньше 5, то объедините имеющийся список с новым списком ["Movie5", "Movie6", "Movie7"]
-if len(movie_list) < 5:
+if len(movie_list) <5 :
     movie_list.extend(["Movie5", "Movie6", "Movie7"])
-
 # 1.4 Создайте вложенный список, где каждый фильм имеет свой год выпуска и рейтинг:
+details = [['year', 'int'], ['rating', 'float']]
+movie_details =[]
+for movie in movie_list:
+    element = [movie]
+    for detail in details:
+        detail_value = eval(f'{detail[1]}(input(f"pleas input value of {detail[0]} for {movie}: "))')
+        element.append(detail_value)
+    movie_details.append(element)
 # ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5], ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9],
 # ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]
-movie_details = [
-    ["Movie1", 2010, 8.1],
-    ["Updated Movie2", 2015, 7.5],
-    ["Movie3", 2020, 8.6],
-    ["Movie4", 2021, 7.9],
-    ["Movie5", 2013, 8.5],
-    ["Movie6", 2018, 8.6],
-    ["Movie7", 2023, 7.0]]
-
 # 1.5 Добавьте фильм ["Movie", 2002, 7.7] в начало вложенного списка.
 movie_details.insert(0, ["Movie", 2002, 7.7])
-
 # 1.6 Выведите список фильмов и вложенный список.
-print()
 print(movie_list)  #  "Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7"
 print(movie_details)  # Ожидаемый результат: [["Movie", 2002, 7.7], ["Movie1", 2010, 8.1], ["Updated Movie2", 2015, 7.5],
-# ["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
+#["Movie3", 2020, 8.6], ["Movie4", 2021, 7.9], ["Movie5", 2013, 8.5], ["Movie6", 2018, 8.6], ["Movie7", 2023, 7.0]]
 
 # 1.2 Пропишите условие: добавить в список фильм "Movie4", если его еще нет в списке.
 if "Movie4" not in movie_list:
@@ -293,6 +285,8 @@ print(subjects_sorted, subjects_slice, subjects_extended, total_duration_1, tota
 
 # 4. Пользователь должен иметь возможность удалить задачу. Чтобы удалить задачу, запросите ее номер.
 # Если номер корректный, то удалите ее.
+
+tasks = []
 
 task_counter = 1
 #

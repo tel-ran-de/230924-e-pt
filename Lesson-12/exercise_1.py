@@ -12,6 +12,7 @@
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, Зарплата: {salary}"
 #
 employees = {
+
     "Alice": {"age": 30, "department": "HR", "salary": 5000},
     "Bob": {"age": 25, "department": "IT", "salary": 6000},
     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}}
@@ -42,6 +43,7 @@ print(salary)
 
 employees['David'] = {'age':28, 'department': 'IT', 'Salary': 6500}
 print(employees['David']['Salary'])
+
 
 # Задача 2: Управление запасами товаров
 # У вас есть словарь, содержащий информацию о запасах товаров в магазине.
@@ -75,9 +77,5 @@ inventory["Dates"] = {"quantity": 15, "price": 4}
 
 total_value = sum(item["quantity"] * item["price"] for item in inventory.values())
 print(f"\nОбщая стоимость всех товаров: {total_value}")
-# inventory = {
-#     "Apples": {"quantity": 50, "price": 2},
-#     "Bananas": {"quantity": 30, "price": 1},
-#     "Cherries": {"quantity": 20, "price": 3},
-# }
+
 
