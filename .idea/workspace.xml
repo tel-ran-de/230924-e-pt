@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавление нового урока 23">
-      <change afterPath="$PROJECT_DIR$/Lesson-23/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/Урок 18. Сортировка.pptx" afterDir="false" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил в ветку для ДЗ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/exercise_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.exercise_1.executor": "Run",
+    "Python.exercise_2.executor": "Run",
     "Python.hwtest10.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Viktor-Yerokhov-h23",
@@ -58,7 +53,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.exercise_1">
+  <component name="RunManager" selected="Python.exercise_2">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -73,6 +68,50 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-23/exercise_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-23" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-23/exercise_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="230924-e-pt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson-23" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson-23/exercise_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,6 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exercise_2" />
+        <item itemvalue="Python.exercise_3" />
         <item itemvalue="Python.exercise_1" />
         <item itemvalue="Python.hwtest10" />
         <item itemvalue="Python.hwtest10" />
@@ -167,14 +208,40 @@
       <option name="project" value="LOCAL" />
       <updated>1731954170522</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731956259183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731956259183</updated>
+    </task>
+    <task id="LOCAL-00004" summary="практика 1 урок 23 выполнена">
+      <option name="closed" value="true" />
+      <created>1731956278236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731956278236</updated>
+    </task>
+    <task id="LOCAL-00005" summary="добавил в ветку для ДЗ">
+      <option name="closed" value="true" />
+      <created>1731956292386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731956292386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="решение урока 18" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="добавление нового урока 23" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавление нового урока 23" />
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="практика 1 урок 23 выполнена" />
+    <MESSAGE value="добавил в ветку для ДЗ" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил в ветку для ДЗ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
