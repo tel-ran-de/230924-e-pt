@@ -6,8 +6,8 @@
 # Ожидаемый результат: ['mountain', 'river', 'tree']
 
 items = ["tree", 3, "mountain", 1, "river", 2]
-# strings = list(filter(lambda x: isinstance(x, str), items))
-sorted_strings = sorted(list(filter(lambda x: isinstance(x, str), items)), key=lambda x: x)
+strings = list(filter(lambda x: isinstance(x, str), items))
+sorted_strings = sorted(strings, key=lambda x: x)
 print(sorted_strings)
 
 # Задача 2: Сортировка списка словарей по значению ключа с проверкой типов
