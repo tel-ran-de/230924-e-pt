@@ -52,7 +52,7 @@ power_two()
 # 5. Прочитайте все строки файла и выведите их на экран.
 
 try:
-    file = open('file.txt' 'r')
+    file = open('file.txt', 'r')
     text = file.read()
 except FileNotFoundError:
     print('Вы пытаетесь открыть несуществующий файл!')
