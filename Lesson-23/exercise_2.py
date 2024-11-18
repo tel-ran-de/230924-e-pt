@@ -44,5 +44,14 @@ print(sorted_tuples)
 # что хотя бы одна длина значения ключа `capital` больше 6, с помощью функции `any`.
 # Ожидаемый результат: [{'country': 'UK', 'capital': 'London'}, {'country': 'Australia', 'capital': 'Canberra'}, {'country': 'USA', 'capital': 'Washington'}]
 
-
-
+countries = [
+    {"country": "USA", "capital": "Washington"},
+    {"country": "UK", "capital": "London"},
+    {"country": "Australia", "capital": "Canberra"}
+]
+any_long_capital = any(len(item["capital"]) > 6 for item in countries)
+if any_long_capital:
+    sorted_countries = sorted(countries, key=lambda x: len(x['capital']))
+    print(sorted_countries)
+else:
+    print('Ни одна длина значения capital не больше 6')
