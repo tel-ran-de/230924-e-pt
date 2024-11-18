@@ -78,7 +78,7 @@
 # - Как использовать isinstance, all и any при сортировке.
 
 # Пример 6: Проверка типа данных с помощью isinstance
-# x = 5
+x = 5
 # print(isinstance(x, int))  # True
 # print(isinstance(x, str))  # False
 
@@ -87,8 +87,8 @@
 
 # Пример 7: Фильтрация и сортировка чисел из списка с различными типами данных
 # data = [3, 'a', 5, 'b', 2]
-
-# Фильтруем только числа для сортировки
+#
+# # Фильтруем только числа для сортировки
 # numbers = list(filter(lambda x: isinstance(x, int), data))
 # strings = list(filter(lambda x: isinstance(x, str), data))
 #
@@ -105,7 +105,7 @@
 # print(all(num > 3 for num in numbers))  # False  [False, False, False, True, True]
 
 # Пример 9: Сортировка списка на основе условий
-# data = [3, 5, 2, 8, 1]
+data = [3, 5, 2, 8, 1]
 #
 # # Проверяем, все ли элементы больше 0
 # if all(num > 0 for num in data):
