@@ -1,3 +1,11 @@
+# FIXED
+
+# Тема: Цикл while. Операторы break, continue, else.
+ ollga-faruk-l10
+from itertools import product
+from operator import attrgetter
+ ollga-faruk
+
 # Упражнение 1: Поиск числа
 #
 # Напишите программу, которая запрашивает у пользователя числа, пока он не введет число совпадающее
@@ -17,10 +25,21 @@ while True:
     else:
         print("Вы угадали число")
         break
+ main
 
-print()
-print("Упражнение 2: Проверка пароля")
-print()
+print('Task # 1')
+guess_num = 63
+while True:
+    check_num = int(input('Введите число от 0 до 100: '))
+    if check_num > guess_num:
+        print("Вы ввели большее число")
+    elif check_num < guess_num:
+        print("Слишком маленькое число")
+    else:
+        print("Вы угадали число")
+        break
+print('Task # 2')
+=======
 
 # Упражнение 2: Проверка пароля
 #
@@ -30,7 +49,6 @@ print()
 # Если введен правильный пароль, программа должна выводить сообщение "Доступ разрешен" и завершаться.
 # Если после трех неправильных попыток пароль не введен правильно, программа должна выводить сообщение
 # "Превышено количество попыток" и завершаться.
-
 t = 4
 while True :
      p = input('Введите пароль:')
@@ -46,31 +64,72 @@ while True :
        print('Превышено количество попыток')
        break
 
-print()
-print("Упражнение 3: Работа со списком покупок")
-print()
-
 
 password = "python123"
-attempts = 0
-max_attempts = 3
-
-while attempts < max_attempts:
-   passcode = input("Введите пароль: ")
-
-   if " " in passcode:
+attempt_num = 3
+attempt = 0
+while True:
+    user_input = input('Введите пароль: ')
+    attempt += 1
+    if ' ' in user_input:
         print("Пароль не должен содержать пробелов")
-        continue
-
-   if passcode == password:
+    if user_input == password:
         print("Доступ разрешен")
         break
-   else:
-       attempts += 1
-if attempts == max_attempts:
-         print("Превышено количество попыток")
+    if attempt == attempt_num:
+        break
+    print(f'{attempt_num - attempt} attempt(s) remain!')
+print('Task # 3'
+articles_list = []
+article_num = 6
+stop_word = 'стоп'
+counter = 0
+while True:
+    if len(articles_list) > 0:
+        print('список покупок')
+        for index, item in enumerate(articles_list, 1):
+            print(f'{index}. {item}')
+    article = input('Внесите планируемую покупку в список: ')
+    if article == 'стоп':
+        print("Формирование списка завершено")
+        print('список покупок')
+        for index, item in enumerate(articles_list, 1):
+            print(f'{index}. {item}')
+        break
+    elif article in articles_list:
+        print('Эта покупка уже в списке!')
+        continue
+    if counter == article_num:
+        print('Превышен лимит покупок.')
+        print('список покупок')
+        for index, item in enumerate(articles_list, 1):
+            print(f'{index}. {item}')
+        break
+    articles_list.append(article)
+    counter +=
+
+#password = "python123"
+#attempts = 0
+#max_attempts = 3
+#
+#while attempts < max_attempts:
+#   passcode = input("Введите пароль: ")
+#
+#   if " " in passcode:
+#        print("Пароль не должен содержать пробелов")
+#        continue
+#
+#    if passcode == password:
+#        print("Доступ разрешен")
+#        break
+#    else:
+#       attempts += 1
+#        if attempts == max_attempts:
+#         print("Превышено количество попыток")
 
 
+
+ ollga-faruk
 
 # Упражнение 3: Работа со списком покупок
 #
@@ -82,25 +141,25 @@ if attempts == max_attempts:
 # то программа должна вывести: “Превышен лимит покупок.” и завершиться.
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
-
-shopping_list = []
-max_produkt = 6
-
-while len(shopping_list) < max_produkt:
-    product = input("Введите элемент для списка покупок: ")
-    if product.lower() == "стоп":
-        print('Формирование списка завершено')
-        break
-    if product in shopping_list:
-            print("Этот элемент уже в списке")
-            continue
-    shopping_list.append(product)
-    print()
-
-if len(shopping_list) >= max_produkt:
-        print("Превышен лимит покупок.")
-print("Итоговый список покупок:", shopping_list)
-print("Общее количество элементов в списке:", len(shopping_list))
+ ollga-faruk-l10
+#shopping_list = []
+#max_produkt = 6
+#
+#while len(shopping_list) < max_produkt:
+#    product = input("Введите элемент для списка покупок: ")
+#    if product.lower() == "стоп":
+#        print('Формирование списка завершено')
+#         break
+#       if product in shopping_list:
+#             print("Этот элемент уже в списке")
+#            continue
+#    shopping_list.append(product)
+#    print()
+#
+#if len(shopping_list) >= max_produkt:
+#        print("Превышен лимит покупок.")
+#print("Итоговый список покупок:", shopping_list)
+#print("Общее количество элементов в списке:", len(shopping_list))
 #
 
 
@@ -111,26 +170,29 @@ print("Общее количество элементов в списке:", len
 #
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
-
 word=input('Введите слово:')
 gls =0
 for letter in word:
         if letter in "aeiou":
           gls +=1
-print(gls)
-print()
-print("Упражнение 3: Работа со списком покупок")
-print()
+pr
+print('Тема: Цикл for Task # 1')
+check_string = 'aeiou'
+counter = 0
+word = input('введите слово: ')
+for letter in word:
+    if letter in check_string:
+        counter += 1
+print(f'в слове {word} всего {counter} гласных букв')
 
-vowels = "aeiou"
-user_input = input("Введите строку: ")
-vowel_count = 0
-for char in user_input.lower():
-    if char in vowels:
-        vowel_count += 1
-
-print(f"Количество гласных букв в строке: {vowel_count}")
-
+#vowels = "aeiou"
+#user_input = input("Введите строку: ")
+#vowel_count = 0
+#for char in user_input.lower():
+#    if char in vowels:
+#        vowel_count += 1
+#
+#print(f"Количество гласных букв в строке: {vowel_count}")
 
 
 # Упражнение 2: Генерация и вывод последовательности чисел
@@ -148,11 +210,21 @@ for i in range(1, 21):
         print('Buzz')
     else:
         print(i)
+ main
 
-print()
-print("Генерация и вывод последовательности чисел")
-print()
+for number in range(1, 21):
+    if number % 3 == 0:
+        if number % 5 == 0:
+         print("FizzBuzz")
+        else:
+            print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
 
+
+print('project Управление библиотекой')
 
 # Проект 1: Управление библиотекой
 #
@@ -162,10 +234,28 @@ print()
 #
 # Требования: Реализуйте работу всех пунктов меню.
 #
+# library = [["Война и мир", "Толстой", "в наличии"],
+#            ["Преступление и наказание", "Достоевский", "выдана"],
+#            ["Мастер и Маргарита", "Булгаков", "в наличии"]]
+#
+# while True:
+#     print("\nМеню")
+#     print("1. Показать список всех книг")
+#     print("2. Добавить книгу")
+#     print("3. Удалить книгу")
+#     print("4. Поменять статус книги")
+#     print("5. Показать книги определенного автора")
+#     print("6. Показать книги с определенным статусом")
+#     choice = input("Выберите действие, введя его номер: ")
+#
+#     # Продолжите программу ниже.
+
+
 library = [["Война и мир", "Толстой", "в наличии"],
            ["Преступление и наказание", "Достоевский", "выдана"],
            ["Мастер и Маргарита", "Булгаков", "в наличии"]]
-
+status =["выдана", "в наличии"]
+#
 while True:
     print("\nМеню")
     print("1. Показать список всех книг")
@@ -174,212 +264,97 @@ while True:
     print("4. Поменять статус книги")
     print("5. Показать книги определенного автора")
     print("6. Показать книги с определенным статусом")
-    choice = input("Выберите действие, введя его номер: ")
+    print("0. если хотите покинуть программу")
+    choice = int(input("Выберите действие, введя его номер: "))
 
-    # Продолжите программу ниже.
-    if choice == "1":
-        print("\nСписок всех книг:")
-        for book in library:
-            print(f"{book[0]} - {book[1]} ({book[2]})")
-
-    elif choice == "2":
-        title = input("Введите название книги: ")
-        author = input("Введите автора книги: ")
-        status = input("Введите статус книги (в наличии/выдана): ")
-        library.append([title, author, status])
-        print(f"Книга '{title}' добавлена.")
-
-    elif choice == "3":
-        title = input("Введите название книги, которую хотите удалить: ")
-        found = False
-        for book in library:
-            if book[0].lower() == title.lower():
-                library.remove(book)
-                found = True
-                print(f"Книга '{title}' удалена.")
+    if choice == 1:
+        print('список книг')
+        print(60 * '-')
+        print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+        print(60 * '-')
+        for index, book in enumerate(library, 1):
+            print(f'|{(3 - len(str(index)))*' '}{index} |'
+                  f'{(13 - len(book[1]))*' '}{book[1]} |'
+                  f'{(25 - len(book[0]))*' '}{book[0]} |'
+                  f'{(10 - len(book[2]))*' '}{book[2]} |')
+            print(60 * '-')
+    elif choice == 2:
+        add_title = input('введите название книги: ')
+        add_author = input('введите автора книги: ')
+        library.append([add_title, add_author, 'в наличии'])
+        print(f'книга с названием {add_title} автор {add_author} добавлена в библиотеку!')
+    elif choice == 3:
+        delete_title = input('введите название книги для удаления: ')
+        delete_author = input('введите автора книги для удаления: ')
+        for index, book in enumerate(library):
+             if book[0].lower() == delete_title.lower() and book[1].lower() == delete_author.lower():
+                library.pop(index)
+                print(f'книга с названием {delete_title} автор {delete_author} удалена из библиотеки!')
                 break
-        if not found:
-            print(f"Книга '{title}' не найдена.")
-
-    elif choice == "4":
-        title = input("Введите название книги, статус которой хотите поменять: ")
-        found = False
+        else:
+            print(f'книга с названием {delete_title} автор {delete_author} не найдена библиотеке!')
+    elif choice == 4:
+        update_title = input('введите название книги для изменения статуса: ')
+        update_author = input('введите автора книги для изменения статуса: ')
         for book in library:
-            if book[0].lower() == title.lower():
-                new_status = input(f"Введите новый статус для книги '{title}' (в наличии/выдана): ")
-                book[2] = new_status
-                found = True
-                print(f"Статус книги '{title}' изменен на '{new_status}'.")
+            if book[0].lower() == update_title.lower() and book[1].lower() == update_author.lower():
+                print(f'книга с названием {update_title} автор {update_author} имеет статус {book[2]}')
+                action = int(input('Если хотите изменить статус книги введите 1, если статус не меняется введите 0: '))
+                if action == 1:
+                    for item in status:
+                        if item != book[2]:
+                            book[2] = item
+                            print(f'книга с названием {update_title} '
+                                  f'автор {update_author} имеет новый статус {book[2]}!')
+                            break
+                else:
+                    print(f'книга с названием {update_title} '
+                          f'автор {update_author} имеет прежний статус {book[2]}!')
                 break
-        if not found:
-            print(f"Книга '{title}' не найдена.")
-
-    elif choice == "5":
-        author = input("Введите автора: ")
-        print(f"\nКниги автора {author}:")
-        found = False
+        else:
+            print(f'книга с названием {update_title} автор {update_author} не найдена библиотеке!')
+    elif choice == 5:
+        author_list = []
+        author = input('Введите имя автора: ')
         for book in library:
             if book[1].lower() == author.lower():
-                print(f"{book[0]} ({book[2]})")
-                found = True
-        if not found:
-            print(f"Книги автора {author} не найдены.")
+                author_list.append(book)
+        if len(author_list) == 0:
+            print('Книг заданного автора нет в библиотеке')
+        else:
+            print('список книг')
+            print(60 * '-')
+            print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+            print(60 * '-')
+            for index, book in enumerate(author_list, 1):
+                print(f'|{(3 - len(str(index))) * ' '}{index} |'
+                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
+                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
+                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
+                print(60 * '-')
+    elif choice == 6:
+        status_list = []
+        index = int(input(f'Для поиска книг со статусом "выдана" введите 0 \n'
+                       f'Для поиска книг со статусом "в наличии" введите 1: '))
 
-    elif choice == "6":
-        status = input("Введите статус (в наличии/выдана): ")
-        print(f"\nКниги со статусом '{status}':")
-        found = False
         for book in library:
-            if book[2].lower() == status.lower():
-                print(f"{book[0]} - {book[1]}")
-                found = True
-        if not found:
-            print(f"Книги со статусом '{status}' не найдены.")
-
-    elif choice == "7":
-        print("Программа завершена.")
+            if book[2] == status[index]:
+                status_list.append(book)
+        if len(status_list) == 0:
+            print(f'Книг со статусом {status[index]} нет в библиотеке')
+        else:
+            print('список книг')
+            print(60 * '-')
+            print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+            print(60 * '-')
+            for index, book in enumerate(status_list, 1):
+                print(f'|{(3 - len(str(index))) * ' '}{index} |'
+                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
+                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
+                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
+                print(60 * '-')
+    elif choice == 0:
+        print('Вы покинули программу')
         break
-
-    else:
-        print("Некорректный выбор. Пожалуйста, выберите пункт из меню.")
-
-print()
-print("Управление библиотекой")
-print()
-
-
-#library = [
-#    ["Война и мир", "Толстой", "в наличии"],
-#            ["Преступление и наказание", "Достоевский", "выдана"],
-#            ["Мастер и Маргарита", "Булгаков", "в наличии"]
-#]
-#
-#def show_books():
-#    for book in library:
-#        print(f"название: {book[0]}, автор: {book[1]}, статус: {book[2]}")
-#def add_book():
-#    title = input("Введите название книги: ")
-#    author = input("Введите автора книги: ")
-#    status = input("Введите статус книги (в наличии/ выдана): ")
-#    library.append([title, author, status])
-#    print(f"Книга ´{title}` добавлена в библиотеку.")
-#
-#def remove_book():
-#    title =input("Введите название книги для удаления: ")
-#    for book in library:
-#        if book[0].lower() == title.lower():
-#            library.remove(book)
-#            print(f"Книга `{title}` удалена из библиотеки.")
-#
-#def change_status():
-#    title = input("Введите название книги для изменения статуса: ")
-#    for book in library:
-#        if book[0].lower() == title.lower():
-#            new_status = input("Введите новый статус книги (в наличии/ выдана): ")
-#            book[2] = new_status
-#            print(f"Статус книги `{title}` изменен на `{new_status}`. ")
-#            return
-#        print(f"Книга `{title}` не найдена в библиотеке.")
-#def search_by_author():
-#    author = input("Введите автора для поиска книги: ")
-#    found = False
-#    for book in library:
-#        if book[1].lower() == author.lower():
-#            print(f"Название: {book[0]}, Автор: {book[1]}, Статус: {book[2]}")
-#            found = True
-#            if not found:
-#                print(f"Книги автора `{author}` не найдена в библиотеке.")
-#
-#def search_by_status():
-#    status = input("Введите статус книги для поиска (в наличии/ выдана): ")
-#    found = False
-#    for book in library:
-#        if book[2].lower() == status.lower():
-#            print(f"Название: {book[0]}, Автор: {book[1]}, Статус: {book[2]}")
-#            found = True
-#            if not  found:
-#                print(f"Книги со статусом `{status}` не найдены.")
-#
-#while True:
-#     print("\nМеню")
-#     print("1. Показать список всех книг")
-#    print("2. Добавить книгу")
-#     print("3. Удалить книгу")
-#     print("4. Поменять статус книги")
-#     print("5. Показать книги определенного автора")
-#     print("6. Показать книги с определенным статусом")
-#     choice = input("Выберите действие, введя его номер: ")
-#
-#     if choice == "1":
-#         show_books()
-#     elif choice == "2":
-#         add_book()
-#     elif choice == "3":
-#         remove_book()
-#     elif choice == "4":
-#         change_status()
-#     elif choice == "5":
-#        search_by_author()
-#     elif choice == "6":
-#         search_by_status()
-#     elif choice == "7":
-#         print("Выход из программы.")
-#         break
-#     else:
-#         print("Неверный выбор. Выберите действие из имеющегося списка от 1 до 7.")
-
-
-
-# Проект 2: Анализ посещаемости на сайте
-#
-# Разработайте программу для анализа посещаемости на сайте. Программа должна позволять вводить количество посещений
-# за каждый день недели, определять дни с наибольшей и наименьшей посещаемостью, рассчитывать среднюю посещаемость
-# за неделю и выводить дни с посещаемостью выше среднего.
-#
-days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-visits = []
-
-for day in days:
-    visit_count = int(input(f"Введите количество посещений за {day}: "))
-    visits.append(visit_count)
-
-max_visits = max(visits)
-min_visits = min(visits)
-
-max_day = days[visits.index(max_visits)]
-min_day = days[visits.index(min_visits)]
-
-print(f"\nДень с наибольшей посещаемостью: {max_day} ({max_visits} посещений)")
-print(f"День с наименьшей посещаемостью: {min_day} ({min_visits} посещений)")
-
-average_visits = sum(visits) / len(visits)
-print(f"\nСредняя посещаемость за неделю: {average_visits:.2f}")
-
-print("\nДни с посещаемостью выше среднего:")
-for i in range(len(visits)):
-    if visits[i] > average_visits:
-        print(f"{days[i]}: {visits[i]} посещений")
-
-
-print()
-print("Анализ посещаемости на сайте")
-print()
-
-max_visits = max(visits)
-min_visits = min(visits)
-max_day = days[visits.index(max_visits)]
-min_day = days[visits.index(min_visits)]
-
-average_visits = sum(visits) / len(visits)
-
-above_average_days = [days[i] for i in range(len(visits)) if visits[i] > average_visits]
-
-print("\nРезультаты анализа посещаемости:")
-print(f"День с наибольшей посещаемостью: {max_day} ({max_visits} посещений)")
-print(f"День с наименьшей посещаемостью: {min_day} ({min_visits} посещений)")
-print(f"Средняя посещаемость за неделю: {average_visits:.2f}")
-print("Дни с посещаемостью выше среднего:", ", ".join(above_average_days))
-
-days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
-visits = []
+    else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
 

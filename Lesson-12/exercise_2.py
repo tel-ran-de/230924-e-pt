@@ -28,6 +28,17 @@ print("\nКоординаты, отсортированные по оси x:")
 for coord in sorted_coordinates:
     print(coord)
 
+print(*coordinates)
+x_c = sum([x[0] for x in coordinates])
+y_c = sum([x[1] for x in coordinates])
+print(x_c, y_c)
+coordinates.append((70,80))
+print(*coordinates)
+coordinates[0] = (15, 25)
+print(*coordinates)
+x_sort = sorted([x[0] for x in coordinates])
+coordinates.sort()
+print(coordinates)
 
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
@@ -58,6 +69,15 @@ for product in sorted_products:
     print(product)
 
 
+
+for item in products:
+    print(item[0])
+
+pr_sum = sum([x[1] for x in products])
+print(pr_sum)
+products.append(('Date', 4))
+print(products)
+
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
@@ -68,6 +88,7 @@ for product in sorted_products:
 # 4. Проверьте, есть ли пользователь "Alice" в множестве.
 # 5. Выведите количество пользователей.
 #
+
 users = {"Alice", "Bob", "Charlie"}
 
 for user in users:
@@ -81,6 +102,8 @@ if "Alice" in users:
     print("\nПользователь 'Alice' есть в множестве.")
 
 print(f"\nКоличество пользователей: {len(users)}")
+# users = {"Alice", "Bob", "Charlie"}
+
 
 # Задача 4: Управление наборами данных
 # У вас есть два множества, представляющих различные наборы данных.
@@ -93,6 +116,7 @@ print(f"\nКоличество пользователей: {len(users)}")
 # 4. Найдите разность множеств `set1` и `set2`.
 # 5. Проверьте, является ли `set2` подмножеством `set1`.
 #
+
 set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 
@@ -110,3 +134,6 @@ print("Разность множеств (set1 - set2):", difference)
 
 is_subset = set2.issubset(set1)
 print(f"\nЯвляется ли set2 подмножеством set1: {is_subset}")
+# set1 = {1, 2, 3, 4, 5}
+# set2 = {4, 5, 6, 7, 8}
+
