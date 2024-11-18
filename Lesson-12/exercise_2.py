@@ -11,6 +11,7 @@
 #
 coordinates = [(10, 20), (30, 40), (50, 60)]
 
+
 for coord in coordinates:
     print(coord)
 
@@ -40,6 +41,7 @@ x_sort = sorted([x[0] for x in coordinates])
 coordinates.sort()
 print(coordinates)
 
+
 # Задача 2: Обработка данных о продуктах
 # У вас есть список продуктов, каждый из которых представлен кортежем (название, цена).
 # Необходимо провести различные операции с этими данными.
@@ -52,6 +54,7 @@ print(coordinates)
 # 5. Выведите все продукты, отсортированные по цене.
 #
 products = [("Apple", 2), ("Banana", 1), ("Cherry", 3)]
+
 
 for product in products:
     print(product)
@@ -105,6 +108,7 @@ print(f"\nКоличество пользователей: {len(users)}")
 # users = {"Alice", "Bob", "Charlie"}
 
 
+
 # Задача 4: Управление наборами данных
 # У вас есть два множества, представляющих различные наборы данных.
 # Необходимо провести различные операции с этими множествами.
@@ -134,6 +138,5 @@ print("Разность множеств (set1 - set2):", difference)
 
 is_subset = set2.issubset(set1)
 print(f"\nЯвляется ли set2 подмножеством set1: {is_subset}")
-# set1 = {1, 2, 3, 4, 5}
-# set2 = {4, 5, 6, 7, 8}
+
 
