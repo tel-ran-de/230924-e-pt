@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил в ветку для ДЗ">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-23/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/exercise_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/exercise_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +47,7 @@
   "keyToString": {
     "Python.exercise_1.executor": "Run",
     "Python.exercise_2.executor": "Run",
+    "Python.exercise_3.executor": "Run",
     "Python.hwtest10.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Viktor-Yerokhov-h23",
@@ -53,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.exercise_2">
+  <component name="RunManager" selected="Python.exercise_3">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
       <option name="ENV_FILES" value="" />
@@ -167,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exercise_2" />
         <item itemvalue="Python.exercise_3" />
+        <item itemvalue="Python.exercise_2" />
         <item itemvalue="Python.exercise_1" />
         <item itemvalue="Python.hwtest10" />
         <item itemvalue="Python.hwtest10" />
@@ -232,16 +234,24 @@
       <option name="project" value="LOCAL" />
       <updated>1731956292386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1731961513712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731961513712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="решение урока 18" />
     <MESSAGE value="добавление нового урока 23" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="практика 1 урок 23 выполнена" />
     <MESSAGE value="добавил в ветку для ДЗ" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил в ветку для ДЗ" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
