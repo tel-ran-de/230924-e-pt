@@ -19,6 +19,21 @@
 # Отсортируйте кортежи по количеству слов во втором элементе, предварительно проверив,
 # что все строки содержат только алфавитные символы, с помощью функции `all`.
 # Ожидаемый результат: [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
+tuples_1 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high"), (9, "the biggest 1")]
+tuples_2 = [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
+tuples_3 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high")]
+
+all_alphabetic = all(all(c.isalpha() or c.isspace() for c in item[1]) for item in tuples_1)
+sorted_tuples = sorted(tuples_1, key=lambda item: len(item[1].split()) if all_alphabetic else 0)
+print(sorted_tuples)
+
+all_alphabetic = all(all(c.isalpha() or c.isspace() for c in item[1]) for item in tuples_2)
+sorted_tuples = sorted(tuples_2, key=lambda item: len(item[1].split()) if all_alphabetic else 0)
+print(sorted_tuples)
+
+all_alphabetic = all(all(c.isalpha() or c.isspace() for c in item[1]) for item in tuples_3)
+sorted_tuples = sorted(tuples_3, key=lambda item: len(item[1].split()) if all_alphabetic else 0)
+print(sorted_tuples)
 
 
 # Задача 4: Сортировка списка словарей по длине значений с использованием any
