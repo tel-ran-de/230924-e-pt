@@ -5,6 +5,7 @@
 # Пример использования:
 # print(multiply_all(1, 2, 3, 4))  # Вывод: 24
 
+
 def multiply_all(*args):
     if not args:
         return 1
