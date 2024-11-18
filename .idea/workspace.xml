@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
-      <change afterPath="$PROJECT_DIR$/Lesson-10/tutorial.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/examples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/exercise_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/live-coding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson-23/Урок 18. Сортировка.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-10/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-10/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-11/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-11/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-12/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-12/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-12/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-12/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-13/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-13/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-13/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-13/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-14/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-14/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/exercise_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-15/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-15/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-8/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-8/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/exercise_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-9/live-coding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-9/live-coding.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,14 +37,14 @@
     "Python.homework.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging SHNAYDER",
+    "git-widget-placeholder": "SHNAYDER",
     "last_opened_file_path": "C:/Users/SHNAYDER/PycharmProjects/230924-e-pt",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.exercise_3">
+  <component name="RunManager">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject2" />
       <option name="ENV_FILES" value="" />
@@ -523,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731932864035</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1731962237435</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1731962237435</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
