@@ -6,6 +6,8 @@
 # Ожидаемый результат: [1, 3, 4, 7, 9, 10]
 # 2. Отсортируйте список по убыванию с помощью функции `sorted`.
 # Ожидаемый результат: [10, 9, 7, 4, 3, 1]
+print(65*"-")
+print("---Задача 1: Сортировка списка чисел по возрастанию и убыванию---")
 numbers = [10, 3, 7, 1, 9, 4]
 numbers.sort()
 print("По возрастанию:", numbers)
@@ -17,7 +19,7 @@ print("По убыванию:",sorted_numbers)
 # Дан список строк `["house", "cat", "elephant", "car", "building"]`.
 # Отсортируйте список по длине строк с помощью функции `sorted`.
 # Ожидаемый результат: ['cat', 'car', 'house', 'building', 'elephant']
-
+print("-----------Задача 2: Сортировка списка строк по длине------------")
 words = ["house", "cat", "elephant", "car", "building"]
 sorted_words = sorted(words, key=len)
 print(sorted_words)
@@ -26,7 +28,7 @@ print(sorted_words)
 # Дан список кортежей `[(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]`.
 # Отсортируйте список по второму элементу кортежей с помощью метода `sort`.
 # Ожидаемый результат: [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
-
+print("-----Задача 3: Сортировка списка кортежей по второму элементу----")
 list_word = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
 list_word.sort(key=lambda x: x[1])
 print(list_word)
@@ -35,6 +37,7 @@ print(list_word)
 # Дан список словарей `[{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 20 }, { "name": "Charlie", "age": 23 }]`.
 # Отсортируйте список по значению ключа `age` с помощью функции `sorted`.
 # Ожидаемый результат: [{'name': 'Bob', 'age': 20}, {'name': 'Charlie', 'age': 23}, {'name': 'Alice', 'age': 25}]
+print("------Задача 4: Сортировка списка словарей по значению ключа-----")
 people = [
     {"name": "Alice", "age": 25},
     {"name": "Bob", "age": 20},
@@ -47,17 +50,19 @@ print(sorted_people)
 # Дан список кортежей `[(3, 5), (1, 7), (4, 2), (6, 3)]`.
 # Отсортируйте кортежи по сумме их элементов с помощью метода `sort`.
 # Ожидаемый результат: [(4, 2), (3, 5), (6, 3), (1, 7)]
+print("-----Задача 5: Сортировка списка кортежей по сумме элементов-----")
 elements = [(3, 5), (1, 9), (4, 2), (6, 3)]
 elements.sort(key=lambda x: sum(x))
 print(elements)
 
 # Тема: Cортировка с all, any, isinstance
-
+print()
+print("Тема: Cортировка с all, any, isinstance")
 # Задача 1: Сортировка списка строк с проверкой типов
 # Дан список `["tree", 3, "mountain", 1, "river", 2]`.
 # Отсортируйте только строки в списке по алфавиту с помощью функции `sorted`,
 # Ожидаемый результат: ['mountain', 'river', 'tree']
-
+print("------------Задача 1: Сортировка списка строк с проверкой типов-------------")
 items = ["tree", 3, "mountain", 1, "river", 2]
 strings = list(filter(lambda x: isinstance(x, str), items))
 sorted_strings = sorted(strings, key=lambda x: x)
@@ -69,6 +74,8 @@ print(sorted_strings)
 # Отсортируйте словари по значению ключа `price`, предварительно проверив, что значение является числом,
 # с помощью функции `isinstance`.
 # Ожидаемый результат: [{'title': 'Book C', 'price': 9.99}, {'title': 'Book A', 'price': 15.99}]
+print(76*"-")
+print("--Задача 2: Сортировка списка словарей по значению ключа с проверкой типов--")
 books = [
     {"title": "Book A", "price": 15.99},
     {"title": "Book B", "price": "free"},
@@ -83,7 +90,8 @@ print(sorted_books)
 # Отсортируйте кортежи по количеству слов во втором элементе, предварительно проверив,
 # что все строки содержат только алфавитные символы, с помощью функции `all`.
 # Ожидаемый результат: [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
-
+print(76*"-")
+print("--Задача 3: Сортировка списка кортежей по количеству слов с использованием all--")
 tuples_1 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high"), (9, "the biggest 1")]
 tuples_2 = [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
 tuples_3 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high")]
@@ -107,6 +115,8 @@ print(sorted_tuples)
 # Отсортируйте словари по длине значений ключа `capital`, предварительно проверив,
 # что хотя бы одна длина значения ключа `capital` больше 6, с помощью функции `any`.
 # Ожидаемый результат: [{'country': 'UK', 'capital': 'London'}, {'country': 'Australia', 'capital': 'Canberra'}, {'country': 'USA', 'capital': 'Washington'}]
+print(76*"-")
+print("--Задача 4: Сортировка списка словарей по длине значений с использованием any--")
 countries = [
     { "country": "USA", "capital": "Washington" },
     { "country": "UK", "capital": "London" },
@@ -117,14 +127,16 @@ if any(len(i['capital']) > 6 for i in countries):
     print(sorted_countries)
 else:
     print("Условие не выполнено.")
-
+print(76*"-")
+print()
 # Тема: Дополнительная практика
-
+print("Тема: Дополнительная практика")
 # Задача 1: Сортировка списка строк по количеству гласных с использованием isinstance
 # Дан список `["engineer", 2, "artificial", 3.14, "intel"]`.
 # Отсортируйте только строки в списке по количеству гласных с помощью функции `sorted`,
 # предварительно проверив тип данных с помощью функции `isinstance`.
 # Ожидаемый результат: ['artificial', 'engineering', 'intelligence']
+print("--Задача 1: Сортировка списка строк по количеству гласных с использованием isinstance--")
 data = ["engineer", 2, "artificial", 3.14, "intel"]
 
 def count_vowels(word):
@@ -140,7 +152,8 @@ print(sorted_strings)
 # Отсортируйте списки по их минимальному значению, предварительно проверив,
 # что все элементы списков являются положительными, с помощью функции `all`.
 # Ожидаемый результат: [[3, 5, 1], [4, 4, 4]]
-
+print(76*"-")
+print("--Задача 2: Сортировка списка списков по минимальному значению элемента с использованием all--")
 lists = [[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]
 sorted_lists = sorted([lst for lst in lists if all(x > 0 for x in lst)], key=lambda x: min(x))
 print(sorted_lists)
@@ -156,6 +169,8 @@ print(sorted_lists)
 # [{'username': 'alice', 'status': 'ACTIVE'},
 # {'username': 'charlie', 'status': 'ACTIVE'},
 # {'username': 'bob', 'status': 'INACTIVE'}]
+print(76*"-")
+print("--Задача 3: Сортировка списка словарей по статусу пользователя и преобразование с помощью map--")
 users = [
     {"username": "alice", "status": "active"},
     {"username": "bob", "status": "inactive"},
@@ -171,6 +186,8 @@ print(sorted_users)
 # Отсортируйте URL по длине, а затем используйте функцию `filter`,
 # чтобы отобрать только те URL, которые содержат подстроку "example".
 # Ожидаемый результат: ['https://example.com', 'https://longexample.com/page']
+print(76*"-")
+print("-----Задача 4: Сортировка списка URL по длине и фильтрация с помощью filter-----")
 urls = [
     "https://example.com",
     "https://longexample.com/page",
@@ -186,7 +203,8 @@ print(filtered_urls)
 # `["/home", "/login", "/profile", "/settings"]`. Отсортируйте время выполнения по возрастанию,
 # а затем используйте функцию `zip`, чтобы объединить отсортированные времена выполнения с URL, и выведите результат.
 # Ожидаемый результат: [(30, '/home'), (90, '/login'), (120, '/profile'), (150, '/settings')]
-
+print(76*"-")
+print("--Задача 5: Сортировка списка запросов по времени выполнения и объединение с URL с помощью zip--")
 times = [120, 30, 150, 90]
 urls = ["/home", "/login", "/profile", "/settings"]
 sorted_times = sorted(times)
@@ -201,6 +219,8 @@ print(sorted_requests)
 # Отсортируйте ответы по статус-коду, а затем используйте функцию `zip` для объединения отсортированных ответов
 # с их порядковыми номерами, и функцию `map` для преобразования в кортежи вида (номер, url, статус).
 # Ожидаемый результат: [(0, '/api/user', 200), (1, '/api/admin', 403), (2, '/api/data', 404)]
+print(76*"-")
+print("--Задача 6: Сортировка списка API ответов по статус-коду и преобразование с помощью map и zip--")
 api_urls = [
     { "url": "/api/user", "status": 200 },
     { "url": "/api/admin", "status": 403 },
