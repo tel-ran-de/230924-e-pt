@@ -20,7 +20,6 @@ first_list = ["engineer", 2, "artificial", 3.14, "intel"]
 string_list = [x for x in first_list if isinstance(x , str)]
 sorted_list = sorted(string_list, key=count_vowels)
 
-
 print(sorted_list)
 
 # Задача 2: Сортировка списка списков по минимальному значению элемента с использованием all
