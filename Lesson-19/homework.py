@@ -91,6 +91,10 @@ with open('output.txt', 'r') as file:
 # 6. Переместите указатель в начало файла и прочитайте весь файл.
 
 
+
+
+
+
 # 1. Открытие файла для чтения и записи (если файл не существует, он будет создан)
 with open('pointer_example.txt', 'w+') as file:
     # 2. Запись строки "Python File Handling\n" в файл
@@ -224,15 +228,15 @@ with open('users.json', 'w') as file:
 
 import json
 
-# 1. Читаем массив объектов из файла 'users.json'
+# 1. Читаем из файла 'users.json'
 with open('users.json', 'r') as file:
     users = json.load(file)
 
-# 2. Удаляем пользователя по имени (например, "John Doe")
+# 2. Удаляем по имени (например, "John Doe")
 user_to_remove = "John Doe"
 users = [user for user in users if user['name'] != user_to_remove]
 
-# 3. Записываем обновленный массив обратно в файл 'users.json'
+# 3. обновленный массив в файл 'users.json'
 with open('users.json', 'w') as file:
     json.dump(users, file, indent=4)  # indent=4 для форматированного вывода
 Описание кода:
