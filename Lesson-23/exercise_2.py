@@ -55,3 +55,5 @@ if any_long_capital:
     print(sorted_countries)
 else:
     print('Ни одна длина значения capital не больше 6')
+
+# print(sorted(countries, key=lambda x: len(x['capital'])) if any_long_capital else 'Ни одна длина значения capital не больше 6')
