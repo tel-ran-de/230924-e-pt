@@ -2,6 +2,7 @@
 
 # 1. Напишите функцию sum_all, которая принимает произвольное количество числовых аргументов
 # с помощью *args и возвращает их сумму.
+
 def sum_all(*args):
     return sum(args)
 
@@ -18,8 +19,12 @@ def combine_lists(*args):
 print(combine_lists([1,2], [3, 4], [5, 6]))
 
 
+# 2. Напишите функцию combine_lists, которая принимает несколько списков в качестве аргументов с помощью *args
+# и возвращает один объединённый список.
+
 # 3. Напишите функцию print_details, которая принимает два аргумента name и age.
 # Затем создайте словарь с ключами name и age, распакуйте его и передайте в функцию print_details.
+
 def print_details(name, age):
     print(f'name: {name}, age: {age}')
 
@@ -30,6 +35,7 @@ print_details(**person)
 # 4. Напишите функцию filter_numbers, которая принимает произвольное количество числовых аргументов с помощью *args
 # и возвращает список только тех чисел, которые больше 10.
 
+
 def filter_numbers(*args):
     res_list = []
     for element in args:
@@ -38,3 +44,4 @@ def filter_numbers(*args):
     return res_list
 
 print(filter_numbers(1,11, 12, 3, 32, 5))
+

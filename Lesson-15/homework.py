@@ -35,6 +35,7 @@ print(is_palindrome("hello"))
 # 3. Напишите функцию `find_max(lst)`, которая возвращает максимальный элемент в списке `lst` с помощью рекурсии.
 # Пример использования:
 # print(find_max([1, 5, 3, 9, 2]))  # Вывод: 9
+
 print('Тема: Рекурсия. Задача 3.')
 def find_max(lst):
     if len(lst) == 1:
@@ -50,9 +51,16 @@ print(find_max([1, 5, 3, 9, 2]))
 
 # Тема: Дополнительная практика на рекурсию
 print('Тема: Дополнительная практика на рекурсию. Задача 1.')
+=======
+
+
+# Тема: Дополнительная практика на рекурсию
+
+
 # 1. Напишите функцию `sum_of_digits(n)`, которая возвращает сумму цифр числа `n` с помощью рекурсии.
 # Пример использования:
 # print(sum_of_digits(12345))  # Вывод: 15
+
 
 def sum_of_digits(n):
     if n < 10:
@@ -61,9 +69,11 @@ def sum_of_digits(n):
         return n % 10 + sum_of_digits(n // 10)
 print(sum_of_digits(123456))
 
+
 # 2. Напишите функцию `reverse_string(s)`, которая возвращает строку `s` в обратном порядке с помощью рекурсии.
 # Пример использования:
 # print(reverse_string("hello"))  # Вывод: "olleh"
+
 print('Тема: Дополнительная практика на рекурсию. Задача 2.')
 def reverse_string(s):
     if not s:
@@ -73,9 +83,11 @@ def reverse_string(s):
 
 print(reverse_string("hello"))
 
+
 # 3. Напишите функцию `list_length(lst)`, которая возвращает длину списка `lst` с помощью рекурсии.
 # Пример использования:
 # print(list_length([1, 2, 3, 4, 5]))  # Вывод: 5
+
 print('Тема: Дополнительная практика на рекурсию. Задача 3.')
 def list_length(lst):
     if not lst:
@@ -84,6 +96,7 @@ def list_length(lst):
         return 1 + list_length(lst[1:])
 
 print(list_length([1, 2, 3, 4, 5]))
+
 
 
 # Тема: Дополнительная практика на функции
@@ -101,7 +114,6 @@ def multiply_all(*args):
 
 print(multiply_all(1, 2, 3, 4))
 
-
 # 2. Напишите функцию `merge_dicts`, которая принимает произвольное количество словарей с помощью `**kwargs`
 # и возвращает один объединённый словарь.
 # Пример использования:
@@ -116,6 +128,7 @@ dict1 = {"a": 1, "b": 2}
 dict2 = {"c": 3, "d": 4}
 
 print(merge_dicts(**dict1, **dict2))
+
 
 # 3. Напишите функцию `make_flatten`, которая создаёт функцию `flatten`, превращающую вложенный список в одноуровневый.
 # Пример использования:
@@ -155,6 +168,7 @@ print(find_min([4, 2, 8, 1, 5]))
 # args = (1, 2, 3)
 # kwargs = {"name": "Alice", "age": 30}
 # show_info(*args, **kwargs)
+
 print('Тема: Дополнительная практика на функции. Задача 5.')
 def show_info(*args, **kwargs):
     print(f'Args: {args}')
@@ -164,6 +178,3 @@ args = (1, 2, 3)
 kwargs = {"name": "Alice", "age": 30}
 show_info(*args, **kwargs)
 
-# Вывод:
-# Args: (1, 2, 3)
-# Kwargs: {'name': 'Alice', 'age': 30}

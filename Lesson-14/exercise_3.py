@@ -3,6 +3,7 @@
 # 1. Напишите функцию create_user, которая принимает параметры username, email
 # и произвольное количество дополнительных данных с помощью **kwargs.
 # Функция должна возвращать словарь с информацией о пользователе.
+
 def create_user(username, email, **kwargs):
     kwargs['username'] = username
     kwargs['email'] = email

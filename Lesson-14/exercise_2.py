@@ -53,6 +53,8 @@ print(mult_by_2(5))
 mult_by_3 = make_multiplier(3)
 print(mult_by_3(5))
 
+
+
 # 4. Напишите функцию make_prefixer, которая принимает строку prefix и возвращает внутреннюю функцию prefixer.
 # Внутренняя функция должна добавлять prefix к любому переданному ей аргументу.
 # add_hello = make_prefixer("Hello, ")

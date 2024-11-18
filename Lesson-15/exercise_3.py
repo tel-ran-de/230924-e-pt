@@ -6,6 +6,12 @@
 # print(multiply_all(1, 2, 3, 4))  # Вывод: 24
 
 
+def multiply_all(*args):
+    if not args:
+        return 1
+    return args[0] * multiply_all(*args[1:])
+
+print(multiply_all(1, 2, 3, 4))
 # 2. Напишите функцию `merge_dicts`, которая принимает произвольное количество словарей с помощью `**kwargs`
 # и возвращает один объединённый словарь.
 # Пример использования:
