@@ -12,6 +12,7 @@
 # numbers = [5, 2, 9, 1, 5, 6]
 # sorted_numbers = sorted(numbers)
 # print(sorted_numbers)  # [1, 2, 5, 5, 6, 9]
+# print(numbers)
 
 
 # Пример 2: Сравнение различных типов данных
@@ -37,11 +38,11 @@
 # print(my_list)  # Вывод: ['kiwi', 'cherry', 'pineapple']
 
 
-# Пример 4: Сортировка списка кортежей и строк с учетом регистра
+# Пример 4: Сортировка списка кортежей и строк без учёта регистра
 # data = [(1, 'b'), (2, 'a'), (3, 'c')]
 # sorted_data = sorted(data, key=lambda x: x[1])  # Сортировка списка кортежей по второму элементу
 # print(sorted_data)  # Вывод: [(2, 'a'), (1, 'b'), (3, 'c')]
-#
+
 # words = ['banana', 'Apple', 'cherry', 'Date']
 # sorted_words = sorted(words)  # Сортировка списка строк
 # print(sorted_words)  # Вывод: ['Apple', 'Date','banana', 'cherry']
