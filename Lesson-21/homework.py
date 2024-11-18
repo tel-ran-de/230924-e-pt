@@ -2,7 +2,7 @@
 
 # Задание 1: Напишите функцию, которая создает итератор, возвращающий числа от 1 до заданного числа `n`.
 # Обработайте исключение StopIteration
-"""
+
 def generation_n_numbers(n):
     counter = 1
     while counter <= n:
@@ -95,7 +95,7 @@ for i in range(len(list(filter_by_word()))+1):
         print('Конец итерации')
 # Файл: data.txt
 
-x_word = 'this'"""
+x_word = 'this'
 
 # Задача 2: Чтение файла по частям и подсчет строк
 # Создайте генератор, который читает файл по частям заданного размера (например, 50 байт)
@@ -140,17 +140,17 @@ def lines_counter(filename = FILE_PATH, chunk_size = 60):
 gen = lines_counter()
 for i in range(15):
     print(next(gen))
-"""for item in range(len(list(lines_counter())) + 1):
+for item in range(len(list(lines_counter())) + 1):
     try:
         print(next(gen))
     except StopIteration:
-        print("Конец итерации")"""
+        print("Конец итерации")
 
 # Задача 3: Поиск строк, содержащих числа
 # Создайте генератор, который читает строки из файла и возвращает только те строки, которые содержат числа.
 # Файл: data.txt
 
-"""def digit_finder(filename = FILE_PATH):
+def digit_finder(filename = FILE_PATH):
     with open(filename, 'r') as file:
         for line in file.readlines():
             if any(char.isdigit() for char in line):
@@ -161,4 +161,3 @@ for i in range(len(list(digit_finder())) + 1):
         print(next(gen))
     except StopIteration:
         print("Конец итерации")
-"""
