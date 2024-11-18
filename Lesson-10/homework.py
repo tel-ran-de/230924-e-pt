@@ -19,6 +19,18 @@ while True:
         print("Вы угадали число")
         break
 
+print('Task # 1')
+guess_num = 63
+while True:
+    check_num = int(input('Введите число от 0 до 100: '))
+    if check_num > guess_num:
+        print("Вы ввели большее число")
+    elif check_num < guess_num:
+        print("Слишком маленькое число")
+    else:
+        print("Вы угадали число")
+        break
+print('Task # 2')
 # Упражнение 2: Проверка пароля
 #
 # Напишите программу, которая будет запрашивать у пользователя пароль до тех пор, пока не будет введен
@@ -42,6 +54,7 @@ while True :
      else:
        print('Превышено количество попыток')
        break
+
 
 # Упражнение 3: Работа со списком покупок
 #
@@ -83,6 +96,7 @@ while True:
     counter += 1
 
 
+
 # Тема: Цикл for
 
 # Упражнение 1: Подсчет гласных в строке
@@ -95,7 +109,18 @@ gls =0
 for letter in word:
         if letter in "aeiou":
           gls +=1
-print(gls)
+pr
+print('Тема: Цикл for Task # 1')
+check_string = 'aeiou'
+counter = 0
+word = input('введите слово: ')
+for letter in word:
+    if letter in check_string:
+        counter += 1
+print(f'в слове {word} всего {counter} гласных букв')
+
+
+print('Тема: Цикл for Task # 2')
 
 # Упражнение 2: Генерация и вывод последовательности чисел
 #
@@ -112,6 +137,20 @@ for i in range(1, 21):
         print('Buzz')
     else:
         print(i)
+
+for number in range(1, 21):
+    if number % 3 == 0:
+        if number % 5 == 0:
+         print("FizzBuzz")
+        else:
+            print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+
+print('project Управление библиотекой')
 
 # Проект 1: Управление библиотекой
 #
@@ -230,6 +269,7 @@ while True:
     else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
 
 
+
 print('project Управление библиотекой')
 
 # Проект 2: Анализ посещаемости на сайте
@@ -306,5 +346,4 @@ while True:
             print(34 * '-')
     else:
         print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
-
 

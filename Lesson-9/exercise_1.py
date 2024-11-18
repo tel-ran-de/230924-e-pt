@@ -14,6 +14,7 @@ price = [["bread ", 10], ["milk", 2], ["eggs", 3]]
 print(price)
 
 
+
 # Выведите список покупок, срез и вложенный список.
 # print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
 # print(slice_shopping_list)  # Ожидаемый результат: ["bread", "almond milk"]
@@ -26,7 +27,6 @@ print(price)
 # Измените имя второго студента на "Eve".
 # Создайте срез, содержащий студентов: "Bob", "Charlie".
 # Создайте вложенный список, где каждый студент имеет список своих оценок.
-
 
 students = ["Alice", "Bob", "Charlie", "David"]
 print(students)
@@ -52,7 +52,7 @@ print(students_grades)
 # Выведите список задач, срез и вложенный список.
 # print(tasks)  # Ожидаемый результат: ["task1", "task2", "task3 updated", "task4"]
 # print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
-# print(detailed_tasks)  # Ожидаемый результат: [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False]]
+# print(detailed_tasks)  # Ожидаемый результат: [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False
 
 
 tasks = ["task1", "task2", "task3", "task4"]

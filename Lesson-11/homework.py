@@ -1,7 +1,6 @@
 # Тема: Вложенные циклы
 
 
-
 # Упражнение 1: Проверка простых чисел в диапазоне
 #
 # Напишите программу, которая выводит все простые числа в диапазоне от 2 до 50.
@@ -9,7 +8,6 @@
 # Внутри вложенного цикла while используйте для проверки, является ли число простым.
 # Число является простым, если оно делится только на 1 и на само себя.
 # Для каждого числа в диапазоне от 2 до 50, проверьте, делится ли оно на любое число меньше него (кроме 1).
-
 
 numbers = list(range(2,51))
 simple = []
@@ -24,7 +22,6 @@ for num in numbers:
     if result:
         simple.append(num)
 print(simple)
-
 
 # Упражнение 2: Таблица умножения
 
@@ -61,11 +58,47 @@ for num1 in numbers:
     print()
 '''
 
+numbers = list(range(1,11))
+print(numbers)
+print(' '*4, end='')
+for num in numbers:
+    print(f'{num:4}', end='')
+print()
+print('-'*44)
+for num1 in numbers:
+    print(f'{num1:3}|', end='')
+    for num2 in numbers:
+        print(f'{num1*num2:4}', end='')
+    print()
+'''
 # Тема: Генераторы списков
 
 # Упражнение 1: Напишите программу с помощью генераторов списков,
 # которая находит все числа от 1 до 1000, которые делятся на 7.
 
+list_7 = [x for x in range(7,1001, 7)]
+print(list_7)
+
+
+
+# Упражнение 2: Напишите программу с помощь генераторов списков,
+# которая найдите все числа от 1 до 1000, в которых есть цифра 3.
+list_3 = [x for x in range(1,1001) if str(x).find('3') >= 0]
+print(list_3)
+
+# Упражнение 3: Напишите программу с помощь генераторов списков,
+# которая посчитает количество пробелов в строке
+some_string = 'the slow solid squid swam sumptuously through the slimy swamp'
+result = sum(1 for char in some_string if char==' ')
+print(result)
+
+# Упражнение 4: Напишите программу с помощь генераторов списков,
+# которая создаст список всех гласных букв в строке
+some_string = 'the quick brown fox jumps over the lazy dog'
+vowel_list = [x for x in some_string if x in 'eiuoa']
+print(vowel_list)
+
+=======
 list_7 = [x for x in range(7,1001, 7)]
 print(list_7)
 
@@ -131,10 +164,22 @@ matrix = [
      [19, 42, 31]
  ]
 
+even_odd = [[sum(1 for el in row if el % 2 == 0), sum(1 for el in row if el % 2 == 1)] for row in matrix]
+for row in even_odd:
+    print(f"Количество четных чисел: {row[0]}")
+    print(f"Количество нечетных чисел: {row[1]}")
+
+# Упражнение 7: Поиск минимального и максимального значения в матрице
+# Дана матрица
+matrix = [
+     [34, 23, 18],
+     [14, 55, 27],
+     [19, 42, 31]
+ ]
+
 # Напишите программу для вывода минимального и максимального значений в каждом ряду (вложенном списке) матрицы.
 min_max = [[min(row), max(row)] for row in matrix]
 print(min_max)
-
 
 # Упражнение 8: Перемножение матриц
 #
@@ -162,5 +207,18 @@ for row in product:
     print(row)
 print(product)
 #
+# - Выведите исходные матрицы и результат их произведения.
+
+product = [[sum([matrix1[k][i] * matrix2[i][j] for i in range(3)]) for j in range(3)] for k in range(3)]
+for row in matrix1:
+    print(row)
+print()
+for row in matrix2:
+    print(row)
+for row in product:
+    print(row)
+print(product)
+#
+
 # - Выведите исходные матрицы и результат их произведения.'''
 

@@ -29,6 +29,17 @@ print("\nКоординаты, отсортированные по оси x:")
 for coord in sorted_coordinates:
     print(coord)
 
+print(*coordinates)
+x_c = sum([x[0] for x in coordinates])
+y_c = sum([x[1] for x in coordinates])
+print(x_c, y_c)
+coordinates.append((70,80))
+print(*coordinates)
+coordinates[0] = (15, 25)
+print(*coordinates)
+x_sort = sorted([x[0] for x in coordinates])
+coordinates.sort()
+print(coordinates)
 
 
 # Задача 2: Обработка данных о продуктах
@@ -61,6 +72,15 @@ for product in sorted_products:
     print(product)
 
 
+
+for item in products:
+    print(item[0])
+
+pr_sum = sum([x[1] for x in products])
+print(pr_sum)
+products.append(('Date', 4))
+print(products)
+
 # Задача 3: Управление группами пользователей
 # У вас есть множество пользователей, и вам необходимо выполнить различные операции с этими данными.
 #
@@ -85,6 +105,8 @@ if "Alice" in users:
     print("\nПользователь 'Alice' есть в множестве.")
 
 print(f"\nКоличество пользователей: {len(users)}")
+# users = {"Alice", "Bob", "Charlie"}
+
 
 
 # Задача 4: Управление наборами данных
@@ -116,4 +138,5 @@ print("Разность множеств (set1 - set2):", difference)
 
 is_subset = set2.issubset(set1)
 print(f"\nЯвляется ли set2 подмножеством set1: {is_subset}")
+
 

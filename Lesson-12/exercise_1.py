@@ -32,6 +32,17 @@ del employees["Charlie"]
 for name, details in employees.items():
     print(f"Имя: {name}, Возраст: {details['age']}, Отдел: {details['department']}, Зарплата: {details['salary']}")
 
+     "Alice": {"age": 30, "department": "HR", "salary": 5000},
+     "Bob": {"age": 25, "department": "IT", "salary": 6000},
+     "Charlie": {"age": 35, "department": "Finance", "salary": 7000}
+ }
+for name in employees.keys():
+    print(name)
+salary = sum([ x['salary'] for x in employees.values()])
+print(salary)
+
+employees['David'] = {'age':28, 'department': 'IT', 'Salary': 6500}
+print(employees['David']['Salary'])
 
 
 # Задача 2: Управление запасами товаров
@@ -66,4 +77,5 @@ inventory["Dates"] = {"quantity": 15, "price": 4}
 
 total_value = sum(item["quantity"] * item["price"] for item in inventory.values())
 print(f"\nОбщая стоимость всех товаров: {total_value}")
+
 
