@@ -32,15 +32,15 @@ print(sorted_books)
 # Ожидаемый результат: [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
 
 tuples = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high"), (9, "the biggest 1")]
-tuples = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high")]
+tuples_2 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high")]
 
 all_tuples = all(all(word.isalpha() or word.isspace() for word in t[1]) for t in tuples)
 sorted_tuples = sorted(tuples, key=lambda x: len(x[1].split()) if all_tuples else 0)
 print(sorted_tuples)
 
-# all_tuples_2 = all(all(word.isalpha() or word.isspace() for word in t[1]) for t in tuples_2)
-# sorted_tuples = sorted(tuples, key=lambda x: len(x[1].split()) if all_tuples else 0)
-# print(sorted_tuples)
+all_tuples_2 = all(all(word.isalpha() or word.isspace() for word in t[1]) for t in tuples_2)
+sorted_tuples = sorted(tuples, key=lambda x: len(x[1].split()) if all_tuples else 0)
+print(sorted_tuples)
 
 # Задача 4: Сортировка списка словарей по длине значений с использованием any
 # Дан список словарей
