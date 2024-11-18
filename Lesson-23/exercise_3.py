@@ -1,11 +1,27 @@
 # Тема: Дополнительная практика
 
 # Задача 1: Сортировка списка строк по количеству гласных с использованием isinstance
-# Дан список `["engineer", 2, "artificial", 3.14, "intel"]`.
+# # Дан список `["engineer", 2, "artificial", 3.14, "intel"]`.
 # Отсортируйте только строки в списке по количеству гласных с помощью функции `sorted`,
 # предварительно проверив тип данных с помощью функции `isinstance`.
 # Ожидаемый результат: ['intel', 'engineer', 'artificial']
 
+
+
+
+
+def count_vowels(s):
+    vowels = "aeiouyAEIOUY"
+    return sum(1 for i in s if i in vowels)
+
+count_vowels("engineer")
+
+first_list = ["engineer", 2, "artificial", 3.14, "intel"]
+string_list = [x for x in first_list if isinstance(x , str)]
+sorted_list = sorted(string_list, key=count_vowels)
+
+
+print(sorted_list)
 
 # Задача 2: Сортировка списка списков по минимальному значению элемента с использованием all
 # Дан список списков `[[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]`.
@@ -13,6 +29,10 @@
 # что все элементы списков являются положительными, с помощью функции `all`.
 # Ожидаемый результат: [[3, 5, 1], [4, 4, 4]]
 
+
+# lis = [[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]
+# lis2 = [x for x in lis if all(x)>0 ]
+# print(lis2)
 
 # Задача 3: Сортировка списка словарей по статусу пользователя и преобразование с помощью map
 # **Задание:**
