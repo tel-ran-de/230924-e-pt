@@ -9,13 +9,16 @@ import datetime
 # 1. Получение текущей даты и времени
 # now = datetime.datetime.now()
 # print(now)  # Вывод: текущие дата и время, например, 2024-05-21 15:26:53.123456
+# print(type(now))
 #
-# # 2. Получение текущей даты
+# 2. Получение текущей даты
 # today = datetime.date.today()
 # print(today)  # Вывод: текущая дата, например, 2024-05-21
+# print(type(today))
 #
 # # 3. Создание объекта даты
 # my_date = datetime.date(2023, 5, 21)
+# # my_date = datetime.date(year=2023, month=5, day=21)
 # print(my_date)  # Вывод: 2023-05-21
 #
 # # 4. Создание объекта времени
@@ -30,13 +33,19 @@ import datetime
 # date_string = "2023-05-21 15:30:00"
 # date_object = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
 # print(date_object)  # Вывод: 2023-05-21 15:30:00
+# print(type(date_object))
+# print(type(date_string))
 #
 # # 7. Форматирование объекта даты и времени в строку (datetime -> строка)
 # now = datetime.datetime.now()
 # formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
 # formatted_date2 = now.strftime("%d.%m.%Y %H:%M:%S")
+# formatted_date3 = now.strftime("%W week %d %B'%y %A")
+# formatted_date4 = now.strftime("%W-ая неделя %Y-го года")
 # print(formatted_date)  # Вывод: 2024-05-21 15:26:53
 # print(formatted_date2)  # Вывод: 21.05.2024 15:26:53
+# print(formatted_date3)  # Вывод: 19 week 21 May'24 Thursday
+# print(formatted_date4)  # Вывод: Неделя 19 2024-го года
 #
 # # 8. Получение компонента даты или времени
 # now = datetime.datetime.now()
@@ -52,18 +61,19 @@ import datetime
 # date2 = datetime.date(2022, 5, 21)
 # difference = date1 - date2
 # print(difference)  # Вывод: timedelta(days=365)
+# print(type(difference))
 # print(difference.days)  # Вывод: 365
 #
 # # 10. Добавление или вычитание времени с использованием timedelta
 # now = datetime.datetime.now()
-# future = now + datetime.timedelta(days=10)
-# print(future)  # Вывод: дата и время через 10 дней от текущей
-#
+# future = now + datetime.timedelta(days=42)
+# print(future)  # Вывод: дата и время через 42 дня от текущей
+# #
 # past = now - datetime.timedelta(days=10, hours=2, minutes=30)
 # print(past)  # Вывод: дата и время 10 дней назад от текущей
 #
 # # 11. Работа с часовыми поясами
-# import pytz
+# import pytz  # pip install pytz
 #
 # utc = pytz.UTC
 # eastern = pytz.timezone('US/Eastern')
