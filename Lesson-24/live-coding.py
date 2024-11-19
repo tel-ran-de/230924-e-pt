@@ -96,7 +96,7 @@ import os
 # # 1. Получение текущей рабочей директории
 # current_directory = os.getcwd()
 # print(current_directory)  # Вывод: текущая рабочая директория
-#
+
 # # 2. Изменение текущей рабочей директории
 # os.chdir('../../QA422')
 # print(os.getcwd())  # Вывод: новая рабочая директория C:\Users\maks\PycharmProjects\QA422
@@ -106,6 +106,8 @@ import os
 # '..' - родительская директория
 # files_and_directories = os.listdir('..')
 # print(files_and_directories)  # Вывод: ['.gitignore', '.idea', '.venv', 'Lesson-10', 'Lesson-11', 'Lesson-12', 'Lesson-13', 'Lesson-14', 'Lesson-15', 'Lesson-16', 'Lesson-17', 'Lesson-18', 'Lesson-19', 'Lesson-2', 'Lesson-20', 'Lesson-21', 'Lesson-22', 'Lesson-23', 'Lesson-24', 'Lesson-3', 'Lesson-4', 'Lesson-5', 'Lesson-6', 'Lesson-7', 'Lesson-8', 'Lesson-9', 'manuals']
+# files_and_directories = os.listdir('.')
+# print(files_and_directories)  # ['examples.py', 'exercise_1.py', 'exercise_2.py', 'exercise_3.py', 'homework.py', 'live-coding.py', 'Урок 19. Модули  datetime и os.pptx']
 #
 # # 4. Создание новой директории
 # os.mkdir('new_directory')  # Создает директорию с именем 'new_directory'
@@ -120,8 +122,8 @@ import os
 # os.rename('old_name.txt', 'new_name.txt')  # Переименовывает 'old_name.txt' в 'new_name.txt'
 #
 # # 8. Проверка существования файла или директории
-# exists = os.path.exists('new_name.txt')
-# exists2 = os.path.exists('old_name.txt')
+# exists = os.path.exists('new_name.txt')  # True
+# exists2 = os.path.exists('old_name.txt')  # False
 # print(exists)  # Вывод: True, если файл существует, иначе False
 # print(exists2)  # Вывод: True, если файл существует, иначе False
 #
@@ -139,15 +141,14 @@ import os
 # os.removedirs('parent_directory/child_directory')  # Удаляет директорию 'child_directory' и пустую 'parent_directory'
 #
 # # 12. Выполнение системных команд
-# os.chdir('../../../Projects/141024-m-pt')
 # print(os.getcwd())
 # os.system('echo hello > file.txt')  # Выполняет команду echo в системной оболочке
 #
 # # 13. Получение значений переменных окружения
 # path = os.environ.get('PATH')
 # print(path)  # Вывод: значение переменной окружения PATH
-#
-# # 14. Установка значений переменных окружения
+# #
+# # # 14. Установка значений переменных окружения
 # os.environ['NEW_VAR'] = 'value'
 # print(os.environ['NEW_VAR'])  # Вывод: значение новой переменной окружения NEW_VAR
 #
