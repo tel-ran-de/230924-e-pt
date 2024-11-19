@@ -33,6 +33,27 @@ create_and_remove_directory()
 # Напишите программу, которая создает файл с именем "temp_file.txt", записывает в него строку "Temporary content",
 # затем переименовывает файл в "renamed_file.txt" и выводит список всех файлов в текущем каталоге.
 
+def create_and_rename_file():
+    original_file = "temp_file.txt"
+    renamed_file = "renamed_file.txt"
+
+    with open(original_file, "w") as file:  # запись строки
+        file.write("Temporary content")
+    print(f"Файл '{original_file}' создан и содержимое записано.")
+
+    if os.path.exists(original_file):   # Переименование файла
+        os.rename(original_file, renamed_file)
+        print(f"Файл '{original_file}' переименован в '{renamed_file}'.")
+    else:
+        print(f"Файл '{original_file}' не существует для переименования.")
+
+    # Список всех файлов
+    all_files = [f for f in os.listdir() if os.path.isfile(f)]
+    print("Список всех файлов в текущем каталоге:")
+    print(all_files)
+
+create_and_rename_file()
+
 
 # Задача 3: Проверка существования файла
 # Напишите программу, которая проверяет существование файла с именем "example.txt" в текущем каталоге.
