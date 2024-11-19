@@ -143,6 +143,151 @@ print('+========================+')
 # 6. Вывести список товаров меньше определнной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
 
+import json
+
+def load_inventory():
+    try:
+        with open('inventory.json', 'r') as file:
+            inventory = json.load(file)
+    except FileNotFoundError:
+        inventory = []
+        print('Файл не найден! Создание нового списка.')
+    return inventory
+
+
+
+def save_inventory(inventory):
+    try:
+        with open('inventory.json', 'w') as file:
+            json.dump(inventory, file)
+    except IOError as e:
+        print('Ошибка сохранения файла')
+
+def show_inventory():
+    inventory = load_inventory()
+    if not inventory:
+        print('\nСписок товаров пуст.')
+        return
+    print('\nСписок товаров:')
+    for item in inventory:
+        print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}")
+
+def add_item():
+    try:
+        inventory = load_inventory()
+        product_name = input('Введите название товара: ')
+        price_item = float(input('Введите цену: '))
+        count_item = int(input('Введите количество: '))
+        inventory.append({'product': product_name, 'price': price_item, 'count': count_item})
+        save_inventory(inventory)
+        print(f"product: {product_name}, price: {price_item}, count: {count_item} добавлен в список товаров.")
+    except ValueError:
+        print('Цена и количество должны быть числами.')
+
+
+def delete_items():
+    try:
+        inventory = load_inventory()
+        delete_item = input('Какой товар вы хотите удалить: ')
+        for item in inventory:
+            if item['product'] == delete_item:
+                inventory.remove(item)
+                save_inventory(inventory)
+                print(f'product: {delete_item} удален!')
+            else:
+                print('Продукт не найден.')
+    except IOError:
+        print("Ошибка обработки файла!")
+
+
+def update_item():
+    try:
+        inventory = load_inventory()
+        name_item = input('Введите название товара для обновления: ')
+        for item in inventory:
+            if item['product'] == name_item:
+                items = input("Что вы хотите обновить: product, price, count: ").lower()
+                if items == 'product':
+                    item['product'] = input('Введите новое название товара: ')
+                elif items == 'price':
+                    item['price'] = float(input('Введите новую цену товара: '))
+                elif items == 'count':
+                    item['count'] = int(input('Введите новое количество товара: '))
+                else:
+                    print('Продукт не найден.')
+                save_inventory(inventory)
+                print(f'Продукт {item['product']} обновлён.')
+                return
+    except ValueError:
+        print('Цена и количество должны быть числами.')
+    except IOError as e:
+        print("Ошибка обработки файла!")
+
+
+def find_item():
+    inventory = load_inventory()
+    name_item = input('Введите название товара для поиска: ')
+    for item in inventory:
+        if item['product'] == name_item:
+            print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}")
+            return
+    else:
+        print('Продукт не найден.')
+
+def below_price():
+    try:
+        inventory = load_inventory()
+        below_item_price = float(input('Введите определенную стоимость: '))
+        print(f'\nТовары меньше {below_item_price} стоимости:')
+        for item in inventory:
+            if item['price'] < below_item_price:
+                print(f'Товар: {item['product']}')
+    except ValueError:
+        print('Цена товара должно быть числом.')
+
+def below_count():
+    try:
+        inventory = load_inventory()
+        below_item_count = int(input('Введите определенное количество: '))
+        print(f'\nТовары меньше количества {below_item_count}')
+        for item in inventory:
+            if item['count'] < below_item_count:
+                print(f'Товар: {item['product']}')
+    except ValueError:
+        print('Количество товара должно быть числом.')
+
+
+while True:
+    print('\nМеню:')
+    print('1. Показать список товаров.')
+    print('2. Добавить товар.')
+    print('3. Удалить товар.')
+    print('4. Обновить название товара, стоимость или количество.')
+    print('5. Найти товар по названию.')
+    print('6. Вывести список товаров меньше определенной стоимости.')
+    print('7. Вывести список товаров меньше определенного количества.')
+    print('8. Выйти.')
+
+    choice = input('Выберите действие: ')
+    if choice == '1':
+        show_inventory()
+    elif choice == '2':
+        add_item()
+    elif choice == '3':
+        delete_items()
+    elif choice == '4':
+        update_item()
+    elif choice == '5':
+        find_item()
+    elif choice == '6':
+        below_price()
+    elif choice == '7':
+        below_count()
+    elif choice == '8':
+        print('Программа завершена')
+        break
+    else:
+        print('Неверный набор.')
 
 
 
