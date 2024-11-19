@@ -1,0 +1,37 @@
+[
+    {
+        "product": "Laptop",
+        "price": 1000,
+        "count": 13,
+        "created_at": "2024-11-20 01:39:15",
+        "updated_at": "2024-11-20 01:39:15"
+    },
+    {
+        "product": "Mouse",
+        "price": 34.0,
+        "count": 45,
+        "created_at": "2024-11-20 01:39:15",
+        "updated_at": "2024-11-20 01:49:02"
+    },
+    {
+        "product": "Keyboard",
+        "price": 30,
+        "count": 33,
+        "created_at": "2024-11-20 01:39:15",
+        "updated_at": "2024-11-20 01:39:15"
+    },
+    {
+        "product": "Monitor",
+        "price": 200,
+        "count": 10,
+        "created_at": "2024-11-20 01:39:15",
+        "updated_at": "2024-11-20 01:39:15"
+    },
+    {
+        "product": "ddr4",
+        "price": 234.0,
+        "count": 532,
+        "created_at": "2024-11-20 02:00:14",
+        "updated_at": "2024-11-20 02:00:14"
+    }
+]
