@@ -29,28 +29,35 @@ print('+==============================+')
 # Ожидаемый результат: [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 
 data = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
-sorted_data =
-
+sorted_data = data.sort(key=lambda x: x[1])
+print(data)
+print('+==============================+')
 # Задача 4: Сортировка списка словарей по значению ключа
 # Дан список словарей `[{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 20 }, { "name": "Charlie", "age": 23 }]`.
 # Отсортируйте список по значению ключа `age` с помощью функции `sorted`.
 # Ожидаемый результат: [{'name': 'Bob', 'age': 20}, {'name': 'Charlie', 'age': 23}, {'name': 'Alice', 'age': 25}]
-
-
+data = [{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 20 }, { "name": "Charlie", "age": 23 }]
+sorted_data = sorted(data, key=lambda x: x['age'])
+print(sorted_data)
+print('+==============================+')
 # Задача 5: Сортировка списка кортежей по сумме элементов
 # Дан список кортежей `[(3, 5), (1, 7), (4, 2), (6, 3)]`.
 # Отсортируйте кортежи по сумме их элементов с помощью метода `sort`.
 # Ожидаемый результат: [(4, 2), (3, 5), (6, 3), (1, 7)]
-
-
+tuples_data = [(3, 5), (1, 7), (4, 2), (6, 3)]
+tuples_data.sort(key=lambda x: sum(x))
+print(tuples_data)
+print('+==============================+')
 # Тема: Cортировка с all, any, isinstance
 
 # Задача 1: Сортировка списка строк с проверкой типов
 # Дан список `["tree", 3, "mountain", 1, "river", 2]`.
 # Отсортируйте только строки в списке по алфавиту с помощью функции `sorted`,
 # Ожидаемый результат: ['mountain', 'river', 'tree']
-
-
+str_list = ["tree", 3, "mountain", 1, "river", 2]
+sorted_list = sorted([x for x in str_list if isinstance(x, str)])
+print(sorted_list)
+print('+==============================+')
 # Задача 2: Сортировка списка словарей по значению ключа с проверкой типов
 # Дан список словарей
 # [{ "title": "Book A", "price": 15.99 }, { "title": "Book B", "price": "free" }, { "title": "Book C", "price": 9.99 }].
@@ -58,6 +65,11 @@ sorted_data =
 # с помощью функции `isinstance`.
 # Ожидаемый результат: [{'title': 'Book C', 'price': 9.99}, {'title': 'Book A', 'price': 15.99}]
 
+tuples_data = [{ "title": "Book A", "price": 15.99 }, { "title": "Book B", "price": "free" }, { "title": "Book C", "price": 9.99 }]
+filter_data = [i for i in tuples_data if isinstance(i['price'],(int, float))]
+sorted_data = sorted(filter_data, key=lambda x: x['price'])
+print(sorted_data)
+print('+==============================+')
 
 # Задача 3: Сортировка списка кортежей по количеству слов с использованием all
 # Дан список кортежей `[(3, "high"), (1, "low"), (4, "medium"), (6, "very high")]`.
@@ -65,7 +77,12 @@ sorted_data =
 # что все строки содержат только алфавитные символы, с помощью функции `all`.
 # Ожидаемый результат: [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
 
+tuples_data = [(3, "high"), (1, "low"), (4, "medium"), (6, "very high")]
+filter_data = [i for i in tuples_data if isinstance(i[1],str) and all(word.isalpha() for word in i[1].split())]
+sorted_tuples = sorted(filter_data, key=lambda x: len(x[1].split()))
+print(sorted_tuples)
 
+print('+==============================+')
 # Задача 4: Сортировка списка словарей по длине значений с использованием any
 # Дан список словарей
 # [{ "country": "USA", "capital": "Washington" }, { "country": "UK", "capital": "London" },
