@@ -20,13 +20,13 @@ import os
 # затем переименовывает файл в "renamed_file.txt" и выводит список всех файлов в текущем каталоге.
 
 
-with open ("temp_file.txt" , "w") as file:
-    file.write("Temporary content")
-    os.rename("temp_file.txt" , "renamed_file.txt")
-
-curr_dir2 = os.listdir('.')
-dir_list2 = [item for item in curr_dir2]
-print(f"List of all files in current directory :{dir_list2}")
+# with open ("temp_file.txt" , "w") as file:
+#     file.write("Temporary content")
+#     os.rename("temp_file.txt" , "renamed_file.txt")
+#
+# curr_dir2 = os.listdir('.')
+# dir_list2 = [item for item in curr_dir2]
+# print(f"List of all files in current directory :{dir_list2}")
 
 
 # Задача 3: Проверка существования файла
@@ -34,8 +34,20 @@ print(f"List of all files in current directory :{dir_list2}")
 # Если файл существует, программа должна вывести его размер в байтах. Если файл не существует,
 # программа должна вывести сообщение "Файл не найден".
 
+try :
+    size = os.path.getsize("example.txt")
+    print(size)
+
+except FileNotFoundError :
+    print ('Файл не найден !')
+
+
 
 # Задача 4: Сравнение размеров файлов
 # Напишите программу, которая принимает два имени файлов в текущем каталоге, сравнивает их размеры и выводит,
 # какой из файлов больше. Если размеры файлов равны, программа должна вывести сообщение "Файлы имеют одинаковый размер".
 
+
+
+size1 = os.path.getsize('file1')
+size2 = os.path.getsize('file2')
