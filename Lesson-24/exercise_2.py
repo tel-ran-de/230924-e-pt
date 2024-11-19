@@ -3,7 +3,31 @@
 # Задача 1: Создание и удаление директории
 # Напишите программу, которая создает новую директорию с именем "test_directory", выводит список всех директорий
 # в текущем каталоге, а затем удаляет созданную директорию.
+import os
 
+
+def create_and_remove_directory():
+    dir_name = "test_directory"
+
+    if not os.path.exists(dir_name):
+        os.mkdir(dir_name)
+        print(f"Директория '{dir_name}' создана.")
+    else:
+        print(f"Директория '{dir_name}' уже существует.")
+
+    all_dirs = [d for d in os.listdir() if os.path.isdir(d)]
+    print("Список всех директорий в текущем каталоге:")
+    print(all_dirs)
+
+    if os.path.exists(dir_name): # Удаление
+        os.rmdir(dir_name)
+        print(f"Директория '{dir_name}' удалена.")
+    else:
+        print(f"Директория '{dir_name}' не существует для удаления.")
+
+
+# Вызов функции
+create_and_remove_directory()
 
 # Задача 2: Переименование файла
 # Напишите программу, которая создает файл с именем "temp_file.txt", записывает в него строку "Temporary content",
