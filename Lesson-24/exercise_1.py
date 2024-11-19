@@ -29,16 +29,13 @@ print(f"Ваш возраст: {age} лет")
 # оставшихся до этой даты.
 
 def days_until_event(event_date):
-    # Преобразование строки в объект даты
-    event_date = datetime.strptime(event_date, "%Y-%m-%d").date()
+    event_date = datetime.strptime(event_date, "%Y-%m-%d").date()   # Преобразование строки в объект даты
     today = datetime.today().date()
 
-    # Вычисление разницы в днях
-    days_remaining = (event_date - today).days
+    days_remaining = (event_date - today).days  # Вычисление разницы в днях
 
-    # Проверка на прошедшую дату
     if days_remaining < 0:
-        return "Мероприятие уже прошло!"
+        return "Мероприятие уже прошло!"    # Проверка на прошедшую дату
     return days_remaining
 
 event_date_input = input("Введите дату следующего мероприятия в формате YYYY-MM-DD: ")

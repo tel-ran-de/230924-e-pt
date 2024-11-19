@@ -60,20 +60,40 @@ create_and_rename_file()
 # Если файл существует, программа должна вывести его размер в байтах. Если файл не существует,
 # программа должна вывести сообщение "Файл не найден".
 
+def check_file_existence():
+    file_name = "examples.py"
+
+    if os.path.exists(file_name) and os.path.isfile(file_name):
+        file_size = os.path.getsize(file_name)
+        print(f"Файл '{file_name}' существует. Его размер: {file_size} байт.")
+    else:
+        print(f"Файл '{file_name}' не найден.")
+
+check_file_existence()
+
 
 # Задача 4: Сравнение размеров файлов
 # Напишите программу, которая принимает два имени файлов в текущем каталоге, сравнивает их размеры и выводит,
 # какой из файлов больше. Если размеры файлов равны, программа должна вывести сообщение "Файлы имеют одинаковый размер".
 
-def file_sizes():
-    file1 = input("Введите имя первого файла: ")
-    file2 = input("Введите имя второго файла: ")
+def compare_file_sizes(file1, file2):
+    if not os.path.exists(file1):
+        print(f"Файл '{file1}' не найден.")
+        return
+    if not os.path.exists(file2):
+        print(f"Файл '{file2}' не найден.")
+        return
 
-    if os.path.getsize(file1) > os.path.getsize(file2):
-        print(f"Файл '{file1}' больше. Его размер: {size1} байт.")
-    elif os.path.getsize(file1) < os.path.getsize(file2):
-        print(f"Файл '{file2}' больше. Его размер: {size2} байт.")
+    size1 = os.path.getsize(file1)
+    size2 = os.path.getsize(file2)
+
+    if size1 > size2:
+        print(f"Файл '{file1}' больше, его размер: {size1} байт.")
+    elif size1 < size2:
+        print(f"Файл '{file2}' больше, его размер: {size2} байт.")
     else:
         print("Файлы имеют одинаковый размер.")
 
-file_sizes()
+file_name1 = input("Введите имя первого файла: ")
+file_name2 = input("Введите имя второго файла: ")
+compare_file_sizes(file_name1, file_name2)
