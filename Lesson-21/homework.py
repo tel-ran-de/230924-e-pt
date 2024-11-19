@@ -6,32 +6,33 @@
 
 
 
+
 class NumberIterator:
     def __init__(self, n):
-        self.n = n,  "Максимальное число"
-        self.current = 1,  "число, начинается итерация"
+        self.n = n
+        self.current = 1,   "начинаем с 1"
 
     def __iter__(self):
-        return self,  "Возвращаем  итератор"
+        return self
 
     def __next__(self):
-        if self.current > self.n:  # Если текущее число больше n, остановим итератор
+        if self.current > self.n:
             raise StopIteration
         current_value = self.current
-        self.current += 1  # Переходим к следующему числу
+        self.current += 1
         return current_value
 
-# Функция для создания итератора
+
+"Пример"
+n = 5
+iterator = NumberIterator(n)
+for num in iterator:
+    print(num)
+
+
+"создания итератора"
 def create_number_iterator(n):
     return NumberIterator(n)
-
-# Пример использования
-n = 5,  "Максимальное число"
-iterator = create_number_iterator(n)
-
-for number in iterator:
-    print(number),"Вывод"
-
 
 
 
@@ -44,19 +45,19 @@ for number in iterator:
 
 
 
-#def square_generator():
-#    for i in range(11):  # от 0 до 10 включительно
-#        yield i ** 2  # возвращаем квадрат числа
 
-#"использования генератора"
-#gen = square_generator()
+"Генератор квадратов"
 
-# Печать всех квадратов
-#try:
-#    while True:
-#       print(next(gen))  # Получаем следующее значение из генератора
-#except StopIteration:
-#    print("Итерация завершена!")
+squares_generator = (x**2 for x in range(11))
+
+"Обработка StopIteration"
+try:
+    while True:
+        square = next(squares_generator)
+        print(square)
+except StopIteration:
+    pass
+
 
 
 
@@ -67,24 +68,24 @@ for number in iterator:
 
 
 
+
+
 "Функция-генератор"
 
 
 def word_generator(sentence):
-    words = sentence.split()  # Разделяем предложение на слова
+    words = sentence.split(),  "Разделяем на слова"
     for word in words:
-        yield word  # Возвращаем слово по одному
+        yield word
 
-# Пример использования функции-генератора
+"Пример"
 sentence = "Python is an awesome programming language"
 
-# Создаем генератор
 generator = word_generator(sentence)
 
-# Используем next() для извлечения слов и обработку исключения StopIteration
 try:
     while True:
-        word = next(generator)  # Получаем следующее слово
+        word = next(generator)
         print(word)
 except StopIteration:
     print("Все слова")
@@ -99,33 +100,24 @@ except StopIteration:
 # def square_generator():
 #     for i in range(11):  # от 0 до 10 включительно
 #         yield i ** 2  # возвращаем квадрат числа
-#
-# # Пример использования генератора
-# gen = square_generator()
-#
-# # Печать всех квадратов
-# try:
-#     while True:
-#         print(next(gen))  # Получаем следующее значение из генератора
-# except StopIteration:
-#     print("Итерация завершена!")
 
 
 
 
-#def generate_numbers():
-#   for i in range(1, 11):
-#       if i % 2 == 0:
-#           yield i * 2,  "Если число четное, удваиваем его"
-#       else:
-#           yield i,  "число нечетное, возвращаем без изменений"
 
 
-#result_set = set(generate_numbers())
+def square_numbers():
+    for x in range(11):
+        yield x**2
 
-#"Вывод"
+"Пример"
 
-#print(result_set)
+squares_generator = square_numbers()
+
+for square in squares_generator:
+    print(square)
+
+
 
 
 
@@ -139,31 +131,15 @@ except StopIteration:
 
 
 
-def multiples_of_three():
-    for i in range(1, 21):  # от 1 до 20 включительно
-        if i % 3 == 0:  # проверяем, кратно ли число 3
-            yield i  # если кратно 3, возвращаем это число
+def multiples_of_3():
+    for i in range(1, 21):
+        if i % 3 == 0:
+            yield i,   "возвращаем"
 
-# Создаем генератор
-gen = multiples_of_three()
+result = sum(multiples_of_3())
 
-# Используем функцию sum() для подсчета суммы чисел из генератора
-total_sum = sum(gen)
+print(result)
 
-# Выводим результат
-print(f"Сумма чисел от 1 до 20, кратных 3: {total_sum}")
-
-
-def multiples_of_three():
-#   for num in range(1, 21):
-        if num % 3 == 0:
-            yield num
-
-
-result_sum = sum(multiples_of_three())
-
-"Вывод"
-print(result_sum)
 
 
 
@@ -181,7 +157,7 @@ print(result_sum)
 def word_lengths(sentence):
     words = sentence.split(),
     for word in words:
-        yield len(word),  "Возвращаем длину слова"
+        yield len(word)
 
 "строка"
 
@@ -193,10 +169,8 @@ min_length = min(word_lengths(sentence))
 max_length = max(word_lengths(sentence))
 
 # Выводим результаты
-print(f"Минимальная длина слова: {min_length}")
-print(f"Максимальная длина слова: {max_length}")
-
-
+print(f"Мини: {min_length}")
+print(f"Макс: {max_length}")
 
 
 
@@ -216,23 +190,24 @@ x_word = 'this'
 
 
 
-def keyword_filter(filename, x_word):
+"Генератор"
 
 
-#   with open(filename, 'r') as file:
+def filter_lines_by_keyword(filename, keyword):
+    keyword = keyword.lower(),       "нижний регистр"
+    with open(filename, 'r') as file:
+        for line in file:
+            if keyword in line.lower():
+                yield line.strip(),  "Возвращаем строку"
 
-#       for line in file:
-            "Приводим строку и ключевое слово к нижнему регистру для нечувствительности к регистрy"
 
-            if x_word.lower() in line.lower():
-                yield line.strip()  # Возвращаем строку без символов новой строки
+"Пример"
 
-"Пример использования генератора"
-filename = 'data.txt'
-keyword = 'Python'
+filename = 'data.txt'  # Имя файла
+x_word = 'python'  # Ключевое слово для фильтрации
 
-# Используем генератор для получения строк, содержащих ключевое слово
-for line in keyword_filter(filename, keyword):
+# Читаем и выводим строки, которые содержат ключевое слово
+for line in filter_lines_by_keyword(filename, x_word):
     print(line)
 
 
@@ -249,27 +224,22 @@ for line in keyword_filter(filename, keyword):
 
 
 
-# Генератор, который возвращает длины слов из строки
-
 def word_lengths(sentence):
-    words = sentence.split()  # Разделяем строку на слова
-    for word in words:
-        yield len(word)  # Возвращаем длину каждого слова
+    for word in sentence.split():
+        yield len(word),   "Возвращаем длину"
 
-# Заданная строка
+
 sentence = "Write a generator that returns word lengths from a given sentence"
 
-# Создаем генератор
-gen = word_lengths(sentence)
+"длин слов"
 
-# Используем функции min() и max() для нахождения минимальной и максимальной длины слов
-min_length = min(gen)  # Минимальная длина
-gen = word_lengths(sentence)  # Перезапускаем генератор, так как он исчерпан после первого использования
-max_length = max(gen)  # Максимальная длина
+lengths = word_lengths(sentence)
 
-# Выводим результаты
-print(f"Минимальная длина слова: {min_length}")
-print(f"Максимальная длина слова: {max_length
+min_length = min(lengths)
+max_length = max(lengths)
+
+print("Мини:", min_length)
+print("Макс:", max_length)
 
 
 
@@ -282,24 +252,25 @@ print(f"Максимальная длина слова: {max_length
 # Файл: data.txt
 
 
-import re
 
 
-def lines_with_numbers(file_path):
-    with open(file_path, 'r') as file:
+
+def filter_lines_with_numbers(filename):
+    with open(filename, 'r') as file:
         for line in file:
-            # Используем регулярное выражение для поиска чисел
             if re.search(r'\d', line):
-                yield line.strip()  # Возвращаем строку, убрав лишние пробелы
+                yield line.strip(),  "Возвращаем строку"
 
-# Пример использования генератора
-file_path = 'data.txt'  # Путь к вашему файлу
+"Пример"
+filename = 'data.txt'
 
-# Используем генератор для вывода строк, содержащих числа
-for line in lines_with_numbers(file_path):
+for line in filter_lines_with_numbers(filename):
     print(line)
 
 
 
 
+
+##########################################################################################
+##########################################################################################
 ##########################################################################################

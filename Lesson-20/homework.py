@@ -12,20 +12,20 @@
 
 def divide_numbers(a, b):
     try:
-        "Преобразуем в числа (если они еще не числа)"
+        "в числа "
 
         a = float(a)
         b = float(b)
 
-        "Выполнение деления"
+        "деления"
         result = a / b
         return result
 
     except ZeroDivisionError:
-        return "Ошибка: Деление на ноль невозможно."
+        return "Ошибка: Деление невозможно."
 
     except (ValueError, TypeError):
-        return "Ошибка: Введены некорректные значения. Пожалуйста, введите числа."
+        return " введите числа."
 
 
 "Примеры использования"
@@ -87,7 +87,7 @@ get_square()
 # import math
 #
 # def calculate_square_root(number):
-#     # Добавьте проверку на отрицательное число и возбуждение исключения
+#
 #
 #     return math.sqrt(number)
 #
@@ -98,7 +98,7 @@ get_square()
 #     except ValueError as e:
 #         print(f"Ошибка: {e}")
 #
-# # Тесты функции
+#
 # safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
 # safe_calculate_square_root(-9)  # Ожидаемый результат: Ошибка: Число должно быть положительным
 
@@ -130,8 +130,6 @@ def safe_calculate_square_root(number):
 # Тесты функции
 safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
 safe_calculate_square_root(-9)  # Ожидае
-
-
 
 
 
@@ -192,7 +190,7 @@ def load_inventory(filename="inventory.json"):
     except FileNotFoundError:
         return []
     except json.JSONDecodeError:
-        print("Ошибка: Невозможно прочитать файл, возможно он поврежден.")
+        print("")
         return []
 
 

@@ -20,7 +20,7 @@
 
 import random
 
-"Список слов для игры"
+"Список слов "
 word_list = ['python', 'programming', 'developer', 'hangman', 'computer', 'algorithm']
 
 "штрафных очков"
@@ -31,64 +31,67 @@ max_tries = 6
 
 
 def play_hangman():
+
     "случайное слово"
     word = random.choice(word_list)
     word_length = len(word)
 
-    "хранения угаданных букв"
+    "хранения  букв"
     guessed_letters = set()
 
-    "списка скрытых букв (звездочек)"
+    "скрытых букв "
     hidden_word = ['*' for _ in range(word_length)]
 
-    "штрафных очков"
+    "штраф очков"
     attempts_left = max_tries
 
     print("'Виселица'!")
 
-    "игровой цикл"
+
 
     while attempts_left > 0:
         print("\nТекущее слово: " + ' '.join(hidden_word))
-        print(f"Осталось попыток: {attempts_left}")
+        print(f"попыток: {attempts_left}")
 
 
-        guess = input("Введите букву: ").lower()
+        guess = input("букву: ").lower()
 
 
         if len(guess) != 1 or not guess.isalpha():
-            print("Пожалуйста, введите букву.")
+            print("букву.")
             continue
 
         if guess in guessed_letters:
-            print(f"Вы уже угадывали букву '{guess}'. Попробуйте другую.")
+            print(f"угадывали букву '{guess}'.")
             continue
 
-        "букву в список угаданных"
+        "список"
         guessed_letters.add(guess)
 
 
         if guess in word:
-            print(f"Отлично! Буква '{guess}' есть в слове.")
+            print(f"Буква '{guess}'.")
             for i in range(word_length):
                 if word[i] == guess:
                     hidden_word[i] = guess
         else:
             attempts_left -= 1
-            print(f"Увы! Буквы '{guess}' нет в слове.")
+            print(f"Буквы'{guess}' нет .")
 
 
         if '*' not in hidden_word:
-            print("\nПоздравляем! Вы угадали слово:", word)
+            print("\n угадали слово:", word)
             break
 
-    "попытки закончились, проигрыш"
+    "закончились"
     if attempts_left == 0:
-        print("\nВы проиграли! Слово было:", word)
+        print("\n Слово:", word)
 
 
 "Запуск"
 if __name__ == "__main__":
     play_hangman()
+
+################################################################################
 
 

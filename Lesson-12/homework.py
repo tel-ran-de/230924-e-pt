@@ -12,7 +12,7 @@
 # 5. Удалите сотрудника "Charlie".
 # 6. Выведите данные о каждом сотруднике в формате:
 # "Имя: {name}, Возраст: {age}, Отдел: {department}, 
-Зарплата
+"Зарплата"
 # employees = {
 #     "Alice": {"age": 30, "department": "HR", "salary": 5000},
 #     "Bob": {"age": 25, "department": "IT", "salary": 6000},

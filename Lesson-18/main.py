@@ -37,3 +37,60 @@ def main():
 # 4. Виселица - hangman.py
 # 5. Текстовый квест - text_adventure.py
 # 6. Сапер - minesWeeper.py
+
+
+
+
+import guess_number
+import rock_paper_scissors
+import quiz_game
+import hangman
+import text_adventure
+import minesweeper
+
+
+##############################################################################3
+
+
+def main():
+    while True:
+        # Меню
+        print("\nДобро пожаловать в Game Hub!")
+        print("1. Угадай число")
+        print("2. Камень, ножницы, бумага")
+        print("3. Викторина")
+        print("4. Виселица")
+        print("5. Текстовый квест")
+        print("6. Сапер")
+        print("7. Выход")
+
+        try:
+            choice = int(input("Выберите игру (1-7): "))
+
+            if choice == 1:
+                guess_number.play_game(),         ("Угадай число")
+            elif choice == 2:
+                rock_paper_scissors.play_game(),  ("Камень, ножницы, бумага")
+            elif choice == 3:
+                quiz_game.play_game(),            ("Викторина")
+            elif choice == 4:
+                hangman.play_game(),              ("Виселица")
+            elif choice == 5:
+                text_adventure.play_game(),       ("Текстовый квест")
+            elif choice == 6:
+                minesweeper.play_game(),          ("Сапер")
+            elif choice == 7:
+                print("Выход")
+                break
+            else:
+                print("от 1 до 7.")
+
+        except ValueError:
+            print("Ошибка")
+
+
+if __name__ == "__main__":
+    main()
+
+
+#################################################################################################3

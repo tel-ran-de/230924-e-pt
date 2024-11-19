@@ -8,6 +8,9 @@
 # Ожидаемый результат: [1, 4, 9, 16, 25]
 
 
+
+
+
 def square(x):
     return x ** 2
 
@@ -55,6 +58,8 @@ print(even_numbers)
 
 
 
+
+
 names = ["Alice", "Bob", "Charlie"]
 ages = [25, 30, 35]
 
@@ -81,7 +86,7 @@ def to_int(string):
     return int(string)
 
 str_numbers = ["1", "2", "3", "4", "5"]
-print (list(str_stirng)
+print (list(str_stirng))
 
 
 
@@ -164,19 +169,24 @@ print(list(result))
 
 
 
-# Генератор, который читает строки из файла
+
 def read_lines(filename):
     with open(filename, 'r') as file:
         for line in file:
-            yield line.strip()  # Убираем лишние пробелы и символы новой строки
+            yield line.strip()  "лишние пробелы"
 
-# Используем фильтрацию для строк, содержащих слово "Python"
+"Используем фильтрацию"
+
 lines = read_lines('example.txt')
 
-# Применяем filter для отбора строк, содержащих "Python"
+
+"Применяем filter"
+
 filtered_lines = filter(lambda line: 'Python' in line, lines)
 
-"map для преобразования строк в верхний регистр"
+
+"map в верхний регистр"
+
 uppercase_lines = map(lambda line: line.upper(), filtered_lines)
 
 for line in uppercase_lines:
@@ -201,11 +211,9 @@ def celsius_generator():
     for celsius in range(-10, 11):
         yield celsius
 
-# Используем map для конвертации температур в Фаренгейты
 celsius_values = celsius_generator()
 fahrenheit_values = map(lambda c: (9/5) * c + 32, celsius_values)
 
-# Преобразуем результат в список и выводим
 print(list(fahrenheit_values))
 
 
@@ -223,10 +231,10 @@ print(list(fahrenheit_values))
 
 words = ["hello", "world", "python", "is", "awesome"]
 
-# Используем filter для отбора строк, длина которых больше 5 символов
+"Используем filter"
+
 long_words = filter(lambda word: len(word) > 5, words)
 
-# Преобразуем результат в список и выводим
 print(list(long_words))
 
 
@@ -244,28 +252,27 @@ print(list(long_words))
 
 
 
-# Генератор для чисел от 1 до 3
-def numbers_generator():
+
+
+def number_generator():
     for i in range(1, 4):
         yield i
 
-# Генератор для кубов чисел от 1 до 3
-def cubes_generator():
+
+"Генератор для кубов"
+
+def cube_generator():
     for i in range(1, 4):
         yield i ** 3
 
-# Создаем два генератора
-numbers = numbers_generator()
-cubes = cubes_generator()
 
-# Используем zip для объединения генераторов
-zipped = zip(numbers, cubes)
+"генераторов с zip"
 
-# Применяем map с лямбда функцией для форматирования
-formatted_result = map(lambda x: f"{x[0]}: {x[1]}", zipped)
+result = list(map(lambda x: f"{x[0]}: {x[1]}", zip(number_generator(), cube_generator())))
 
-# Преобразуем результат в список и выводим
-print(list(formatted_result))
+
+print(result)
+
 
 
 
@@ -279,22 +286,24 @@ print(list(formatted_result))
 
 
 
-# Генератор для чтения строк из файла
+
 def read_lines(filename):
     with open(filename, 'r') as file:
         for line in file:
             yield line.strip()  # Убираем символы новой строки и лишние пробелы
 
-# Чтение строк из файла
+
+
 lines = read_lines('data.txt')
 
-# Используем filter для отбора строк, содержащих числа
+
+
 lines_with_numbers = filter(lambda line: any(char.isdigit() for char in line), lines)
 
-# Используем map для преобразования строк в целые числа (поиск чисел в строках)
+
+
 numbers = map(lambda line: int(''.join(filter(str.isdigit, line))), lines_with_numbers)
 
-# Выводим результат
 print(list(numbers))
 
 
@@ -309,29 +318,39 @@ print(list(numbers))
 
 
 
-# Генератор для чтения строк из первого файла
+
+
 def read_file1(filename):
     with open(filename, 'r') as file:
         for line in file:
-            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+            yield line.strip()
 
-# Генератор для чтения строк из второго файла
+
 def read_file2(filename):
     with open(filename, 'r') as file:
         for line in file:
-            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+            yield line.strip()
 
-# Чтение строк из файлов
+"Чтение строк"
+
 file1_lines = read_file1('file1.txt')
 file2_lines = read_file2('file2.txt')
 
-# Используем zip для объединения строк из двух файлов
+
+
+"zip объединения строк из двух файлов"
+
 zipped_lines = zip(file1_lines, file2_lines)
 
-# Применяем map с лямбда функцией для вывода в нужном формате
+
+
+"map с лямбда функцией для вывода в формате"
+
 formatted_lines = map(lambda x: f"{x[0]} - {x[1]}", zipped_lines)
 
-# Выводим результат
+
+"Вывод"
+
 for line in formatted_lines:
     print(line)
 

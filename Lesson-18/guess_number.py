@@ -27,27 +27,27 @@ def guess_the_number():
     while attempts_left > 0:
         "ввод числа"
         try:
-            guess = int(input(f"\n осталось {attempts_left} попыток. Введите ваше число: "))
+            guess = int(input(f"\n {attempts_left}  ваше число: "))
         except ValueError:
-            print("Пожалуйста, введите корректное число.")
+            print(" корректное число.")
             continue
 
         "попытку в список"
         attempts.append(guess)
 
         if guess == secret_number:
-            print(f"\nОтлично! угадали число {secret_number} с {7 - attempts_left} попытки!")
+            print(f"\n угадали число {secret_number} с {7 - attempts_left} ")
             break
         elif guess < secret_number:
             print("число больше.")
         else:
             print("число меньше.")
 
-        attempts_left -= 1,   "Уменьшаем попыток"
+        attempts_left -= 1,
 
-    "попытки закончились"
+
     if attempts_left == 0:
-        print(f"\n не угадали число. Загаданное число было: {secret_number}")
+        print(f"\n не угадали число.{secret_number}")
 
 "Вывод"
 #   print("\nВаши попытки:", attempts)

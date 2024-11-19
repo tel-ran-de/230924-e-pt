@@ -10,31 +10,34 @@
 
 
 
-with open('data.txt', 'r') as file:
-    # 2. Прочитаем весь контент файла и выведем его на экран
+filename = 'data.txt'
+
+
+
+with open(filename, 'r') as file:
     content = file.read()
-    print("Полный контент файла:")
+    print("Весь контент файла:")
     print(content)
+    print("\n")
 
-    # 3. Прочитаем первые 10 символов файла и выведем их
-    file.seek(0)  # Сбрасываем указатель файла на начало
+with open(filename, 'r') as file:
     first_10_chars = file.read(10)
-    print("\nПервые 10 символов файла:")
+    print("10 символов файла:")
     print(first_10_chars)
+    print("\n")
 
-    # 4. Прочитаем одну строку из файла и выведем её
-    file.seek(0)  # Сбрасываем указатель файла на начало
+with open(filename, 'r') as file:
     first_line = file.readline()
-    print("\nПервая строка файла:")
+    print("Первая строка файла:")
     print(first_line)
+    print("\n")
 
-    # 5. Прочитаем все строки файла и выведем их на экран
-    file.seek(0)  # Сбрасываем указатель файла на начало
+with open(filename, 'r') as file:
     all_lines = file.readlines()
-    print("\nВсе строки файла:")
+    print("Все строки файла:")
     for line in all_lines:
-        print(line, end='')  # Используем end='', чтобы не добавлять лишний символ новой
-
+        print(line, end='')
+    print("\n")
 
 
 
@@ -53,23 +56,19 @@ with open('data.txt', 'r') as file:
 
 
 
-
- "Открытие файла для записи"
 with open('output.txt', 'w') as file:
 
-    "Записываем строку"
-    file.write("Hello, World!\n")
 
-    "Записываем список строк"
-    file.writelines(["This is line 1\n", "This is line 2\n"])
+    file.write("Hello, World!\n"),
 
-"Открытие файла для чтения и вывод его содержимого"
+
+    file.writelines(["This is line 1\n", "This is line 2\n"]),
+
+
+
 with open('output.txt', 'r') as file:
     content = file.read()
     print(content)
-
-
-
 
 
 
@@ -95,29 +94,42 @@ with open('output.txt', 'r') as file:
 
 
 
-# 1. Открытие файла для чтения и записи (если файл не существует, он будет создан)
+"1.Открытие файла"
+
 with open('pointer_example.txt', 'w+') as file:
-    # 2. Запись строки "Python File Handling\n" в файл
+
+    "2. Запись строки"
+
     file.write("Python File Handling\n")
 
-    # 3. Перемещение указателя в начало файла и чтение первой строки
-    file.seek(0)  # Перемещаем указатель в начало файла
+
+
+    "3. Перемещение"
+
+    file.seek(0)
     first_line = file.readline()
     print(f"Первая строка: {first_line}")
 
-    # 4. Перемещение указателя на позицию 7 и чтение следующих 5 символов
-    file.seek(7)  # Перемещаем указатель на позицию 7
-    five_chars = file.read(5)  # Читаем 5 символов
-    print(f"5 символов начиная с позиции 7: {five_chars}")
 
-    # 5. Перемещение указателя в конец файла и добавление строки "End of file\n"
-    file.seek(0, 2)  # Перемещаем указатель в конец файла (позиция 2 означает конец)
+
+    "4. Перемещение позиции"
+
+    file.seek(7)
+    five_chars = file.read(5)
+    print(f"5 символов с 7: {five_chars}")
+
+
+
+    "5. Перемещение в конец файла "
+
+    file.seek(0, 2)  ("позиция 2 - конец")
     file.write("End of file\n")
 
-    # 6. Перемещение указателя в начало файла и чтение всего содержимого
-    file.seek(0)  # Перемещаем указатель в начало файла
-    content = file.read()  # Читаем весь файл
-    print(f"Содержимое файла:\n{content}")
+    "6. Перемещение указателя в начало файла "
+
+    file.seek(0)
+    content = file.read()
+    print(f":\n{content}")
 
 
 
@@ -136,18 +148,24 @@ with open('pointer_example.txt', 'w+') as file:
 
 import json
 
-# 1. Создаем словарь с информацией о пользователе
+
+"1. Создаем словарь"
+
 user_info = {
     "name": "John Doe",
     "age": 30,
     "city": "New York"
 }
 
-# 2. Записываем этот словарь в файл user.json с использованием менеджера контекста
+
+"2. Записываем этот словарь"
+
 with open('user.json', 'w') as file:
     json.dump(user_info, file)
 
-# 3. Читаем данные из файла user.json и выводим их на экран
+
+"3. Читаем данные"
+
 with open('user.json', 'r') as file:
     data = json.load(file)
     print("Данные из файла user.json:")
@@ -168,16 +186,17 @@ with open('user.json', 'r') as file:
 
 import json
 
-# 1. Читаем данные из файла 'user.json'
+
 with open('user.json', 'r') as file:
     user_info = json.load(file)
 
-# 2. Обновляем возраст пользователя на 29 лет
+
 user_info['age'] = 29
 
-# 3. Записываем обновленные данные обратно в файл 'user.json'
+
 with open('user.json', 'w') as file:
-    json.
+    json
+
 
 
 
@@ -196,11 +215,12 @@ with open('user.json', 'w') as file:
 
 import json
 
-# 1. Читаем массив объектов из файла 'users.json'
+
 with open('users.json', 'r') as file:
     users = json.load(file)
 
-# 2. Добавляем нового пользователя в массив
+
+
 new_user = {
     "name": "Alice Smith",
     "age": 28,
@@ -208,9 +228,11 @@ new_user = {
 }
 users.append(new_user)
 
-# 3. Записываем обновленный массив обратно в файл 'users.json'
+
+
 with open('users.json', 'w') as file:
-    json.dump(users, file, indent=4)  # indent=4 добавляет форматирование для улучшения читаемости
+    json.dump(users, file, indent=4)
+
 
 
 
@@ -228,19 +250,21 @@ with open('users.json', 'w') as file:
 
 import json
 
-# 1. Читаем из файла 'users.json'
+
+
 with open('users.json', 'r') as file:
     users = json.load(file)
 
-# 2. Удаляем по имени (например, "John Doe")
+
+
 user_to_remove = "John Doe"
 users = [user for user in users if user['name'] != user_to_remove]
 
-# 3. обновленный массив в файл 'users.json'
-with open('users.json', 'w') as file:
-    json.dump(users, file, indent=4)  # indent=4 для форматированного вывода
-Описание кода:
 
+
+
+with open('users.json', 'w') as file:
+    json.dump(users, file, indent=4),   "вывод"
 
 
 
@@ -280,20 +304,25 @@ inventory = [
 
 import json
 
-# Функция для загрузки данных из файла
+
 def load_inventory():
     try:
         with open('inventory.json', 'r') as file:
             return json.load(file)
     except FileNotFoundError:
-        return []  # Если файл не найден, возвращаем пустой список
+        return [],   "возвращаем пустой список"
 
-# Функция для сохранения данных в файл
+#  сохранения данных
 def save_inventory(inventory):
     with open('inventory.json', 'w') as file:
         json.dump(inventory, file, indent=4)
 
-# 1. Показать список товаров
+
+
+" 1.  список товаров"
+
+
+
 def show_inventory(inventory):
     if inventory:
         print("Список товаров:")
@@ -302,7 +331,12 @@ def show_inventory(inventory):
     else:
         print("Инвентарь пуст.")
 
-# 2. Добавить товар
+
+
+" 2. Добавить товар"
+
+
+
 def add_product(inventory):
     product = input("Введите название товара: ")
     price = float(input("Введите цену товара: "))
@@ -311,7 +345,12 @@ def add_product(inventory):
     save_inventory(inventory)
     print(f"Товар {product} добавлен.")
 
-# 3. Удалить товар
+
+
+" 3. Удалить товар"
+
+
+
 def remove_product(inventory):
     product = input("Введите название товара для удаления: ")
     inventory = [item for item in inventory if item['product'] != product]
@@ -319,7 +358,12 @@ def remove_product(inventory):
     print(f"Товар {product} удален.")
     return inventory
 
-# 4. Обновить товар
+
+
+" 4. Обновить товар"
+
+
+
 def update_product(inventory):
     product = input("Введите название товара для обновления: ")
     for item in inventory:
@@ -340,37 +384,46 @@ def update_product(inventory):
     print(f"Товар {product} не найден.")
     return inventory
 
-# 5. Найти товар по названию
+
+
+" 5. Найти товар"
+
+
+
 def find_product(inventory):
-    product = input("Введите название товара для поиска: ")
+    product = input("Введите название товара : ")
     found = [item for item in inventory if item['product'].lower() == product.lower()]
     if found:
         for item in found:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товар с названием {product} не найден.")
+        print(f" с названием {product} не найден.")
 
-# 6. Вывести товары с ценой меньше заданной
+" 6. Вывести товары"
+
 def show_products_under_price(inventory):
-    price = float(input("Введите максимальную цену: "))
+    price = float(input(" максимальную цену: "))
     filtered = [item for item in inventory if item['price'] < price]
     if filtered:
         for item in filtered:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товары с ценой ниже {price} не найдены.")
+        print(f" с ценой ниже {price} не найдены.")
 
-# 7. Вывести товары с количеством меньше заданного
+" 7. Вывести товары"
 def show_products_under_count(inventory):
-    count = int(input("Введите минимальное количество товара: "))
+    count = int(input("минимальное количество : "))
     filtered = [item for item in inventory if item['count'] < count]
     if filtered:
         for item in filtered:
             print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
     else:
-        print(f"Товары с количеством меньше {count} не найдены.")
+        print(f" меньше {count} не найдены.")
 
-# Основное меню
+
+    "меню"
+
+
 def main():
     inventory = load_inventory()
 
@@ -385,7 +438,7 @@ def main():
         print("7. Вывести товары с количеством меньше заданного")
         print("8. Выход")
 
-        choice = input("Выберите действие (1-8): ")
+        choice = input(" действие (1-8): ")
 
         if choice == '1':
             show_inventory(inventory)
@@ -402,13 +455,15 @@ def main():
         elif choice == '7':
             show_products_under_count(inventory)
         elif choice == '8':
-            print("Выход из программы.")
+            print("Выход")
             break
         else:
-            print("Неверный выбор. Попробуйте снова.")
+            print("снова.")
 
 if __name__ == '__main__':
     main()
+
+
 
 
 ###########################################################################################

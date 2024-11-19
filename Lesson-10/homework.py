@@ -1,10 +1,6 @@
 # FIXED
 
 # Тема: Цикл while. Операторы break, continue, else.
- ollga-faruk-l10
-from itertools import product
-from operator import attrgetter
- ollga-faruk
 
 # Упражнение 1: Поиск числа
 #
@@ -25,7 +21,7 @@ while True:
     else:
         print("Вы угадали число")
         break
- main
+"main"
 
 print('Task # 1')
 guess_num = 63
@@ -39,7 +35,7 @@ while True:
         print("Вы угадали число")
         break
 print('Task # 2')
-=======
+
 
 # Упражнение 2: Проверка пароля
 #
@@ -79,7 +75,7 @@ while True:
     if attempt == attempt_num:
         break
     print(f'{attempt_num - attempt} attempt(s) remain!')
-print('Task # 3'
+print('Task # 3')
 articles_list = []
 article_num = 6
 stop_word = 'стоп'
@@ -106,7 +102,7 @@ while True:
             print(f'{index}. {item}')
         break
     articles_list.append(article)
-    counter +=
+    counter +=()
 
 #password = "python123"
 #attempts = 0
@@ -129,7 +125,7 @@ while True:
 
 
 
- ollga-faruk
+
 
 # Упражнение 3: Работа со списком покупок
 #
@@ -141,7 +137,7 @@ while True:
 # то программа должна вывести: “Превышен лимит покупок.” и завершиться.
 # Перед завершением программа должна выводить итоговый список покупок и общее количество элементов в нем.
 
- ollga-faruk-l10
+
 #shopping_list = []
 #max_produkt = 6
 #
@@ -210,7 +206,7 @@ for i in range(1, 21):
         print('Buzz')
     else:
         print(i)
- main
+"main"
 
 for number in range(1, 21):
     if number % 3 == 0:
@@ -273,12 +269,12 @@ while True:
         print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
         print(60 * '-')
         for index, book in enumerate(library, 1):
-            print(f'|{(3 - len(str(index)))*' '}{index} |'
-                  f'{(13 - len(book[1]))*' '}{book[1]} |'
-                  f'{(25 - len(book[0]))*' '}{book[0]} |'
-                  f'{(10 - len(book[2]))*' '}{book[2]} |')
-            print(60 * '-')
-    elif choice == 2:
+#            print(f'|{(3 - len(str(index)))*' '}{index} |'
+#                  f'{(13 - len(book[1]))*' '}{book[1]} |'
+#                  f'{(25 - len(book[0]))*' '}{book[0]} |'
+#                  f'{(10 - len(book[2]))*' '}{book[2]} |')
+#            print(60 * '-')
+#    elif choice == 2:
         add_title = input('введите название книги: ')
         add_author = input('введите автора книги: ')
         library.append([add_title, add_author, 'в наличии'])
@@ -349,11 +345,11 @@ while True:
             print(60 * '-')
             for index, book in enumerate(status_list, 1):
                 print(f'|{(3 - len(str(index))) * ' '}{index} |'
-                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
-                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
-                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
-                print(60 * '-')
-    elif choice == 0:
+#                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
+#                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
+#                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
+#                print(60 * '-')
+#    elif choice == 0:
         print('Вы покинули программу')
         break
     else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')

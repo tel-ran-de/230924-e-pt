@@ -40,9 +40,8 @@ if __name__ == "__main__":
 
 
 
-# import math_operations
+ import math_operations
 
-"использования функций"
 
 a = 10
 b = 5
@@ -94,7 +93,6 @@ def round_and_sqrt(ceil_num, floor_num):
 #   print(f"Число {floor_num} округлено вниз до {floor_rounded}, квадратный корень: {sqrt_floor}")
 
 
-   "Пример"
 round_and_sqrt(7.3, 15.8)
 
 
@@ -129,7 +127,7 @@ def factorial_and_power(number):
 #   print(f"Результат возведения в степень {digits_count}: {result}")
 
 
-# Пример использования
+
 factorial_and_power(5)
 
 
@@ -174,7 +172,7 @@ shuffle_and_choose()
 
 
 
-#import math
+import math
 
 
 def drop_fraction_and_factorial(number):
@@ -182,15 +180,33 @@ def drop_fraction_and_factorial(number):
     integer_part = math.floor(number)
 
     "факториал"
+
     factorial_result = math.factorial(integer_part)
 
-#    print(f"Число {number} после отбрасывания дробной части: {integer_part}")
-#    print(f"Факториал {integer_part} равен: {factorial_result}")
+#   print(f"Число {number} после дробной части: {integer_part}")
+#   print(f"Факториал {integer_part} равен: {factorial_result}")
 
 
 "Пример"
 
 drop_fraction_and_factorial(7.85)
+
+
+
+import math
+
+# Ввод дробного числа
+decimal_number = float(input("Введите дробное число: "))
+
+# Отбрасываем дробную часть
+integer_part = int(decimal_number)
+
+# Вычисляем факториал целого числа
+factorial_result = math.factorial(integer_part)
+
+# Выводим результат
+print(f"Целая часть числа: {integer_part}")
+print(f"Факториал числа")
 
 
 
@@ -203,24 +219,23 @@ drop_fraction_and_factorial(7.85)
 
 
 
-#import random
-#import math
+
+import random
+import math
 
 
-def generate_and_round():
-    "Генерация числа в диапазоне от 1.5 до 10.5"
-    random_number = random.uniform(1.5, 10.5)
-
-    "Округление вниз и вверх"
-    rounded_down = math.floor(random_number)
-    rounded_up = math.ceil(random_number)
-
-#    print(f"Сгенерированное число: {random_number}")
-#    print(f"Округлено вниз: {rounded_down}, округлено вверх: {rounded_up}")
+random_number = random.uniform(1.5, 10.5)
 
 
-generate_and_round()
+rounded_down = math.floor(random_number)
 
+
+rounded_up = math.ceil(random_number)
+
+
+print(f"Сгенерированное число: {random_number}")
+print(f"в меньшую сторону: {rounded_down}")
+print(f" в большую сторону: {rounded_up}")
 
 
 

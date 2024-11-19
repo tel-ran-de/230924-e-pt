@@ -7,6 +7,9 @@
 # не одержит на три победы больше, чем соперник. В конце показывается итоговый счет и объясляется победитель.
 
 
+
+
+
 import random
 
 
@@ -16,27 +19,27 @@ choices = ['камень', 'ножницы', 'бумага']
 "игры"
 
 def play_game():
-    user_score = 0,  "пользователя"
-    computer_score = 0,  "компьютера"
+    user_score = 0,
+    computer_score = 0,
 
-    "разница в победах не станет 3"
     while abs(user_score - computer_score) < 3:
         "выбор"
 
-        user_choice = input("ваш выбор (камень, ножницы, бумага): ").lower()
+        user_choice = input("(камень, ножницы, бумага):").lower()
 
         "ввод"
 
         if user_choice not in choices:
-            print("Некорректный ввод. выберите: камень, ножницы или бумага.")
+            print(" выберите: камень, ножницы или бумага.")
             continue
 
-        "Компьютер выбор"
+        "Комп"
 
         computer_choice = random.choice(choices)
         print(f"Компьютер выбрал: {computer_choice}")
 
-        "Определение победителя"
+        "Определение"
+
         if user_choice == computer_choice:
             print("Ничья!")
         elif (user_choice == 'камень' and computer_choice == 'ножницы') or \
@@ -45,18 +48,18 @@ def play_game():
             print("Вы выиграли!")
             user_score += 1
         else:
-            print("Компьютер выиграл!")
+            print("Комп !")
             computer_score += 1
 
 
-        print(f"Текущий счет: Вы - {user_score}, Компьютер - {computer_score}")
+        print(f"Текущий счет: {user_score}, Компьютер - {computer_score}")
 
     "победителя"
 
     if user_score > computer_score:
-        print("\nПоздравляем! Вы выиграли игру!")
+        print("\n выиграли ")
     else:
-        print("\nК сожалению, вы проиграли игру. Компьютер победил!")
+        print("\nК победил!")
 
 
 # Запуск игры
