@@ -1,50 +1,115 @@
 # Тема: Модуль datetime
-
+from datetime import datetime
 # Задача 1: Определение текущей даты и времени
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
 # Пример: 2024-06-11 14:35:45
-
-
+# now = datetime.now()
+# now_date = now.strftime('%Y-%m-%d %H:%M:%S')
+# print(now_date)
+print('+========================+')
 # Задача 2: Вычисление возраста
 # Напишите программу, которая принимает дату рождения пользователя в формате "YYYY-MM-DD" и вычисляет его возраст.
-
-
+# def calculate_age(birth_date):
+#     birth_date = datetime.strptime(birth_date, "%d.%m.%Y")
+#     today = datetime.today()
+#     result = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+#     return result
+#
+#
+# # Пример использования
+# bd = input("Введите дату рождения в формате DD.MM.YYYY: ")
+# age = calculate_age(bd)
+# print(f"Ваш возраст: {age} лет")
+print('+========================+')
 # Задача 3: Расчет дней до следующего мероприятия
 # Напишите программу, которая принимает дату следующего мероприятия в формате "YYYY-MM-DD" и выводит количество дней,
 # оставшихся до этой даты.
-
-
+# today = datetime.today().date()
+# event_date_input = input("Введите дату в формате YYYY-MM-DD: ")
+# event_date = datetime.strptime(event_date_input, '%Y-%m-%d').date()
+# delta = event_date - today
+# print(f'Осталось {delta.days}')
+print('+========================+')
 # Задача 4: Определение дня недели
 # Напишите программу, которая принимает дату в формате "YYYY-MM-DD" и выводит день недели для этой даты.
-
-
+# date_input = input("Введите дату в формате YYYY-MM-DD: ")
+# date = datetime.strptime(date_input, "%Y-%m-%d")
+#
+# day_of_week = date.strftime("%A")
+#
+# print(f'День недели для даты: {date_input} будет {day_of_week}')
+print('+========================+')
 # Задача 5: Сравнение двух дат
 # Напишите программу, которая принимает две даты в формате "YYYY-MM-DD" и определяет, какая из них позже.
-
-
+# date_1_input = input("Введите первую дату в формате YYYY-MM-DD: ")
+# date_2_input = input("Введите вторую дату в формате YYYY-MM-DD: ")
+#
+# date_1 = datetime.strptime(date_1_input, '%Y-%m-%d').date()
+# date_2 = datetime.strptime(date_2_input, '%Y-%m-%d').date()
+# if date_1 > date_2:
+#     print(f"Дата {date_1} позже, чем {date_2}")
+# elif date_1 < date_2:
+#     print(f"Дата {date_2} позже, чем {date_1}")
+# else:
+#     print("Обе даты одинаковы.")
+print('+========================+')
 # Тема: Модуль os
 
 # Задача 1: Создание и удаление директории
 # Напишите программу, которая создает новую директорию с именем "test_directory", выводит список всех директорий
 # в текущем каталоге, а затем удаляет созданную директорию.
+import os
 
 
+# directory_new = "test_directory"
+# os.mkdir(directory_new)
+#
+# file_dir = os.listdir('.')
+# for i in os.listdir('.'):
+#     if os.path.isdir(i):
+#         print(i)
+
+# os.rmdir(directory_new)
+print('+========================+')
 # Задача 2: Переименование файла
 # Напишите программу, которая создает файл с именем "temp_file.txt", записывает в него строку "Temporary content",
 # затем переименовывает файл в "renamed_file.txt" и выводит список всех файлов в текущем каталоге.
-
-
+# file_1 = "temp_file.txt"
+# with open(file_1, 'w') as file:
+#     file.write("Temporary content")
+#
+# file_2 = "renamed_file.txt"
+# # os.rename(file_1, file_2)
+# for i in os.listdir('.'):
+#     if os.path.isfile(i):
+#         print(i)
+print('+========================+')
 # Задача 3: Проверка существования файла
 # Напишите программу, которая проверяет существование файла с именем "example.txt" в текущем каталоге.
 # Если файл существует, программа должна вывести его размер в байтах. Если файл не существует,
 # программа должна вывести сообщение "Файл не найден".
-
-
+# new_file = "examples.py"
+# if os.path.exists(new_file):
+#
+#     print(os.path.getsize(new_file))
+# else:
+#     print("Файл не найден")
+print('+========================+')
 # Задача 4: Сравнение размеров файлов
 # Напишите программу, которая принимает два имени файлов в текущем каталоге, сравнивает их размеры и выводит,
 # какой из файлов больше. Если размеры файлов равны, программа должна вывести сообщение "Файлы имеют одинаковый размер".
-
-
+# file_1 = input('Введите имя файла 1: ')
+# file_2 = input('Введите имя файла 2: ')
+# size_1 = os.path.getsize(file_1)
+# size_2 = os.path.getsize(file_2)
+#
+# if size_1 < size_2:
+#     print(f'{file_2} больше {file_1}' )
+# elif size_1 > size_2:
+#     print(f'{file_1} больше {file_2}')
+# else:
+#     print("Файлы имеют одинаковый размер")
+print('+========================+')
 # Тема: Интеграционная практика.
 
 # Проект: Перепишите проект из уроков 7-8, 14-15, добавив в него фичи 1 - 3 на основе модулей datetime и os.
