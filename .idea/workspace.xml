@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="задача 1 практика 2 урок 24 выполнена">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение практики 2 урок 24">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_2.py" afterDir="false" />
     </list>
@@ -217,7 +217,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732045260554</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1732045442948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732045442948</updated>
+    </task>
+    <task id="LOCAL-00008" summary="выполнение практики 2 урок 24">
+      <option name="closed" value="true" />
+      <created>1732045690948</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732045690948</updated>
+    </task>
+    <task id="LOCAL-00009" summary="выполнение практики 2 урок 24">
+      <option name="closed" value="true" />
+      <created>1732045697689</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732045697689</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,9 +259,10 @@
     <MESSAGE value="решение урока 18" />
     <MESSAGE value="добавление нового урока 24" />
     <MESSAGE value="практика 1 урок 24 выполнена" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="задача 1 практика 2 урок 24 выполнена" />
-    <option name="LAST_COMMIT_MESSAGE" value="задача 1 практика 2 урок 24 выполнена" />
+    <MESSAGE value="перезапись" />
+    <MESSAGE value="выполнение практики 2 урок 24" />
+    <option name="LAST_COMMIT_MESSAGE" value="выполнение практики 2 урок 24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
