@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение практики 2 урок 24">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-24/renamed_file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-24/temp_file.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.exercise_1.executor": "Run",
-    "Python.exercise_2.executor": "Run",
-    "Python.hwtest10.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Viktor-Yerokhov-h24",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.exercise_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exercise_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hwtest10.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Viktor-Yerokhov-h24&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.exercise_2">
     <configuration name="exercise_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="230924-e-pt" />
@@ -241,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732045697689</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1732049529035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732049529035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,9 +270,9 @@
     <MESSAGE value="добавление нового урока 24" />
     <MESSAGE value="практика 1 урок 24 выполнена" />
     <MESSAGE value="задача 1 практика 2 урок 24 выполнена" />
-    <MESSAGE value="перезапись" />
     <MESSAGE value="выполнение практики 2 урок 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="выполнение практики 2 урок 24" />
+    <MESSAGE value="перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
