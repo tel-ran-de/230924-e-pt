@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_3.py" afterDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="практика 3 урок 24" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +270,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732049529035</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1732053775790</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732053775790</updated>
+    </task>
+    <task id="LOCAL-00012" summary="перезапись">
+      <option name="closed" value="true" />
+      <created>1732053780859</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732053780859</updated>
+    </task>
+    <task id="LOCAL-00013" summary="практика 3 урок 24">
+      <option name="closed" value="true" />
+      <created>1732053795724</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732053795724</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,7 +315,8 @@
     <MESSAGE value="задача 1 практика 2 урок 24 выполнена" />
     <MESSAGE value="выполнение практики 2 урок 24" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="практика 3 урок 24" />
+    <option name="LAST_COMMIT_MESSAGE" value="практика 3 урок 24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
