@@ -275,11 +275,11 @@ while True:
 #                  f'{(10 - len(book[2]))*' '}{book[2]} |')
 #            print(60 * '-')
 #    elif choice == 2:
-        add_title = input('введите название книги: ')
-        add_author = input('введите автора книги: ')
-        library.append([add_title, add_author, 'в наличии'])
-        print(f'книга с названием {add_title} автор {add_author} добавлена в библиотеку!')
-    elif choice == 3:
+#        add_title = input('введите название книги: ')
+#        add_author = input('введите автора книги: ')
+#        library.append([add_title, add_author, 'в наличии'])
+#        print(f'книга с названием {add_title} автор {add_author} добавлена в библиотеку!')
+#    elif choice == 3:
         delete_title = input('введите название книги для удаления: ')
         delete_author = input('введите автора книги для удаления: ')
         for index, book in enumerate(library):
