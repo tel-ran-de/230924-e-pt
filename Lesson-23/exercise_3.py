@@ -1,11 +1,26 @@
 # Тема: Дополнительная практика
 
 # Задача 1: Сортировка списка строк по количеству гласных с использованием isinstance
-# Дан список `["engineering", 2, "artificial", 3.14, "intelligence"]`.
+# # Дан список `["engineer", 2, "artificial", 3.14, "intel"]`.
 # Отсортируйте только строки в списке по количеству гласных с помощью функции `sorted`,
 # предварительно проверив тип данных с помощью функции `isinstance`.
-# Ожидаемый результат: ['artificial', 'engineering', 'intelligence']
+# Ожидаемый результат: ['intel', 'engineer', 'artificial']
 
+
+
+
+
+def count_vowels(s):
+    vowels = "aeiouyAEIOUY"
+    return sum(1 for i in s if i in vowels)
+
+count_vowels("engineer")
+
+first_list = ["engineer", 2, "artificial", 3.14, "intel"]
+string_list = [x for x in first_list if isinstance(x , str)]
+sorted_list = sorted(string_list, key=count_vowels)
+
+print(sorted_list)
 
 # Задача 2: Сортировка списка списков по минимальному значению элемента с использованием all
 # Дан список списков `[[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]`.
@@ -13,11 +28,10 @@
 # что все элементы списков являются положительными, с помощью функции `all`.
 # Ожидаемый результат: [[3, 5, 1], [4, 4, 4]]
 
-lists = [[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]
 
-sorted_lists = sorted([lst for lst in lists if all(x > 0 for x in lst)], key=lambda x: min(x))
-print(sorted_lists)
-
+# lis = [[3, 5, 1], [0, -2, 3], [4, 4, 4], [-1, 3, 5]]
+# lis2 = [x for x in lis if all(x)>0 ]
+# print(lis2)
 
 # Задача 3: Сортировка списка словарей по статусу пользователя и преобразование с помощью map
 # **Задание:**
@@ -30,16 +44,6 @@ print(sorted_lists)
 # [{'username': 'alice', 'status': 'ACTIVE'},
 # {'username': 'charlie', 'status': 'ACTIVE'},
 # {'username': 'bob', 'status': 'INACTIVE'}]
-users = [
-    {"username": "alice", "status": "active"},
-    {"username": "bob", "status": "inactive"},
-    {"username": "charlie", "status": "active"}
-]
-
-sorted_users = sorted(users, key=lambda x: x['status'])
-# {'username': 'alice', 'status': 'active', 'status': 'ACTIVE'}
-sorted_users = list(map(lambda x: {**x, 'status': x['status'].upper()}, sorted_users))
-print(sorted_users)
 
 
 # Задача 4: Сортировка списка URL по длине и фильтрация с помощью filter
