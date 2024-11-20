@@ -14,7 +14,7 @@ import datetime
 
 
 def log_action(message):
-    with open("guess_number_log.txt", "a") as log_file:
+    with open("guess_number_log.txt", "a", encoding="utf-8") as log_file:
         log_file.write(f"{datetime.datetime.now()}: {message}\n")
 
 
