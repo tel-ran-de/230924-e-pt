@@ -30,7 +30,6 @@
 # 5. Найти товар по названию.
 # 6. Вывести список товаров меньше определенной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
-
 import json
 import os
 from datetime import datetime
@@ -60,10 +59,10 @@ def log_action(action, details=""):
 # Проверка существования файла инвентаря
 if not os.path.exists(inventory_file):
     inventory = [
-        {'product': "Laptop", 'price': 10, 'count': 13, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())},
+        {'product': "Laptop", 'price': 1000, 'count': 13, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())},
         {'product': "Mouse", 'price': 50, 'count': 1, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())},
         {'product': "Keyboard", 'price': 30, 'count': 33, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())},
-        {'product': "Monitor", 'price': 20, 'count': 10, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())}
+        {'product': "Monitor", 'price': 200, 'count': 10, 'created_at': str(datetime.now()), 'updated_at': str(datetime.now())}
     ]
     with open(inventory_file, 'w', encoding='utf-8') as file:
         json.dump(inventory, file, ensure_ascii=False, indent=4)
@@ -108,11 +107,11 @@ def add_product():
             return
     while True:
         try:
-            price = int(input("Введите цену товара: "))
+            price = float(input("Введите цену товара: "))
             count = int(input("Введите количество товара: "))
             break
         except ValueError:
-            print("Ошибка: Цена и количество должны быть числовыми значениями.")
+            print("Ошибка: Цена должна быть числом с плавающей точкой, а количество — целым числом.")
     timestamp = str(datetime.now())
     inventory.append({'product': product, 'price': price, 'count': count, 'created_at': timestamp, 'updated_at': timestamp})
     save_inventory(inventory)
@@ -142,17 +141,18 @@ def update_product():
         if item['product'].lower() == product.lower():
             while True:
                 try:
-                    item['price'] = int(input("Введите новую цену: "))
+                    item['price'] = float(input("Введите новую цену: "))
                     item['count'] = int(input("Введите новое количество: "))
                     item['updated_at'] = str(datetime.now())
                     break
                 except ValueError:
-                    print("Ошибка: Цена и количество должны быть числовыми значениями.")
+                    print("Ошибка: Цена должна быть числом с плавающей точкой, а количество — целым числом.")
             save_inventory(inventory)
             log_action("Обновление товара", f"Товар: {product}, Новая цена: {item['price']}, Новое количество: {item['count']}")
             print("Товар обновлён.")
             return
     print("Товар не найден.")
+
 # Поиск товара
 def search_product():
     inventory = load_inventory()
@@ -171,7 +171,7 @@ def filter_by_price():
     inventory = load_inventory()
     while True:
         try:
-            max_price = int(input("Введите максимальную цену: "))
+            max_price = float(input("Введите максимальную цену: "))
             break
         except ValueError:
             print("Ошибка: Введите числовое значение для цены.")
@@ -238,13 +238,3 @@ def menu():
             print("Некорректный выбор. Попробуйте снова.")
 
 menu()
-
-
-
-
-
-
-
-
-
-
