@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/hangman.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-18/minesweeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/minesweeper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-19/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-20/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-20/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-21/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-21/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-22/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-22/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-23/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-18/guess_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-18/guess_number.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
