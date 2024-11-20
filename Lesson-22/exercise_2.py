@@ -30,16 +30,12 @@ print(lambda_list)
 
 
 
-Итератор для чисел от 1 до 5
-numbers = iter(range(1, 6))
 
-Итератор для квадратов чисел от 1 до 5
-squares = iter(x ** 2 for x in range(1, 6))
 
-Используем zip для объединения чисел и их квадратов
-result = map(lambda x: f"{x[0]}: {x[1]}", zip(numbers, squares))
+numbers = iter(range(1, 6)),                                        "от 1 до 5""Итератор чисел"
+squares = iter(x ** 2 for x in range(1, 6)),                        "от 1 до 5""Итератор квадратов"
+result = map(lambda x: f"{x[0]}: {x[1]}", zip(numbers, squares)),   "zip для чисел и квадратов"
 
-Преобразуем результат в список и выводим
 print(list(result))
 
 
@@ -55,3 +51,21 @@ print(list(result))
 # Используйте функцию `filter` с лямбда функцией, чтобы отобрать строки, содержащие слово "Python",
 # и затем примените функцию `map` с лямбда функцией для преобразования этих строк в верхний регистр.
 
+
+
+
+def process_file(filename):
+    with open(filename, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+
+def filter_and_transform(filename):
+    lines = process_file(filename)
+    result = map(lambda line: line.upper(), filter(lambda line: 'Python' in line, lines))
+    return result
+
+
+filename = 'example.txt'
+for line in filter_and_transform(filename):
+    print(line)

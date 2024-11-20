@@ -5,16 +5,21 @@ from datetime import datetime
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
 # Пример: 2024-06-11 14:35:45
 
+today_now = datetime.today()
+f_datetime = today_now.strftime("%Y-%m-%d-%H:%M:%S")
+print(f_datetime)
+
 
 # Задача 2: Вычисление возраста
 # Напишите программу, которая принимает дату рождения пользователя в формате "YYYY-MM-DD" и вычисляет его возраст.
 
 # # Функция для вычисления возраста
-# def calculate_age(birth_date):
-#     birth_date = datetime.strptime(birth_date, "%d.%m.%Y")
-#     today = datetime.today()
-#     result = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
-#     return result
+
+def calculate_age(birth_date):
+    birth_date = datetime.strptime(birth_date, "%d.%m.%Y")
+    today = datetime.today()
+    result = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+    return result
 #
 #
 # # Пример использования

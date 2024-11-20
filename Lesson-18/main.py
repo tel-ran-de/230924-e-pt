@@ -65,7 +65,7 @@ def main():
         print("7. Выход")
 
         try:
-            choice = int(input("Выберите игру (1-7): "))
+            choice = int(input("Выберите игру (1-7): ")),"1"
 
             if choice == 1:
                 guess_number.play_game(),         ("Угадай число")
@@ -83,7 +83,7 @@ def main():
                 print("Выход")
                 break
             else:
-                print("от 1 до 7.")
+                print("c 1 до 7.")
 
         except ValueError:
             print("Ошибка")

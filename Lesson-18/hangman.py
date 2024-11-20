@@ -50,7 +50,7 @@ def play_hangman():
 
 
     while attempts_left > 0:
-        print("\nТекущее слово: " + ' '.join(hidden_word))
+        print("\nслово: " + ' '.join(hidden_word))
         print(f"попыток: {attempts_left}")
 
 

@@ -86,7 +86,7 @@ def to_int(string):
     return int(string)
 
 str_numbers = ["1", "2", "3", "4", "5"]
-print (list(str_stirng))
+print (list(str_numbers))
 
 
 
@@ -102,16 +102,14 @@ print (list(str_stirng))
 
 
 
+
 def longer_than_four(word):
     return len(word) > 4
 
-"Список"
 words = ["apple", "kiwi", "banana", "pear"]
 
-# Используем filter с функцией longer_than_four для отбора слов длиной больше 4
 long_words = filter(longer_than_four, words)
 
-"список и вывод"
 print(list(long_words))
 
 
@@ -148,14 +146,14 @@ print(list(even_numbers))
 
 
 
+
 numbers = iter(range(1, 6))
 
 squares = iter(x ** 2 for x in range(1, 6))
-
-
 result = map(lambda x: f"{x[0]}: {x[1]}", zip(numbers, squares))
 
 print(list(result))
+
 
 
 
@@ -173,21 +171,12 @@ print(list(result))
 def read_lines(filename):
     with open(filename, 'r') as file:
         for line in file:
-            yield line.strip()  "лишние пробелы"
+            yield line.strip()
 
-"Используем фильтрацию"
 
 lines = read_lines('example.txt')
-
-
-"Применяем filter"
-
 filtered_lines = filter(lambda line: 'Python' in line, lines)
-
-
-"map в верхний регистр"
-
-uppercase_lines = map(lambda line: line.upper(), filtered_lines)
+uppercase_lines = map(lambda line: line.upper(), filtered_lines), ("map верхний регистр")
 
 for line in uppercase_lines:
     print(line)
@@ -231,12 +220,8 @@ print(list(fahrenheit_values))
 
 words = ["hello", "world", "python", "is", "awesome"]
 
-"Используем filter"
-
 long_words = filter(lambda word: len(word) > 5, words)
-
 print(list(long_words))
-
 
 
 
@@ -253,23 +238,16 @@ print(list(long_words))
 
 
 
-
 def number_generator():
     for i in range(1, 4):
         yield i
 
-
-"Генератор для кубов"
-
+"для кубов"
 def cube_generator():
     for i in range(1, 4):
         yield i ** 3
-
-
-"генераторов с zip"
-
+"с zip"
 result = list(map(lambda x: f"{x[0]}: {x[1]}", zip(number_generator(), cube_generator())))
-
 
 print(result)
 
@@ -290,18 +268,13 @@ print(result)
 def read_lines(filename):
     with open(filename, 'r') as file:
         for line in file:
-            yield line.strip()  # Убираем символы новой строки и лишние пробелы
+            yield line.strip()
 
 
 
 lines = read_lines('data.txt')
 
-
-
 lines_with_numbers = filter(lambda line: any(char.isdigit() for char in line), lines)
-
-
-
 numbers = map(lambda line: int(''.join(filter(str.isdigit, line))), lines_with_numbers)
 
 print(list(numbers))
@@ -331,25 +304,15 @@ def read_file2(filename):
         for line in file:
             yield line.strip()
 
-"Чтение строк"
 
 file1_lines = read_file1('file1.txt')
 file2_lines = read_file2('file2.txt')
 
-
-
-"zip объединения строк из двух файлов"
-
 zipped_lines = zip(file1_lines, file2_lines)
 
 
-
-"map с лямбда функцией для вывода в формате"
-
+"map с лямбда"
 formatted_lines = map(lambda x: f"{x[0]} - {x[1]}", zipped_lines)
-
-
-"Вывод"
 
 for line in formatted_lines:
     print(line)

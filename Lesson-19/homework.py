@@ -98,13 +98,14 @@ with open('output.txt', 'r') as file:
 
 with open('pointer_example.txt', 'w+') as file:
 
-    "2. Запись строки"
+
+    ("2. Запись строки")
 
     file.write("Python File Handling\n")
 
 
 
-    "3. Перемещение"
+    ("3. Перемещение")
 
     file.seek(0)
     first_line = file.readline()
@@ -112,20 +113,20 @@ with open('pointer_example.txt', 'w+') as file:
 
 
 
-    "4. Перемещение позиции"
+    ("4. Перемещение позиции")
 
     file.seek(7)
     five_chars = file.read(5)
-    print(f"5 символов с 7: {five_chars}")
+    print(f":{five_chars}"), "5 символов с 7"
 
 
 
-    "5. Перемещение в конец файла "
+    ("5. Перемещение в конец файла ")
 
     file.seek(0, 2)  ("позиция 2 - конец")
     file.write("End of file\n")
 
-    "6. Перемещение указателя в начало файла "
+    ("6. Перемещение указателя в начало файла ")
 
     file.seek(0)
     content = file.read()
@@ -149,7 +150,7 @@ with open('pointer_example.txt', 'w+') as file:
 import json
 
 
-"1. Создаем словарь"
+"1. словарь"
 
 user_info = {
     "name": "John Doe",
@@ -158,7 +159,7 @@ user_info = {
 }
 
 
-"2. Записываем этот словарь"
+"2. Записываем словарь"
 
 with open('user.json', 'w') as file:
     json.dump(user_info, file)
@@ -256,10 +257,8 @@ with open('users.json', 'r') as file:
     users = json.load(file)
 
 
-
 user_to_remove = "John Doe"
 users = [user for user in users if user['name'] != user_to_remove]
-
 
 
 
@@ -310,9 +309,9 @@ def load_inventory():
         with open('inventory.json', 'r') as file:
             return json.load(file)
     except FileNotFoundError:
-        return [],   "возвращаем пустой список"
+        return [],   "пустой список"
 
-#  сохранения данных
+
 def save_inventory(inventory):
     with open('inventory.json', 'w') as file:
         json.dump(inventory, file, indent=4)
@@ -325,11 +324,11 @@ def save_inventory(inventory):
 
 def show_inventory(inventory):
     if inventory:
-        print("Список товаров:")
+        print("товар:")
         for item in inventory:
-            print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+            print(f" {item['product']}, {item['price']}, {item['count']}")
     else:
-        print("Инвентарь пуст.")
+        print("пуст.")
 
 
 
@@ -338,12 +337,12 @@ def show_inventory(inventory):
 
 
 def add_product(inventory):
-    product = input("Введите название товара: ")
-    price = float(input("Введите цену товара: "))
-    count = int(input("Введите количество товара: "))
+    product = input("название товара: ")
+    price = float(input("цену товара: "))
+    count = int(input("количество товара: "))
     inventory.append({'product': product, 'price': price, 'count': count})
     save_inventory(inventory)
-    print(f"Товар {product} добавлен.")
+    print(f" {product}")
 
 
 
@@ -352,10 +351,10 @@ def add_product(inventory):
 
 
 def remove_product(inventory):
-    product = input("Введите название товара для удаления: ")
+    product = input("товар - удаления")
     inventory = [item for item in inventory if item['product'] != product]
     save_inventory(inventory)
-    print(f"Товар {product} удален.")
+    print(f" {product} удален.")
     return inventory
 
 
@@ -365,23 +364,23 @@ def remove_product(inventory):
 
 
 def update_product(inventory):
-    product = input("Введите название товара для обновления: ")
+    product = input("товар")
     for item in inventory:
         if item['product'] == product:
-            print(f"Обновление товара {product}.")
-            new_name = input(f"Введите новое название (или оставьте пустым, чтобы не менять): ")
+            print(f" {product}.")
+            new_name = input(f"новое название:")
             if new_name:
                 item['product'] = new_name
-            new_price = input(f"Введите новую цену (или оставьте пустым, чтобы не менять): ")
+            new_price = input(f" новую цену:")
             if new_price:
                 item['price'] = float(new_price)
-            new_count = input(f"Введите новое количество (или оставьте пустым, чтобы не менять): ")
+            new_count = input(f" новое количество:")
             if new_count:
                 item['count'] = int(new_count)
             save_inventory(inventory)
-            print(f"Товар {product} обновлен.")
+            print(f"{product} обновлен")
             return inventory
-    print(f"Товар {product} не найден.")
+    print(f"{product} не найден")
     return inventory
 
 
@@ -391,37 +390,46 @@ def update_product(inventory):
 
 
 def find_product(inventory):
-    product = input("Введите название товара : ")
+    product = input("товара ")
     found = [item for item in inventory if item['product'].lower() == product.lower()]
     if found:
         for item in found:
-            print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+            print(f" {item['product']},  {item['price']},  {item['count']}")
     else:
-        print(f" с названием {product} не найден.")
+        print(f" {product} не найден.")
+
+
 
 " 6. Вывести товары"
 
+
+
 def show_products_under_price(inventory):
-    price = float(input(" максимальную цену: "))
+    price = float(input(" макс. цену: "))
     filtered = [item for item in inventory if item['price'] < price]
     if filtered:
         for item in filtered:
-            print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+            print(f"{item['product']}, {item['price']}, {item['count']}")
     else:
-        print(f" с ценой ниже {price} не найдены.")
+        print(f"ценой ниже {price} ")
+
+
 
 " 7. Вывести товары"
+
+
+
 def show_products_under_count(inventory):
-    count = int(input("минимальное количество : "))
+    count = int(input("мин. количество : "))
     filtered = [item for item in inventory if item['count'] < count]
     if filtered:
         for item in filtered:
-            print(f"Товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
+            print(f"{item['product']},{item['price']}, {item['count']}")
     else:
         print(f" меньше {count} не найдены.")
 
 
-    "меню"
+
 
 
 def main():
@@ -438,7 +446,7 @@ def main():
         print("7. Вывести товары с количеством меньше заданного")
         print("8. Выход")
 
-        choice = input(" действие (1-8): ")
+        choice = input("(1-8)")
 
         if choice == '1':
             show_inventory(inventory)
@@ -455,7 +463,7 @@ def main():
         elif choice == '7':
             show_products_under_count(inventory)
         elif choice == '8':
-            print("Выход")
+            print("'Выход'")
             break
         else:
             print("снова.")

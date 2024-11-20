@@ -53,7 +53,6 @@
 
 import random
 
-
 GRID_SIZE = 5
 MINES_COUNT = 5
 
@@ -61,7 +60,6 @@ MINES_COUNT = 5
 def create_grid():
     grid = [['-' for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
     return grid
-
 
 "Проверка"
 
@@ -72,7 +70,6 @@ def place_mines(grid):
         grid[row][col] = '*'
     return grid
 
-
 def count_adjacent_mines(grid, row, col):
     mine_count = 0
     for r in range(row - 1, row + 2):
@@ -81,7 +78,6 @@ def count_adjacent_mines(grid, row, col):
                 if grid[r][c] == '*':
                     mine_count += 1
     return mine_count
-
 
 "Проверка"
 
@@ -101,8 +97,6 @@ def open_cell(grid, revealed, row, col):
                 if 0 <= r < GRID_SIZE and 0 <= c < GRID_SIZE:
                     open_cell(grid, revealed, r, c)
     return True
-
-
 "Проверка"
 
 def print_grid(grid, revealed):
@@ -132,27 +126,27 @@ def play_game():
     revealed = [[False for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
 
     print("'Сапер'!")
-    print("размещены 5 мин.")
-    print("клетки без мин.\n")
+    print("размещены 5 мин")
+    print("клетки без мин \n")
 
     while True:
         print_grid(grid, revealed)
 
         try:
-            row, col = map(int, input("(строка столбец): ").split())
+            row, col = map(int, input("(строка): ").split())
             if not (0 <= row < GRID_SIZE and 0 <= col < GRID_SIZE):
-                print("Попробуйте снова.")
+                print("Попробуйте снова")
                 continue
         except ValueError:
-            print("Попробуйте снова.")
+            print("снова")
             continue
 
         if not open_cell(grid, revealed, row, col):
-            print("попали на мину.")
+            print("попали на мину")
             break
 
         if check_win(grid, revealed):
-            print("oткрыли  клетки.")
+            print("oткрыли клетки")
             break
 
 if __name__ == "__main__":

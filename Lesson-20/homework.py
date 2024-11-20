@@ -12,29 +12,24 @@
 
 def divide_numbers(a, b):
     try:
-        "в числа "
-
         a = float(a)
         b = float(b)
 
-        "деления"
         result = a / b
         return result
 
     except ZeroDivisionError:
-        return "Ошибка: Деление невозможно."
+        return  ("невозможно")
 
     except (ValueError, TypeError):
-        return " введите числа."
+        return ("введите числа")
 
 
-"Примеры использования"
 
-print(divide_numbers(10, 2))  # Ожидаемый результат: 5.0
-print(divide_numbers(10, 0))  # Ожидаемый результат: Ошибка: Деление на ноль невозможно.
-print(divide_numbers('10', '5'))  # Ожидаемый результат: 2.0
+print(divide_numbers(10, 2))
+print(divide_numbers(10, 0))
+print(divide_numbers('10', '5'))
 print(divide_numbers('abc', 2))
-
 
 
 
@@ -48,22 +43,15 @@ print(divide_numbers('abc', 2))
 
 
 
-
-# Функция для запроса ввода числа и вычисления его квадрата
 def get_square():
     try:
-        # Запрос ввода от пользователя
-        user_input = input("Введите число: ")
+        user_input = input("число: ")
 
-        # Преобразование ввода в число
         number = float(user_input)
-
-        # Вывод квадрата числа
-        print(f"Квадрат числа {number} равен {number ** 2}")
+        print(f"Квадрат числа {number}, {number ** 2}")
 
     except ValueError:
-        # Обработка исключения, если введено не число
-        print("Ошибка! Введите корректное число.")
+        print("коррек. число.")
 
 
 # Вызов функции
@@ -114,7 +102,7 @@ import math
 def calculate_square_root(number):
     # Проверка на отрицательное число
     if number < 0:
-        raise ValueError("Число должно быть положительным")
+        raise ValueError("Число положит.")
 
     return math.sqrt(number)
 
@@ -122,9 +110,9 @@ def calculate_square_root(number):
 def safe_calculate_square_root(number):
     try:
         result = calculate_square_root(number)
-        print(f"Квадратный корень из {number} равен {result}")
+        print(f"Квадр.корень {number},{result}")
     except ValueError as e:
-        print(f"Ошибка: {e}")
+        print(f": {e}")
 
 
 # Тесты функции
@@ -181,8 +169,6 @@ safe_calculate_square_root(-9)  # Ожидае
 import json
 
 
-# Функции для работы с инвентарем
-
 def load_inventory(filename="inventory.json"):
     try:
         with open(filename, "r") as file:
@@ -199,12 +185,12 @@ def save_inventory(inventory, filename="inventory.json"):
         with open(filename, "w") as file:
             json.dump(inventory, file, indent=4)
     except Exception as e:
-        print(f"Ошибка при записи файла: {e}")
+        print(f": {e}")
 
 
 def show_inventory(inventory):
     if not inventory:
-        print("Инвентарь пуст.")
+        print("пуст.")
         return
     for item in inventory:
         print(f"{item['product']} | Цена: {item['price']} | Количество: {item['count']}")
@@ -212,20 +198,20 @@ def show_inventory(inventory):
 
 def add_product(inventory, product, price, count):
     if price <= 0 or count <= 0:
-        raise ValueError("Цена и количество должны быть больше нуля.")
+        raise ValueError("больше нуля.")
 
     new_product = {'product': product, 'price': price, 'count': count}
     inventory.append(new_product)
-    print(f"Товар '{product}' успешно добавлен.")
+    print(f"'{product}'добавлен.")
 
 
 def remove_product(inventory, product):
     for item in inventory:
         if item['product'] == product:
             inventory.remove(item)
-            print(f"Товар '{product}' удален.")
+            print(f"'{product}'удален.")
             return
-    print(f"Товар '{product}' не найден.")
+    print(f"'{product}'не найден.")
 
 
 def update_product(inventory, product, price=None, count=None):
@@ -233,44 +219,46 @@ def update_product(inventory, product, price=None, count=None):
         if item['product'] == product:
             if price is not None:
                 if price <= 0:
-                    raise ValueError("Цена должна быть больше нуля.")
+                    raise ValueError("больше нуля.")
                 item['price'] = price
             if count is not None:
                 if count <= 0:
-                    raise ValueError("Количество должно быть больше нуля.")
+                    raise ValueError("больше нуля.")
                 item['count'] = count
-            print(f"Товар '{product}' обновлен.")
+            print(f"'{product}'")
             return
-    print(f"Товар '{product}' не найден.")
+    print(f"'{product}'")
 
 
 def find_product(inventory, product):
     for item in inventory:
         if item['product'] == product:
-            print(f"Найден товар: {item['product']} | Цена: {item['price']} | Количество: {item['count']}")
+            print(f"{item['product']} | {item['price']} | {item['count']}")
             return
-    print(f"Товар '{product}' не найден.")
+    print(f"'{product}'")
 
 
 def filter_by_price(inventory, max_price):
     filtered = [item for item in inventory if item['price'] < max_price]
     if not filtered:
-        print("Нет товаров с такой ценой.")
+        print("Нет с ценой.")
         return
     for item in filtered:
-        print(f"{item['product']} | Цена: {item['price']} | Количество: {item['count']}")
+        print(f"{item['product']} | {item['price']} | {item['count']}")
 
 
 def filter_by_count(inventory, max_count):
     filtered = [item for item in inventory if item['count'] < max_count]
     if not filtered:
-        print("Нет товаров с таким количеством.")
+        print("Нет с количеством.")
         return
     for item in filtered:
-        print(f"{item['product']} | Цена: {item['price']} | Количество: {item['count']}")
+        print(f"{item['product']} |{item['price']} |  {item['count']}")
 
 
-# Главное меню
+
+
+
 def main():
     inventory = load_inventory()
 
@@ -291,42 +279,41 @@ def main():
             if choice == "1":
                 show_inventory(inventory)
             elif choice == "2":
-                product = input("Введите название товара: ")
-                price = int(input("Введите цену товара: "))
-                count = int(input("Введите количество товара: "))
+                product = input ("название товара: ")
+                price = int(input (" цену товара: "))
+                count = int(input(" количество товара: "))
                 add_product(inventory, product, price, count)
             elif choice == "3":
-                product = input("Введите название товара для удаления: ")
+                product = input ("название товара - удаления: ")
                 remove_product(inventory, product)
             elif choice == "4":
-                product = input("Введите название товара для обновления: ")
-                price = input("Введите новую цену товара (оставьте пустым для пропуска): ")
-                count = input("Введите новое количество товара (оставьте пустым для пропуска): ")
+                product = input(" товар обновления: ")
+                price = input("цену товара : ")
+                count = input (" кол. товара : ")
                 price = int(price) if price else None
                 count = int(count) if count else None
                 update_product(inventory, product, price, count)
             elif choice == "5":
-                product = input("Введите название товара для поиска: ")
+                product = input("товар - поиска: ")
                 find_product(inventory, product)
             elif choice == "6":
-                max_price = int(input("Введите максимальную стоимость: "))
+                max_price = int(input("макс. стоимость: "))
                 filter_by_price(inventory, max_price)
             elif choice == "7":
-                max_count = int(input("Введите максимальное количество: "))
+                max_count = int(input("макс. количество: "))
                 filter_by_count(inventory, max_count)
             elif choice == "8":
                 save_inventory(inventory)
-                print("Выход из программы.")
+                print("Выход.")
                 break
             else:
-                print("Неверный ввод. Попробуйте снова.")
+                print("Неверный - ввод.")
         except ValueError as e:
-            print(f"Ошибка: {e}")
+            print(f": {e}")
         except Exception as e:
-            print(f"Неизвестная ошибка: {e}")
+            print(f": {e}")
 
 
-# Запуск программы
 if __name__ == "__main__":
     main()
 
