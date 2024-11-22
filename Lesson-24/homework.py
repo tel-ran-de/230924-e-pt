@@ -147,24 +147,55 @@ print('+========================+')
 
 
 
+import json
+import datetime
+import os
+
+# Путь к файлу инвентаря
+INVENTORY_FILE = 'inventory.json'
+LOG_FILE = 'inventory_log.txt'
+
+
+# Загружает инвентарь из файла.
+# Если файл не найден, создает новый список.
 def load_inventory():
     try:
-        with open('inventory.json', 'r') as file:
+        with open(INVENTORY_FILE, 'r', encoding='utf-8') as file:
             inventory = json.load(file)
     except FileNotFoundError:
         inventory = []
         print('Файл не найден! Создание нового списка.')
     return inventory
 
-
-
+# Сохраняет инвентарь в файл.
 def save_inventory(inventory):
     try:
-        with open('inventory.json', 'w') as file:
+        with open(INVENTORY_FILE, 'w', encoding='utf-8') as file:
             json.dump(inventory, file)
     except IOError as e:
         print('Ошибка сохранения файла')
 
+
+# Записывает действие в лог-файл с временной меткой.
+def log_action(action):
+    with open(LOG_FILE, 'a', encoding='utf-8') as file:
+        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        file.write(f"{timestamp} - {action}\n")
+
+# Создает резервную копию файла инвентаря с текущей датой и временем.
+def backup_inventory():
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    backup_file = f'inventory_backup_{timestamp}.json'
+    try:
+        with open(INVENTORY_FILE, 'r', encoding='utf-8') as file:
+            inventory = json.load(file)
+        with open(backup_file, 'w', encoding='utf-8') as file:
+            json.dump(inventory, file)
+        print(f'Резервная копия создана: {backup_file}')
+    except IOError as e:
+        print('Ошибка создания резервной копии')
+
+# Выводит список товаров на экран.
 def show_inventory():
     inventory = load_inventory()
     if not inventory:
@@ -172,21 +203,30 @@ def show_inventory():
         return
     print('\nСписок товаров:')
     for item in inventory:
-        print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}")
+        print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}, Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
 
+# Добавляет новый товар в инвентарь.
 def add_item():
     try:
         inventory = load_inventory()
         product_name = input('Введите название товара: ')
-        price_item = float(input('Введите цену: '))
-        count_item = int(input('Введите количество: '))
-        inventory.append({'product': product_name, 'price': price_item, 'count': count_item})
+        price_item = input('Введите цену: ')
+        count_item = input('Введите количество: ')
+
+        # Проверка и преобразование ввода
+        price_item = float(price_item)
+        count_item = int(count_item)
+
+        created_at = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        updated_at = created_at
+        inventory.append({'product': product_name, 'price': price_item, 'count': count_item, 'created_at': created_at, 'updated_at': updated_at})
         save_inventory(inventory)
+        log_action(f"Добавлен товар: {product_name}, Цена: {price_item}, Количество: {count_item}")
         print(f"product: {product_name}, price: {price_item}, count: {count_item} добавлен в список товаров.")
     except ValueError:
         print('Цена и количество должны быть числами.')
 
-
+# Удаляет товар из инвентаря.
 def delete_items():
     try:
         inventory = load_inventory()
@@ -195,13 +235,14 @@ def delete_items():
             if item['product'] == delete_item:
                 inventory.remove(item)
                 save_inventory(inventory)
+                log_action(f"Удален товар: {delete_item}")
                 print(f'product: {delete_item} удален!')
-            else:
-                print('Продукт не найден.')
+                return
+        print('Продукт не найден.')
     except IOError:
         print("Ошибка обработки файла!")
 
-
+# Обновляет информацию о товаре в инвентаре.
 def update_item():
     try:
         inventory = load_inventory()
@@ -217,7 +258,9 @@ def update_item():
                     item['count'] = int(input('Введите новое количество товара: '))
                 else:
                     print('Продукт не найден.')
+                item['updated_at'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 save_inventory(inventory)
+                log_action(f"Обновлен товар: {item['product']}, Цена: {item['price']}, Количество: {item['count']}")
                 print(f'Продукт {item['product']} обновлён.')
                 return
     except ValueError:
@@ -225,17 +268,17 @@ def update_item():
     except IOError as e:
         print("Ошибка обработки файла!")
 
-
+# Находит товар по названию.
 def find_item():
     inventory = load_inventory()
     name_item = input('Введите название товара для поиска: ')
     for item in inventory:
         if item['product'] == name_item:
-            print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}")
+            print(f"Название продукта: {item['product']}, Цена: {item['price']}, Количество товаров: {item['count']}, Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
             return
-    else:
-        print('Продукт не найден.')
+    print('Продукт не найден.')
 
+# Выводит список товаров, цена которых меньше заданной.
 def below_price():
     try:
         inventory = load_inventory()
@@ -247,6 +290,7 @@ def below_price():
     except ValueError:
         print('Цена товара должно быть числом.')
 
+# Выводит список товаров, количество которых меньше заданного.
 def below_count():
     try:
         inventory = load_inventory()
@@ -258,6 +302,8 @@ def below_count():
     except ValueError:
         print('Количество товара должно быть числом.')
 
+# Создание резервной копии при запуске программы
+backup_inventory()
 
 while True:
     print('\nМеню:')
