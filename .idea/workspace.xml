@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/backup_2024-11-19_23-18-38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/backup_2024-11-23_11-08-59.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/backup_2024-11-23_11-23-58.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-24/inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/inventory.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
