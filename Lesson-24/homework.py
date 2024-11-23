@@ -1,4 +1,8 @@
 # Тема: Модуль datetime
+from zipfile import compressor_names
+
+from pkg_resources import empty_provider
+
 
 # Задача 1: Определение текущей даты и времени
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
@@ -78,6 +82,65 @@
 # 6. Вывести список товаров меньше определнной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
 
+
+
+class Company:
+ company_name = "Killer Company"
+
+ def __init__(self):
+    self.employees = []
+
+
+
+class Employee:
+
+ def __init__(self,name,killer,salary):
+     self.employees = []
+     self.name = name
+     self.killer = killer
+     self.salary = salary
+
+ def add_employees(self, employee_name):
+     self.employees.append(employee_name)
+
+
+ def get_employees(self):
+     return self.employees
+
+employee1 = Employee("Bob", "Soldat", 5000)
+employee2 = Employee("Jana", "Soldat",3000)
+
+company= Company()
+company.company_name = "Killer" 
+company.add_employee1 = "Bob","Soldat" , 5000
+company.add_employee2 = "Jana"
+
+print(f"Company name :{company.company_name}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+
+
+
+
+
+
+
+
+def get_age(self):
+    return self.__age
+
+
+def set__age(self, age):
+    if age > 0:
+        self.__age = age
+    else:
+        print("Age muss be positive")
+
+        print = Person("Alice", 30)
+        print(Person.name)
+        print(Person.age)
 
 
 
