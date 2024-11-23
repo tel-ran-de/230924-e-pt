@@ -1,0 +1,58 @@
+[
+    {
+        "product": "Laptop",
+        "price": 1000,
+        "count": 13,
+        "created_at": "2024-11-23 11:24:37.013200",
+        "updated_at": "2024-11-23 11:24:37.013200"
+    },
+    {
+        "product": "Mouse",
+        "price": 25.0,
+        "count": 17,
+        "created_at": "2024-11-23 11:24:37.013200",
+        "updated_at": "2024-11-23 11:26:11.385200"
+    },
+    {
+        "product": "Keyboard",
+        "price": 30,
+        "count": 33,
+        "created_at": "2024-11-23 11:24:37.013200",
+        "updated_at": "2024-11-23 11:24:37.013200"
+    },
+    {
+        "product": "Monitor Acer",
+        "price": 55.0,
+        "count": 21,
+        "created_at": "2024-11-23 11:25:20.656376",
+        "updated_at": "2024-11-23 11:25:20.656376"
+    },
+    {
+        "product": "Mouse Logic",
+        "price": 15.0,
+        "count": 32,
+        "created_at": "2024-11-23 11:25:33.139111",
+        "updated_at": "2024-11-23 11:25:33.139111"
+    },
+    {
+        "product": "Motherboard",
+        "price": 85.0,
+        "count": 11,
+        "created_at": "2024-11-23 11:25:45.430130",
+        "updated_at": "2024-11-23 11:25:45.430130"
+    },
+    {
+        "product": "Monitor",
+        "price": 75.0,
+        "count": 28,
+        "created_at": "2024-11-23 11:47:10.213621",
+        "updated_at": "2024-11-23 11:47:10.213621"
+    },
+    {
+        "product": "Laptop Acer",
+        "price": 715.0,
+        "count": 9,
+        "created_at": "2024-11-23 19:51:31.064326",
+        "updated_at": "2024-11-23 19:51:31.064326"
+    }
+]
