@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="перезапись">
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="Перезапись">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-24/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/exercise_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson-24/inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/inventory.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -345,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732357471628</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Перезапись">
+      <option name="closed" value="true" />
+      <created>1732389577579</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732389577579</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +376,8 @@
     <MESSAGE value="выполнение практики 2 урок 24" />
     <MESSAGE value="практика 3 урок 24" />
     <MESSAGE value="перезапись" />
-    <option name="LAST_COMMIT_MESSAGE" value="перезапись" />
+    <MESSAGE value="Перезапись" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перезапись" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
