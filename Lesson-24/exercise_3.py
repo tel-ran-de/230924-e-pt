@@ -30,20 +30,32 @@
 # 5. Найти товар по названию.
 # 6. Вывести список товаров меньше определенной стоимости.
 # 7. Вывести список товаров меньше определенного количества.
+# Фильтрация по цене
 import json
 import os
+import shutil
 from datetime import datetime
 from tabulate import tabulate
 
+
+# Файлы для хранения данных
 inventory_file = 'inventory.json'
 log_file = 'actions.log'
+
+# Функция для поиска последнего резервного файла
+def get_latest_backup():
+    backups = [file for file in os.listdir() if file.startswith("backup_") and file.endswith(".json")]
+    if not backups:
+        return None
+    backups.sort(key=lambda name: datetime.strptime(name, "backup_%Y-%m-%d_%H-%M-%S.json"), reverse=True)
+    return backups[0]
 
 # Резервное копирование данных
 def backup_inventory():
     backup_name = f"backup_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
     try:
         if os.path.exists(inventory_file):
-            os.rename(inventory_file, backup_name)
+            shutil.copy(inventory_file, backup_name)
             print(f"Резервная копия создана: {backup_name}")
     except Exception as e:
         print(f"Ошибка при создании резервной копии: {e}")
@@ -72,11 +84,17 @@ def load_inventory():
     try:
         with open(inventory_file, 'r', encoding='utf-8') as file:
             return json.load(file)
-    except FileNotFoundError:
-        print("Ошибка: Файл не найден.")
-        return []
-    except json.JSONDecodeError:
-        print("Ошибка: Некорректный формат данных в файле.")
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Основной файл повреждён или отсутствует. Попытка загрузить данные из последнего резервного файла...")
+        latest_backup = get_latest_backup()
+        if latest_backup:
+            try:
+                with open(latest_backup, 'r', encoding='utf-8') as backup_file:
+                    print(f"Загрузка данных из резервного файла: {latest_backup}")
+                    return json.load(backup_file)
+            except Exception as e:
+                print(f"Ошибка при загрузке резервного файла: {e}")
+        print("Резервные файлы не найдены. Возвращён пустой инвентарь.")
         return []
 
 # Сохранение инвентаря
@@ -94,7 +112,7 @@ def print_inventory():
         print("Инвентарь пуст.")
     else:
         headers = ["Название товара", "Цена", "Количество", "Создано", "Обновлено"]
-        table = [[item['product'].title(), item['price'], item['count'], item['created_at'], item['updated_at']] for item in inventory]
+        table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']] for item in inventory]
         print(tabulate(table, headers=headers, tablefmt="grid"))
 
 # Добавление товара
@@ -105,31 +123,26 @@ def add_product():
         if item['product'].lower() == product.lower():
             print("Товар уже существует.")
             return
-    while True:
-        try:
-            price = float(input("Введите цену товара: "))
-            count = int(input("Введите количество товара: "))
-            break
-        except ValueError:
-            print("Ошибка: Цена должна быть числом с плавающей точкой, а количество — целым числом.")
-    timestamp = str(datetime.now())
-    inventory.append({'product': product, 'price': price, 'count': count, 'created_at': timestamp, 'updated_at': timestamp})
-    save_inventory(inventory)
-    log_action("Добавление товара", f"Товар: {product}, Цена: {price}, Количество: {count}")
-    print("Товар добавлен.")
+    try:
+        price = int(input("Введите цену товара: "))
+        count = int(input("Введите количество товара: "))
+        timestamp = str(datetime.now())
+        inventory.append({'product': product, 'price': price, 'count': count, 'created_at': timestamp, 'updated_at': timestamp})
+        save_inventory(inventory)
+        log_action("Добавление товара", f"Товар: {product}, Цена: {price}, Количество: {count}")
+        print("Товар добавлен.")
+    except ValueError:
+        print("Ошибка: неверный формат данных.")
 
 # Удаление товара
 def delete_product():
     inventory = load_inventory()
     product = input("Введите название товара для удаления: ").strip()
-
-    item_exists = any(item['product'].lower() == product.lower() for item in inventory)
-    if not item_exists:
-        print("Ошибка: Товар не найден. Попробуйте снова.")
+    updated_inventory = [item for item in inventory if item['product'].lower() != product.lower()]
+    if len(updated_inventory) == len(inventory):
+        print("Товар не найден.")
         return
-
-    inventory = [item for item in inventory if item['product'].lower() != product.lower()]
-    save_inventory(inventory)
+    save_inventory(updated_inventory)
     log_action("Удаление товара", f"Товар: {product}")
     print("Товар удалён.")
 
@@ -139,68 +152,58 @@ def update_product():
     product = input("Введите название товара для обновления: ").strip()
     for item in inventory:
         if item['product'].lower() == product.lower():
-            while True:
-                try:
-                    item['price'] = float(input("Введите новую цену: "))
-                    item['count'] = int(input("Введите новое количество: "))
-                    item['updated_at'] = str(datetime.now())
-                    break
-                except ValueError:
-                    print("Ошибка: Цена должна быть числом с плавающей точкой, а количество — целым числом.")
-            save_inventory(inventory)
-            log_action("Обновление товара", f"Товар: {product}, Новая цена: {item['price']}, Новое количество: {item['count']}")
-            print("Товар обновлён.")
-            return
+            try:
+                item['price'] = int(input("Введите новую цену: "))
+                item['count'] = int(input("Введите новое количество: "))
+                item['updated_at'] = str(datetime.now())
+                save_inventory(inventory)
+                log_action("Обновление товара", f"Товар: {product}, Новая цена: {item['price']}, Новое количество: {item['count']}")
+                print("Товар обновлён.")
+                return
+            except ValueError:
+                print("Ошибка: неверный формат данных.")
+                return
     print("Товар не найден.")
 
 # Поиск товара
 def search_product():
     inventory = load_inventory()
     product = input("Введите название товара для поиска: ").strip()
-
     for item in inventory:
         if item['product'].lower() == product.lower():
-            headers = ["Название товара", "Цена", "Количество"]
-            table = [[item['product'].title(), item['price'], item['count']]]
+            headers = ["Название товара", "Цена", "Количество", "Создано", "Обновлено"]
+            table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']]]
             print(tabulate(table, headers=headers, tablefmt="grid"))
             return
     print("Товар не найден.")
-
-# Фильтрация по цене
 def filter_by_price():
     inventory = load_inventory()
-    while True:
-        try:
-            max_price = float(input("Введите максимальную цену: "))
-            break
-        except ValueError:
-            print("Ошибка: Введите числовое значение для цены.")
-
-    filtered = [item for item in inventory if item['price'] <= max_price]
-    if not filtered:
-        print("Нет товаров дешевле указанной цены.")
-    else:
-        headers = ["Название товара", "Цена", "Количество"]
-        table = [[item['product'].title(), item['price'], item['count']] for item in filtered]
-        print(tabulate(table, headers=headers, tablefmt="grid"))
+    try:
+        max_price = int(input("Введите максимальную цену: "))
+        filtered = [item for item in inventory if item['price'] <= max_price]
+        if not filtered:
+            print("Нет товаров дешевле указанной цены.")
+        else:
+            headers = ["Название товара", "Цена", "Количество", "Создано", "Обновлено"]
+            table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']] for item in filtered]
+            print(tabulate(table, headers=headers, tablefmt="grid"))
+    except ValueError:
+        print("Ошибка: введите числовое значение для цены.")
 
 # Фильтрация по количеству
 def filter_by_count():
     inventory = load_inventory()
-    while True:
-        try:
-            max_count = int(input("Введите максимальное количество: "))
-            break
-        except ValueError:
-            print("Ошибка: Введите числовое значение для количества.")
-
-    filtered = [item for item in inventory if item['count'] <= max_count]
-    if not filtered:
-        print("Нет товаров с количеством ниже указанного.")
-    else:
-        headers = ["Название товара", "Цена", "Количество"]
-        table = [[item['product'].title(), item['price'], item['count']] for item in filtered]
-        print(tabulate(table, headers=headers, tablefmt="grid"))
+    try:
+        max_count = int(input("Введите максимальное количество: "))
+        filtered = [item for item in inventory if item['count'] <= max_count]
+        if not filtered:
+            print("Нет товаров с количеством ниже указанного.")
+        else:
+            headers = ["Название товара", "Цена", "Количество", "Создано", "Обновлено"]
+            table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']] for item in filtered]
+            print(tabulate(table, headers=headers, tablefmt="grid"))
+    except ValueError:
+        print("Ошибка: введите числовое значение для количества.")
 
 # Меню программы
 def menu():
@@ -237,4 +240,5 @@ def menu():
         else:
             print("Некорректный выбор. Попробуйте снова.")
 
-menu()
+if __name__ == "__main__":
+    menu()
