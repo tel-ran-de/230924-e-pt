@@ -47,12 +47,12 @@ def get_latest_backup():
     backups = [file for file in os.listdir() if file.startswith("backup_") and file.endswith(".json")]
     if not backups:
         return None
-    backups.sort(key=lambda name: datetime.strptime(name, "backup_%Y-%m-%d_%H-%M-%S.json"), reverse=True)
+    backups.sort(key=lambda name: datetime.strptime(name, "backup_%H-%M-%S_%d-%m-%Y.json"), reverse=True)
     return backups[0]
 
 # Резервное копирование данных
 def backup_inventory():
-    backup_name = f"backup_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
+    backup_name = f"backup_{datetime.now().strftime('%H-%M-%S_%d-%m-%Y')}.json"
     try:
         if os.path.exists(inventory_file):
             shutil.copy(inventory_file, backup_name)
@@ -64,7 +64,7 @@ def backup_inventory():
 def log_action(action, details=""):
     try:
         with open(log_file, 'a', encoding='utf-8') as log:
-            log.write(f"{datetime.now()} | {action} | {details}\n")
+            log.write(f"{datetime.now().strftime('%H:%M:%S %d.%m.%Y')} | {action} | {details}\n")
     except Exception as e:
         print(f"Ошибка записи в лог: {e}")
 
@@ -103,16 +103,18 @@ def save_inventory(inventory):
         with open(inventory_file, 'w', encoding='utf-8') as file:
             json.dump(inventory, file, ensure_ascii=False, indent=4)
     except Exception as e:
+        log_action("Ошибка сохранения данных", str(e))
         print(f"Ошибка при сохранении данных: {e}")
 
 # Вывод инвентаря
-def print_inventory():
-    inventory = load_inventory()
-    if not inventory:
+def print_inventory(items=None):
+    if items is None:
+        items = load_inventory()
+    if not items:
         print("Инвентарь пуст.")
     else:
         headers = ["Название товара", "Цена", "Количество", "Создано", "Обновлено"]
-        table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']] for item in inventory]
+        table = [[item['product'], item['price'], item['count'], item['created_at'], item['updated_at']] for item in items]
         print(tabulate(table, headers=headers, tablefmt="grid"))
 
 # Добавление товара
@@ -126,12 +128,15 @@ def add_product():
     try:
         price = int(input("Введите цену товара: "))
         count = int(input("Введите количество товара: "))
-        timestamp = str(datetime.now())
-        inventory.append({'product': product, 'price': price, 'count': count, 'created_at': timestamp, 'updated_at': timestamp})
+        timestamp = datetime.now().strftime('%H:%M:%S %d.%m.%Y')
+        new_product = {'product': product, 'price': price, 'count': count, 'created_at': timestamp, 'updated_at': timestamp}
+        inventory.append(new_product)
         save_inventory(inventory)
         log_action("Добавление товара", f"Товар: {product}, Цена: {price}, Количество: {count}")
         print("Товар добавлен.")
+        print_inventory([new_product])  # Вывод добавленного товара в формате таблицы
     except ValueError:
+        log_action("Ошибка ввода данных", "Неверный формат цены или количества")
         print("Ошибка: неверный формат данных.")
 
 # Удаление товара
@@ -155,14 +160,17 @@ def update_product():
             try:
                 item['price'] = int(input("Введите новую цену: "))
                 item['count'] = int(input("Введите новое количество: "))
-                item['updated_at'] = str(datetime.now())
+                item['updated_at'] = datetime.now().strftime('%H:%M:%S %d.%m.%Y')
                 save_inventory(inventory)
                 log_action("Обновление товара", f"Товар: {product}, Новая цена: {item['price']}, Новое количество: {item['count']}")
                 print("Товар обновлён.")
+                print_inventory([item])  # Вывод обновленного товара в формате таблицы
                 return
             except ValueError:
+                log_action("Ошибка ввода данных", "Неверный формат цены или количества")
                 print("Ошибка: неверный формат данных.")
                 return
+    log_action("Ошибка обновления товара", f"Товар '{product}' не найден")
     print("Товар не найден.")
 
 # Поиск товара
