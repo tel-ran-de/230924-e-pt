@@ -1,4 +1,5 @@
 # Тема: Модуль datetime
+from collections.abc import ValuesView
 from zipfile import compressor_names
 
 from pkg_resources import empty_provider
@@ -87,8 +88,48 @@ from pkg_resources import empty_provider
 class Company:
  company_name = "Killer Company"
 
+ def __init__(self,company_name):
+     self.company_name = company_name
+     self.employees = []
+
+
+
+ class Employee:
+
+     def __init__(self,name,killer,salary):
+         self.employees = []
+         self.name = name
+         self.killer = killer
+
+ def add_employees(self, employee_name):
+     if isinstance(employee, Employee):
+         self.employees.append(employee_name)
+     else:
+         raise ValueError("employee dolschen wijasnitj")
+
+company= Company("Killer Company")
+
+company.company_name1 = "Killer"
+employee1 = ("Employee:","Bob", "Soldat", 5000)
+employee2 = ("Employee:", "Jana", "Soldat",3000)
+
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
+
+print(f"Company name :{company.company_name1}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+#########################################################################################
+
+
+class Company:
+ company_name = "Killer Company"
+
  def __init__(self):
     self.employees = []
+
 
 
 
@@ -100,24 +141,53 @@ class Employee:
      self.killer = killer
      self.salary = salary
 
+
  def add_employees(self, employee_name):
      self.employees.append(employee_name)
 
-
  def get_employees(self):
      return self.employees
+
+
 
 employee1 = Employee("Bob", "Soldat", 5000)
 employee2 = Employee("Jana", "Soldat",3000)
 
 company= Company()
-company.company_name = "Killer" 
-company.add_employee1 = "Bob","Soldat" , 5000
-company.add_employee2 = "Jana"
+company.company_name1 = "Killer"
+company.company_name2 = "Bob" , "Jana"
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
 
-print(f"Company name :{company.company_name}")
+print(f"Company name :{company.company_name1},{company.company_name2}")
 print("Employees:",company.add_employee1 )
 print("Employees:", company.add_employee2 )
+
+
+
+
+########################################################################################################
+########################################################################################################
+########################################################################################################
+
+
+
+class Library:
+    def __init(self,total_books):
+        self.total_books = total_books
+        total_books = 0
+        self.books = []
+
+
+    def add_books(self,book_name):
+        self.books.append(book_name)
+        Library.total_books +=1
+
+
+
+
+
+
 
 
 
