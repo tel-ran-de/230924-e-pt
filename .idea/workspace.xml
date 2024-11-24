@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение минипроекта с логированием и проверкой исключений с логированием урок 24">
-      <change beforePath="$PROJECT_DIR$/Lesson-24/backup_20-36-55_23-11-2024.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-24/backup_20-45-45_23-11-2024.json" beforeDir="false" />
-    </list>
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="выполнение минипроекта с логированием и проверкой исключений с логированием урок 24" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
