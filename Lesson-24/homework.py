@@ -128,7 +128,8 @@ class Company:
  company_name = "Killer Company"
 
  def __init__(self):
-    self.employees = []
+     self.company_name = Company
+     self.employees = []
 
 
 
