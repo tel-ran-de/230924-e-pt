@@ -78,49 +78,10 @@ def main():
     hourly_employee = HourlyEmployee("Иван", 180, 20),   #  "почасовая ставка и часы"
     employees = [salaried_employee, hourly_employee]
     for employee in employees:
-        print(f"{employee.name} заработал: {employee.calculate_pay()} евро.")
+        print(f"on i ona{employee.name} заработал: {employee.calculate_pay()} евро.")
 
 
 if __name__ == "__main__":
     main()
 
 
-
-
-# Базовый класс Employee
-class Employee:
-    def calculate_pay(self):
-        raise NotImplementedError("Метод 'calculate_pay' должен быть переопределен в подклассе.")
-
-# Производный класс для сотрудников с фиксированным окладом
-class SalariedEmployee(Employee):
-    def __init__(self, name, salary):
-        self.name = name
-        self.salary = salary
-
-    def calculate_pay(self):
-        # Ежемесячная зарплата фиксированная
-        return self.salary
-
-# Производный класс для сотрудников, работающих почасово
-class HourlyEmployee(Employee):
-    def __init__(self, name, hourly_rate, hours_worked):
-        self.name = name
-        self.hourly_rate = hourly_rate
-        self.hours_worked = hours_worked
-
-    def calculate_pay(self):
-        # Заработная плата рассчитывается как количество отработанных часов * почасовая ставка
-        return self.hourly_rate * self.hours_worked
-
-# Демонстрация полиморфизма
-def print_pay(employee):
-    print(f"{employee.name} заработал(а) {employee.calculate_pay()} единиц денег.")
-
-# Создание объектов
-salaried_employee = SalariedEmployee("Иван", 50000)
-hourly_employee = HourlyEmployee("Мария", 20, 160)
-
-# Вызов метода calculate_pay для разных типов сотрудников
-print_pay(salaried_employee)  # Ожидается фиксированная зарплата
-print_pay(hourly_employee)
