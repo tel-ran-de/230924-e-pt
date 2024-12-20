@@ -1,8 +1,9 @@
 # Тема: Модуль datetime
+
 from collections.abc import ValuesView
 from zipfile import compressor_names
-
 from pkg_resources import empty_provider
+from datetime import datetime
 
 
 # Задача 1: Определение текущей даты и времени
