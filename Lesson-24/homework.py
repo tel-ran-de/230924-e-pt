@@ -8,23 +8,75 @@ from pkg_resources import empty_provider
 # Задача 1: Определение текущей даты и времени
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
 # Пример: 2024-06-11 14:35:45
+from datetime import datetime
 
+
+current_datetime = datetime.now()
+formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+print("Текущая дата и время:", formatted_datetime)
 
 # Задача 2: Вычисление возраста
 # Напишите программу, которая принимает дату рождения пользователя в формате "YYYY-MM-DD" и вычисляет его возраст.
 
+from datetime import datetime
+
+
+birth_date = input("Введите вашу дату рождения (YYYY-MM-DD): ")
+birth_date = datetime.strptime(birth_date, "%Y-%m-%d")
+current_date = datetime.now()
+age = current_date.year - birth_date.year
+if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
+    age -= 1
+print("Ваш возраст:", age)
 
 # Задача 3: Расчет дней до следующего мероприятия
 # Напишите программу, которая принимает дату следующего мероприятия в формате "YYYY-MM-DD" и выводит количество дней,
 # оставшихся до этой даты.
 
+from datetime import datetime
+
+event_date = input("Введите дату следующего мероприятия (YYYY-MM-DD): ")
+event_date = datetime.strptime(event_date, "%Y-%m-%d")
+current_date = datetime.now()
+days_left = (event_date - current_date).days
+print(f"До мероприятия осталось {days_left} дней.")
+
+
 
 # Задача 4: Определение дня недели
 # Напишите программу, которая принимает дату в формате "YYYY-MM-DD" и выводит день недели для этой даты.
 
+from datetime import datetime
+
+date_input = input("Введите дату (YYYY-MM-DD): ")
+date_object = datetime.strptime(date_input, "%Y-%m-%d")
+day_of_week = date_object.strftime("%A")
+print(f"День недели для {date_input}:", day_of_week)
+
 
 # Задача 5: Сравнение двух дат
 # Напишите программу, которая принимает две даты в формате "YYYY-MM-DD" и определяет, какая из них позже.
+
+
+from datetime import datetime
+
+
+date_1 = input("Введите первую дату (YYYY-MM-DD): ")
+date_2 = input("Введите вторую дату (YYYY-MM-DD): ")
+
+# строки в объекты даты
+date_1 = datetime.strptime(date_1, "%Y-%m-%d")
+date_2 = datetime.strptime(date_2, "%Y-%m-%d")
+
+# Сравниваем
+if date_1 > date_2:
+    print(f"Первая дата ({date_1.date()}) позже второй.")
+elif date_1 < date_2:
+    print(f"Вторая дата ({date_2.date()}) позже первой.")
+else:
+    print(" даты одинаковы.")
+
+
 
 
 # Тема: Модуль os
@@ -48,6 +100,9 @@ from pkg_resources import empty_provider
 # Задача 4: Сравнение размеров файлов
 # Напишите программу, которая принимает два имени файлов в текущем каталоге, сравнивает их размеры и выводит,
 # какой из файлов больше. Если размеры файлов равны, программа должна вывести сообщение "Файлы имеют одинаковый размер".
+
+
+
 
 
 # Тема: Интеграционная практика.
