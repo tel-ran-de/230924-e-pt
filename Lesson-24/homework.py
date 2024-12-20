@@ -86,9 +86,45 @@ else:
 # в текущем каталоге, а затем удаляет созданную директорию.
 
 
+import os
+
+# 1."test_directory"
+os.mkdir("test_directory")
+print("Директория 'test_directory' успешно создана.")
+
+# 2. Выводим список
+print("\nСписок директорий в текущем каталоге:")
+for item in os.listdir():
+    if os.path.isdir(item):
+        print(item)
+
+# 3. Удаляем "test_directory"
+os.rmdir("test_directory")
+print("\nДиректория 'test_directory' успешно удалена.")
+
+
 # Задача 2: Переименование файла
 # Напишите программу, которая создает файл с именем "temp_file.txt", записывает в него строку "Temporary content",
 # затем переименовывает файл в "renamed_file.txt" и выводит список всех файлов в текущем каталоге.
+
+
+import os
+
+# 1. Создаем файл "temp_file.txt"
+with open("temp_file.txt", "w") as file:
+    file.write("Temporary content")
+print("Файл 'temp_file.txt' успешно создан и в него записан текст.")
+
+# 2. Переименован файл в "renamed_file.txt"
+os.rename("temp_file.txt", "renamed_file.txt")
+print("Файл успешно переименован в 'renamed_file.txt'.")
+
+# 3. Выводим список
+print("\nСписок файлов в текущем каталоге:")
+for item in os.listdir():
+    if os.path.isfile(item):
+        print(item)
+
 
 
 # Задача 3: Проверка существования файла
@@ -97,9 +133,42 @@ else:
 # программа должна вывести сообщение "Файл не найден".
 
 
+import os
+
+
+file_name = "example.txt"
+if os.path.exists(file_name):
+    file_size = os.path.getsize(file_name)
+    print(f"Файл '{file_name}' найден. Размер файла: {file_size} байт.")
+else:
+
+    print("Файл не найден.")
+
+
+
 # Задача 4: Сравнение размеров файлов
 # Напишите программу, которая принимает два имени файлов в текущем каталоге, сравнивает их размеры и выводит,
 # какой из файлов больше. Если размеры файлов равны, программа должна вывести сообщение "Файлы имеют одинаковый размер".
+
+
+import os
+
+
+file_1 = input("Введите имя первого файла: ")
+file_2 = input("Введите имя второго файла: ")
+
+if os.path.exists(file_1) and os.path.exists(file_2):
+    size_1 = os.path.getsize(file_1)
+    size_2 = os.path.getsize(file_2)
+
+    if size_1 > size_2:
+        print(f"Файл '{file_1}' больше ({size_1} байт).")
+    elif size_1 < size_2:
+        print(f"Файл '{file_2}' больше ({size_2} байт).")
+    else:
+        print("Файлы имеют одинаковый размер.")
+else:
+    print("Один или оба файла не существуют.")
 
 
 
