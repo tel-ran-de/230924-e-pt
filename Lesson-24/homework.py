@@ -1,14 +1,17 @@
 # Тема: Модуль datetime
-
+#
 from collections.abc import ValuesView
 from zipfile import compressor_names
 from pkg_resources import empty_provider
+
 from datetime import datetime
 
 
 # Задача 1: Определение текущей даты и времени
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
 # Пример: 2024-06-11 14:35:45
+
+
 from datetime import datetime
 
 
@@ -16,67 +19,73 @@ current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 print("Текущая дата и время:", formatted_datetime)
 
+
 # Задача 2: Вычисление возраста
 # Напишите программу, которая принимает дату рождения пользователя в формате "YYYY-MM-DD" и вычисляет его возраст.
 
-from datetime import datetime
-
-
-birth_date = input("Введите вашу дату рождения (YYYY-MM-DD): ")
-birth_date = datetime.strptime(birth_date, "%Y-%m-%d")
-current_date = datetime.now()
-age = current_date.year - birth_date.year
-if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
-    age -= 1
-print("Ваш возраст:", age)
-
-# Задача 3: Расчет дней до следующего мероприятия
-# Напишите программу, которая принимает дату следующего мероприятия в формате "YYYY-MM-DD" и выводит количество дней,
-# оставшихся до этой даты.
-
-from datetime import datetime
-
-event_date = input("Введите дату следующего мероприятия (YYYY-MM-DD): ")
-event_date = datetime.strptime(event_date, "%Y-%m-%d")
-current_date = datetime.now()
-days_left = (event_date - current_date).days
-print(f"До мероприятия осталось {days_left} дней.")
-
-
-
-# Задача 4: Определение дня недели
-# Напишите программу, которая принимает дату в формате "YYYY-MM-DD" и выводит день недели для этой даты.
-
-from datetime import datetime
-
-date_input = input("Введите дату (YYYY-MM-DD): ")
-date_object = datetime.strptime(date_input, "%Y-%m-%d")
-day_of_week = date_object.strftime("%A")
-print(f"День недели для {date_input}:", day_of_week)
-
-
-# Задача 5: Сравнение двух дат
-# Напишите программу, которая принимает две даты в формате "YYYY-MM-DD" и определяет, какая из них позже.
-
-
-from datetime import datetime
-
-
-date_1 = input("Введите первую дату (YYYY-MM-DD): ")
-date_2 = input("Введите вторую дату (YYYY-MM-DD): ")
-
-# строки в объекты даты
-date_1 = datetime.strptime(date_1, "%Y-%m-%d")
-date_2 = datetime.strptime(date_2, "%Y-%m-%d")
-
-# Сравниваем
-if date_1 > date_2:
-    print(f"Первая дата ({date_1.date()}) позже второй.")
-elif date_1 < date_2:
-    print(f"Вторая дата ({date_2.date()}) позже первой.")
-else:
-    print(" даты одинаковы.")
-
+#
+#
+# from datetime import datetime
+#
+#
+# birth_date = input("Введите вашу дату рождения (YYYY-MM-DD): ")
+# birth_date = datetime.strptime(birth_date, "%Y-%m-%d")
+# current_date = datetime.now()
+# age = current_date.year - birth_date.year
+# if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
+#     age -= 1
+# print("Ваш возраст:", age)
+#
+#
+#
+#
+# # Задача 3: Расчет дней до следующего мероприятия
+# # Напишите программу, которая принимает дату следующего мероприятия в формате "YYYY-MM-DD" и выводит количество дней,
+# # оставшихся до этой даты.
+#
+# from datetime import datetime
+#
+# event_date = input("Введите дату следующего мероприятия (YYYY-MM-DD): ")
+# event_date = datetime.strptime(event_date, "%Y-%m-%d")
+# current_date = datetime.now()
+# days_left = (event_date - current_date).days
+# print(f"До мероприятия осталось {days_left} дней.")
+#
+#
+#
+# # Задача 4: Определение дня недели
+# # Напишите программу, которая принимает дату в формате "YYYY-MM-DD" и выводит день недели для этой даты.
+#
+# from datetime import datetime
+#
+# date_input = input("Введите дату (YYYY-MM-DD): ")
+# date_object = datetime.strptime(date_input, "%Y-%m-%d")
+# day_of_week = date_object.strftime("%A")
+# print(f"День недели для {date_input}:", day_of_week)
+#
+#
+# # Задача 5: Сравнение двух дат
+# # Напишите программу, которая принимает две даты в формате "YYYY-MM-DD" и определяет, какая из них позже.
+#
+#
+# from datetime import datetime
+#
+#
+# date_1 = input("Введите первую дату (YYYY-MM-DD): ")
+# date_2 = input("Введите вторую дату (YYYY-MM-DD): ")
+#
+# # строки в объекты даты
+# date_1 = datetime.strptime(date_1, "%Y-%m-%d")
+# date_2 = datetime.strptime(date_2, "%Y-%m-%d")
+#
+# # Сравниваем
+# if date_1 > date_2:
+#     print(f"Первая дата ({date_1.date()}) позже второй.")
+# elif date_1 < date_2:
+#     print(f"Вторая дата ({date_2.date()}) позже первой.")
+# else:
+#     print(" даты одинаковы.")
+#
 
 
 
@@ -171,9 +180,9 @@ if os.path.exists(file_1) and os.path.exists(file_2):
 else:
     print("Один или оба файла не существуют.")
 
-
-
-
+#
+#
+#
 
 # Тема: Интеграционная практика.
 
@@ -209,125 +218,125 @@ else:
 # 7. Вывести список товаров меньше определенного количества.
 
 
-#
-# class Company:
-#  company_name = "Killer Company"
-#
-#  def __init__(self,company_name):
-#      self.company_name = company_name
-#      self.employees = []
-#
-#
-#
-#  class Employee:
-#
-#      def __init__(self,name,killer,salary):
-#          self.employees = []
-#          self.name = name
-#          self.killer = killer
-#
-#  def add_employees(self, employee_name):
-#      if isinstance(employee, Employee):
-#          self.employees.append(employee_name)
-#      else:
-#          raise ValueError("employee dolschen wijasnitj")
-#
-# company= Company("Killer Company")
-#
-# company.company_name1 = "Killer"
-# employee1 = ("Employee:","Bob", "Soldat", 5000)
-# employee2 = ("Employee:", "Jana", "Soldat",3000)
-#
-# company.add_employee1 = "Bob","Soldat - Sniper" , 5000
-# company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
-#
-# print(f"Company name :{company.company_name1}")
-# print("Employees:",company.add_employee1 )
-# print("Employees:", company.add_employee2 )
-#
-#
-# #########################################################################################
-#
-#
-# class Company:
-#  company_name = "Killer Company"
-#
-#  def __init__(self):
-#      self.company_name = Company
-#      self.employees = []
-#
-#
-#
-#
-# class Employee:
-#
-#  def __init__(self,name,killer,salary):
-#      self.employees = []
-#      self.name = name
-#      self.killer = killer
-#      self.salary = salary
-#
-#
-#  def add_employees(self, employee_name):
-#      self.employees.append(employee_name)
-#
-#  def get_employees(self):
-#      return self.employees
-#
-#
-#
-# employee1 = Employee("Bob", "Soldat", 5000)
-# employee2 = Employee("Jana", "Soldat",3000)
-#
-# company= Company()
-# company.company_name1 = "Killer"
-# company.company_name2 = "Bob" , "Jana"
-# company.add_employee1 = "Bob","Soldat - Sniper" , 5000
-# company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
-#
-# print(f"Company name :{company.company_name1},{company.company_name2}")
-# print("Employees:",company.add_employee1 )
-# print("Employees:", company.add_employee2 )
-#
-#
-#
-#
-# ########################################################################################################
-# ########################################################################################################
-# ########################################################################################################
-#
-#
-#
-# class Library:
-#     def __init(self,total_books):
-#         self.total_books = total_books
-#         total_books = 0
-#         self.books = []
-#
-#
-#     def add_books(self,book_name):
-#         self.books.append(book_name)
-#         Library.total_books +=1
-#
-#
-#
-#
-#
-#
-# def get_age(self):
-#     return self.__age
-#
-#
-# def set__age(self, age):
-#     if age > 0:
-#         self.__age = age
-#     else:
-#         print("Age muss be positive")
-#
-#         print = Person("Alice", 30)
-#         print(Person.name)
-#         print(Person.age)
-#
+
+class Company:
+ company_name = "Killer Company"
+
+ def __init__(self,company_name):
+     self.company_name = company_name
+     self.employees = []
+
+
+
+ class Employee:
+
+     def __init__(self,name,killer,salary):
+         self.employees = []
+         self.name = name
+         self.killer = killer
+
+ def add_employees(self, employee_name):
+     if isinstance(employee, Employee):
+         self.employees.append(employee_name)
+     else:
+         raise ValueError("employee dolschen wijasnitj")
+
+company= Company("Killer Company")
+
+company.company_name1 = "Killer"
+employee1 = ("Employee:","Bob", "Soldat", 5000)
+employee2 = ("Employee:", "Jana", "Soldat",3000)
+
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
+
+print(f"Company name :{company.company_name1}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+#########################################################################################
+
+
+class Company:
+ company_name = "Killer Company"
+
+ def __init__(self):
+     self.company_name = Company
+     self.employees = []
+
+
+
+
+class Employee:
+
+ def __init__(self,name,killer,salary):
+     self.employees = []
+     self.name = name
+     self.killer = killer
+     self.salary = salary
+
+
+ def add_employees(self, employee_name):
+     self.employees.append(employee_name)
+
+ def get_employees(self):
+     return self.employees
+
+
+
+employee1 = Employee("Bob", "Soldat", 5000)
+employee2 = Employee("Jana", "Soldat",3000)
+
+company= Company()
+company.company_name1 = "Killer"
+company.company_name2 = "Bob" , "Jana"
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
+
+print(f"Company name :{company.company_name1},{company.company_name2}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+
+
+########################################################################################################
+########################################################################################################
+########################################################################################################
+
+
+
+class Library:
+    def __init(self,total_books):
+        self.total_books = total_books
+        total_books = 0
+        self.books = []
+
+
+    def add_books(self,book_name):
+        self.books.append(book_name)
+        Library.total_books +=1
+
+
+
+
+
+
+def get_age(self):
+    return self.__age
+
+
+def set__age(self, age):
+    if age > 0:
+        self.__age = age
+    else:
+        print("Age muss be positive")
+
+        print = Person("Alice", 30)
+        print(Person.name)
+        print(Person.age)
+
 
 
 
