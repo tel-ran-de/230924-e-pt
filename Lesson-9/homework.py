@@ -9,10 +9,10 @@ shopping_list = ["bread", "milk", "eggs"]
 
 # Измените элемент "milk" на "almond milk".
 shopping_list[1] = "almond milk"
-Aleksandr_Samborskij
+
 print(shopping_list)
 
-main
+
 # Создайте срез, содержащий первые два элемента списка.
 slice_shopping_list = shopping_list[:2]
 
@@ -128,6 +128,8 @@ print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
 
 print(detailed_tasks)  # Ожидаемый результат:
 # [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False]]
+
+
 
 
 # Тема: Методы списков

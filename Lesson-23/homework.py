@@ -297,7 +297,7 @@ print(result)
 
 
 
-sorted_responses = sorted(api_responses, key=lambda response: response['status'])
+sorted_responses = sorted('api_responses', key=lambda response: response['status'])
 numbered_responses = zip(range(len(sorted_responses)), sorted_responses)
 result = list(map(lambda item: (item[0], item[1]['url'], item[1]['status']), numbered_responses))
 

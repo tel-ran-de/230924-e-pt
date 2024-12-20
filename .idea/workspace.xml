@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения" />
+    <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-11/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-11/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-22/examples.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-22/examples.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/exercise_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/exercise_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/exercise_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/exercise_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-23/live-coding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-23/live-coding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-24/live-coding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-24/live-coding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-25/game_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-25/game_log.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +53,7 @@
     &quot;Python.homework (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.homework (2).executor&quot;: &quot;Run&quot;,
     &quot;Python.homework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.live-coding.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.minesweeper.executor&quot;: &quot;Run&quot;,
     &quot;Python.quiz_game.executor&quot;: &quot;Run&quot;,
@@ -213,14 +224,6 @@
       <option name="presentableId" value="Default" />
       <updated>1730132970358</updated>
       <workItem from="1730132980995" duration="7000" />
-    </task>
-    <task id="LOCAL-00002" summary="добавил изменения">
-      <option name="closed" value="true" />
-      <created>1731281740606</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1731281740606</updated>
     </task>
     <task id="LOCAL-00003" summary="добавил изменения">
       <option name="closed" value="true" />
@@ -606,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733186394517</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1733186916456</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1733186916456</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
