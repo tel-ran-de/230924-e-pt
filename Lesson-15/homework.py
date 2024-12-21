@@ -20,6 +20,8 @@ print(sum_list([1, 2, 3, 4, 5]))
 # Пример использования:
 # print(is_palindrome("radar"))  # Вывод: True
 # print(is_palindrome("hello"))  # Вывод: False
+
+
 print('Тема: Рекурсия. Задача 2.')
 def is_palindrome(s):
    if not s:
@@ -35,6 +37,7 @@ print(is_palindrome("hello"))
 # 3. Напишите функцию `find_max(lst)`, которая возвращает максимальный элемент в списке `lst` с помощью рекурсии.
 # Пример использования:
 # print(find_max([1, 5, 3, 9, 2]))  # Вывод: 9
+
 
 print('Тема: Рекурсия. Задача 3.')
 def find_max(lst):
