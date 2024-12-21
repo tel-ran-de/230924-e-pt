@@ -1,30 +1,32 @@
 # # Пример 1: Применение функции ко всем элементам списка с помощью map
-# def square(x):
-#     return x * x
-#
-#
-# numbers = [1, 2, 3, 4, 5]
-# squared_numbers = map(square, numbers)
-# print(squared_numbers)
-# print(list(squared_numbers))  # Результат: [1, 4, 9, 16, 25]
+def square(x):
+    return x * x
+
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+print(squared_numbers)
+print(list(squared_numbers))  # Результат: [1, 4, 9, 16, 25]
 
 
 # # Пример 2: Фильтрация списка с помощью функции filter
-# def is_even(x):
-#     return x % 2 == 0
-#
-# numbers = [1, 2, 3, 4, 5, 6]
-# even_numbers = filter(is_even, numbers)
-# print(even_numbers)
-# print(list(even_numbers))  # Результат: [2, 4, 6]
+
+def is_even(x):
+    return x % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(is_even, numbers)
+print(even_numbers)
+print(list(even_numbers))  # Результат: [2, 4, 6]
 
 # # Пример 3: Объединение двух списков в список кортежей с помощью zip
-# names = ["Alice", "Bob", "Charlie"]
-# ages = [25, 30, 35]
-# cities = ["Tashkent", "Tbilisi", "Warsaw"]
-# combined = zip(names, ages, cities)
-# print(list(combined))  # Вывод: [('Alice', 25, 'Tashkent'), ('Bob', 30, 'Tbilisi'), ('Charlie', 35, 'Warsaw')]
-# print(list(zip(["Alice", "Bob", "Charlie"], [25, 30, 35])))
+
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+cities = ["Tashkent", "Tbilisi", "Warsaw"]
+combined = zip(names, ages, cities)
+print(list(combined))  # Вывод: [('Alice', 25, 'Tashkent'), ('Bob', 30, 'Tbilisi'), ('Charlie', 35, 'Warsaw')]
+print(list(zip(["Alice", "Bob", "Charlie"], [25, 30, 35])))
 
 #
 # # Пример 4: Итерация по двум спискам одновременно с помощью zip
@@ -57,31 +59,34 @@
 #     return x if x >= 0 else -x
 #
 # # Пример 7: Применение лямбда-функции ко всем элементам списка с помощью map
-# numbers = [1, 2, 3, 4, 5]
-# squared_numbers = map(lambda x: x * x, numbers)
-# print(list(squared_numbers))  # Результат: [1, 4, 9, 16, 25]
-#
-# # Пример 8: Фильтрация списка с помощью лямбда-функции и filter
-# numbers = [1, 2, 3, 4, 5, 6]
-# even_numbers = filter(lambda x: x % 2 == 0, numbers)
-# print(list(even_numbers))  # Результат: [2, 4, 6]
-#
+
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(lambda x: x * x, numbers)
+print(list(squared_numbers))  # Результат: [1, 4, 9, 16, 25]
+
+# Пример 8: Фильтрация списка с помощью лямбда-функции и filter
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+print(list(even_numbers))  # Результат: [2, 4, 6]
+
 # # Пример 9: Генерация последовательности и применение функции к ее элементам
-# def number_generator(n):
-#     for i in range(n):
-#         yield i
-#
-# gen = number_generator(5)
-# squared = map(lambda x: x ** 2, gen)
-# print(list(squared))  # [0, 1, 4, 9, 16]
-#
+# number_generator(n):
+# #     for i in range(n):
+# #         yield i
+# #
+# # gen = number_generator(5)
+# # squared = map(lambda x: x ** 2, gen)
+# # print(list(squared))  # [0, 1, 4, 9, 16]
+# #
+# # def
 # # Пример 10: Чтение строк из файла и фильтрация с помощью лямбда-функции
-# def file_reader(file_path):
-#     with open(file_path, 'r') as file:
-#         for line in file:
-#             yield line.strip()
-#
-# lines = file_reader('example.txt')
-# filtered_lines = filter(lambda line: 'Python' in line, lines)
-# print(list(filtered_lines))
-#
+def file_reader(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+lines = file_reader('example.txt')
+filtered_lines = filter(lambda line: 'Python' in line, lines)
+print(list(filtered_lines))
+
