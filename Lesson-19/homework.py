@@ -72,9 +72,6 @@ with open('output.txt', 'r') as file:
 
 
 
-
-
-
 # Задание 3:
 
 

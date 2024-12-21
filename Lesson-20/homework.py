@@ -61,17 +61,16 @@ get_square()
 
 
 
-
-
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
-
-
 # Тема: Расространение исключения. Возбуждение исключения.
-
 # Задача 1. Допишите код ниже.
 #
+
+
+
+
 import math
 
 def calculate_square_root(number):
@@ -80,7 +79,7 @@ def calculate_square_root(number):
 def safe_calculate_square_root(number):
     try:
         result = calculate_square_root(number)
-        print(f"Квадратный корень из {number} равен {result}")
+        print(f"Квадрат. корень из{number},равен{result}")
     except ValueError as e:
         print(f"Ошибка: {e}")
 
@@ -91,15 +90,12 @@ safe_calculate_square_root(-9)  # Ожидаемый результат: Оши�
 
 
 
-
-
-
 import math
 
 
 def calculate_square_root(number):
     if number < 0:
-        raise ValueError("Число положит.")
+        raise ValueError("Число положитнное.")
 
     return math.sqrt(number)
 
@@ -121,9 +117,9 @@ safe_calculate_square_root(-9)  # Ожидае
 
 # Задача 2. Допишите код ниже.
 
-def convert_to_number(string):
-    # Добавьте проверку на некорректное значение и возбуждение исключения
 
+
+def convert_to_number(string):
     return int(string)
 
 def safe_convert_to_number(string):
@@ -136,6 +132,8 @@ def safe_convert_to_number(string):
 
 safe_convert_to_number("123")  # Ожидаемый результат: Конвертированное число: 123
 safe_convert_to_number("abc")  # Ожидаемый результат: Ошибка: Введенное значение не является числом
+
+
 
 
 
