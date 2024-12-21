@@ -3,8 +3,8 @@
 # Задание 1: Напишите функцию, которая создает итератор, возвращающий числа от 1 до заданного числа `n`.
 # Обработайте исключение StopIteration
 
-
-
+#
+#
 
 
 class NumberIterator:
@@ -18,21 +18,22 @@ class NumberIterator:
     def __next__(self):
         if self.current > self.n:
             raise StopIteration
-        current_value = self.current
-        self.current += 1
-        return current_value
+        else:
+            result = self.current
+            self.current += 1
+            return result
 
 
 n = 5
-iterator = NumberIterator(n)
-for num in iterator:
-    print(num)
 
-def create_number_iterator(n):
-    return NumberIterator(n)
-    ("итератор")
+def generate_numbers(n):
 
+    iterator = NumberIterator(n)
 
+    for num in iterator:
+        print(num)
+
+# generate_numbers(5)
 
 
 
@@ -40,12 +41,9 @@ def create_number_iterator(n):
 # Обработайте исключение StopIteration
 
 
-"Генератор - квадратов"
-
-
-
-
-
+# "Генератор - квадратов"
+#
+#
 
 squares_generator = (x**2 for x in range(11))
 "StopIteration"
@@ -64,9 +62,9 @@ except StopIteration:
 # Задание 3: Напишите функцию-генератор, которая принимает предложение и возвращает слова по одному.
 # Обработайте исключение StopIteration
 
-
-"Функция - генератор"
-
+#
+# "Функция - генератор"
+#
 
 
 def word_generator(sentence):
@@ -91,6 +89,7 @@ except StopIteration:
 # Тема: Генераторы и встроенные функции
 
 # Задача 1: # Генератор, который возвращает квадраты чисел от 0 до 10
+
 # def square_generator():
 #     for i in range(11):  # от 0 до 10 включительно
 #         yield i ** 2  # возвращаем квадрат числа
@@ -144,6 +143,7 @@ print(result)
 
 
 
+
 def word_lengths(sentence):
     words = sentence.split(),
     for word in words:
@@ -171,19 +171,23 @@ print(f"Макс: {max_length}")
 # Программа должна одинаково реагировать на написание слова строчными и заглавными буквами.
 # Файл: data.txt
 
+
 x_word = 'this'
 
 
 
 def filter_lines_by_keyword(filename, keyword):
     keyword = keyword.lower(),               ("нижний регистр")
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
-            if keyword in line.lower():
+            if keyword.lover() in line.lower():
                 yield line.strip(),          ("Возвр. строку")
 
-filename = 'data.txt'
-x_word = 'python'
+
+def main():
+    keyword = input("Введите ключевое слово для поиска: ")
+    filename = 'data.txt'
+    x_word = 'python'
 
 for line in filter_lines_by_keyword(filename, x_word):
     print(line)
@@ -198,11 +202,11 @@ for line in filter_lines_by_keyword(filename, x_word):
 # чтобы найти минимальную и максимальную длину слов и выведите их.
 # sentence = "Write a generator that returns word lengths from a given sentence"
 
+#
 
-
-
-
-
+#
+#
+#
 def word_lengths(sentence):
     for word in sentence.split():
         yield len(word),
@@ -230,19 +234,25 @@ print("Макс:", max_length)
 
 
 
+import re
+
 
 def filter_lines_with_numbers(filename):
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             if re.search(r'\d', line):
-                yield line.strip(),
+                yield line.strip()
 
 filename = 'data.txt'
+
+print("Строки, {содержащие числа}")
 
 for line in filter_lines_with_numbers(filename):
     print(line)
 
 
+if __name__ == "__main__":
+    main()
 
 
 

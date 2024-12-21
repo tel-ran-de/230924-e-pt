@@ -20,6 +20,8 @@ print(sum_list([1, 2, 3, 4, 5]))
 # Пример использования:
 # print(is_palindrome("radar"))  # Вывод: True
 # print(is_palindrome("hello"))  # Вывод: False
+
+
 print('Тема: Рекурсия. Задача 2.')
 def is_palindrome(s):
    if not s:
@@ -36,6 +38,7 @@ print(is_palindrome("hello"))
 # Пример использования:
 # print(find_max([1, 5, 3, 9, 2]))  # Вывод: 9
 
+
 print('Тема: Рекурсия. Задача 3.')
 def find_max(lst):
     if len(lst) == 1:
@@ -51,7 +54,7 @@ print(find_max([1, 5, 3, 9, 2]))
 
 # Тема: Дополнительная практика на рекурсию
 print('Тема: Дополнительная практика на рекурсию. Задача 1.')
-=======
+
 
 
 # Тема: Дополнительная практика на рекурсию
