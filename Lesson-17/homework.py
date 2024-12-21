@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
 
 
- import math_operations
+import math_operations
 
 
 a = 10
@@ -226,9 +226,7 @@ import math
 
 random_number = random.uniform(1.5, 10.5)
 
-
 rounded_down = math.floor(random_number)
-
 
 rounded_up = math.ceil(random_number)
 

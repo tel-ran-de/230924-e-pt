@@ -72,9 +72,6 @@ with open('output.txt', 'r') as file:
 
 
 
-
-
-
 # Задание 3:
 
 
@@ -94,7 +91,7 @@ with open('output.txt', 'r') as file:
 
 
 
-"1.Открытие файла"
+    "1.Открытие файла"
 
 with open('pointer_example.txt', 'w+') as file:
 

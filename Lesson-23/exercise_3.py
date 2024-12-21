@@ -25,6 +25,7 @@
 # [{'username': 'alice', 'status': 'ACTIVE'},
 # {'username': 'charlie', 'status': 'ACTIVE'},
 # {'username': 'bob', 'status': 'INACTIVE'}]
+
 tuples_list = [
     {"username": "alice", "status": "active"},
     {"username": "bob", "status": "inactive"},

@@ -10,6 +10,7 @@
 # Число является простым, если оно делится только на 1 и на само себя.
 # Для каждого числа в диапазоне от 2 до 50, проверьте, делится ли оно на любое число меньше него (кроме 1).
 
+
 numbers = list(range(2,51))
 simple = []
 for num in numbers:
@@ -23,6 +24,7 @@ for num in numbers:
     if result:
         simple.append(num)
 print(simple)
+
 
 # Упражнение 2: Таблица умножения
 
@@ -58,7 +60,9 @@ for num1 in numbers:
     for num2 in numbers:
         print(f'{num1*num2:4}', end='')
     print()
-'''
+
+
+
 # Тема: Генераторы списков
 
 # Упражнение 1: Напишите программу с помощью генераторов списков,
@@ -79,24 +83,27 @@ for num1 in numbers:
 # которая создаст список всех гласных букв в строке
 # some_string = 'the quick brown fox jumps over the lazy dog'.
 
-=======
+
 list_7 = [x for x in range(7,1001, 7)]
 print(list_7)
 
 
 # Упражнение 2: Напишите программу с помощь генераторов списков,
 # которая найдите все числа от 1 до 1000, в которых есть цифра 3.
+
 list_3 = [x for x in range(1,1001) if str(x).find('3') >= 0]
 print(list_3)
 
 # Упражнение 3: Напишите программу с помощь генераторов списков,
 # которая посчитает количество пробелов в строке
+
 some_string = 'the slow solid squid swam sumptuously through the slimy swamp'
 result = sum(1 for char in some_string if char==' ')
 print(result)
 
 # Упражнение 4: Напишите программу с помощь генераторов списков,
 # которая создаст список всех гласных букв в строке
+
 some_string = 'the quick brown fox jumps over the lazy dog'
 vowel_list = [x for x in some_string if x in 'eiuoa']
 print(vowel_list)
@@ -145,6 +152,7 @@ for row in matrix:
 # ]
 
 # Напишите программу для вывода минимального и максимального значений в каждом ряду (вложенном списке) матриц
+
 matrix = [
      [2, 5, 8, 11],
      [14, 17, 20, 23],
@@ -175,6 +183,7 @@ print(min_max)
 # Упражнение 8: Перемножение матриц
 #
 # - Создайте с помощью генераторов списков две матрицы размером 3x3 со значениями от 1 до 9 и от 9 до 1.
+
 matrix1 = [[x for x in range(1 + j*3, 1 + 3*(j+1))] for j in range(3)]
 print(f'matrix1 = {matrix1}')
 matrix2 = [[x for x in range(3*j, (j-1)*3, -1) ] for j in range(3, 0,-1)]

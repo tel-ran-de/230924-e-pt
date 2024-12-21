@@ -9,13 +9,17 @@
 # В файл записывается время начало игры, время и значение каждой попытки, время окончания игры и результат.
 # - Добавить обработку ошибок с использованием `try/except`, где это необходимо.
 
+
+
 import random
 import datetime
+
 
 
 def log_action(message):
     with open("guess_number_log.txt", "a", encoding="utf-8") as log_file:
         log_file.write(f"{datetime.datetime.now()}: {message}\n")
+
 
 
 def guess_number():
