@@ -13,29 +13,29 @@
 
 
 
-{
-    "start": {
-        "text": "Вы просыпаетесь в темной комнате. Куда вы пойдете?",
-        "choices": {
-            "1": "Открыть дверь",
-            "2": "Остаться и осмотреться"
-        }
-    },
-    "1": {
-        "text": "Вы открыли дверь и увидели длинный коридор.",
-        "choices": {
-            "1": "Идти по коридору",
-            "2": "Вернуться в комнату"
-        }
-    },
-    "2": {
-        "text": "Вы остались в комнате и нашли тайник с оружием.",
-        "choices": {
-            "1": "Использовать оружие",
-            "2": "Выйти из комнаты"
-        }
-    }
-}
+# {
+#     "start": {
+#         "text": "Вы просыпаетесь в темной комнате. Куда вы пойдете?",
+#         "choices": {
+#             "1": "Открыть дверь",
+#             "2": "Остаться и осмотреться"
+#         }
+#     },
+#     "1": {
+#         "text": "Вы открыли дверь и увидели длинный коридор.",
+#         "choices": {
+#             "1": "Идти по коридору",
+#             "2": "Вернуться в комнату"
+#         }
+#     },
+#     "2": {
+#         "text": "Вы остались в комнате и нашли тайник с оружием.",
+#         "choices": {
+#             "1": "Использовать оружие",
+#             "2": "Выйти из комнаты"
+#         }
+#     }
+# }
 
 
 import json
@@ -43,12 +43,15 @@ import os
 import logging
 from datetime import datetime
 
+
 # Настройка логирования
 logging.basicConfig(filename='game_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+
 
 # Путь к файлам
 STORY_FILE = 'game_story.json'
 STATE_FILE = 'game_state.json'
+
 
 # Загрузка сюжета игры
 def load_story():
@@ -62,6 +65,7 @@ def load_story():
         print("Ошибка: проблема с форматом JSON.")
         return {}
 
+
 # Загрузка состояния игры
 def load_game_state():
     if os.path.exists(STATE_FILE):
@@ -72,6 +76,7 @@ def load_game_state():
             print("Ошибка: проблема с форматом состояния игры.")
     return None
 
+
 # Сохранение состояния игры
 def save_game_state(current_scene):
     try:
@@ -80,6 +85,8 @@ def save_game_state(current_scene):
         print("Состояние игры сохранено.")
     except Exception as e:
         print(f"Ошибка при сохранении состояния игры: {e}")
+
+
 
 # Основной игровой цикл
 def play_game():
@@ -95,6 +102,8 @@ def play_game():
 
     logging.info(f"Игра началась. Стартовая сцена: {current_scene}")
 
+
+
     # Игровой процесс
     while True:
         # Вывод текста текущей сцены
@@ -109,6 +118,8 @@ def play_game():
         for key, choice in scene["choices"].items():
             print(f"{key}. {choice}")
 
+
+
         # Ввод игрока
         try:
             user_choice = input("Выберите действие (цифра): ").strip()
@@ -117,6 +128,8 @@ def play_game():
         except ValueError as e:
             print(e)
             continue
+
+
 
         # Логирование хода
         logging.info(f"Игрок выбрал: {scene['choices'][user_choice]}")
