@@ -19,6 +19,8 @@
 # Отсортируйте кортежи по количеству слов во втором элементе, предварительно проверив,
 # что все строки содержат только алфавитные символы, с помощью функции `all`.
 # Ожидаемый результат: [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
+
+
 tuples_1 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high"), (9, "the biggest 1")]
 tuples_2 = [(1, 'low'), (3, 'high'), (4, 'medium'), (6, 'very high')]
 tuples_3 = [(8, "ultra very high"), (3, "high"), (1, "low"), (4, "medium"), (6, "very high")]

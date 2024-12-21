@@ -166,12 +166,13 @@ while True:
 #
 # Напишите программу, которая принимает строку от пользователя и подсчитывать количество гласных букв (a, e, i, o, u)
 # в этой строке.Используйте цикл for и условие if.
+
+
 word=input('Введите слово:')
 gls =0
 for letter in word:
         if letter in "aeiou":
           gls +=1
-pr
 print('Тема: Цикл for Task # 1')
 check_string = 'aeiou'
 counter = 0
@@ -229,7 +230,7 @@ print('project Управление библиотекой')
 # удалять книги, искать книги по автору и выводить список всех книг с их авторами и статусами (в наличии или выдана).
 #
 # Требования: Реализуйте работу всех пунктов меню.
-#
+# #
 # library = [["Война и мир", "Толстой", "в наличии"],
 #            ["Преступление и наказание", "Достоевский", "выдана"],
 #            ["Мастер и Маргарита", "Булгаков", "в наличии"]]
@@ -243,114 +244,236 @@ print('project Управление библиотекой')
 #     print("5. Показать книги определенного автора")
 #     print("6. Показать книги с определенным статусом")
 #     choice = input("Выберите действие, введя его номер: ")
+
+    # Продолжите программу ниже.
+
+library = [
+    ["Война и мир", "Толстой", "в наличии"],
+    ["Преступление и наказание", "Достоевский", "выдана"],
+    ["Мастер и Маргарита", "Булгаков", "в наличии"]
+]
+
+
+# Функция для отображения всех книг в библиотеке
+def show_all_books():
+    if not library:
+        print("Библиотека пуста.")
+    else:
+        print("\nСписок всех книг:")
+        for book in library:
+            print(f"Название: {book[0]}, Автор: {book[1]}, Статус: {book[2]}")
+
+
+# Функция для добавления новой книги
+def add_book():
+    title = input("Введите название книги: ")
+    author = input("Введите имя автора: ")
+    status = input("Введите статус книги (в наличии/выдана): ").lower()
+
+    if status not in ["в наличии", "выдана"]:
+        print("Некорректный статус. Статус может быть 'в наличии' или 'выдана'.")
+        return
+
+    library.append([title, author, status])
+    print("Книга добавлена в библиотеку.")
+
+
+# Функция для удаления книги
+def delete_book():
+    title = input("Введите название книги, которую хотите удалить: ")
+    for book in library:
+        if book[0].lower() == title.lower():
+            library.remove(book)
+            print(f"Книга '{title}' удалена из библиотеки.")
+            return
+    print("Книга не найдена.")
+
+
+# Функция для изменения статуса книги
+def change_book_status():
+    title = input("Введите название книги для изменения статуса: ")
+    for book in library:
+        if book[0].lower() == title.lower():
+            new_status = input("Введите новый статус книги (в наличии/выдана): ").lower()
+            if new_status not in ["в наличии", "выдана"]:
+                print("Некорректный статус. Статус может быть 'в наличии' или 'выдана'.")
+                return
+            book[2] = new_status
+            print(f"Статус книги '{title}' изменён на '{new_status}'.")
+            return
+    print("Книга не найдена.")
+
+
+# Функция для отображения книг по автору
+def show_books_by_author():
+    author = input("Введите имя автора: ")
+    found = False
+    for book in library:
+        if book[1].lower() == author.lower():
+            print(f"Название: {book[0]}, Статус: {book[2]}")
+            found = True
+    if not found:
+        print(f"Книги автора {author} не найдены.")
+
+
+# Функция для отображения книг с определённым статусом
+def show_books_by_status():
+    status = input("Введите статус книги (в наличии/выдана): ").lower()
+    found = False
+    for book in library:
+        if book[2].lower() == status:
+            print(f"Название: {book[0]}, Автор: {book[1]}")
+            found = True
+    if not found:
+        print(f"Книги со статусом '{status}' не найдены.")
+
+
+# Главное меню программы
+def menu():
+    while True:
+        print("\nМеню")
+        print("1. Показать список всех книг")
+        print("2. Добавить книгу")
+        print("3. Удалить книгу")
+        print("4. Поменять статус книги")
+        print("5. Показать книги определенного автора")
+        print("6. Показать книги с определенным статусом")
+        print("7. Выход")
+
+        choice = input("Выберите действие, введя его номер: ")
+
+        if choice == '1':
+            show_all_books()
+        elif choice == '2':
+            add_book()
+        elif choice == '3':
+            delete_book()
+        elif choice == '4':
+            change_book_status()
+        elif choice == '5':
+            show_books_by_author()
+        elif choice == '6':
+            show_books_by_status()
+        elif choice == '7':
+            print("Выход из программы.")
+            break
+        else:
+            print("Некорректный выбор. Пожалуйста, выберите число от 1 до 7.")
+
+
+# Запуск программы
+menu()
+
+
+######################################################################################################
+
 #
-#     # Продолжите программу ниже.
-
-
-library = [["Война и мир", "Толстой", "в наличии"],
-           ["Преступление и наказание", "Достоевский", "выдана"],
-           ["Мастер и Маргарита", "Булгаков", "в наличии"]]
-status =["выдана", "в наличии"]
 #
-while True:
-    print("\nМеню")
-    print("1. Показать список всех книг")
-    print("2. Добавить книгу")
-    print("3. Удалить книгу")
-    print("4. Поменять статус книги")
-    print("5. Показать книги определенного автора")
-    print("6. Показать книги с определенным статусом")
-    print("0. если хотите покинуть программу")
-    choice = int(input("Выберите действие, введя его номер: "))
-
-    if choice == 1:
-        print('список книг')
-        print(60 * '-')
-        print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
-        print(60 * '-')
-        for index, book in enumerate(library, 1):
-#            print(f'|{(3 - len(str(index)))*' '}{index} |'
-#                  f'{(13 - len(book[1]))*' '}{book[1]} |'
-#                  f'{(25 - len(book[0]))*' '}{book[0]} |'
-#                  f'{(10 - len(book[2]))*' '}{book[2]} |')
-#            print(60 * '-')
-#    elif choice == 2:
-#        add_title = input('введите название книги: ')
-#        add_author = input('введите автора книги: ')
-#        library.append([add_title, add_author, 'в наличии'])
-#        print(f'книга с названием {add_title} автор {add_author} добавлена в библиотеку!')
-#    elif choice == 3:
-        delete_title = input('введите название книги для удаления: ')
-        delete_author = input('введите автора книги для удаления: ')
-        for index, book in enumerate(library):
-             if book[0].lower() == delete_title.lower() and book[1].lower() == delete_author.lower():
-                library.pop(index)
-                print(f'книга с названием {delete_title} автор {delete_author} удалена из библиотеки!')
-                break
-        else:
-            print(f'книга с названием {delete_title} автор {delete_author} не найдена библиотеке!')
-    elif choice == 4:
-        update_title = input('введите название книги для изменения статуса: ')
-        update_author = input('введите автора книги для изменения статуса: ')
-        for book in library:
-            if book[0].lower() == update_title.lower() and book[1].lower() == update_author.lower():
-                print(f'книга с названием {update_title} автор {update_author} имеет статус {book[2]}')
-                action = int(input('Если хотите изменить статус книги введите 1, если статус не меняется введите 0: '))
-                if action == 1:
-                    for item in status:
-                        if item != book[2]:
-                            book[2] = item
-                            print(f'книга с названием {update_title} '
-                                  f'автор {update_author} имеет новый статус {book[2]}!')
-                            break
-                else:
-                    print(f'книга с названием {update_title} '
-                          f'автор {update_author} имеет прежний статус {book[2]}!')
-                break
-        else:
-            print(f'книга с названием {update_title} автор {update_author} не найдена библиотеке!')
-    elif choice == 5:
-        author_list = []
-        author = input('Введите имя автора: ')
-        for book in library:
-            if book[1].lower() == author.lower():
-                author_list.append(book)
-        if len(author_list) == 0:
-            print('Книг заданного автора нет в библиотеке')
-        else:
-            print('список книг')
-            print(60 * '-')
-            print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
-            print(60 * '-')
-            for index, book in enumerate(author_list, 1):
-                print(f'|{(3 - len(str(index))) * ' '}{index} |'
-                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
-                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
-                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
-                print(60 * '-')
-    elif choice == 6:
-        status_list = []
-        index = int(input(f'Для поиска книг со статусом "выдана" введите 0 \n'
-                       f'Для поиска книг со статусом "в наличии" введите 1: '))
-
-        for book in library:
-            if book[2] == status[index]:
-                status_list.append(book)
-        if len(status_list) == 0:
-            print(f'Книг со статусом {status[index]} нет в библиотеке')
-        else:
-            print('список книг')
-            print(60 * '-')
-            print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
-            print(60 * '-')
-            for index, book in enumerate(status_list, 1):
-                print(f'|{(3 - len(str(index))) * ' '}{index} |'
-#                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
-#                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
-#                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
-#                print(60 * '-')
-#    elif choice == 0:
-        print('Вы покинули программу')
-        break
-    else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
-
+#
+# library = [["Война и мир", "Толстой", "в наличии"],
+#            ["Преступление и наказание", "Достоевский", "выдана"],
+#            ["Мастер и Маргарита", "Булгаков", "в наличии"]]
+# status =["выдана", "в наличии"]
+# #
+# while True:
+#     print("\nМеню")
+#     print("1. Показать список всех книг")
+#     print("2. Добавить книгу")
+#     print("3. Удалить книгу")
+#     print("4. Поменять статус книги")
+#     print("5. Показать книги определенного автора")
+#     print("6. Показать книги с определенным статусом")
+#     print("0. если хотите покинуть программу")
+#     choice = int(input("Выберите действие, введя его номер: "))
+#
+#     if choice == 1:
+#         print('список книг')
+#         print(60 * '-')
+#         print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+#         print(60 * '-')
+#         for index, book in enumerate(library, 1):
+# #            print(f'|{(3 - len(str(index)))*' '}{index} |'
+# #                  f'{(13 - len(book[1]))*' '}{book[1]} |'
+# #                  f'{(25 - len(book[0]))*' '}{book[0]} |'
+# #                  f'{(10 - len(book[2]))*' '}{book[2]} |')
+# #            print(60 * '-')
+# #    elif choice == 2:
+# #        add_title = input('введите название книги: ')
+# #        add_author = input('введите автора книги: ')
+# #        library.append([add_title, add_author, 'в наличии'])
+# #        print(f'книга с названием {add_title} автор {add_author} добавлена в библиотеку!')
+# #    elif choice == 3:
+#         delete_title = input('введите название книги для удаления: ')
+#         delete_author = input('введите автора книги для удаления: ')
+#         for index, book in enumerate(library):
+#              if book[0].lower() == delete_title.lower() and book[1].lower() == delete_author.lower():
+#                 library.pop(index)
+#                 print(f'книга с названием {delete_title} автор {delete_author} удалена из библиотеки!')
+#                 break
+#         else:
+#             print(f'книга с названием {delete_title} автор {delete_author} не найдена библиотеке!')
+#     elif choice == 4:
+#         update_title = input('введите название книги для изменения статуса: ')
+#         update_author = input('введите автора книги для изменения статуса: ')
+#         for book in library:
+#             if book[0].lower() == update_title.lower() and book[1].lower() == update_author.lower():
+#                 print(f'книга с названием {update_title} автор {update_author} имеет статус {book[2]}')
+#                 action = int(input('Если хотите изменить статус книги введите 1, если статус не меняется введите 0: '))
+#                 if action == 1:
+#                     for item in status:
+#                         if item != book[2]:
+#                             book[2] = item
+#                             print(f'книга с названием {update_title} '
+#                                   f'автор {update_author} имеет новый статус {book[2]}!')
+#                             break
+#                 else:
+#                     print(f'книга с названием {update_title} '
+#                           f'автор {update_author} имеет прежний статус {book[2]}!')
+#                 break
+#         else:
+#             print(f'книга с названием {update_title} автор {update_author} не найдена библиотеке!')
+#     elif choice == 5:
+#         author_list = []
+#         author = input('Введите имя автора: ')
+#         for book in library:
+#             if book[1].lower() == author.lower():
+#                 author_list.append(book)
+#         if len(author_list) == 0:
+#             print('Книг заданного автора нет в библиотеке')
+#         else:
+#             print('список книг')
+#             print(60 * '-')
+#             print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+#             print(60 * '-')
+#             for index, book in enumerate(author_list, 1):
+#                 print(f'|{(3 - len(str(index))) * ' '}{index} |'
+#                       f'{(13 - len(book[1])) * ' '}{book[1]} |'
+#                       f'{(25 - len(book[0])) * ' '}{book[0]} |'
+#                       f'{(10 - len(book[2])) * ' '}{book[2]} |')
+#                 print(60 * '-')
+#     elif choice == 6:
+#         status_list = []
+#         index = int(input(f'Для поиска книг со статусом "выдана" введите 0 \n'
+#                        f'Для поиска книг со статусом "в наличии" введите 1: '))
+#
+#         for book in library:
+#             if book[2] == status[index]:
+#                 status_list.append(book)
+#         if len(status_list) == 0:
+#             print(f'Книг со статусом {status[index]} нет в библиотеке')
+#         else:
+#             print('список книг')
+#             print(60 * '-')
+#             print(f'| id |{4 * " "}author{4 * " "}|{11 * " "}title{10 * " "}|   Status  |')
+#             print(60 * '-')
+#             for index, book in enumerate(status_list, 1):
+#                 print(f'|{(3 - len(str(index))) * ' '}{index} |'
+# #                      f'{(13 - len(book[1])) * ' '}{book[1]} |'
+# #                      f'{(25 - len(book[0])) * ' '}{book[0]} |'
+# #                      f'{(10 - len(book[2])) * ' '}{book[2]} |')
+# #                print(60 * '-')
+# #    elif choice == 0:
+#         print('Вы покинули программу')
+#         break
+#     else: print('Вы сделали неправильный выбор! Выберите номер действия согласно меню.')
+#

@@ -10,6 +10,7 @@
 
 
 
+
 numbers = [10, 3, 7, 1, 9, 4]
 numbers.sort()
 print(numbers)
@@ -21,6 +22,7 @@ print(sorted_numbers)
 
 
 
+
 # Задача 2: Сортировка списка строк по длине
 # Дан список строк `["house", "cat", "elephant", "car", "building"]`.
 # Отсортируйте список по длине строк с помощью функции `sorted`.
@@ -28,9 +30,12 @@ print(sorted_numbers)
 
 
 
+
 my_list = ["house", "cat", "elephant", "car", "building"]
 sorted_list = sorted(my_list, key=len)
 print(my_list)
+
+
 
 
 
@@ -56,9 +61,13 @@ print(numbers_value)
 
 
 
+
+
 people = [{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 20 }, { "name": "Charlie", "age": 23 }]
 people_sorted = sorted(people, key=lambda person: person['age'])
 print(people_sorted)
+
+
 
 
 
@@ -93,6 +102,7 @@ print(numbers_value)
 items = ["tree", 3, "mountain", 1, "river", 2]
 sorted_strings = sorted(filter(lambda x: isinstance(x, str), items))
 print(sorted_strings)
+
 
 
 
@@ -140,7 +150,6 @@ print(sorted_tuples)
 
 
 
-
 # Задача 4: Сортировка списка словарей по длине значений с использованием any
 # Дан список словарей
 # [{ "country": "USA", "capital": "Washington" }, { "country": "UK", "capital": "London" },
@@ -148,6 +157,7 @@ print(sorted_tuples)
 # Отсортируйте словари по длине значений ключа `capital`, предварительно проверив,
 # что хотя бы одна длина значения ключа `capital` больше 6, с помощью функции `any`.
 # Ожидаемый результат: [{'country': 'UK', 'capital': 'London'}, {'country': 'Australia', 'capital': 'Canberra'}, {'country': 'USA', 'capital': 'Washington'}]
+
 
 
 
@@ -297,7 +307,8 @@ print(result)
 
 
 
-sorted_responses = sorted(api_responses, key=lambda response: response['status'])
+
+sorted_responses = sorted('api_responses', key=lambda response: response['status'])
 numbered_responses = zip(range(len(sorted_responses)), sorted_responses)
 result = list(map(lambda item: (item[0], item[1]['url'], item[1]['status']), numbered_responses))
 
