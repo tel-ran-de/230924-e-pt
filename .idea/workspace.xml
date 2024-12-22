@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dced80-658c-4f89-9216-6c79767eb18c" name="Changes" comment="добавил изменения">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-17/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-17/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-19/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-19/homework.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson-6/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-6/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson-7/live-coding3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson-7/live-coding3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +46,8 @@
     "Python.homework (2).executor": "Run",
     "Python.homework.executor": "Run",
     "Python.live-coding.executor": "Run",
+    "Python.live-coding1.executor": "Run",
+    "Python.live-coding2.executor": "Run",
     "Python.live-coding3.executor": "Run",
     "Python.main.executor": "Run",
     "Python.minesweeper.executor": "Run",
@@ -223,22 +222,6 @@
       <option name="presentableId" value="Default" />
       <updated>1730132970358</updated>
       <workItem from="1730132980995" duration="7000" />
-    </task>
-    <task id="LOCAL-00014" summary="добавил изменения">
-      <option name="closed" value="true" />
-      <created>1731733599299</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1731733599299</updated>
-    </task>
-    <task id="LOCAL-00015" summary="добавил изменения">
-      <option name="closed" value="true" />
-      <created>1731777301543</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1731777301543</updated>
     </task>
     <task id="LOCAL-00016" summary="добавил изменения">
       <option name="closed" value="true" />
@@ -616,7 +599,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734743375200</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1734834673829</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1734834673830</updated>
+    </task>
+    <task id="LOCAL-00064" summary="добавил изменения">
+      <option name="closed" value="true" />
+      <created>1734834683820</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1734834683820</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
