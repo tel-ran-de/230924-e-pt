@@ -40,8 +40,8 @@ if __name__ == "__main__":
 
 
 
-import math_operations
-
+import math_operations.py
+math_operations.py
 
 a = 10
 b = 5
@@ -49,19 +49,17 @@ b = 5
 # Умножение
 
 result_multiply = math_operations.multiply(a, b)
-# print(f"{a} * {b} = {result_multiply}")
+print(f"{a} * {b} = {result_multiply}")
 
 # Вычитание
 
 result_subtract = math_operations.subtract(a, b)
-# print(f"{a} - {b} = {result_subtract}")
+print(f"{a} - {b} = {result_subtract}")
 
 # Деление
 
 result_divide = math_operations.divide(a, b)
-
-
-# print(f"{a} / {b} = {result_divide}")
+print(f"{a} / {b} = {result_divide}")
 
 
 # Тема: модули random, math
@@ -89,8 +87,8 @@ def round_and_sqrt(ceil_num, floor_num):
     sqrt_ceil = math.sqrt(ceil_rounded)
     sqrt_floor = math.sqrt(floor_rounded)
 
-#   print(f"Число {ceil_num} округлено вверх до {ceil_rounded}, квадратный корень: {sqrt_ceil}")
-#   print(f"Число {floor_num} округлено вниз до {floor_rounded}, квадратный корень: {sqrt_floor}")
+    print(f"Число {ceil_num} округлено вверх до {ceil_rounded}, квадратный корень: {sqrt_ceil}")
+    print(f"Число {floor_num} округлено вниз до {floor_rounded}, квадратный корень: {sqrt_floor}")
 
 
 round_and_sqrt(7.3, 15.8)
