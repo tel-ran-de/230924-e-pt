@@ -11,7 +11,7 @@ from datetime import datetime
 # Напишите программу, которая выводит текущие дату и время в формате "YYYY-MM-DD HH:MM:SS".
 # Пример: 2024-06-11 14:35:45
 #
-#
+
 from datetime import datetime
 #
 #
@@ -24,10 +24,10 @@ print("Текущая дата и время:", formatted_datetime)
 # Напишите программу, которая принимает дату рождения пользователя в формате "YYYY-MM-DD" и вычисляет его возраст.
 #
 # #
-#
+
 from datetime import datetime
 
-
+#
 birth_date = input("Введите вашу дату рождения (YYYY-MM-DD): ")
 birth_date = datetime.strptime(birth_date, "%Y-%m-%d")
 current_date = datetime.now()
@@ -37,7 +37,7 @@ if (current_date.month, current_date.day) < (birth_date.month, birth_date.day):
 print("Ваш возраст:", age)
 
 #
-#
+
 #
 # Задача 3: Расчет дней до следующего мероприятия
 # Напишите программу, которая принимает дату следующего мероприятия в формате "YYYY-MM-DD" и выводит количество дней,
@@ -55,7 +55,7 @@ print(f"До мероприятия осталось {days_left} дней.")
 #
 # Задача 4: Определение дня недели
 # Напишите программу, которая принимает дату в формате "YYYY-MM-DD" и выводит день недели для этой даты.
-# #
+#
 
 
 
@@ -212,7 +212,7 @@ else:
     print("Один или оба файла не существуют.")
 
 #
-#
+
 
 
 # Тема: Интеграционная практика.
@@ -251,178 +251,178 @@ else:
 
 
 
-
-
-import os
-import datetime
-
-# Файл для хранения товаров
-inventory_file = "inventory.txt"
-log_file = "inventory_log.txt"
-
-# Функция для логирования действий
-def log_action(action):
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(log_file, "a") as log:
-        log.write(f"{timestamp} - {action}\n")
-
-# Функция для создания резервной копии файла инвентаря
-def create_backup():
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    backup_filename = f"inventory_backup_{timestamp}.txt"
-    with open(inventory_file, "r") as original_file:
-        with open(backup_filename, "w") as backup_file:
-            backup_file.write(original_file.read())
-    log_action(f"Резервная копия создана: {backup_filename}")
-
-# Чтение всех товаров из файла
-def read_inventory():
-    inventory = []
-    if os.path.exists(inventory_file):
-        with open(inventory_file, "r") as file:
-            lines = file.readlines()
-            for line in lines:
-                parts = line.strip().split(",")
-                name = parts[0]
-                price = float(parts[1])
-                quantity = int(parts[2])
-                created_at = parts[3]
-                updated_at = parts[4]
-                inventory.append({"name": name, "price": price, "quantity": quantity, "created_at": created_at, "updated_at": updated_at})
-    return inventory
-
-# "Сохранение в файл"
-def save_inventory(inventory):
-    with open(inventory_file, "w") as file:
-        for item in inventory:
-            file.write(f"{item['name']},{item['price']},{item['quantity']},{item['created_at']},{item['updated_at']}\n")
-
-# "Показать список"
-def show_inventory():
-    inventory = read_inventory()
-    if inventory:
-        print("Список товаров:")
-        for item in inventory:
-            print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}, "
-                  f"Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
-    else:
-        print("Нет товаров в базе.")
-
-# Добавить товар
-def add_product():
-    name = input("Введите название товара: ")
-    price = float(input("Введите цену товара: "))
-    quantity = int(input("Введите количество товара: "))
-    created_at = updated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    inventory = read_inventory()
-    inventory.append({"name": name, "price": price, "quantity": quantity, "created_at": created_at, "updated_at": updated_at})
-    save_inventory(inventory)
-    log_action(f"Добавлен товар: {name}")
-
-# Удалить товар
-def remove_product():
-    name = input("Введите название товара для удаления: ")
-    inventory = read_inventory()
-    inventory = [item for item in inventory if item['name'] != name]
-    save_inventory(inventory)
-    log_action(f"Удален товар: {name}")
-
-# Обновить товар
-def update_product():
-    name = input("Введите название товара для обновления: ")
-    inventory = read_inventory()
-    for item in inventory:
-        if item['name'] == name:
-            print(f"Текущие данные товара: Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
-            price = float(input("Введите новую цену товара: "))
-            quantity = int(input("Введите новое количество товара: "))
-            item['price'] = price
-            item['quantity'] = quantity
-            item['updated_at'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            save_inventory(inventory)
-            log_action(f"Обновлен товар: {name}")
-            return
-    print("Товар не найден.")
-
-# Найти товар по названию
-def find_product():
-    name = input("Введите название товара для поиска: ")
-    inventory = read_inventory()
-    found = False
-    for item in inventory:
-        if item['name'] == name:
-            found = True
-            print(f"Товар найден: Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}, "
-                  f"Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
-            break
-    if not found:
-        print("Товар не найден.")
-
-# Вывести товары по цене
-def products_below_price():
-    price = float(input("Введите максимальную цену для фильтрации: "))
-    inventory = read_inventory()
-    filtered = [item for item in inventory if item['price'] < price]
-    if filtered:
-        print("Товары ниже заданной цены:")
-        for item in filtered:
-            print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
-    else:
-        print("Нет товаров с такой ценой.")
-
-# Вывести товары по количеству
-def products_below_quantity():
-    quantity = int(input("Введите минимальное количество для фильтрации: "))
-    inventory = read_inventory()
-    filtered = [item for item in inventory if item['quantity'] < quantity]
-    if filtered:
-        print("Товары с количеством меньше заданного:")
-        for item in filtered:
-            print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
-    else:
-        print("Нет товаров с таким количеством.")
-
-# Главное меню
-def menu():
-    while True:
-        print("\nМеню:")
-        print("1. Показать список товаров")
-        print("2. Добавить товар")
-        print("3. Удалить товар")
-        print("4. Обновить товар")
-        print("5. Найти товар по названию")
-        print("6. Вывести товары с ценой ниже заданной")
-        print("7. Вывести товары с количеством ниже заданного")
-        print("8. Создать резервную копию данных")
-        print("9. Выход")
-        choice = input("Выберите действие (1-9): ")
-
-        if choice == "1":
-            show_inventory()
-        elif choice == "2":
-            add_product()
-        elif choice == "3":
-            remove_product()
-        elif choice == "4":
-            update_product()
-        elif choice == "5":
-            find_product()
-        elif choice == "6":
-            products_below_price()
-        elif choice == "7":
-            products_below_quantity()
-        elif choice == "8":
-            create_backup()
-        elif choice == "9":
-            print("Выход из программы.")
-            break
-        else:
-            print("Некорректный выбор, попробуйте снова.")
-
-# Запуск программы
-if __name__ == "__main__":
-    menu()
-
+#
+#
+# import os
+# import datetime
+#
+# # Файл для хранения товаров
+# inventory_file = "inventory.txt"
+# log_file = "inventory_log.txt"
+#
+# # Функция для логирования действий
+# def log_action(action):
+#     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#     with open(log_file, "a") as log:
+#         log.write(f"{timestamp} - {action}\n")
+#
+# # Функция для создания резервной копии файла инвентаря
+# def create_backup():
+#     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+#     backup_filename = f"inventory_backup_{timestamp}.txt"
+#     with open(inventory_file, "r") as original_file:
+#         with open(backup_filename, "w") as backup_file:
+#             backup_file.write(original_file.read())
+#     log_action(f"Резервная копия создана: {backup_filename}")
+#
+# # Чтение всех товаров из файла
+# def read_inventory():
+#     inventory = []
+#     if os.path.exists(inventory_file):
+#         with open(inventory_file, "r") as file:
+#             lines = file.readlines()
+#             for line in lines:
+#                 parts = line.strip().split(",")
+#                 name = parts[0]
+#                 price = float(parts[1])
+#                 quantity = int(parts[2])
+#                 created_at = parts[3]
+#                 updated_at = parts[4]
+#                 inventory.append({"name": name, "price": price, "quantity": quantity, "created_at": created_at, "updated_at": updated_at})
+#     return inventory
+#
+# # "Сохранение в файл"
+# def save_inventory(inventory):
+#     with open(inventory_file, "w") as file:
+#         for item in inventory:
+#             file.write(f"{item['name']},{item['price']},{item['quantity']},{item['created_at']},{item['updated_at']}\n")
+#
+# # "Показать список"
+# def show_inventory():
+#     inventory = read_inventory()
+#     if inventory:
+#         print("Список товаров:")
+#         for item in inventory:
+#             print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}, "
+#                   f"Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
+#     else:
+#         print("Нет товаров в базе.")
+#
+# # Добавить товар
+# def add_product():
+#     name = input("Введите название товара: ")
+#     price = float(input("Введите цену товара: "))
+#     quantity = int(input("Введите количество товара: "))
+#     created_at = updated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#     inventory = read_inventory()
+#     inventory.append({"name": name, "price": price, "quantity": quantity, "created_at": created_at, "updated_at": updated_at})
+#     save_inventory(inventory)
+#     log_action(f"Добавлен товар: {name}")
+#
+# # Удалить товар
+# def remove_product():
+#     name = input("Введите название товара для удаления: ")
+#     inventory = read_inventory()
+#     inventory = [item for item in inventory if item['name'] != name]
+#     save_inventory(inventory)
+#     log_action(f"Удален товар: {name}")
+#
+# # Обновить товар
+# def update_product():
+#     name = input("Введите название товара для обновления: ")
+#     inventory = read_inventory()
+#     for item in inventory:
+#         if item['name'] == name:
+#             print(f"Текущие данные товара: Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
+#             price = float(input("Введите новую цену товара: "))
+#             quantity = int(input("Введите новое количество товара: "))
+#             item['price'] = price
+#             item['quantity'] = quantity
+#             item['updated_at'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#             save_inventory(inventory)
+#             log_action(f"Обновлен товар: {name}")
+#             return
+#     print("Товар не найден.")
+#
+# # Найти товар по названию
+# def find_product():
+#     name = input("Введите название товара для поиска: ")
+#     inventory = read_inventory()
+#     found = False
+#     for item in inventory:
+#         if item['name'] == name:
+#             found = True
+#             print(f"Товар найден: Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}, "
+#                   f"Дата создания: {item['created_at']}, Дата обновления: {item['updated_at']}")
+#             break
+#     if not found:
+#         print("Товар не найден.")
+#
+# # Вывести товары по цене
+# def products_below_price():
+#     price = float(input("Введите максимальную цену для фильтрации: "))
+#     inventory = read_inventory()
+#     filtered = [item for item in inventory if item['price'] < price]
+#     if filtered:
+#         print("Товары ниже заданной цены:")
+#         for item in filtered:
+#             print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
+#     else:
+#         print("Нет товаров с такой ценой.")
+#
+# # Вывести товары по количеству
+# def products_below_quantity():
+#     quantity = int(input("Введите минимальное количество для фильтрации: "))
+#     inventory = read_inventory()
+#     filtered = [item for item in inventory if item['quantity'] < quantity]
+#     if filtered:
+#         print("Товары с количеством меньше заданного:")
+#         for item in filtered:
+#             print(f"Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
+#     else:
+#         print("Нет товаров с таким количеством.")
+#
+# # Главное меню
+# def menu():
+#     while True:
+#         print("\nМеню:")
+#         print("1. Показать список товаров")
+#         print("2. Добавить товар")
+#         print("3. Удалить товар")
+#         print("4. Обновить товар")
+#         print("5. Найти товар по названию")
+#         print("6. Вывести товары с ценой ниже заданной")
+#         print("7. Вывести товары с количеством ниже заданного")
+#         print("8. Создать резервную копию данных")
+#         print("9. Выход")
+#         choice = input("Выберите действие (1-9): ")
+#
+#         if choice == "1":
+#             show_inventory()
+#         elif choice == "2":
+#             add_product()
+#         elif choice == "3":
+#             remove_product()
+#         elif choice == "4":
+#             update_product()
+#         elif choice == "5":
+#             find_product()
+#         elif choice == "6":
+#             products_below_price()
+#         elif choice == "7":
+#             products_below_quantity()
+#         elif choice == "8":
+#             create_backup()
+#         elif choice == "9":
+#             print("Выход из программы.")
+#             break
+#         else:
+#             print("Некорректный выбор, попробуйте снова.")
+#
+# # Запуск программы
+# if __name__ == "__main__":
+#     menu()
+#
 
 
 
