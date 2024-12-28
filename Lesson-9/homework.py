@@ -1,18 +1,18 @@
 # FIXED
 
+
 # Тема: Список, срезы списков.
+
+
 
 # Упражнение 1: Управление списком покупок
 # Создайте список покупок, содержащий элементы "bread", "milk", "eggs".
 shopping_list = ["bread", "milk", "eggs"]
 
-
 # Измените элемент "milk" на "almond milk".
 shopping_list[1] = "almond milk"
-Aleksandr_Samborskij
 print(shopping_list)
 
-main
 # Создайте срез, содержащий первые два элемента списка.
 slice_shopping_list = shopping_list[:2]
 
@@ -24,28 +24,39 @@ print(shopping_list)  # ["bread", "almond milk", "eggs"]
 print(slice_shopping_list)  # ["bread", "almond milk"]
 print(detailed_shopping_list)  # [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
 
+
+
+
 # Измените элемент "milk" на "almond milk".
 el_to_change = shopping_list.index('milk')
 shopping_list[el_to_change] = "almond milk"
+
 # Создайте срез, содержащий первые два элемента списка.
 slice_shopping_list = shopping_list[:2]
+
 # Создайте вложенный список, где каждый элемент списка покупок будет содержать его цену.
 detailed_shopping_list = []
 for element in shopping_list:
     price = float(input(f'Please input price for {element}: '))
     detailed_shopping_list.append([element, price])
+
+
 # Выведите список покупок, срез и вложенный список.
 print(5*'#', 'RESULT', 5*'#')
 print(f'shopping_list: {shopping_list}', f'slice_shopping_list: {slice_shopping_list}',
       f'detailed_shopping_list: {detailed_shopping_list}', sep='\n' )
 
-# print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
-# print(slice_shopping_list)  # Ожидаемый результат: ["bread", "almond milk"]
-# print(detailed_shopping_list)  # Ожидаемый результат: [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
+print(shopping_list)  # Ожидаемый результат: ["bread", "almond milk", "eggs"]
+print(slice_shopping_list)  # Ожидаемый результат: ["bread", "almond milk"]
+print(detailed_shopping_list)  # Ожидаемый результат: [["bread", 1.5], ["almond milk", 3.0], ["eggs", 2.0]]
 
+
+
+#############################################################################################################
 
 
 # Упражнение 2: Управление списком студентов и их оценок
+
 # Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
 students = ["Alice", "Bob", "Charlie", "David"]
 
@@ -56,39 +67,28 @@ students[1] = "Eve"
 top_students = students[1:3]
 
 # Создайте вложенный список, где каждый студент имеет список своих оценок.
-student_grades = [
+students_grades = [
     ["Alice", [90, 85, 88]],
     ["Eve", [75, 80, 82]],
     ["Charlie", [95, 92, 93]],
     ["David", [78, 85, 84]]]
+
+students_grades[1][0] = "Eve"
+
+for student in students_grades:
+    name, grades = student
+    print(f"Студент: {name}, Оценки: {grades}")
 
 # Выведите список студентов, срез и вложенный список.
 print()
 print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
 print(top_students)  # Ожидаемый результат: ["Eve", "Charlie"]
 
-# Упражнение 2: Управление списком студентов и их оценок
-# Создайте список студентов, содержащий элементы "Alice", "Bob", "Charlie", "David".
-students = ["Alice", "Bob", "Charlie", "David"]
-# Создайте срез, содержащий студентов: "Bob", "Charlie".
-top_students = students[1:3]
-# Измените имя второго студента на "Eve".
-students[1] = "Eve"
-# Создайте вложенный список, где каждый студент имеет список своих оценок.
-student_grades = []
-subjects = ['math', 'algorithm', 'design']
-for student in students:
-    marks = []
-    for subject in subjects:
-        marks.append(int(input(f'Please input mark by {subject} for {student}: ')))
-    student_grades.append([student, marks])
-
-# Выведите список студентов, срез и вложенный список.
-print(students)  # Ожидаемый результат: ["Alice", "Eve", "Charlie", "David"]
-print(top_students)  # Ожидаемый результат: ["Bob", "Charlie"]
-
-print(student_grades)  # Ожидаемый результат:
+print(students_grades)  # Ожидаемый результат:
 # [["Alice", [90, 85, 88]], ["Eve", [75, 80, 82]], ["Charlie", [95, 92, 93]], ["David", [78, 85, 84]]]
+
+
+###########################################################################################################
 
 
 # Упражнение 3: Управление списком задач
@@ -115,8 +115,13 @@ print(last_tasks)  # Ожидаемый результат: ["task3", "task3 upd
 
 # Измените третью задачу на "task3 updated".
 tasks[2] = "task3 updated"
+
+
+
+
 # Создайте срез, содержащий последние две задачи.
 last_tasks = tasks[-2:]
+
 # Создайте вложенный список, где каждая задача имеет свой статус (True - выполнено, False - не выполнено).
 detailed_tasks = []
 for task in tasks:
@@ -128,6 +133,8 @@ print(last_tasks)  # Ожидаемый результат: ["task3", "task4"]
 
 print(detailed_tasks)  # Ожидаемый результат:
 # [["task1", True], ["task2 updated", False], ["task3", True], ["task4", False]]
+
+
 
 
 # Тема: Методы списков
@@ -270,10 +277,14 @@ for items in subjects_extended:
 total_duration_2 = sum([item[1] for item in subjects_extended])
 # 2.8 Выведите в консоль:
 print(subjects_sorted, subjects_slice, subjects_extended, total_duration_1, total_duration_2, sep='\n')
+
 # - отсортированный список курсо, # Ожидаемый результат:['C++', 'JavaScript', 'Kotlin', 'Python']
 # - срез, # Ожидаемый результат: ['Python', 'Kotlin', 'JavaScript']
 # - вложенный список, # Ожидаемый результат: [['Python', 40], ['Kotlin', 30], ['JavaScript', 35], ['C++', 50]]
 # - общую продолжительность всех курсов. # Ожидаемый результат: 155
+
+
+
 
 
 # Мини-проект: Система управления задачами (To-Do List)
@@ -295,60 +306,60 @@ print(subjects_sorted, subjects_slice, subjects_extended, total_duration_1, tota
 
 # 4. Пользователь должен иметь возможность удалить задачу. Чтобы удалить задачу, запросите ее номер.
 # Если номер корректный, то удалите ее.
-
-task_counter = 1
 #
-while True:
+# task_counter = 1
+# #
+# while True:
+#
+#     # В решении используется цикл, чтобы программа работала пока вы ее принудительно не завершите через Ctr-C.
+#     # Циклы вы еще не проходили и для решения задачи эти знания не нужны. Просто пишите код с отступом, продолжая программу.
+#     print("\nСистема управления задачами")
+#     print("1. Добавить задачу")
+#     print("2. Показать задачи")
+#     print("3. Отметить задачу как выполненную")
+#     print("4. Удалить задачу")
+#     choice = input("Выберите действие, введя его номер: ")
+#
+#     # Продолжите программу ниже. Код пишите с отсутпом, как принты выше.
+#
+#     if choice == "1":
+#         task = input("Введите задачу: ")
+#         tasks.append([task_counter, task, False])
+#         task_counter += 1
+#         print(f"Задача '{task}' добавлена.")
+#
+#     elif choice == "2":
+#         if not tasks:
+#             print("Задач нет.")
+#         else:
+#             for task in tasks:
+#                 status = "Выполнено" if task[2] else "Не выполнено"
+#                 print(f"{task[0]}. {task[1]} - {status}")
+#
+#     elif choice == "3":
+#         task_num = int(input("Введите номер задачи для отметки как выполненной: "))
+#         for task in tasks:
+#             if task[0] == task_num:
+#                 task[2] = True
+#                 print(f"Задача '{task[1]}' отмечена как выполненная.")
+#                 break
+#         else:
+#             print("Некорректный номер задачи.")
+#
+#     elif choice == "4":
+#         task_num = int(input("Введите номер задачи для удаления: "))
+#         for task in tasks:
+#             if task[0] == task_num:
+#                 tasks.remove(task)
+#                 print(f"Задача '{task[1]}' удалена.")
+#                 break
+#         else:
+#             print("Некорректный номер задачи.")
+#
+#     elif choice == 'exit':
+#         exit()
 
-    # В решении используется цикл, чтобы программа работала пока вы ее принудительно не завершите через Ctr-C.
-    # Циклы вы еще не проходили и для решения задачи эти знания не нужны. Просто пишите код с отступом, продолжая программу.
-    print("\nСистема управления задачами")
-    print("1. Добавить задачу")
-    print("2. Показать задачи")
-    print("3. Отметить задачу как выполненную")
-    print("4. Удалить задачу")
-    choice = input("Выберите действие, введя его номер: ")
-
-    # Продолжите программу ниже. Код пишите с отсутпом, как принты выше.
-
-    if choice == "1":
-        task = input("Введите задачу: ")
-        tasks.append([task_counter, task, False])
-        task_counter += 1
-        print(f"Задача '{task}' добавлена.")
-
-    elif choice == "2":
-        if not tasks:
-            print("Задач нет.")
-        else:
-            for task in tasks:
-                status = "Выполнено" if task[2] else "Не выполнено"
-                print(f"{task[0]}. {task[1]} - {status}")
-
-    elif choice == "3":
-        task_num = int(input("Введите номер задачи для отметки как выполненной: "))
-        for task in tasks:
-            if task[0] == task_num:
-                task[2] = True
-                print(f"Задача '{task[1]}' отмечена как выполненная.")
-                break
-        else:
-            print("Некорректный номер задачи.")
-
-    elif choice == "4":
-        task_num = int(input("Введите номер задачи для удаления: "))
-        for task in tasks:
-            if task[0] == task_num:
-                tasks.remove(task)
-                print(f"Задача '{task[1]}' удалена.")
-                break
-        else:
-            print("Некорректный номер задачи.")
-
-    elif choice == 'exit':
-        exit()
-
-
+#
 # в процессе создания, задаче будет присваивается id
 # id будет генерироваться в виде последовательности начиная с 1
 id = 1

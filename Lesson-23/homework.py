@@ -10,6 +10,7 @@
 
 
 
+
 numbers = [10, 3, 7, 1, 9, 4]
 numbers.sort()
 print(numbers)
@@ -21,6 +22,7 @@ print(sorted_numbers)
 
 
 
+
 # Задача 2: Сортировка списка строк по длине
 # Дан список строк `["house", "cat", "elephant", "car", "building"]`.
 # Отсортируйте список по длине строк с помощью функции `sorted`.
@@ -28,9 +30,12 @@ print(sorted_numbers)
 
 
 
+
 my_list = ["house", "cat", "elephant", "car", "building"]
 sorted_list = sorted(my_list, key=len)
 print(my_list)
+
+
 
 
 
@@ -56,9 +61,13 @@ print(numbers_value)
 
 
 
+
+
 people = [{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 20 }, { "name": "Charlie", "age": 23 }]
 people_sorted = sorted(people, key=lambda person: person['age'])
 print(people_sorted)
+
+
 
 
 
@@ -93,6 +102,7 @@ print(numbers_value)
 items = ["tree", 3, "mountain", 1, "river", 2]
 sorted_strings = sorted(filter(lambda x: isinstance(x, str), items))
 print(sorted_strings)
+
 
 
 
@@ -140,7 +150,6 @@ print(sorted_tuples)
 
 
 
-
 # Задача 4: Сортировка списка словарей по длине значений с использованием any
 # Дан список словарей
 # [{ "country": "USA", "capital": "Washington" }, { "country": "UK", "capital": "London" },
@@ -148,6 +157,7 @@ print(sorted_tuples)
 # Отсортируйте словари по длине значений ключа `capital`, предварительно проверив,
 # что хотя бы одна длина значения ключа `capital` больше 6, с помощью функции `any`.
 # Ожидаемый результат: [{'country': 'UK', 'capital': 'London'}, {'country': 'Australia', 'capital': 'Canberra'}, {'country': 'USA', 'capital': 'Washington'}]
+
 
 
 
@@ -297,7 +307,8 @@ print(result)
 
 
 
-sorted_responses = sorted(api_responses, key=lambda response: response['status'])
+
+sorted_responses = sorted('api_responses', key=lambda response: response['status'])
 numbered_responses = zip(range(len(sorted_responses)), sorted_responses)
 result = list(map(lambda item: (item[0], item[1]['url'], item[1]['status']), numbered_responses))
 
@@ -306,3 +317,129 @@ print(result)
 
 
 ###########################################################################################################
+
+
+
+
+
+
+
+class Company:
+ company_name = "Killer Company"
+
+ def __init__(self,company_name):
+     self.company_name = company_name
+     self.employees = []
+
+
+
+ class Employee:
+
+     def __init__(self,name,killer,salary):
+         self.employees = []
+         self.name = name
+         self.killer = killer
+
+ def add_employees(self, employee_name):
+     if isinstance(employee, Employee):
+         self.employees.append(employee_name)
+     else:
+         raise ValueError("employee dolschen wijasnitj")
+
+company= Company("Killer Company")
+
+company.company_name1 = "Killer"
+employee1 = ("Employee:","Bob", "Soldat", 5000)
+employee2 = ("Employee:", "Jana", "Soldat",3000)
+
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
+
+print(f"Company name :{company.company_name1}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+#########################################################################################
+
+
+class Company:
+ company_name = "Killer Company"
+
+ def __init__(self):
+     self.company_name = Company
+     self.employees = []
+
+
+
+
+class Employee:
+
+ def __init__(self,name,killer,salary):
+     self.employees = []
+     self.name = name
+     self.killer = killer
+     self.salary = salary
+
+
+ def add_employees(self, employee_name):
+     self.employees.append(employee_name)
+
+ def get_employees(self):
+     return self.employees
+
+
+
+employee1 = Employee("Bob", "Soldat", 5000)
+employee2 = Employee("Jana", "Soldat",3000)
+
+company= Company()
+company.company_name1 = "Killer"
+company.company_name2 = "Bob" , "Jana"
+company.add_employee1 = "Bob","Soldat - Sniper" , 5000
+company.add_employee2 = "Jana","Soldatin - Hilfe" , 3000
+
+print(f"Company name :{company.company_name1},{company.company_name2}")
+print("Employees:",company.add_employee1 )
+print("Employees:", company.add_employee2 )
+
+
+
+
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+
+
+
+class Library:
+    def __init(self,total_books):
+        self.total_books = total_books
+        total_books = 0
+        self.books = []
+
+
+    def add_books(self,book_name):
+        self.books.append(book_name)
+        Library.total_books +=1
+
+
+
+
+
+
+# def get_age(self):
+#     return self.__age
+#
+#
+# def set__age(self, age):
+#     if age > 0:
+#         self.__age = age
+#     else:
+#         print("Age muss be positive")
+#
+#         print = Person("Alice", 30)
+#         print(Person.name)
+#         print(Person.age)
+#
+

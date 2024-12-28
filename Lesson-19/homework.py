@@ -6,33 +6,44 @@
 # 3. Прочитайте первые 10 символов файла и выведите их на экран.
 # 4. Прочитайте одну строку из файла и выведите ее на экран.
 # 5. Прочитайте все строки файла и выведите их на экран.
-
-
-
+#
+#
+#
 
 filename = 'data.txt'
 
 
-
-with open(filename, 'r') as file:
+with open('data.txt', 'a') as file:
     content = file.read()
     print("Весь контент файла:")
     print(content)
     print("\n")
 
-with open(filename, 'r') as file:
+
+file.seek(0)
+
+
+with open('data.txt', 'r') as file:
     first_10_chars = file.read(10)
     print("10 символов файла:")
     print(first_10_chars)
     print("\n")
 
-with open(filename, 'r') as file:
+
+file.seek(0)
+
+
+with open('data.txt', 'r') as file:
     first_line = file.readline()
     print("Первая строка файла:")
     print(first_line)
     print("\n")
 
-with open(filename, 'r') as file:
+# Перемещение курсора в начало файла для чтения всех строк
+file.seek(0)
+
+
+with open('data.txt', 'r') as file:
     all_lines = file.readlines()
     print("Все строки файла:")
     for line in all_lines:
@@ -40,8 +51,7 @@ with open(filename, 'r') as file:
     print("\n")
 
 
-
-
+#
 
 
 # Задание 2: Запись данных в файл
@@ -73,9 +83,27 @@ with open('output.txt', 'r') as file:
 
 
 
+# Задание 3: Добавление данных в файл
+# 1. Откройте (создайте) файл `log.txt` для добавления данных.
+# 2. Добавьте строку "New log entry\n" в конец файла.
+# 3. Добавьте список строк ["Log entry 1\n", "Log entry 2\n"] в конец файла.
+# 4. Закройте файл.
+# 5. Откройте файл `log.txt` для чтения и выведите его содержимое на экран.
 
 
-# Задание 3:
+
+
+with open('log.txt','a' ) as file:
+
+    file.write ("New log entry\n"),
+
+    file.writelines(["Log entry 1\n", "Log entry 2\n"]),
+
+with open('log.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+
 
 
 
@@ -92,9 +120,7 @@ with open('output.txt', 'r') as file:
 
 
 
-
-
-"1.Открытие файла"
+    "1.Открытие файла"
 
 with open('pointer_example.txt', 'w+') as file:
 
@@ -123,7 +149,7 @@ with open('pointer_example.txt', 'w+') as file:
 
     ("5. Перемещение в конец файла ")
 
-    file.seek(0, 2)  ("позиция 2 - конец")
+    file.seek(0, 2), ("позиция 2 - конец")
     file.write("End of file\n")
 
     ("6. Перемещение указателя в начало файла ")
@@ -217,7 +243,7 @@ with open('user.json', 'w') as file:
 import json
 
 
-with open('users.json', 'r') as file:
+with open('users.json', 'a') as file:
     users = json.load(file)
 
 
@@ -253,7 +279,7 @@ import json
 
 
 
-with open('users.json', 'r') as file:
+with open('users.json', 'a') as file:
     users = json.load(file)
 
 

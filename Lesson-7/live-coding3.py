@@ -12,7 +12,7 @@ print('Hello\nworld!')
 print('Hello\tworld!')
 
 # форматирование строк: метод format()
-name = 'Alex'
+name = 'Maximus'
 age = 27
 greeting_format = "My name is {}, I'm {} years old".format(name, age)
 print(greeting_format)
