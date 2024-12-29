@@ -9,13 +9,17 @@
 # В файл записывается время начало игры, время и значение каждой попытки, время окончания игры и результат.
 # - Добавить обработку ошибок с использованием `try/except`, где это необходимо.
 
+
+
 import random
 import datetime
+
 
 
 def log_action(message):
     with open("guess_number_log.txt", "a", encoding="utf-8") as log_file:
         log_file.write(f"{datetime.datetime.now()}: {message}\n")
+
 
 
 def guess_number():
@@ -41,14 +45,14 @@ def guess_number():
             elif guess > number_to_guess:
                 print("Загаданное число меньше.")
             else:
-                print(f"Отлично! Вы угадали число {number_to_guess} с {attempt + 1} попытки!")
+                print(f"Отлично! угадали число {number_to_guess} с {attempt + 1} попытки!")
                 log_action(f"Игрок угадал число {number_to_guess} с {attempt + 1} попытки.")
                 break
         except ValueError as e:
             print(e)
 
     else:
-        print(f"К сожалению, вы не угадали число. Загаданное число было: {number_to_guess}.")
+        print(f"К сожалению, не угадали число. Загаданное число было: {number_to_guess}.")
         log_action(f"Игрок не угадал число. Загаданное число было: {number_to_guess}.")
 
     print(f"Ваши попытки: {guesses}")

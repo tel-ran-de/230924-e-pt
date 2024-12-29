@@ -76,6 +76,8 @@ print(create_dict(keys, values))
 # Задача 6: Подсчет символов в строке
 # Напишите функцию `count_characters(string)`, которая принимает строку и
 # возвращает словарь, где ключи - это символы строки, а значения - количество их вхождений.
+
+
 def count_characters(string):
     result_dict = {}
     for char in string:
@@ -94,6 +96,8 @@ print(count_characters(string))
 # Напишите функцию `sum_positive_negative(*args)`, которая принимает произвольное число числовых аргументов
 # и возвращает кортеж из двух значений: сумма положительных чисел и сумма отрицательных чисел.
 #
+
+
 def sum_positive_negative(*args):
     positiv_sum = sum(x for x in args if x > 0)
     negativ_sum = sum(x for x in args if x < 0)

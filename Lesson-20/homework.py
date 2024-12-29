@@ -7,8 +7,8 @@
 # - ввод не числовых значений.
 
 
-
-
+#
+#
 
 def divide_numbers(a, b):
     try:
@@ -54,10 +54,8 @@ def get_square():
         print("коррек. число.")
 
 
-# Вызов функции
+# "Вызов"
 get_square()
-
-
 
 
 
@@ -66,32 +64,28 @@ get_square()
 # Задача 3. Вернитесь к задачам предыдущего урока из файла exercise_1 и добавьте в решение обработку возможных ошибок,
 # которые могут случиться при работе с файлами (FileNotFoundError, PermissionError, IOError).
 # Проверьте, что ошибки обрабатываются на примере FileNotFoundError.
-
-
 # Тема: Расространение исключения. Возбуждение исключения.
-
 # Задача 1. Допишите код ниже.
 #
-# import math
-#
-# def calculate_square_root(number):
-#
-#
-#     return math.sqrt(number)
-#
-# def safe_calculate_square_root(number):
-#     try:
-#         result = calculate_square_root(number)
-#         print(f"Квадратный корень из {number} равен {result}")
-#     except ValueError as e:
-#         print(f"Ошибка: {e}")
-#
-#
-# safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
-# safe_calculate_square_root(-9)  # Ожидаемый результат: Ошибка: Число должно быть положительным
 
 
 
+
+import math
+
+def calculate_square_root(number):
+    return math.sqrt(number)
+
+def safe_calculate_square_root(number):
+    try:
+        result = calculate_square_root(number)
+        print(f"Квадрат. корень из{number},равен{result}")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
+
+
+safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
+safe_calculate_square_root(-9)  # Ожидаемый результат: Ошибка: Число должно быть положительным
 
 
 
@@ -100,9 +94,8 @@ import math
 
 
 def calculate_square_root(number):
-    # Проверка на отрицательное число
     if number < 0:
-        raise ValueError("Число положит.")
+        raise ValueError("Число положитнное.")
 
     return math.sqrt(number)
 
@@ -115,7 +108,6 @@ def safe_calculate_square_root(number):
         print(f": {e}")
 
 
-# Тесты функции
 safe_calculate_square_root(25)  # Ожидаемый результат: Квадратный корень из 25 равен 5.0
 safe_calculate_square_root(-9)  # Ожидае
 
@@ -124,21 +116,26 @@ safe_calculate_square_root(-9)  # Ожидае
 
 
 # Задача 2. Допишите код ниже.
-# def convert_to_number(string):
-#     # Добавьте проверку на некорректное значение и возбуждение исключения
-#
-#     return int(string)
-#
-# def safe_convert_to_number(string):
-#     try:
-#         number = convert_to_number(string)
-#         print(f"Конвертированное число: {number}")
-#     except ValueError as e:
-#         print(f"Ошибка: {e}")
-#
-# # Тесты функции
-# safe_convert_to_number("123")  # Ожидаемый результат: Конвертированное число: 123
-# safe_convert_to_number("abc")  # Ожидаемый результат: Ошибка: Введенное значение не является числом
+
+
+
+def convert_to_number(string):
+    return int(string)
+
+def safe_convert_to_number(string):
+    try:
+        number = convert_to_number(string)
+        print(f"Конвертированное число: {number}")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
+
+
+safe_convert_to_number("123")  # Ожидаемый результат: Конвертированное число: 123
+safe_convert_to_number("abc")  # Ожидаемый результат: Ошибка: Введенное значение не является числом
+
+
+
+
 
 
 # Тема: Интеграционная практика. Мини-проект
@@ -257,10 +254,9 @@ def filter_by_count(inventory, max_count):
 
 
 
-
-
 def main():
     inventory = load_inventory()
+
 
     while True:
         print("\nМеню:")
@@ -273,7 +269,9 @@ def main():
         print("7. Вывести список товаров меньше определенного количества.")
         print("8. Выйти.")
 
+
         choice = input("Введите номер действия: ")
+
 
         try:
             if choice == "1":

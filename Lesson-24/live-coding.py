@@ -92,79 +92,84 @@ import datetime
 # - Основные команды: getcwd, listdir, mkdir, remove, rmdir, rename.
 #
 import os
-#
-# # 1. Получение текущей рабочей директории
-# current_directory = os.getcwd()
-# print(current_directory)  # Вывод: текущая рабочая директория
 
-# # 2. Изменение текущей рабочей директории
-# os.chdir('../../QA422')
-# print(os.getcwd())  # Вывод: новая рабочая директория C:\Users\maks\PycharmProjects\QA422
+# 1. Получение текущей рабочей директории
+
+now = datetime.datetime.now()
+print(now)
+print(type(now))
+
+current_directory = os.getcwd()
+print(current_directory)  # Вывод: текущая рабочая директория
+
+# 2. Изменение текущей рабочей директории
+os.chdir('../../QA422')
+print(os.getcwd())  # Вывод: новая рабочая директория C:\Users\maks\PycharmProjects\QA422
+
+# 3. Список файлов и директорий в указанной директории
+'.' - текущая директория
+'..' - родительская директория
+files_and_directories = os.listdir('..')
+print(files_and_directories)  # Вывод: ['.gitignore', '.idea', '.venv', 'Lesson-10', 'Lesson-11', 'Lesson-12', 'Lesson-13', 'Lesson-14', 'Lesson-15', 'Lesson-16', 'Lesson-17', 'Lesson-18', 'Lesson-19', 'Lesson-2', 'Lesson-20', 'Lesson-21', 'Lesson-22', 'Lesson-23', 'Lesson-24', 'Lesson-3', 'Lesson-4', 'Lesson-5', 'Lesson-6', 'Lesson-7', 'Lesson-8', 'Lesson-9', 'manuals']
+files_and_directories = os.listdir('.')
+print(files_and_directories)  # ['examples.py', 'exercise_1.py', 'exercise_2.py', 'exercise_3.py', 'homework.py', 'live-coding.py', 'Урок 19. Модули  datetime и os.pptx']
+
+# 4. Создание новой директории
+os.mkdir('new_directory')  # Создает директорию с именем 'new_directory'
+
+# 5. Удаление директории
+os.rmdir('new_directory')  # Удаляет директорию с именем 'new_directory'
+
+# 6. Удаление файла
+os.remove('file1.txt')  # Удаляет файл с именем 'file1.txt'
+
+# 7. Переименование файла или директории
+os.rename('old_name.txt', 'new_name.txt')  # Переименовывает 'old_name.txt' в 'new_name.txt'
+
+# 8. Проверка существования файла или директории
+exists = os.path.exists('new_name.txt')  # True
+exists2 = os.path.exists('old_name.txt')  # False
+print(exists)  # Вывод: True, если файл существует, иначе False
+print(exists2)  # Вывод: True, если файл существует, иначе False
+
+# 9. Получение информации о файле или директории
+info = os.stat('live-coding.py')
+print(info)  # Вывод: os.stat_result(st_mode=33206, st_ino=5066549580835969, st_dev=1826509369, st_nlink=1, st_uid=0, st_gid=0, st_size=8169, st_atime=1731666364, st_mtime=1731666364, st_ctime=1731658323)
+print(info.st_mode)  # Вывод: 33206
+print(info.st_size)  # Вывод: 8169
+print(info.st_mtime)  # Вывод: 1731666364
+
+# 10. Создание вложенных директорий
+os.makedirs('parent_directory/child_directory')  # Создает директорию 'parent_directory' и вложенную 'child_directory'
+
+# 11. Удаление вложенных директорий
+os.removedirs('parent_directory/child_directory')  # Удаляет директорию 'child_directory' и пустую 'parent_directory'
+
+# 12. Выполнение системных команд
+print(os.getcwd())
+os.system('echo hello > file.txt')  # Выполняет команду echo в системной оболочке
+
+# 13. Получение значений переменных окружения
+path = os.environ.get('PATH')
+print(path)  # Вывод: значение переменной окружения PATH
 #
-# # 3. Список файлов и директорий в указанной директории
-# '.' - текущая директория
-# '..' - родительская директория
-# files_and_directories = os.listdir('..')
-# print(files_and_directories)  # Вывод: ['.gitignore', '.idea', '.venv', 'Lesson-10', 'Lesson-11', 'Lesson-12', 'Lesson-13', 'Lesson-14', 'Lesson-15', 'Lesson-16', 'Lesson-17', 'Lesson-18', 'Lesson-19', 'Lesson-2', 'Lesson-20', 'Lesson-21', 'Lesson-22', 'Lesson-23', 'Lesson-24', 'Lesson-3', 'Lesson-4', 'Lesson-5', 'Lesson-6', 'Lesson-7', 'Lesson-8', 'Lesson-9', 'manuals']
-# files_and_directories = os.listdir('.')
-# print(files_and_directories)  # ['examples.py', 'exercise_1.py', 'exercise_2.py', 'exercise_3.py', 'homework.py', 'live-coding.py', 'Урок 19. Модули  datetime и os.pptx']
-#
-# # 4. Создание новой директории
-# os.mkdir('new_directory')  # Создает директорию с именем 'new_directory'
-#
-# # 5. Удаление директории
-# os.rmdir('new_directory')  # Удаляет директорию с именем 'new_directory'
-#
-# # 6. Удаление файла
-# os.remove('file1.txt')  # Удаляет файл с именем 'file1.txt'
-#
-# # 7. Переименование файла или директории
-# os.rename('old_name.txt', 'new_name.txt')  # Переименовывает 'old_name.txt' в 'new_name.txt'
-#
-# # 8. Проверка существования файла или директории
-# exists = os.path.exists('new_name.txt')  # True
-# exists2 = os.path.exists('old_name.txt')  # False
-# print(exists)  # Вывод: True, если файл существует, иначе False
-# print(exists2)  # Вывод: True, если файл существует, иначе False
-#
-# # 9. Получение информации о файле или директории
-# info = os.stat('live-coding.py')
-# print(info)  # Вывод: os.stat_result(st_mode=33206, st_ino=5066549580835969, st_dev=1826509369, st_nlink=1, st_uid=0, st_gid=0, st_size=8169, st_atime=1731666364, st_mtime=1731666364, st_ctime=1731658323)
-# print(info.st_mode)  # Вывод: 33206
-# print(info.st_size)  # Вывод: 8169
-# print(info.st_mtime)  # Вывод: 1731666364
-#
-# # 10. Создание вложенных директорий
-# os.makedirs('parent_directory/child_directory')  # Создает директорию 'parent_directory' и вложенную 'child_directory'
-#
-# # 11. Удаление вложенных директорий
-# os.removedirs('parent_directory/child_directory')  # Удаляет директорию 'child_directory' и пустую 'parent_directory'
-#
-# # 12. Выполнение системных команд
-# print(os.getcwd())
-# os.system('echo hello > file.txt')  # Выполняет команду echo в системной оболочке
-#
-# # 13. Получение значений переменных окружения
-# path = os.environ.get('PATH')
-# print(path)  # Вывод: значение переменной окружения PATH
-# #
-# # # 14. Установка значений переменных окружения
-# os.environ['NEW_VAR'] = 'value'
-# print(os.environ['NEW_VAR'])  # Вывод: значение новой переменной окружения NEW_VAR
-#
-# # 15. Разделение пути на директорию и файл
-# directory, filename = os.path.split(r'C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24\examples.py')
-# print(directory)  # Вывод: C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24
-# print(filename)  # Вывод: examples.py
-#
-# # 16. Получение абсолютного пути
-# absolute_path = os.path.abspath('examples.py')
-# print(absolute_path)  # Вывод: C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24\examples.py
-#
-# # 17. Проверка, является ли путь файлом
-# print(os.path.isfile('../Lesson-24/examples.py'))  # Вывод: True
-# print(os.path.isfile('../Lesson-24'))  # Вывод: False
-#
-# # 18. Проверка, является ли путь директорией
-# print(os.path.isdir('../Lesson-24/examples.py'))  # Вывод: False
-# print(os.path.isdir('../Lesson-24'))  # Вывод: True
+# # 14. Установка значений переменных окружения
+os.environ['NEW_VAR'] = 'value'
+print(os.environ['NEW_VAR'])  # Вывод: значение новой переменной окружения NEW_VAR
+
+# 15. Разделение пути на директорию и файл
+directory, filename = os.path.split(r'C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24\examples.py')
+print(directory)  # Вывод: C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24
+print(filename)  # Вывод: examples.py
+
+# 16. Получение абсолютного пути
+absolute_path = os.path.abspath('examples.py')
+print(absolute_path)  # Вывод: C:\Users\maks\PycharmProjects\141024-m-pt\Lesson-24\examples.py
+
+# 17. Проверка, является ли путь файлом
+print(os.path.isfile('../Lesson-24/examples.py'))  # Вывод: True
+print(os.path.isfile('../Lesson-24'))  # Вывод: False
+
+# 18. Проверка, является ли путь директорией
+print(os.path.isdir('../Lesson-24/examples.py'))  # Вывод: False
+print(os.path.isdir('../Lesson-24'))  # Вывод: True
