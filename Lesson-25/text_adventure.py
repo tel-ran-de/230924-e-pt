@@ -44,16 +44,16 @@ import logging
 from datetime import datetime
 
 
-# Настройка логирования
+# логирования
 logging.basicConfig(filename='game_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 
-# Путь к файлам
+# к файлам
 STORY_FILE = 'game_story.json'
 STATE_FILE = 'game_state.json'
 
 
-# Загрузка сюжета игры
+# "Загрузка - сюжета игры"
 def load_story():
     try:
         with open(STORY_FILE, 'r', encoding='utf-8') as f:
@@ -66,7 +66,7 @@ def load_story():
         return {}
 
 
-# Загрузка состояния игры
+# "Загрузка - состояния игры"
 def load_game_state():
     if os.path.exists(STATE_FILE):
         try:
@@ -77,7 +77,7 @@ def load_game_state():
     return None
 
 
-# Сохранение состояния игры
+# "Сохранение - состояния игры"
 def save_game_state(current_scene):
     try:
         with open(STATE_FILE, 'w', encoding='utf-8') as f:
@@ -88,7 +88,7 @@ def save_game_state(current_scene):
 
 
 
-# Основной игровой цикл
+# "Основной - игровой цикл"
 def play_game():
     # Загрузка сюжета и состояния игры
     story = load_story()
